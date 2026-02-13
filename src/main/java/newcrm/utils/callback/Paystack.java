@@ -64,9 +64,9 @@ public class Paystack extends CallbackBase
 		// TODO Auto-generated method stub
 		
 		if("VT".equalsIgnoreCase(brand)) {
-			key = "sk_live_1f6a7ad29214e5fb7a93798354c4c0914a0b0ed1";//VT SVG
+			key = "placeholder";//VT SVG
 		}else if("PUG".equalsIgnoreCase(brand)) {
-			key = "sk_live_3253b04147ec52dae3be81feb93ab60329b84b54";
+			key = "placeholder";
 		}else{
 			key = null;
 		}
