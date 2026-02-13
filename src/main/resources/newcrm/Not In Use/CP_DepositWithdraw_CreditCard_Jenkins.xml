@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU Test Suite" configfailurepolicy="continue">
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", 
+		"beta" or "prod". When value is set to "beta" or "prod", the field Accout_Group_Setting 
+		can only be one test settings, like test_crm1_USD -->
+
+  <test name="AUCCDepositWithdrawTest">
+    <parameter name="Brand" value="${Application}"></parameter>     
+  	<parameter name="Regulator" value="${Brand}"></parameter>
+  	<parameter name="TestEnv" value="${Environment}"></parameter>
+    <parameter name="AdminURL" value="https://${adminurl}"></parameter>
+  	<parameter name="TraderURL" value="https://${cp_url}"></parameter>
+  	<parameter name="CallbackUrl" value="https://${openapi}"></parameter>
+  	
+    <parameter name="TraderName" value="${CPLogin}"></parameter>
+    <parameter name="TraderPass" value="${CPpassword}"></parameter>
+  	<parameter name="AdminName" value="${AdminLogin}"></parameter>
+  	<parameter name="AdminPass" value="${adminpass}"></parameter>
+  	
+  	<parameter name="headless" value="true"/>
+ 
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+			 	<methods>
+					<include name="testBridgePay"></include>
+				</methods> 
+			</class>
+		    <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+   		 		<methods>
+   		 			<include name="testCreditCardWithdraw"></include>
+   		 		</methods>
+   		 	</class>  		      		
+	    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

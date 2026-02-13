@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="UM IB Test Suite" configfailurepolicy="continue">
+	<listeners>
+	 	<listener class-name="utils.Listeners.CustomListener"/>
+	</listeners>
+	<parameter name="Brand" value="UM"></parameter>
+	<parameter name="TestEnv" value="alpha"></parameter>
+	<parameter name="Regulator" value="svg"></parameter>
+	<parameter name="TraderURL" value="${TraderURL}"></parameter>
+	<parameter name="TraderPass" value="123Qwe"></parameter>
+	<parameter name="headless" value="true"></parameter>
+
+      <test name="UM Test Japan IB Withdraw">
+           <parameter name="TraderName" value="testcrmib_donttouch_cpsjapan@test.com"></parameter>
+        <classes>
+                <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+                    <methods>
+                        <include name="testJapanBankWithdraw"></include>
+                        <include name="testJapanBankWithdrawNewAccount"></include>
+                    </methods>
+                </class>
+        </classes>
+      </test>
+
+	<!-- cps hide
+    <test name="UM Test Taiwan IB Withdraw">
+         <parameter name="TraderName" value="testcrmcpsautomationtwuseonly@mailinator.com"></parameter>
+      <classes>
+              <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+                  <methods>
+                      <include name="testTaiwanBankWithdraw"></include>
+                      <include name="testTaiwanBankWithdrawNewAccount"></include>
+                  </methods>
+              </class>
+      </classes>
+    </test>  -->
+
+  <test name="UM Test Brazil-BT/PIX IB Withdraw">
+   	<parameter name="TraderName" value="testcrmib_donttouch_cpsbrazil@test.com"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+   		 	<methods>
+   		 		<include name="testBrazilBankWithdraw"></include>
+   		 		<include name="testBrazilBankWithdrawNewAccount"></include>
+   		 		<include name="testBrazilPIXWithdraw"></include>
+   		 		<include name="testBrazilPIXWithdrawNewAccount"></include>
+   		 	</methods>
+   		 </class>
+    </classes>
+  </test>
+
+	<!-- Batch 7 -->
+  <test name="UM Test Vietnam IB Withdraw">
+   	<parameter name="TraderName" value="testcrmib_donttouch_cpsvietnamclient@test.com"></parameter>
+   	<parameter name="TraderPass" value="123Qwe@@"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+   		 	<methods>
+   		 		<include name="testVietBankWithdraw"></include>
+   		 		<include name="testVietBankWithdrawNewAccount"></include>
+   		 	</methods>
+   		 </class>
+    </classes>
+  </test>
+  <test name="UM Test Thailand IB Withdraw">
+   	<parameter name="TraderName" value="testcrmib_donttouch_cpsthailandib@test.com"></parameter>
+   	<parameter name="TraderPass" value="123Qwe@@"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+   		 	<methods>
+   		 		<include name="testThaiBankWithdraw"></include>
+   		 		<include name="testThaiBankWithdrawNewAccount"></include>
+   		 	</methods>
+   		 </class>
+    </classes>
+  </test>
+  <test name="UM Test Indonesia IB Withdraw">
+   	<parameter name="TraderName" value="testcrmib_donttouch_cpsindonesiaib@test.com"></parameter>
+   	<parameter name="TraderPass" value="123Qwe@@"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+   		 	<methods>
+   		 		<include name="testIndonesiaBankWithdraw"></include>
+   		 		<include name="testIndonesiaBankWithdrawNewAccount"></include>
+   		 	</methods>
+   		 </class>
+    </classes>
+  </test>
+  <test name="UM Test Malaysia IB Withdraw">
+   	<parameter name="TraderName" value="testcrmib_donttouch_cpsmalaysiab@test.com"></parameter>
+   	<parameter name="TraderPass" value="123Qwe@@"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+   		 	<methods>
+   		 		<include name="testMalaysiaBankWithdraw"></include>
+   		 		<include name="testMalaysiaBankWithdrawNewAccount"></include>
+   		 	</methods>
+   		 </class>
+    </classes>
+  </test>
+	<test name="UM Test Hong Kong IB Withdraw">
+		<parameter name="TraderName" value="testcrmib_donttouch_cpsjhk@test.com"></parameter>
+		<parameter name="TraderPass" value="123Qwe!!"></parameter>
+		<classes>
+			<class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+				<methods>
+					<include name="testHongKongBankWithdraw"></include>
+					<include name="testHongKongBankWithdrawNewAccount"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+  <!-- Test -->
+</suite> <!-- Suite -->

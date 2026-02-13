@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite allow-return-values="false" configfailurepolicy="continue" data-provider-thread-count="10" group-by-instances="false" guice-stage="DEVELOPMENT" junit="false" name="AU Test Suite" parallel="none" preserve-order="true" skipfailedinvocationcounts="false" thread-count="5">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"/>
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	
+	
+	<parameter name="Brand" value="vt"/>
+  	<parameter name="TestEnv" value="prod"/>
+  	<parameter name="AdminURL" value="https://admin.vtmarkets.com.cn/"></parameter>
+  	<parameter name="AdminName" value="Test CRM"></parameter>
+  	<parameter name="AdminPass" value="VanSyd123"></parameter>
+  	<parameter name="TraderURL" value="https://myaccount.vtmarkets.com.cn"></parameter>
+   	<parameter name="TraderName" value="webopn@test.com"/>
+    <parameter name="TraderPass" value="123Qwe"/>  
+  	
+  	<parameter name="ThaiAccount" value="webovh@tmail.t-com.sk"/>
+ 	<parameter name="ThaiPwd" value="123Qwe"/>
+ 	  	
+   <parameter name="MalayAccount" value="webovh@tmail.t-com.sk"/>
+ 	<parameter name="MalayPwd" value="123Qwe"/>  
+  	
+    <parameter name="VietAccount" value="webovh@tmail.t-com.sk"/>
+ 	<parameter name="VietPwd" value="123Qwe"/>
+  	
+  	<parameter name="NigeAccount" value="webovh@tmail.t-com.sk"/>
+ 	<parameter name="NigePwd" value="123Qwe"/>
+	
+  <test allow-return-values="false" group-by-instances="false" junit="false" name="Change Account Group to Test Account Group" preserve-order="true" skipfailedinvocationcounts="false">
+   
+	   <classes>
+	   		    		      		
+	   	  <class name="vantagecrm.AdminAPITest">
+	   	  	<methods>
+	   	  		<include name="APIUpdateTestAccGroup"/>
+	   	  		<!-- <include name="APICheckTestAccGroup"/> -->
+	   	  	</methods>
+	   	  </class>  
+	
+	      
+	  	</classes>
+  </test>
+      
+</suite><!-- Suite -->

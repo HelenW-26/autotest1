@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Client Portal Test Suite KY" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+  <parameter name="Brand" value="fsa"></parameter>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+    <parameter name="AdminURL" value="https://admin.test-puprime.com/login/to_login"></parameter>
+  	<parameter name="AdminName" value="alexliu"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="https://secure2.test-puprime.com"></parameter>
+   	 <parameter name="TraderName" value="test776ldj@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>
+
+ 	<parameter name="MalayAccount" value="test776ldj@test.com"></parameter>
+ 	<parameter name="MalayPwd" value="123Qwe"></parameter>
+
+
+ 
+
+     <test name="South Africa Withdraw">
+ 	   <classes>
+	     <class name="vantagecrm.CPWithdraw">
+		     	<methods>
+		     		<include name="CPLogIn"></include>
+		     		<include name="WithdrawSAfrica"></include>
+		     	</methods>
+         </class>
+
+	 <!--      <class name="vantagecrm.TaskManagement">
+	      		<methods>
+		      		<include name="AdminLogIn"></include>
+	            	 <include name="WDAuditMalay"></include>
+	                <include name="WDAuditCompleteMalay"></include>
+	       		</methods>
+	      </class> -->
+
+	  </classes>
+  </test>
+
+</suite> <!-- Suite -->

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- alpha jenkins上进行smoke test的job -->
+<suite name="alpha Regression" configfailurepolicy="continue">
+
+ <listeners>
+     <listener class-name="utils.Listeners.CustomListener"/>
+  </listeners>
+  <parameter name="Brand" value="${brand}"></parameter>
+  <parameter name="Server" value="${container}"></parameter>
+
+ <test name="regression">
+   <classes>
+        <class name="newcrm.testcases.alpharegression.AlphaMobileViewTestCases">
+            <methods>
+                <include name="testOpenAdditionalMT4LiveAccount"></include>
+                <include name="depositwithCallBack"></include>
+            </methods>
+        </class>
+    </classes>
+  </test>
+</suite><!-- Suite -->

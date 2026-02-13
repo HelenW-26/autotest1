@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU IB Test Suite" configfailurepolicy="continue">
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	<listeners>
+     	<listener class-name="utils.Listeners.CustomListener"/>
+  	</listeners>
+  	<parameter name="Brand" value="VFX"></parameter>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+  	<parameter name="Regulator" value="vfsc2"></parameter>
+  	<parameter name="headless" value="true"></parameter>
+  	<parameter name="TraderURL" value="${TraderURL}"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>
+
+	<test name="AU Ewallet IB Withdraw">
+   	<parameter name="TraderName" value="ibtestkorea@test.com"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+   		 	<methods>
+				<include name="testBitwalletWithdrawNew"></include>
+   		 		<include name="testSkrillWithdrawNew"></include>
+   		 		<include name="testNetellerWithdrawNew"></include>
+   		 		<include name="testSticPayWithdrawNew"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <test name="VFX Crypto IB Withdraw">
+   	<parameter name="TraderName" value="automationcreditcardexclusive@mailinator.com"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+   		 	<methods>
+   		 		<include name="testCryptoCRYPTOETHNew"></include>
+				<include name="testCryptoCRYPTOERCNew"></include>
+				<include name="testCryptoBTCNew"></include>
+				<include name="testCryptoTRCNew"></include>
+				<include name="testCryptoBEP20New"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <test name="VFX Malaysia IB Withdraw">
+   	<parameter name="TraderName" value="automationcreditcardexclusive@mailinator.com"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+   		 	<methods>
+   		 		<include name="testMalaysiaBankWithdrawNew"></include>
+				<include name="testMalaysiaBankWithdrawNewAccountNew"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <test name="VFX Vietnam IB Withdraw">
+   	<parameter name="TraderName" value="testcpsibwithdraw_automation_vfsc_vietnam@gmail.com"></parameter>
+   	<parameter name="Regulator" value="vfsc"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+   		 	<methods>
+   		 		<include name="testVietBankWithdrawNew"></include>
+				<include name="testVietBankWithdrawNewAccountNew"></include>
+   		 	</methods>
+   		 </class>
+    </classes>
+  </test>
+  <test name="VFX India IB Withdraw">
+   	<parameter name="TraderName" value="testcpsibwithdraw_automation_vfsc_india@gmail.com"></parameter>
+  	<parameter name="Regulator" value="vfsc"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+   		 	<methods>
+   		 		<include name="testIndiaBankWithdrawNew"></include>
+				<include name="testIndiaBankWithdrawNewAccountNew"></include>
+   		 	</methods>
+   		 </class>
+    </classes>
+  </test>
+  <test name="VFX Nigeria IB Withdraw">
+		<parameter name="TraderName" value="testcrmib_donttouch_cpsnigeriaib@test.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+				<methods>
+					<include name="testNigeriaBankWithdrawNew"></include>
+					<include name="testNigeriaBankWithdrawNewAccountNew"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AU_Philippine_CPS_IB_Withdraw">
+   	<parameter name="TraderName" value="testcrmib_donttouch_cps_philippine_ib@test.com"></parameter>
+   	<parameter name="Regulator" value="vfsc"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+   		 	<methods>
+   		 		<include name="testPhilippinesBankWithdrawNew"></include>
+				<include name="testPhilippinesBankWithdrawNewAccountNew"></include>
+   		 	</methods>
+   		 </class>
+    </classes>
+  </test>
+   <test name="AU_Indonesia_CPS_IB_Withdraw">
+   	<parameter name="TraderName" value="testcrmib_donttouch_cps_indonesia_ib@test.com"></parameter>
+   	<parameter name="Regulator" value="vfsc"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+   		 	<methods>
+   		 		<include name="testIndonesiaBankWithdrawNew"></include>
+				<include name="testIndonesiaBankWithdrawNewAccountNew"></include>
+   		 	</methods>
+   		 </class>
+    </classes>
+  </test>
+	<test name="AU_Japan_CPS_IB_Withdraw">
+		<parameter name="TraderName" value="testcrmib_donttouch_cps_japan_ib@test.com"></parameter>
+		<parameter name="Regulator" value="vfsc"></parameter>
+		<classes>
+			<class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+				<methods>
+					<include name="testJapanBankWithdrawNew"></include>
+					<include name="testJapanBankWithdrawNewAccountNew"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AU Brazil BT/PIX IB Withdrawal">
+		<parameter name="TraderName" value="testcrmib_donttouch_cpsbrazil@test.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+				<methods>
+					<include name="testBrazilBankWithdrawNew"></include>
+					<include name="testBrazilBankWithdrawNewAccountNew"></include>
+					<include name="testBrazilPIXWithdrawNew"></include>
+					<include name="testBrazilPIXWithdrawNewAccountNew"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="VFX Uganda IB Withdraw">
+		<parameter name="TraderName" value="testcrmib_donttouch_cpsugandaib@test.com"></parameter>
+		<parameter name="TraderPass" value="123Qwe@@"></parameter>
+		<classes>
+			 <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+				<methods>
+					<include name="testUgandaBankWithdrawNew"></include>
+					<include name="testOtherBankNewAccountRWitdrawNew"></include>
+				</methods>
+			 </class>
+		</classes>
+	</test>
+	<test name="VFX Ghana IB Withdraw">
+		<parameter name="TraderName" value="testcrmib_donttouch_cpsghanaib@test.com"></parameter>
+		<parameter name="TraderPass" value="123Qwe@@"></parameter>
+		<classes>
+			 <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+				<methods>
+					<include name="testGhanaBankWithdrawNew"></include>
+					<include name="testGhanaBankWithdrawNewAccountNew"></include>
+				</methods>
+			 </class>
+		</classes>
+	</test>
+	<test name="VFX Kenya IB Withdraw">
+		<parameter name="TraderName" value="testcrmib_donttouch_cpskenyaib@test.com"></parameter>
+		<parameter name="TraderPass" value="123Qwe@@"></parameter>
+		<classes>
+			 <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+				<methods>
+					<include name="testKenyaBankWithdrawNew"></include>
+					<include name="testKenyaBankWithdrawNewAccountNew"></include>
+				</methods>
+			 </class>
+		</classes>
+	</test>
+	<test name="VFX Chile IB Withdraw">
+		<parameter name="TraderName" value="testcrmib_donttouch_cpschileib@test.com"></parameter>
+		<parameter name="TraderPass" value="123Qwe@@"></parameter>
+		<classes>
+			<class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+				<methods>
+					<include name="testChileBankWithdrawNew"></include>
+					<include name="testChileBankWithdrawNewAccountNew"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="VFX Mongolia IB Withdraw">
+		<parameter name="TraderName" value="testcrmib_donttouch_cpsmongoliaib@test.com"></parameter>
+		<parameter name="TraderPass" value="123Qwe@@"></parameter>
+           <classes>
+                   <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+                       <methods>
+                           <include name="testMongoliaBankWithdrawNew"></include>
+						   <include name="testMongoliaBankWithdrawNewAccountNew"></include>
+                       </methods>
+                   </class>
+           </classes>
+         </test>
+    <test name="VFX Colombia IB Withdraw">
+		<parameter name="TraderName" value="testcrmib_donttouch_cpscolombiaib@test.com"></parameter>
+		<parameter name="TraderPass" value="123Qwe@@"></parameter>
+           <classes>
+                   <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+                       <methods>
+                           <include name="testColombiaBankWithdrawNew"></include>
+						   <include name="testColombiaBankWithdrawNewAccountNew"></include>
+                       </methods>
+                   </class>
+           </classes>
+         </test>
+         <test name="VFX Zambia IB Withdraw">
+              <parameter name="TraderName" value="testcrmib_donttouch_cpszambiaib@test.com"></parameter>
+              <parameter name="TraderPass" value="123Qwe@@"></parameter>
+           <classes>
+                   <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+                       <methods>
+                           <include name="testZambiaBankWithdrawNew"></include>
+						   <include name="testZambiaBankWithdrawNewAccountNew"></include>
+                       </methods>
+                   </class>
+           </classes>
+         </test>
+         <test name="VFX Laos IB Withdraw">
+              <parameter name="TraderName" value="testcrmib_donttouch_cpslaosib@test.com"></parameter>
+              <parameter name="TraderPass" value="123Qwe@@"></parameter>
+           <classes>
+                   <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+                       <methods>
+                           <include name="testLaosBankWithdrawNew"></include>
+						   <include name="testLaosBankWithdrawNewAccountNew"></include>
+						   <!--&lt;!&ndash;<include name="testLocalDepositorWithdrawNew"></include>   missing add new / saved bank account dropdown&ndash;&gt;-->
+                    </methods>
+                </class>
+        </classes>
+      </test>
+        <test name="VFX Australia IB Withdraw">
+            <parameter name="Regulator" value="asic"></parameter>
+            <parameter name="TraderName" value="autoibaustraliaasic@mailinator.com"></parameter>
+            <parameter name="TraderPass" value="123Qwe@@"></parameter>
+            <classes>
+                <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+                    <methods>
+                        <include name="testAustraliaBanktWithdrawNew"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+<!-- Currently show two IBT (CPS and Non-CPS), one with upload, one without, dont want handle bypass now
+  test name="VFX IBT IB Withdraw">
+	<parameter name="TraderName" value="automationcreditcardexclusive@mailinator.com"></parameter>
+	<classes>
+		<class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+			<methods>
+				<include name="testInternationalBankNewAccountWitdrawNew"></include>
+			</methods>
+		</class>
+	</classes>
+  </test>-->
+
+  <!--  missing add new / saved bank account dropdown -->
+	<!--<test name="VFX South Korea IB Withdraw">
+		<parameter name="TraderName" value="ibtestkorea@test.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+				<methods>
+					<include name="testKoreaBankWithdrawNew"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="VFX South Africa IB Withdraw">
+		<parameter name="TraderName" value="ibtestsouthafrica@test.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+				<methods>
+					<include name="testSouthAfricaBankWithdrawNew"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>-->
+	<!-- cps hide
+	<test name="VFX Thailand IB Withdraw">
+		<parameter name="TraderName" value="ibtestthai@test.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+			  <methods>
+				  <include name="testThaiBankWithdraw"></include>
+				  <include name="testThaiBankWithdrawNewAccount"></include>
+			  </methods>
+			</class>
+		</classes>
+	</test>-->
+</suite> <!-- Suite -->

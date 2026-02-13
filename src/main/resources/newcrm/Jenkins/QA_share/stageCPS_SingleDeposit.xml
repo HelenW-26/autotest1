@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- QA share/QA share-CheckPromotionResult -->
+<suite name="CPS Single Deposit Suite" configfailurepolicy="continue">
+	<parameter name="ToolUrl" value="https://cps-stage-channel-tool.v-payment.io/channel-tool/api-index.html"/>
+	<parameter name="merCd" value="430045110001830"/>
+	<parameter name="secret" value="1620fd93e3e21584a3a5351320fbe54d880bf638"/>
+	<parameter name="headless" value="true"/>
+
+  <test name="CPSCreateDeposit">
+    <classes>
+   		 <class name="newcrm.testcases.cps.stageCPSCreateDepositOrderTest">
+   		 	<methods>
+				<include name="CPSCreateDepositOrderCoboUSDTTRC20"></include>
+   		 	</methods>
+   		 </class>
+    </classes>
+  </test>
+</suite> <!-- Suite -->

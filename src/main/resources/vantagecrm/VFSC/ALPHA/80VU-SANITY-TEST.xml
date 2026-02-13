@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Create New User and Audit" configfailurepolicy="continue">
+
+ <listeners>
+     <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod".
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+
+
+  <test name="Create_NewUser_and_Audit">
+    <parameter name="Brand" value="vfsc"></parameter>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+    <parameter name="AdminURL" value="https://admin.test-vantagefx.com"></parameter>
+  	<parameter name="TraderURL" value="https://secure.test-vantagefx.com"></parameter>
+  	<parameter name="CallbackUrl" value="https://openapi.test-vantagefx.com"></parameter>
+  	<parameter name="TraderName" value="webtrft@test.com.vfsc"></parameter>
+    <!--  <parameter name="TraderName" value="jvubu@test.com"></parameter> -->
+
+  	<parameter name="AdminName" value="automation_ky"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<!-- <parameter name="AdminURL" value="https://admin.test-vtmarkets.com"></parameter>
+  	<parameter name="TraderURL" value="https://secure.test-vtmarkets.com"></parameter>
+    <parameter name="TraderName" value="webtgkm@test.com.vt"></parameter> -->
+    
+    <parameter name="TraderPass" value="123Qwe"></parameter>
+    
+    <groups>
+    	<run>
+    		<include name="sanity"></include>
+    	</run>
+    </groups>
+    
+    <classes>
+
+	    <class name="vantagecrm.CPRegister">
+	        <parameter name="WebSiteURL" value="https://new.vantagefx.com/forex-trading/forex-trading-account/"></parameter>
+	      	<parameter name="RegisterURL" value="https://secure3.test-vantagefx.com"></parameter>
+	      	<parameter name="IBpromotion" value="?affid=NBNzA1MjY="></parameter>
+	     </class>
+	     
+ 		  <class name="vantagecrm.CPDeposit"> </class> 
+ 		 <class name="vantagecrm.CPNewWithdraw"> </class>
+		 <class name="vantagecrm.TaskManagement"> </class> 
+		 
+
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

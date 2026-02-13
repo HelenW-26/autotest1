@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MO CP Withdraw Test Suite New" configfailurepolicy="continue">
+
+    <!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod".
+    When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+    <listeners>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+    <parameter name="Brand" value="MO"></parameter>
+    <parameter name="TestEnv" value="alpha"></parameter>
+    <parameter name="Regulator" value="vfsc"></parameter>
+    <parameter name="TraderURL" value="${TraderURL}"></parameter>
+    <parameter name="TraderPass" value="123Qwe@@"></parameter>
+    <parameter name="headless" value="true"></parameter>
+
+    <!--Batch 1-->
+    <test name="MO_Thailand_User_Test">
+        <parameter name="TraderName" value="autotestuxowjipu@testcrmautomation.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <!--Enable below when prod issue is fix - province value is not saved after submitted-->
+<!--                    <include name="testThaiBankWithdrawNew"></include>-->
+                    <include name="testThaiBankWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="MO Test Indonesian CP Withdraw">
+        <parameter name="TraderName" value="autotestauibnuqd@testcrmautomation.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testIndonesiaBankWithdrawNew"></include>
+                    <include name="testIndonesiaBankWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="MO Test Vietnam CP Withdraw">
+        <parameter name="TraderName" value="autotestzvwrvfdq@testcrmautomation.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testVietnamBankWithdrawNew"></include>
+                    <include name="testVietnamBankWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="MO Test Mexico CP Withdraw">
+        <parameter name="TraderName" value="testcrm_donttouch_cps_mexico_client@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testMexicoBankWithdrawNew"></include>
+                    <include name="testMexicoBankWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="MO Test Japan CP Withdraw">
+        <parameter name="TraderName" value="testcrm_donttouch_moclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testJapanBankWithdrawNew"></include>
+                    <include name="testJapanBankWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="MO Test India CP Withdraw">
+        <parameter name="TraderName" value="testcrm_donttouch_cpsindiaclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testIndiaBankWithdrawNew"></include>
+                    <include name="testIndiaBankWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="MO Test Chile CP Withdraw">
+        <parameter name="TraderName" value="testcrm_donttouch_cpschileclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testChileBankWithdrawNew"></include>
+                    <include name="testChileBankWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="MO Test Colombia CP Withdraw">
+        <parameter name="TraderName" value="testcrm_donttouch_cpscolombiaclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testColombiaBankWithdrawNew"></include>
+                    <include name="testColombiaBankWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="MO Test Peru CP Withdraw">
+        <parameter name="TraderName" value="testcrm_donttouch_cpsperuclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testPeruBankWithdrawNew"></include>
+                    <include name="testPeruBankWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!--Batch 2-->
+    <test name="MO IBT Withdraw">
+        <parameter name="TraderName" value="autotestuxowjipu@testcrmautomation.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testInternationalBankWithdrawNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="MO CP Crypto Withdraw">
+        <parameter name="TraderName" value="autotestuxowjipu@testcrmautomation.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testCryptoCRYPTOBTCNew"></include>
+                    <include name="testCryptoCRYPTOERCNew"></include>
+                    <include name="testCryptoCRYPTOTRCNew"></include>
+                    <include name="testCryptoCRYPTOUSDCNew"></include>
+                    <include name="testCryptoCRYPTOBEPNew"></include>
+                    <include name="testCryptoCRYPTOETHNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="MO_CPS_Ewallet_Withdraw_Test">
+        <parameter name="TraderName" value="autotestuxowjipu@testcrmautomation.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testVoletWithdrawNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="MO Test Malaysian CP Withdraw">
+        <parameter name="TraderName" value="testcrm_automation_malaysia@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testMalaysiaBankWithdrawNew"></include>
+                    <include name="testMalaysiaBankWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="MO Test South Korea CP Withdraw">
+        <parameter name="TraderName" value="autotestdlqlngiz@testcrmautomation.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testKoreaBankWithdrawNew"></include>
+                    <include name="testKoreaBankWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="MO Test Brazil BT/PIX CP Withdraw">
+        <parameter name="TraderName" value="testcrm_donttouch_cps_brazil_client@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testBrazilBankWithdrawNew"></include>
+                    <include name="testBrazilBankWithdrawNewAccountNew"></include>
+                    <include name="testBrazilPIXWithdrawNew"></include>
+                    <include name="testBrazilPIXWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="MO Test Philippines CP Withdraw">
+        <parameter name="TraderName" value="testcrm_donttouch_cpsphilippinesclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testPhilippinesBankWithdrawNew"></include>
+                    <include name="testPhilippinesBankWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite> <!-- Suite -->

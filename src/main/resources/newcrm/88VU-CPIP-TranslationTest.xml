@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite allow-return-values="false" configfailurepolicy="continue" data-provider-thread-count="10" group-by-instances="false" guice-stage="DEVELOPMENT" junit="false" name="KU Test Suite" parallel="none" preserve-order="true" skipfailedinvocationcounts="false" thread-count="5">
+
+ <listeners>
+     <listener class-name="utils.Listeners.CustomListener"/>
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	
+  <test allow-return-values="false" group-by-instances="false" junit="false" name="KYRegressionTest" preserve-order="true" skipfailedinvocationcounts="false">
+    <parameter name="Brand" value="vt"></parameter>
+    <parameter name ="Regulator" value="svg"></parameter>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+    <parameter name="AdminURL" value="https://admin-neptune-ex.crm-alpha.com"></parameter>
+  	<parameter name="TraderURL" value="https://secure-neptune-ex.crm-alpha.com"></parameter>
+  	<parameter name="IBURL" value="https://ibportal-neptune-ex.crm-alpha.com"></parameter>
+  	<parameter name="CallbackUrl" value="https://ibportal-neptune-ex.crm-alpha.com"></parameter>
+     <parameter name="TraderName" value="member17@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>
+    
+  	<parameter name="AdminName" value="automation_ky"></parameter>
+  	<parameter name="AdminPass" value="1234Qwer"></parameter>
+   
+   
+    <parameter name="headless" value='true'/>
+    <classes>
+        <class name="newcrm.testcases.cptestcases.CPTestTranslation"> 
+        	<parameter name="Language" value="English"></parameter>
+		      	<methods>
+		      		<!-- <include name="testCPTranslation"></include> -->
+		      		<include name="testIBTranslation"></include>
+		      		<!-- <include name="testVFXIPSensitiveWords"></include> -->
+		      		<!-- <include name="testVFXCPTranslation"/>
+		      		<include name="testVFXIPTranslation"/> -->
+		       	</methods>
+        </class>  
+      
+      
+      
+	
+   </classes>
+  </test> <!-- Test -->
+</suite><!-- Suite -->

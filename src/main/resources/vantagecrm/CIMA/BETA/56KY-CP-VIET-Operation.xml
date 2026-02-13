@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Client Portal Test Suite KY" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+    <parameter name="Brand" value="ky"></parameter>
+  	<parameter name="TestEnv" value="beta"></parameter>
+    <parameter name="AdminURL" value="https://betavgpadmin.vantagefx.com/admin/main"></parameter>
+  	<parameter name="AdminName" value="Test CRM"></parameter>
+  	<parameter name="AdminPass" value="Vantage123"></parameter>
+  	<parameter name="TraderURL" value="https://betacpportal.vantagefx.com/"></parameter>
+   	<parameter name="TraderName" value="webnyl@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+  	<parameter name="ThaiAccount" value="webnyq@test.com"></parameter>
+ 	<parameter name="ThaiPwd" value="123Qwe"></parameter>
+ 	  	
+ 	<parameter name="MalayAccount" value="webkyy@test.com"></parameter>
+ 	<parameter name="MalayPwd" value="123Qwe"></parameter>
+  	
+    <parameter name="VietAccount" value="test304wro@test.com"></parameter>
+ 	<parameter name="VietPwd" value="123Qwe"></parameter>
+  	
+  	<parameter name="NigeAccount" value="webkyy@test.com"></parameter>
+ 	<parameter name="NigePwd" value="123Qwe"></parameter>
+	
+ 
+    <test name="Client Portal Test KY Deposit">
+ 	 
+    <classes>
+    
+    	   	  <class name="vantagecrm.UpdateClient">
+	   	  	<methods>
+	   	  		<include name="AdminLogIn"></include>
+	   	  		<include name="setCountry2Viet"></include>
+	   	  	</methods>
+	   	  
+	   	  </class>
+    
+	   <class name="vantagecrm.CPDeposit">
+	     	<methods>
+	     		<include name="CPLogIn"></include>
+	     		<include name="VietnamDeposit"></include>
+	     	</methods>    
+	     
+	     </class>
+     	
+        <class name="vantagecrm.TaskManagement">
+      
+      		<methods>
+	      		<include name="AdminLogIn"></include>  	 
+            	 <include name="OLDepositAuditViet"></include>            	     
+       		</methods>
+        </class>
+                 
+    </classes>
+  </test> Test
+  
+    <test name="Client Portal Test KY Withdraw">
+    
+  	 
+    <classes>
+    
+       <class name="vantagecrm.CPWithdraw">
+     		<methods>
+	     		<include name="CPLogIn"></include>
+	     		<include name="WithdrawVietnamBank"></include>
+     		</methods> 
+     
+       </class>
+     
+       <class name="vantagecrm.TaskManagement">	      
+	      		<methods>
+		      	  <include name="AdminLogIn"></include>  	 
+	              <include name="WDAuditViet"></include>  
+	              <include name="WDAuditCompleteViet"></include>   	                       	     
+	       		</methods>
+	   </class>
+     
+    </classes>
+  </test> <!-- Test -->
+ 
+</suite> <!-- Suite -->

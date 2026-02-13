@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- alpha jenkins上进行smoke test的job -->
+
+<suite name="Alpha Regression" configfailurepolicy="continue">
+
+    <listeners>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+<!--        <parameter name="Brand" value="AU"></parameter>-->
+<!--        <parameter name="Server" value="UAT-AU"></parameter>-->
+
+    <parameter name="Brand" value="${brand}"></parameter>
+    <parameter name="Server" value="${container}"></parameter>
+
+
+    <test name="CP Payment UI Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.UATApiWithdrawTestCases">
+                <methods>
+                    <include name="sameChannelDepositWithdraw"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.uatregression.UATWithdrawLimitTestCases">
+                <methods>
+                    <include name="judgeMsgEnable2fa"></include>
+                    <include name="limitWithUnbind2fa"></include>
+                    <include name="limitWithModify2fa"></include>
+                    <include name="limitWithModifyPwd"></include>
+                    <include name="limitWithResetPwd"></include>
+                    <include name="limitWithModifyEmail"></include>
+                    <include name="limitWithModifyPhone"></include>
+                    <include name="withdrawCredit"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.uatregression.UATTrasferWalletTestCases">
+                <methods>
+                    <include name="transMT2Wallet"></include>
+                    <include name="transAccWallet2MT"></include>
+                    <include name="transAccMT2MTWithCredit"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.uatregression.UATDepositApprovePopUpTestCases">
+                <methods>
+                    <include name="testDepositApprovePopupCheck"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.uatregression.UATDepositPageCheckTestCases">
+                    <methods>
+                    <include name="verificationDepositLBTPageCheck"></include>
+                    <include name="verificationDepositCryptoPageCheck"></include>
+                    <include name="verificationDepositCreditCardPageCheck"></include>
+                    <include name="verificationDepositEWalletPageCheck"></include>
+                    <include name="verificationDepositOfflineCheck"></include>
+                    <include name="depositInputDisplayedInfoCheck"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.uatregression.UATGoldDepositTestCases">
+                <methods>
+                    <include name="depositDeductedMaxAmount"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.uatregression.UATDepositPopWindowTestCases">
+                <methods>
+                    <include name="depositMinimumAmountPopupWindow"></include>
+                    </methods>
+                </class>
+            <class name="newcrm.testcases.uatregression.UATCCWithdrawTestCases">
+                <methods>
+                    <include name="testWithdrawCreditCardInfoCheck"></include>
+
+                </methods>
+            </class>
+            <class name="newcrm.testcases.uatregression.UATWithdrawPageCheckTestCases">
+                <methods>
+                    <include name="testWithdrawDeductedMaxAmount"></include>
+                    <include name="testWithDrawPageChangeRateCheck"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.uatregression.UATUnionPayWithdrawTestCases">
+                <methods>
+                    <include name="unionPayWithdraw"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.uatregression.UATWithdrawApprovePopUpTestCases">
+                <methods>
+                    <include name="withdrawApprovePopupCheck"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Admin Payment Deposit API Regression">
+        <classes>
+        <class name="newcrm.testcases.uatregression.UATAPIAdminDepositTestCases">
+            <methods>
+                <include name="testAPICPSuccessDeposit"></include>
+                <include name="testAPICashAdjustmentDeposit"></include>
+                <include name="testAPICashAdjustmentCreditIn"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

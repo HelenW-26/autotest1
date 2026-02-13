@@ -1,0 +1,57 @@
+package newcrm.utils.callback;
+
+import java.util.HashMap;
+
+import newcrm.utils.encryption.EncryptUtil;
+
+public class MobileCPSPay extends CallbackBase {
+
+	private final String path = "cps/receiveWebDepositResult";
+	@Override
+	protected void generateRequest() {
+		// TODO Auto-generated method stub
+		this.headerMap = new HashMap<>();
+		this.formBody = new HashMap<>();
+		String channelName = "CPS-ALI-UNIONEPAY";
+		String channelTxnAmt = amount;
+		String merCd = "6300451100033253";
+		String merOrderNo = orderNum;
+		String txnAmt = amount;
+		String txnCd = "T00312";
+		String txnCurry = currency;
+		String txnDate = "20220802";
+		String txnMsg ="";
+		String txnOrderDesc = "123456-"+orderNum;
+		String txnOrderNo = "1003838846435065856";
+		String txnSubmitTime = "20220801203710";
+		String org = "channelName="+channelName + "&channelTxnAmt=" + channelTxnAmt +"&insCd=&merCd="+merCd+"&merOrderNo="+merOrderNo + "&remarks=&txnAmt="
+				+ txnAmt + "&txnCd="+txnCd+"&txnCurry=usdterc&txnDate="+txnDate + "&txnMsg=" +txnMsg +"&txnOrderDesc="
+				+txnOrderDesc+"&txnOrderNo="+txnOrderNo+"&txnSta=0000&txnSubmitTime="+txnSubmitTime+"&txnTime=014118&versionNo=V01";
+		
+		String signData = EncryptUtil.hmacSHA1(key, org);
+		String callbackData = "{\"txnOrderDesc\":\""+txnOrderDesc+"\",\"signData\":\""+signData+
+				"\",\"merOrderNo\":\""+merOrderNo+"\",\"txnOrderNo\":\""+txnOrderNo+"\",\"txnCurry\":\"usdterc\",\"channelTxnAmt\":\""
+				+channelTxnAmt+"\",\"txnCd\":\""+txnCd+"\",\"insCd\":\"\",\"merCd\":\""+merCd+"\",\"txnSta\":\"0000\",\"txnMsg\":\""+txnMsg+
+				"\",\"versionNo\":\"V01\",\"txnTime\":\"014118\",\"signType\":\"HMAC-SHA1\",\"channelName\":\""+channelName+"\",\"txnSubmitTime\":\""+txnSubmitTime+
+				"\",\"txnDate\":\""+txnDate+"\",\"txnAmt\":\""+txnAmt+"\",\"remarks\":\"\"}";
+		formBody.put("callbackData", callbackData);
+		System.out.println(callbackData);
+	}
+
+	@Override
+	protected void setFullpath() {
+		// TODO Auto-generated method stub
+		this.fullPath = url + path;
+	}
+
+	@Override
+	protected void setKey() {
+		// TODO Auto-generated method stub
+		if("UM".equalsIgnoreCase(brand)) {
+			this.key = "a67a77ddac02d7ebbd0c788287665415c0ef4c51";
+		}else {
+			this.key ="c5e47e08ff0753ba1fc4287922ec4d3fdcdef369";
+		} 
+	}
+
+}

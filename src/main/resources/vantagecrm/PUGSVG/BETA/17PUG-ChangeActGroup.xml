@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU Test Suite" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	
+	
+   <parameter name="Brand" value="svg"></parameter>
+  	<parameter name="TestEnv" value="beta"></parameter>
+  	<parameter name="AdminURL" value="https://betavgpadmin.puprime.com"></parameter>
+  	<parameter name="AdminName" value="test crm"></parameter>
+  	<parameter name="AdminPass" value="Vantage123"></parameter>
+  	<parameter name="TraderURL" value="https://betavgpmyaccount.puprime.com/"></parameter>
+    <parameter name="TraderName" value="webuxt@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter> 
+ 
+	
+  <test name="Change Account Group to Test Account Group">
+   
+	   <classes>
+	   		    		      		
+	   	  <class name="vantagecrm.AdminAPITest">
+	   	  	<methods>
+	   	  		<include name="APIUpdateTestAccGroup"></include>
+	   	  	</methods>
+	   	  </class>  
+	
+	      
+	  	</classes>
+  </test>
+      
+</suite> <!-- Suite -->

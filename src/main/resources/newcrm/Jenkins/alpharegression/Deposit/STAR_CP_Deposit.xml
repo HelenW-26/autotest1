@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Star Deposit Test Suite">
+
+	<listeners>
+     	<listener class-name="utils.Listeners.CustomListener"/>
+  	</listeners>
+	    <parameter name="Brand" value="Star"></parameter>
+	  	<parameter name="TestEnv" value="alpha"></parameter>
+	  	<parameter name="Regulator" value="svg"></parameter>
+	  	<parameter name="TraderURL" value="${TraderURL}"></parameter>
+	   	<parameter name="TraderName" value="autotestmalay@testcrmautomation.com"></parameter>
+	    <parameter name="TraderPass" value="1234Qwer!"></parameter>
+	  	<parameter name="OpenAPIURL" value="openapi-core-star.crm-alpha.com"></parameter>
+	    <parameter name="headless" value="true"></parameter>
+
+	<test name="Star IBT Deposit ">
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+						 <include name="testInterBankTransPay"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Star E-Wallet Deposit ">
+	       <classes>
+	            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+	            	<methods>
+	  		 	    	<!--<include name="testFasaPay"></include>--><!-- cps do not open fasapay -->
+						<include name="testNetellerPayWithCallback"></include>
+						<include name="testSkrillPayWithCallBack"></include>
+						<!-- cps hide <include name="testSticPay"></include> -->
+	  		 	    	<include name="testPerfectMoney"></include>
+	  		 		</methods>
+	            </class>
+		</classes>
+	</test>
+	<test name="Star Test India Deposit ">
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="testIndiaIBTPay"></include>
+					<include name="testIndiaUPI"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="STAR_Crypto_Deposit">
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="testCPSCryptoDeposit"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Star Credit Card Deposit ">
+		<parameter name="TraderName" value="testcrm_donttouch_cpscreditcard@test.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<!-- hide jor <include name="testSDPay"></include> -->
+					<include name="testBridgePay"></include>
+					<include name="testCCGoogleApplePay"></include>
+					<!--ACM-33462 hide jor <include name="testMyFatoorah"></include>-->
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Star Credit Card Multiexc Deposit ">
+		<parameter name="TraderName" value="testsumsubjessthirtyfortynine@re-gister.com"></parameter>
+		<parameter name="TraderPass" value="Test1234@!"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="testMultiexc"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="STAR Test Vietnam CP Deposit">
+		<parameter name="TraderName" value="vietnamdepsoithw@mailinator.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<!-- ACM-30426 <include name="cpsVietnamBT"></include> -->
+					<include name="cpsVietnamQR"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name=" Malaysia CP Deposit">
+		<parameter name="TraderName" value="malaysiadepsoithw@mailinator.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="cpsMalaysiaBT"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+		<test name="STAR Test Indonesia CP Deposit">
+            <parameter name="TraderName" value="indonesiadepsoithw@mailinator.com"></parameter>
+            <classes>
+                <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                    <methods>
+                        <include name="cpsIndonesiaBT"></include>
+						<include name="cpsIndonesiaGoPay"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+	<test name="STAR Test Thailand CP Deposit">
+	       <parameter name="TraderName" value="thailanddepsoithw@mailinator.com"></parameter>
+	       <classes>
+	           <class name="newcrm.testcases.cptestcases.DepositTestCases">
+	               <methods>
+	                   <include name="cpsThailandBT"></include>
+	               </methods>
+	           </class>
+	       </classes>
+	</test>
+	<test name="STAR Test Brazil CP Deposit">
+	    <parameter name="TraderName" value="brazildepsoithw@mailinator.com"></parameter>
+	    <classes>
+	        <class name="newcrm.testcases.cptestcases.DepositTestCases">
+	            <methods>
+	                <include name="cpsBrazilBT"></include>
+	            </methods>
+	        </class>
+	    </classes>
+	</test>
+	<test name="STAR Test Philippine CP Deposit">
+	    <parameter name="TraderName" value="testcrm_donttouch_philippinecpsclient@test.com"></parameter>
+	    <parameter name="TraderPass" value="123Qwe@@"></parameter>
+	    <classes>
+	        <class name="newcrm.testcases.cptestcases.DepositTestCases">
+	            <methods>
+	                <include name="cpsPhilipineBT"></include>
+	            </methods>
+	        </class>
+	    </classes>
+	</test>
+	<test name="STAR Test Mexico CP Deposit">
+	    <parameter name="TraderName" value="testcrm_donttouch_cpsmexicoclient@test.com"></parameter>
+	    <parameter name="TraderPass" value="123Qwe@@"></parameter>
+	    <classes>
+	        <class name="newcrm.testcases.cptestcases.DepositTestCases">
+	            <methods>
+	                <include name="cpsMexicoBT"></include>
+	            </methods>
+	        </class>
+	    </classes>
+	</test>
+	<test name="STAR Test Japan CP Deposit">
+	    <parameter name="TraderName" value="testcrm_donttouch_cpsjapanclient@test.com"></parameter>
+	    <parameter name="TraderPass" value="123Qwe@@"></parameter>
+	    <classes>
+	        <class name="newcrm.testcases.cptestcases.DepositTestCases">
+	            <methods>
+	                <include name="cpsJapanBT"></include>
+	            </methods>
+	        </class>
+	    </classes>
+	</test>
+	<test name="STAR Test Laos CP Deposit">
+	    <parameter name="TraderName" value="laoshwtestcrm@mailinator.com"></parameter>
+	    <parameter name="TraderPass" value="123Qwe@@"></parameter>
+	    <classes>
+	        <class name="newcrm.testcases.cptestcases.DepositTestCases">
+	            <methods>
+	                <include name="cpsLaosBT"></include>
+	            </methods>
+	        </class>
+	    </classes>
+	</test>
+	<test name="STAR_ChinaUnionpay_Deposit">
+		<parameter name="TraderName" value="pdlcmplw904@appapiautotest.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="testUnionPay"></include>
+					<include name="cpsAlipayBT"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="STAR Test Banxa USD CP Deposit">
+		<parameter name="TraderName" value="uncudzxi110@appapiautotest.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="cpsBanxa"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="STAR Test Banxa EUR Deposit">
+		<parameter name="TraderName" value="testbanxaeur@mailinator.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="cpsBanxa"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="STAR Nigeria BT Deposit">
+		<parameter name="TraderName" value="testcrmwmgffpgnq@testcrm.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="cpsNigeriaBT"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="STAR UAE BT Deposit">
+		<parameter name="TraderName" value="donttouchUAE@mailinator.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="testUAEIBTPay"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="STAR Test Taiwan CP Deposit">
+		<parameter name="TraderName" value="testcrm_donttouch_cpstaiwanclient@test.com"></parameter>
+		<parameter name="TraderPass" value="123Qwe!!"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="cpsTaiwanBT"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+<!-- Test -->
+</suite> <!-- Suite -->

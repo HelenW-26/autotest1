@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU Test Suite" configfailurepolicy="continue">
+
+ <listeners>
+     	<listener class-name="utils.Listeners.CustomListener"/>
+  </listeners>
+  <test name="AUTest">
+    <parameter name="TestEnv" value="alpha"></parameter><!-- prod  alpha . default: alpha -->
+    <parameter name="Brand" value="VFX"></parameter><!-- VFX PUG VT Prospero UM -->
+  	<parameter name="Regulator" value="vfsc"></parameter>
+  	<!-- 
+  	VFX: cima,asic,vfsc,vfsc2,fca
+  	PUG: svg, fsc
+  	VT: cima
+  	UM: svg
+  	Prospero： asic,svg
+  	 -->
+  	
+    <parameter name="AdminURL" value="https://admin-earth-ex.crm-alpha.com/"></parameter>
+  	<parameter name="AdminName" value="Yanni"></parameter>
+  	<parameter name="AdminPass" value="12345678Qi"></parameter>
+  	
+  	<parameter name="TraderURL" value="https://secure-earth-ex.crm-alpha.com"></parameter>
+  	<!-- when use this for register, do not have '/' at the end -->
+   	
+   	<parameter name="OpenAPIURL" value="https://openapi-capricorn-ex.crm-alpha.com"></parameter>
+   	
+   	<parameter name="TraderName" value="VFXAutomationexclusive@mailinator.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+    
+    <parameter name="Debug" value="true"></parameter><!--true|false for print debug info. default: true -->
+    
+    <parameter name="headless" value="false"/>
+    <!-- value: true | false.  default: false.
+    	 for webdriver
+    	 must be true if you run script on Jenkins
+    -->
+    
+    <parameter name="IBCode" value=""></parameter><!-- IB code . default: null-->
+    <parameter name="RAFCode" value="s4q08GZPUXixOIq0+FrhPg=="></parameter><!-- RAF code ,default: null-->
+    <!-- the above two parameters used to register. you are allowed to use one of those at the same time.
+         If you configure both of them, only IBCode is activate 
+     -->
+    
+    <classes>
+   		 <class name="">
+   		 	<methods>
+   		 		<include name=""></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

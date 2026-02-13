@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU ADMIN WHOLESALE AUDIT" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+	
+     <parameter name="Brand" value="au"></parameter>
+  	<parameter name="TestEnv" value="test"></parameter>
+    <parameter name="AdminURL" value="http://47.74.114.215:8001/admin/main"></parameter>
+  	<parameter name="AdminName" value="Terry"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="http://cp.vantagefx.com"></parameter>
+   	 <parameter name="TraderName" value="testcrmwbzr@test.com.au"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+ 	
+  
+  <test name="Wholesale Audit">
+  
+    <classes>
+   		      <class name="vantagecrm.CPWholesaleWealthy">
+       		<methods>       			
+       
+       			<include name="CPLogIn"></include>
+       			<include name="WealthTest"></include>
+       		</methods>       
+       </class>    		      		
+  
+      <class name="vantagecrm.Wholesale">
+       		<methods>       			
+       
+       			<include name="AdminLogIn"></include>
+       			<include name="WealthyAuditPending"></include>
+       		</methods>       
+       </class>
+     
+    </classes>
+  </test> <!-- Test -->
+ 
+</suite> <!-- Suite -->

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="VT CP Deposit Test Suite New" configfailurepolicy="continue">
+
+    <!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod".
+    When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+    <listeners>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+    <parameter name="Brand" value="VT"></parameter>
+    <parameter name="TestEnv" value="alpha"></parameter>
+    <parameter name="Regulator" value="svg"></parameter>
+    <parameter name="TraderURL" value="${TraderURL}"></parameter>
+    <parameter name="TraderPass" value="123Qwe@@"></parameter>
+    <parameter name="headless" value="true"></parameter>
+
+    <!-- Batch 1 -->
+    <test name="VT IBT CP Deposit">
+        <parameter name="TraderName" value="testcrm_donttouch_cpsuaeclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testInterBankTransPayNew"></include>
+                    <include name="testUAEIBTPay_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VT Credit Card CP Deposit">
+        <parameter name="TraderName" value="testcrm_donttouch_cpsuaeclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testBridgePayNew"></include>
+                    <include name="testMyFatoorah_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VT Test Indonesia CP Deposit">
+        <parameter name="TraderName" value="autotestriulfrab@testcrmautomation.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsIndonesiaBT_PaymentAsia_IDR"></include>
+                    <include name="cpsIndonesiaBT_ZotaPay_IDR"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VT Test South Africa CP Deposit">
+        <parameter name="TraderName" value="autotestwwpkinxp@testcrmautomation.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testSouthAfricaBTOzow_ZARNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VT Test Mexico CP Deposit">
+        <parameter name="TraderName" value="testcrm_donttouch_cps_mexico_client@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsMexicoBT4ON_OXXo_MXN"></include>
+                    <include name="cpsMexicoBTBitolo_MXN"></include>
+                    <include name="cpsMexicoBTPagsmile_MXN"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VT Test Brazil CP Deposit">
+        <parameter name="TraderName" value="testcrm_donttouch_cps_brazil_client@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsBrazilBTPagsmileNew"></include>
+                    <include name="cpsBrazilBT_Toppay_PixNew"></include>
+                    <!--this channel got issue <include name="cpsBrazilBT_Bitolo_PixNew"></include>-->
+                    <!--not exist as of june 09 <include name="cpsBrazilBT4ON_PixNew"></include>-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VT Test Nigeria CP Deposit">
+        <parameter name="TraderName" value="testcrm_automation_nigeria@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testKoraPay_NGN_New"></include>
+                    <include name="testBitolo_NGN_MM_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VT Test India CP Deposit">
+        <parameter name="TraderName" value="testcrm_automation_india@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsIndiaP2PNew"></include>
+                    <include name="testCheezePayNew"></include>
+                    <include name="testCricpayzNew"></include>
+                    <include name="testXpayNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VT Test Japan CP Deposit">
+        <parameter name="TraderName" value="testcrm_automation_japan@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsJapanBT_ZotaPay_New"></include>
+                    <include name="cpsJapanBTTheJapanOne_New"></include>
+                    <include name="cpsBitwallet_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VT Test Chile CP Deposit">
+        <parameter name="TraderName" value="testcrm_automation_chile@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsCLPBT_Pagsmile_CLP_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VT Test Colombia CP Deposit">
+        <parameter name="TraderName" value="testcrm_automation_colombia@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsCOPBT_Pagsmile_COP_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VT Test Peru CP Deposit">
+        <parameter name="TraderName" value="testcrm_automation_peru@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsPENBT_4ON_PagoEfectivo"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VT Test China Uninopay CP Deposit">
+        <parameter name="TraderName" value="testcrm_automation_china@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <!--channel not available as of June 09
+                    <include name="cpsUnionPay_BitpayNew"></include>
+                    <include name="cpsUnionPay_ChinapayNew"></include>
+                    <include name="cpsUnionPay_TeleportNew"></include>
+                    <include name="cpsUnionPay_Global_VIPNew"></include>-->
+                    <include name="cpsUnionPay_ChipPayNew"></include>
+                    <include name="cpsUnionPay_Global_SmallNew"></include>
+                    <include name="cpsUnionPay_Global_MediumNew"></include>
+                    <include name="cpsUnionPay_Global_LargeNew"></include>
+                    <include name="cpsUnionPay_Global_MinorityNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VT Test Korea CP Deposit">
+        <parameter name="TraderName" value="autotestkqkxzuwj@testcrmautomation.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testPAYWON_KRW_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VT Test Ghana CP Deposit">
+        <parameter name="TraderName" value="testcrm_donttouch_cpsghanaclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <!--channel got issue <include name="cpsGhanaBTBitolo_GHS"></include>-->
+                    <include name="cpsGhanaBTKorapay_GHS"></include>
+                    <include name="cpsGhanaBTZotaPay_GHS"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VT Argentina CP Deposit">
+        <parameter name="TraderName" value="testcrm_donttouch_cpsargentinaclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsArgentineBT_4ON_PPagoFacil"></include>
+                    <include name="cpsArgentineBT_4ON_MercadoPagoWallet"></include>
+                    <include name="cpsArgentineBT_4ON_RapiPago"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VT hong kong CP Deposit">
+        <parameter name="TraderName" value="testcrm_donttouch_cpshkclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsHongKongBT_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VT Test Kenya CP Deposit">
+        <parameter name="TraderName" value="testcrm_donttouch_cpskenyaclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <!--<include name="cpsKenyaBTBitolo_KES"></include>-->
+                    <include name="cpsKenyaBTKorapay_KES"></include>
+                    <include name="cpsKenyaBTZotaPay_KES"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!-- Batch 2 -->
+    <test name="VT E-Wallet CP Deposit">
+        <parameter name="TraderName" value="autotestmqtcctao@testcrmautomation.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testSkrillPayNew"></include>
+                    <include name="testNetellerPayNew"></include>
+                    <include name="testCryptoERCNew"></include>
+                    <include name="testCryptoTRCNew"></include>
+                    <include name="testCryptoUSDCERCNew"></include>
+                    <include name="testDepositCryptoBEPNew"></include>
+                    <include name="testDepositCryptoETHNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VT Test Malaysia CP Deposit">
+        <parameter name="TraderName" value="autotestmqtcctao@testcrmautomation.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsMalaysia2C2PEwallet_New"></include>
+                    <include name="cpsMalaysia2C2PFPX_New"></include>
+                    <include name="cpsCroinPlus_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VT Test Vietnam CP Deposit">
+        <parameter name="TraderName" value="autotestjglntssz@testcrmautomation.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testVietnamBTEeziePay_New"></include>
+                    <include name="cpsVietnamBTZotaPayNew"></include>
+                    <include name="cpsVietnamBT_WalaoPay"></include>
+                    <include name="testWowsPay_Remit_VND_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VT Test Thailand CP Deposit">
+        <parameter name="TraderName" value="testcrm_automation_thailand@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <!--method configuration issue <include name="testCryptoBITNew"></include>-->
+                    <include name="cpsThailandQR_Vtpay"></include>
+                    <include name="cpsThailandBT_ZotaPay_New"></include>
+                    <include name="cpsThailandBT_iSmartNew"></include>
+                    <!--method not available as of June 09 <include name="testAirTM_New"></include>-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VT Test Philippine CP Deposit">
+        <parameter name="TraderName" value="testcrm_donttouch_cps_philippine_client@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsPhilippinesBTZotaPayNew"></include>
+                    <include name="cpsPhilippinesBTPaymentAsiaNew"></include>
+                    <include name="cpsPhilippinesBTToppay_PHPNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite> <!-- Suite -->

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Client Portal Test Suite KY" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+  
+    <parameter name="Brand" value="au"></parameter>
+  	<parameter name="TestEnv" value="test"></parameter>
+    <parameter name="AdminURL" value="https://admin.test-vantagefx.com/admin/main"></parameter>
+  	<parameter name="AdminName" value="automation_ky"></parameter>
+  	<parameter name="AdminPass" value="1234Qwer"></parameter>
+  	<parameter name="TraderURL" value="https://secure.test-vantagefx.com/loginbymobile"></parameter>
+   	<parameter name="TraderName" value="61 0455902112"></parameter>
+    <parameter name="TraderPass" value="1234Qwer"></parameter>  
+  	
+ 
+<test name="Client Portal KY Mobile LogIn Page - Test Links and Error Messages Check">
+
+    <classes>
+     	  
+		<class name="vantagecrm.CPMobileLogIn">
+		
+		  <methods>
+		    <include name="testAllLinks"></include>
+		    <include name = 'ResetPwdErrorCheck'></include>
+      	  </methods>
+     	  
+		</class> 
+		
+    </classes>
+  </test>  
+
+<test name="Client Portal Mobile Reset Passoword">
+
+    <classes>
+     	  
+		<class name="vantagecrm.CPMobileLogIn">
+		
+		  <methods>
+		    <include name="MobileLogIn"></include>
+	   		<include name="testResetPWLink"></include>
+     		
+     	  </methods>
+     	  
+		</class>   
+    </classes>
+  </test> 
+  
+  
+ 
+</suite> <!-- Suite -->

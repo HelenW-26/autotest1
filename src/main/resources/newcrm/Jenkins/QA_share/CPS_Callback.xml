@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- QA share/QA share-CheckPromotionResult -->
+<suite name="CPS Callback Suite" configfailurepolicy="continue">
+	<parameter name="CallbackUrl" value="https://channel-tool.cps-sdbx.com/channel-tool/callback-index.html"/>
+	<parameter name="merCd" value="520045110001805"/>
+	<parameter name="orderNo" value="${orderNo}"/>
+	<parameter name="headless" value="true"/>
+
+  <test name="CPSDepositCallbackTest">
+    <classes>
+   		 <class name="newcrm.testcases.cps.CPSDepositCallbackTest">
+   		 	<methods>
+				<include name="CPSDepositCallbackCoboUSDTTRC20"></include>
+   		 	</methods>
+   		 </class>
+    </classes>
+  </test>
+</suite> <!-- Suite -->

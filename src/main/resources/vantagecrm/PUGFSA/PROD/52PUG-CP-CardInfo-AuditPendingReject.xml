@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU Test Suite" configfailurepolicy="continue">
+
+ <listeners>
+     <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	<parameter name="Brand" value="fsa"></parameter>
+  	<parameter name="TestEnv" value="prod"></parameter>
+    <parameter name="AdminURL" value="http://admin.puprime.com"></parameter>
+  	<parameter name="AdminName" value="Test CRM"></parameter>
+  	<parameter name="AdminPass" value="Vantagefx123"></parameter>
+  	<parameter name="TraderURL" value="http://myaccount.puprime.com"></parameter>
+   	 <parameter name="TraderName" value="webvok@tmail.t-com.sk"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+	
+    <test name="CreditCard Details Audit">
+      	
+     
+	   <classes>
+	   		    		      		
+	     <class name="vantagecrm.CPPaymentDetail">
+	     	<methods>
+	     		<include name="CPLogIn"></include>
+	     		<include name="AddUnionPayWithdrawDetail"></include>
+	     	</methods>    
+	     
+	     </class>
+	   	  
+	       
+	      <class name="vantagecrm.NewTaskManagement">
+	      
+	      		<methods>
+		      		<include name="AdminLogIn"></include>  	 
+	            	 <include name="CreditCardDetailsAudit"></include>            	     
+	       		</methods>
+	      </class>
+	      
+		      
+	  	</classes>
+  </test>
+  
+  <test name="CreditCard Details Pending">
+      	
+     
+	   <classes>
+	   		    		      		
+	   	  <class name="vantagecrm.CPPaymentDetail">
+	     	<methods>
+	     		<include name="CPLogIn"></include>
+	     		<include name="AddUnionPayWithdrawDetail"></include>
+	     	</methods>    
+	     
+	     </class>
+	   	  
+	       
+	      <class name="vantagecrm.NewTaskManagement">
+	      
+	      		<methods>
+		      		<include name="AdminLogIn"></include>  	 
+	            	 <include name="CreditCardDetailsPending"></include>            	     
+	       		</methods>
+	      </class>
+	      
+		      
+	  	</classes>
+  </test>
+  
+   <test name="CreditCard Details Reject">
+      	
+     
+	   <classes>
+	   		    		      		
+	   	  <class name="vantagecrm.CPPaymentDetail">
+	     	<methods>
+	     		<include name="CPLogIn"></include>
+	     		<include name="AddUnionPayWithdrawDetail"></include>
+	     	</methods>    
+	     
+	     </class>
+	   	  
+	       
+	      <class name="vantagecrm.NewTaskManagement">
+	      
+	      		<methods>
+		      		<include name="AdminLogIn"></include>  	 
+	            	<include name="CreditCardDetailsReject"></include>            	     
+	       		</methods>
+	      </class>
+	      
+		      
+	  	</classes> 
+  </test>
+
+ 
+   <test name="CreditCard Details Search">
+    
+	   <classes>
+	   		    		      		
+	      <class name="vantagecrm.NewTaskManagement">
+	      
+	      		<methods>
+		      		<include name="AdminLogIn"></include>  	 
+	            	<include name="CreditCardDetailsSearchByName"></include>            	     
+	       		</methods>
+	      </class>
+	  	</classes>
+  </test> 
+    
+</suite> <!-- Suite -->

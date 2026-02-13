@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU Test Suite" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener" />
+ </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	<parameter name="Brand" value="vt"></parameter>
+  	<parameter name="TestEnv" value="beta"></parameter>
+    <parameter name="AdminURL" value="https://betavgpadmin.vtmarkets.com.cn"></parameter>
+  	<parameter name="AdminName" value="Test CRM"></parameter>
+  	<parameter name="AdminPass" value="Vantage123"></parameter>
+  	<parameter name="TraderURL" value="https://betavgpmyaccount.vtmarkets.com.cn/login/to_login"></parameter>
+	<parameter name="TraderName" value="webqvb@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+
+	
+ 
+  <!-- <test name="VTRegisterUser">
+
+   
+    <classes>
+   		    		      		
+    	  
+      <class name="vantagecrm.UserManagement">
+      
+      	
+        <parameter name="WebSiteURL" value="https://www.vtmarkets.com.cn"></parameter>
+      	<parameter name="RegisterURL" value=""></parameter>
+      	<parameter name="IBpromotion" value="?affid=NBODA1NjI="></parameter> affid for Test CRM
+
+      	<methods>
+  
+    		<include name="RegisterUserMT4"></include>     vt_welcome_mail, reg_usr_compliance_ky_cn
+             
+    	</methods>
+
+       </class> 
+	</classes>
+	</test>
+	 -->
+	
+ 
+ <!--  <test name="VTRegisterDemo Leads Audit">
+
+   
+    <classes>
+   		    		      		
+    	  
+      <class name="vantagecrm.UserManagement">
+      
+      	<parameter name="WebSiteURL" value="https://www.vtmarkets.com.cn"></parameter>
+      	<parameter name="RegisterURL" value=""></parameter>
+      	<parameter name="IBpromotion" value="?affid=NBODA1NjI="></parameter> affid for Test CRM
+      	
+
+      	<methods>
+  
+      		<include name="RegisterDemoMT4"></include>    	new_demo_confirmation_en, register_leads_sales       
+       		<include name="RegisterLead"></include>     register_leads_sales
+
+	      	
+
+          
+    	</methods>
+
+       </class> 
+       
+      
+		
+	   No emails sent, just reset Webuser password
+	   <class name="vantagecrm.UpdateClient">
+	   
+			<methods>
+				<include name="AdminLogIn"></include>
+				<include name="resetPWD"></include>
+	
+			</methods>
+
+		</class>	 
+		
+       <class name="vantagecrm.UpdateIB">
+          <methods>
+             <include name="AdminLogIn"></include>  
+     	     <include name="RequestAddiRebateAccount"></include>   New_IB_MT4_Rabate_Account step1  
+          </methods>
+       </class>
+       
+		<class name="vantagecrm.TaskManagement">
+      
+      		<methods>
+	      		<include name="AdminLogIn"></include> 
+	      		<include name="AddIBNew"></include>    New_RebateAccount_email_sales step1
+	      		<include name="AccountAuditIB"></include>  New_RebateAccount_email_sales step2 + IB_account_audited
+	        	<include name="AccountAuditWeb"></include>  new_mt4_account_confirmation_sp, new_mt4_account_confirmation, New_Account_email_sales
+	        	<include name="AddAccAuditIBRebate"></include>  New_IB_MT4_Rabate_Account step2 
+	        	
+     
+       		</methods>
+      	</class>  
+      	 
+     	
+     </classes>
+  </test> --> <!-- Test -->
+ <!--  
+ <test name="VT Change AFFID">  demo_affid_change_en
+	  <classes>
+	  
+	  	<class name="vantagecrm.UserManagement">
+	      
+	      	<parameter name="WebSiteURL" value="https://www.vtmarkets.com.cn"></parameter>
+	      	<parameter name="RegisterURL" value=""></parameter>
+	      	ibtestcye@test.com  601308
+	      	<parameter name="IBpromotion" value="?affid=NjAxMzA4"></parameter>
+	       
+	      	ibtestbxg@test.com  601349
+	      	<parameter name="IBpromotionnew" value="?affid=NjAxMzQ5"></parameter>
+	      	<parameter name="Brand" value="vt"></parameter>
+	
+	      	<methods>
+	  			<include name="ChangeAFFID1"></include> 
+	  			<include name="ChangeAFFID2"></include>
+	             
+	    	</methods>
+	
+	       </class> 
+	       
+	       
+	       	<class name="vantagecrm.TraderMyAccount">
+       		<methods>
+       			
+       			<include name="TraderLogIn"></include> 
+         		<include name="changeLeverage"></include> leverage_change_notice_operation_cn step1
+        		
+       		</methods>       
+       
+       </class>
+  			
+	  </classes>
+  
+  </test> -->
+  
+<!-- <test name="Questionarie Leverage AddiAccount Transfer Reset">
+
+   
+    <classes>
+   		    	
+   		   <class name="vantagecrm.UpdateClient">
+	      	<methods>
+	  			<include name="AdminLogIn"></include> 
+	            <include name="setCountry2Aus"></include>   evaluation_success step1
+	    	</methods>
+	
+	       </class> 	 
+	       
+   		   <class name="vantagecrm.UserManagement">
+   		   <methods>
+   		   		<parameter name="OldPwd" value="123Qwe"></parameter>
+       			<parameter name="NewPwd" value="1234Qwe"></parameter>
+   		        <include name="AdminLogIn"></include> 
+           		<include name="ModifyClientEmailAndPassword"></include> reset_password_en
+
+   		   </methods>       
+       
+       </class>		
+    	  	<class name="vantagecrm.TraderMyAccount">
+       		<methods>
+       			<parameter name="OldPwd" value="123Qwe"></parameter>
+       			<parameter name="NewPwd" value="1234Qwe"></parameter>
+       			
+       			<include name="TraderLogIn"></include> 
+       			
+       			<include name="failQuestionaire"></include> evaluation_failure step2
+       			<include name="passQuestionaire"></include> evaluation_success step2
+        		<include name="changeLeverage"></include> leverage_change_notice_operation_cn step1
+        		<include name="RequestAddiAccount"></include>  another_mt4_confirmation_en step1 
+       			<include name="TransferFund"></include>  account_transfer_success_en
+       			<include name="ResetMT4Pwd"></include> MT4_Password_Reset
+         		
+       		</methods>       
+       
+       </class>
+  			
+    
+		<class name="vantagecrm.TaskManagement">
+      
+      		<methods>
+	      		<include name="AdminLogIn"></include>  
+            	<include name="leverageReject"></include> leverage_change_rejected_notice_client_us step2            	 
+            	<include name="leverageAudit"></include> leverage_change_succeed_notice_client_us step2
+            	<include name="AddAccAuditIndi"></include>  another_mt4_confirmation_en step2         	 
+        	     
+       		</methods>
+      	</class>  
+      	
+      
+     
+    </classes>
+  </test>  -->
+  
+ <!--   <test name="Pending Deposit Pending Withdraw">
+
+   
+    <classes>
+   		    		      		
+    <class name="vantagecrm.TraderDeposit">
+      		<methods>
+     			
+      			<include name="TraderLogIn"></include> 
+     			<include name="I18NDeposit"></include>    confirmation_deposit_required
+        		
+      		</methods>       
+      
+      </class>
+      
+    
+      <class name="vantagecrm.TraderWithdraw">
+      		<methods>
+      			<parameter name="OldPwd" value="123Qwe"></parameter>
+      			<parameter name="NewPwd" value="1234Qwe"></parameter>
+      			
+      			<include name="TraderLogIn"></include> 
+     			<include name="WithdrawCC"></include>
+        		
+      		</methods>       
+      
+      </class>   	
+  			
+    
+		<class name="vantagecrm.TaskManagement">
+      
+      		<methods>
+	      		<include name="AdminLogIn"></include>  
+            	 
+            	<include name="OfflineDepositPendingAll"></include>    pendingEmail_Deposit1,2,3,4,5
+            	 
+            	<include name="WithdrawlPendingAll"></include>     pendingEmail_Withdraw1,2,3,4,5
+            	     
+       		</methods>
+      	</class>  
+      	
+      
+     
+    </classes>
+  </test>  -->
+  
+ <!--  <test name="VT auditReject ResetMT4Pw">  
+	  <classes>
+	  
+	  	<class name="vantagecrm.UserManagement">
+
+	      	<methods>
+	  			<include name="AdminLogIn"></include> 
+	  			<include name="AddClient"></include>  new_mt4_account_decline step1
+	    	</methods>
+	
+	       </class> 
+	       
+	       
+	       	<class name="vantagecrm.TaskManagement">
+      
+      		<methods>
+	      		<include name="AdminLogIn"></include>  
+            	<include name="AccountAuditReject"></include>  new_mt4_account_decline step2
+            	     
+       		</methods>
+      	</class>  
+    
+ 
+        <class name="vantagecrm.UpdateTradACC">
+      
+      		<methods>
+	      		<include name="AdminLogIn"></include>  
+            	<include name="resetPWD"></include>  mt4_change_password
+            	     
+       		</methods>
+      	</class>  
+
+	  </classes>
+  </test> -->
+    
+ <!--  <test name="Link Card for Unionpay Withdraw">
+  	<classes>
+	  <class name="vantagecrm.TraderWithdraw"> 
+      	<methods>
+      		<include name="TraderLogIn"></include>
+      		<include name="AddUnionPayWithdrawDetail"></include>
+      		
+       	</methods>
+      </class>
+  	  <class name="vantagecrm.TaskManagement"> 
+      	<methods>
+      		<include name="AdminLogIn"></include>   
+      		<include name="WithdrawDetailsPending"></include>    
+      		<include name="WithdrawDetailsAudit"></include>     auditUnionCard_pass
+      		<include name="WithdrawDetailsReject"></include>    auditUnionCard_reject
+      		
+      	</methods>
+      </class>
+  	</classes>
+  
+ 
+  </test>   -->
+   
+  <!-- <test name=" Deposit Withdraw">
+    <classes>
+      <class name="vantagecrm.TraderDeposit">  	  
+ 		<methods>
+ 			<include name="TraderLogIn"></include>
+ 			<include name="I18NDeposit"></include>
+		
+		</methods> 	  	
+	   </class>
+	   
+ 	    <class name="vantagecrm.TraderWithdraw">  	  
+ 		<methods>
+ 			<include name="TraderLogIn"></include>
+ 			
+			<include name="WithdrawI18NBank"></include>	withdraw_apply_client_bankInt_cn,withdraw_apply_sale_bankInt_cn,withdraw_apply_operate_bankInt_cn
+			<include name="WithdrawUnionPayWithBankDetail"></include> withdraw_apply_client_unionPay_cn,withdraw_apply_sale_unionPay_cn,withdraw_apply_operate_unionPay_cn
+			
+		</methods> 	  	
+ 
+	   </class>
+     <class name="vantagecrm.TaskManagement"> 
+      	<methods>
+      		<include name="AdminLogIn"></include>  
+      		<include name="OfflineDepositAudit"></include>  deposit_bank_transfer_success_cn
+      		<include name="OnlineDepositAudit"></include>  deposit_union_pay_success_en ps: not able to audit online payment
+      		
+            <include name="WithdrawlAudit"></include> 
+      		<include name="WithdrawlAuditComplete"></include> withdraw_done_client_en,withdraw_done_operation_en,withdraw_done_sales_en      		
+      		<include name="WithdrawlAuditReject"></include> withdraw_refused_client_en,withdraw_refused_operation_en
+      		
+       	</methods>
+      </class>   
+    
+    </classes>
+  </test>  -->
+  
+<!--     <test name="TestTestTest">
+  	<classes>
+	        <class name="vantagecrm.TraderMyAccount"> 
+      	<methods>
+      		<include name="TraderLogIn"></include>
+      		
+      		<include name="ChangePWD"></include>
+      		
+      		<include name="ChangeMT4Pwd"></include>
+      		
+       	</methods>
+      </class>
+  	
+  	</classes>
+  
+ 
+  </test> -->
+    <!-- <test name="API Test">
+  	<classes>
+	  	<class name="vantagecrm.TaskManagement">
+	        <methods>
+	            <include name="APIResendEmail"></include>
+	        </methods>
+	    </class>
+  	
+  	</classes>
+  
+  </test> -->
+  
+</suite> <!-- Suite -->

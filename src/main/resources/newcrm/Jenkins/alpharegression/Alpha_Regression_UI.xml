@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Alpha Regression UI Tests" configfailurepolicy="continue" parallel="tests" thread-count="1">
+    <listeners>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+  <!--<test name="CP Registration UI Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.AlphaRegisterGoldTestCases">
+                <methods>
+                    <include name="testRegistMT5LiveAccount_Gold"/>
+                    <include name="testRegistMT5LiveAccount_Gold_withoutSumsub"/>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.alpharegression.AlphaRegisterTestCases">
+                <methods>
+                    <include name="testRegistMT5LiveAccount"/>
+                    <include name="testRegistMT5LiveAccount_withoutSumsub"/>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.alpharegression.AlphaRegisterASICTestCases">
+                <methods>
+                    <include name="testRegisterASIC"/>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+    <test name="CP Copy Trading UI Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.copyTrading.AlphaCopyTradingTestCases">
+                <methods>
+                    <include name="testCopyTrading"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+   <!-- <test name="CP Account UI Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.AlphaAccountConfigureTestCases">
+                <methods>
+                    <include name="testChangeMT4AccountLeverage"/>
+                    <include name="testChangeMT5AccountLeverage"/>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.alpharegression.account.AlphaAccountAddAccTestCases">
+                <methods>
+                    <include name="testOpenAdditionalMT4LiveAccount"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CP Wallet UI Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.wallet.AlphaWalletRegisterTestCases">
+                <methods>
+                    <include name="testWalletOpenAccount"/>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.alpharegression.wallet.AlphaWalletTestCases">
+                <methods>
+                    <include name="testWalletDepositCryptoBTC"/>
+                    <include name="testWalletDepositCryptoUSDTERC"/>
+                    <include name="testWalletWithdrawCryptoUSDC"/>
+                    <include name="testWalletWithdrawCryptoUSDTERC"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CP Payment UI Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.AlphaTrasferTestcases">
+                <methods>
+                    <include name="testTransfer"/>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.alpharegression.AlphaDepositTestCases">
+                <methods>
+                    <include name="testDeposit"/>
+                    <include name="depositwithCallBack"/>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.alpharegression.AlphaDepositBridgePayCallBackTestCases">
+                <methods>
+                    <include name="bridgeCCDepositwithCallBack"/>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.alpharegression.AlphaWithdrawTestCases">
+                <methods>
+                    <include name="testcpwithdraw"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Admin Payment Audit &amp; Email UI Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.AlphaWithdrawAuditTestCases">
+                <methods>
+                    <include name="testadminwithdraw"/>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.alpharegression.AlphaEmailCheckTestCase">
+                <methods>
+                    <include name="testEmail"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="IB Payment UI Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.AlphaIBRebateWithdrawTestCases">
+                <methods>
+                    <include name="testIBRebateWithdraw"/>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.alpharegression.AlphaIBRebateTransferTestCases">
+                <methods>
+                    <include name="testIBRebateTransfer"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CP Web Trading Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.webTrading.AlphaWebTradingTestCases">
+                <methods>
+                    <include name="testOpenUpdateClosePosition_Buy"/>
+                    <include name="testOpenUpdateClosePosition_Sell"/>
+                    <include name="testPositions_closeAll"/>
+                    <include name="testPendingPosition_BuyLimit"/>
+                    <include name="testPendingPosition_SellLimit"/>
+                    <include name="testPendingPosition_BuyStop"/>
+                    <include name="testPendingPosition_SellStop"/>
+                    <include name="testPendingPosition_BuyStopLimit"/>
+                    <include name="testPendingPosition_SellStopLimit"/>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+   <!-- <test name="DAP UI">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.IB.DAP.AlphaDAPAccountRegistrationTestCases">
+                <methods>
+                    <include name="testDAPRegistration"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.alpharegression.IB.DAP.AlphaDAPAccountTestCases">
+                <methods>
+                    <include name="testDAPProfilePanel_LoginLogout"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+</suite>

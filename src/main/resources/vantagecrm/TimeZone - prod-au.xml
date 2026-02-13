@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU Prod Suite">
+  <test thread-count="5" name="Test">
+    <parameter name="Brand" value="au"></parameter>
+  	<parameter name="TestEnv" value="prod"></parameter>
+  	<parameter name="AdminURL" value="https://admin.vantagefx.com.au/login/to_login"></parameter>
+  	<parameter name="AdminName" value="Test CRM"></parameter>
+  	<parameter name="AdminPass" value="Vantage123"></parameter>
+  	<parameter name="TraderURL" value="https://secure.vantagefx.com.au/login/to_login"></parameter>
+  	<parameter name="TraderName" value="webggo@test.com"></parameter>
+  	<parameter name="TraderPass" value="123Qwe"></parameter>
+  	
+    <classes>
+  		   	      	
+      <class name="vantagecrm.UserManagement">
+      
+        <parameter name="WebSiteURL" value="https://www.vantagefx.com/forex-trading/forex-trading-account/"></parameter>
+      	<parameter name="RegisterURL" value=""></parameter>
+     		
+      	<methods>
+      	   	<include name="RegisterUser"></include>   
+       		<include name="AdminLogIn"></include>	
+     		<include name="AddIB"></include>  
+			<include name="AddClient"></include> 
+      	</methods>
+       </class>   
+   		
+
+ 	  <class name="vantagecrm.TraderDeposit">  	  
+
+ 		<methods>
+ 			<include name="TraderLogIn"></include>
+ 			<include name="CCDeposit"></include>
+ 			<include name="I18NDeposit"></include>
+ 			<include name="AuBankDeposit"></include> 
+ 			<include name="BPayDeposit"></include>
+ 		    <include name="SkrillDeposit"></include>
+			<include name="NetellerDeposit"></include>	
+			<include name="UnionPayDeposit"></include>	
+		</methods> 	  	
+ 
+	   </class>
+
+  
+      <class name="vantagecrm.TraderWithdraw">
+      	<methods>
+      	
+           	<include name="TraderLogIn"></include>   	 
+      		<include name="WithdrawAUBank"></include> 
+      		<include name="WithdrawI18NBank"></include>   
+      		<include name="WithdrawChinaBank"></include> 
+      		<include name="WithdrawCC"></include>  
+       		<include name="WithdrawSkrNet"></include>  
+       		<include name="WithdrawUnionPay"></include>         		
+       	</methods>
+       </class>   
+
+       <class name="vantagecrm.TraderMyAccount">
+       		<methods>
+       			<parameter name="OldPwd" value="123Qwe"></parameter>
+       			<parameter name="NewPwd" value="1234Qwe"></parameter>
+       			
+       			<include name="TraderLogIn"></include>
+       			<include name="RequestAddiAccount"></include>
+       			<include name="TransferFund"></include>   
+    			<include name="ChangePWD"></include> 	
+       		</methods>       
+       
+       </class>
+
+
+      <class name="vantagecrm.TaskManagement">
+      
+      	<methods>
+      		<include name="AdminLogIn"></include>  
+      		<include name="AccountAudit"></include> 
+      	 	<include name="AddAccAuditIndi"></include>  
+  	  		<include name="OfflineDepositAudit"></include>  
+        	<include name="WithdrawlAudit"></include>
+        	<include name="CommAudit"></include> 
+       	</methods>
+      </class>  
+      
+ 
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

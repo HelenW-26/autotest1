@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Client Portal Test Suite KY" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<parameter name="Brand" value="au"></parameter>
+  	<parameter name="TestEnv" value="beta"></parameter>
+    <parameter name="AdminURL" value="https://betavgpadmin.vantagefx.com.au/"></parameter>
+  	<parameter name="AdminName" value="fiona"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="https://betacpportal.vantagefx.com.au"></parameter>
+   	<parameter name="TraderName" value="ibtestffy@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+  	<parameter name="ThaiAccount" value="webfdv@test.com"></parameter>
+ 	<parameter name="ThaiPwd" value="123Qwe"></parameter>
+ 	  	
+   <parameter name="MalayAccount" value="webfdv@test.com"></parameter>
+ 	<parameter name="MalayPwd" value="123Qwe"></parameter>  
+  	
+    <parameter name="VietAccount" value="webfdv@test.com"></parameter>
+ 	<parameter name="VietPwd" value="123Qwe"></parameter>
+  	
+  	<parameter name="NigeAccount" value="webfdv@test.com"></parameter>
+ 	<parameter name="NigePwd" value="123Qwe"></parameter>
+	
+
+<!--   <test name = "IB Portal Rebate Transfer from Dashboard">  
+      <classes>
+ 
+           <class name="vantagecrm.UpdateRebateACC">
+           		<methods>
+           			<include name="AdminLogIn"></include>
+           			<include name="adjustDeposit"></include>
+           		
+           		</methods>           
+           </class>     
+ 
+           <class name="vantagecrm.IPRebate">
+           		<methods>
+           			<include name="IPLogIn"></include>
+           			<include name="TransferRebateFromDashboard"></include>
+           		</methods>
+           	</class>
+ 
+      </classes>       
+   </test>    
+   
+     <test name = "IB Portal Rebate Transfer from PaymentHistory">  
+      <classes>
+ 
+            <class name="vantagecrm.UpdateRebateACC">
+           		<methods>
+           			<include name="AdminLogIn"></include>
+           			<include name="adjustDeposit"></include>
+           		
+           		</methods>           
+           </class>     
+ 
+           <class name="vantagecrm.IPRebate">
+           		<methods>
+           			<include name="IPLogIn"></include>
+           			<include name="TransferRebateFromPaymentHistory"></include>
+           		</methods>
+           	</class>
+
+      </classes>       
+   </test>  -->   
+   
+   <test name = "IB Portal Withdraw">  
+      <classes>
+      
+           <class name="vantagecrm.UpdateRebateACC">
+     			<methods>
+	     			<include name="AdminLogIn"></include>
+	     			<include name="adjustDeposit"></include>
+	     		
+     			</methods>           
+     		</class>  
+      
+	        <class name="vantagecrm.IPWithdraw"> 
+	        	<methods>
+        		<include name="IPLogIn"></include>
+       			<include name="WithdrawI18NBank"></include>
+        		<include name="WithdrawAUBank"></include>
+        		<include name="WithdrawUnionPay"></include>
+        		<include name="WithdrawNeteller"></include>
+        		<include name="WithdrawSkrill"></include>
+        		<include name="WithdrawFasaPay"></include>
+        	
+        	</methods>     
+        
+	        
+	        </class>
+        
+           <!--   <class name="vantagecrm.TaskManagement">
+      
+	      		<methods>
+		      		<include name="AdminLogIn"></include>
+		       		<include name="WithdrawlAudit"></include>
+		       		<include name="WithdrawlAuditComplete"></include> 
+	       		</methods>
+      		</class> -->
+   
+      </classes>       
+   </test>         
+
+</suite> <!-- Suite -->

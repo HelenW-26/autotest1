@@ -1,0 +1,62 @@
+#NetellerDeposit:
+#  email : "autotestetdfyzri@testcrmautomation.com"
+#  mt4Account : "30204"
+#  operateAmount : "100"
+#  channel_name : "Neteller"
+#  Currency : "GBP"
+#  channel_id : "26"
+#  payment_channel : "26" #26
+#
+NetellerDeposit1:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-bluebird.crm-alpha.com"
+  mt4Account : "21630"
+  operateAmount : "100"
+  channel_name: "neteller"
+  Currency: "EUR"
+  channel_id : "28"
+  payment_channel : "28"
+  password: "7946e795e44db67be4c74219def41e2e"
+#
+###SGD  neteller
+NetellerDeposit2:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-bluebird.crm-alpha.com"
+  mt4Account : "21628"
+  operateAmount : "100"
+  channel_name: "neteller"
+  Currency: "SGD"
+  channel_id : "29"
+  password: "7946e795e44db67be4c74219def41e2e"
+#
+## AUD neteller
+NetellerDeposit3:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-bluebird.crm-alpha.com"
+  mt4Account : "21629"
+  operateAmount : "100"
+  channel_name: "neteller"
+  Currency: "AUD"
+  channel_id : "27"
+  password: "7946e795e44db67be4c74219def41e2e"
+#
+NetellerDeposit4:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-bluebird.crm-alpha.com"
+  mt4Account : "22289"
+  operateAmount : "10000"
+  channel_name: "neteller"
+  Currency: "USC"
+  channel_id : "25"
+  password: "7946e795e44db67be4c74219def41e2e"
+
+NetellerDeposit5:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-bluebird.crm-alpha.com"
+  mt4Account : "804395514"
+  operateAmount : "100"
+  channel_name: "neteller"
+  Currency: "USD"
+  channel_id : "25"
+  password: "7946e795e44db67be4c74219def41e2e"
+

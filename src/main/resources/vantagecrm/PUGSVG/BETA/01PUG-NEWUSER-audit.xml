@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Create New User and Audit" configfailurepolicy="continue">
+
+ <listeners>
+    <!-- <listener class-name="utils.Listeners.TestListener" /> -->
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+    <parameter name="Brand" value="svg"></parameter>
+  	<parameter name="TestEnv" value="beta"></parameter>
+  	<parameter name="AdminURL" value="https://betavgpadmin.puprime.com"></parameter>
+  	<parameter name="AdminName" value="Test CRM"></parameter>
+  	<parameter name="AdminPass" value="Vantagefx123"></parameter>
+  	<parameter name="TraderURL" value="https://betavgpmyaccount.puprime.com/"></parameter>
+    <parameter name="TraderName" value="webvok@tmail.t-com.sk"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>
+
+  <test name="Create_NewUser_and_Audit">
+
+    <classes>
+
+     <class name="vantagecrm.UserManagement">
+
+      	<parameter name="WebSiteURL" value="http://www.puprime.com/live-account/"></parameter>
+      	<parameter name="RegisterURL" value="http://register.puprime.com"></parameter>
+       	<parameter name="IBpromotion" value="?affid=NBMTEwMTM5"></parameter>
+
+      	<methods>
+      		<include name="ValidateRegisterUser"></include>
+      	<!-- 	<include name="RegisterDemoToLive"></include>
+   		  	<include name="RegisterDemoMT4"></include>
+  			<include name="RegisterDemoMT5"></include>
+  			<include name="RegisterLead"></include>
+   			<include name="RegisterUserMT5"></include>
+   			<include name="RegisterUserMT4"></include>
+	     	<include name="AdminLogIn"></include>
+    	  	<include name="AddIBNew"></include>
+  	  		<include name="AddClient"></include>
+  	  	  	<include name="AddIUser"></include>
+  	  		<include name="AddLeads"></include>   -->
+    	</methods>
+
+       </class>
+
+<!--      <class name="vantagecrm.UpdateClient">
+		<methods>
+			<include name="AdminLogIn"></include>
+			<include name="resetPWD"></include>
+		</methods>
+
+	</class>
+
+   	<class name="vantagecrm.TaskManagement">
+
+   		<methods>
+    		<include name="AdminLogIn"></include>
+     		<include name="AccountAuditWeb"></include>
+     		<include name="AccountAuditIB"></include>
+     		<include name="AccountAuditAddClient"></include>
+     		<include name="AccountAuditJoint"></include>
+
+    		</methods>
+   </class> -->
+
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

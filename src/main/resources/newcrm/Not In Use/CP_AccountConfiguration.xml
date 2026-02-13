@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU Register Test Suite" configfailurepolicy="continue">
+
+	<listeners>
+     	<listener class-name="utils.Listeners.CustomListener"/>
+  	</listeners>
+  	
+  <test name="AccountConfigurationTest">
+    <parameter name="Brand" value="${Application}"></parameter>     
+  	<parameter name="Regulator" value="${Brand}"></parameter>
+  	<parameter name="TestEnv" value="${Environment}"></parameter>
+    <parameter name="AdminURL" value="https://${adminurl}"></parameter>
+  	<parameter name="AdminName" value="${AdminLogin}"></parameter>
+  	<parameter name="AdminPass" value="${adminpass}"></parameter>
+  	<parameter name="TraderURL" value="https://${cp_url}"></parameter>
+    <parameter name="TraderName" value="${CPLogin}"></parameter>
+    <parameter name="TraderPass" value="${CPpassword}"></parameter>
+  	
+  	<parameter name="headless" value="true"/>
+
+    <parameter name="Debug" value="true"></parameter>
+    <parameter name="IBCode" value=""></parameter>
+    <parameter name="RAFCode" value="s4q08GZPUXixOIq0+FrhPg=="></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.AccountConfigureTestCases">
+   		 	<methods>
+   		 		<include name="testChangeMT4AccountLeverage"></include>
+   		 		<include name="testChangeMT5AccountLeverage"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

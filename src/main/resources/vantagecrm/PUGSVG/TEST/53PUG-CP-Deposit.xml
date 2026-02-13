@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Client Portal Test Suite AU" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+  <test name="Client Portal Test PUG">
+	<parameter name="Brand" value="svg"></parameter>
+  	<parameter name="TestEnv" value="test"></parameter>
+    <parameter name="AdminURL" value="http://192.168.66.161:8001/login/to_login"></parameter>
+  	<parameter name="AdminName" value="yanni"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="http://cp.pug.com/login"></parameter>
+   	 <parameter name="TraderName" value="webvok@tmail.t-com.sk"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>
+
+
+    <classes>
+
+     <class name="vantagecrm.CPDeposit">
+     	<methods>
+     	    <include name="CPLogIn"></include>
+    <!--  	    <include name="I18NDeposit"></include>
+         	<include name="ValidateI18NDeposit"></include>
+       		<include name="MobilepayDeposit"></include>
+       		<include name="UnionPayDeposit"></include> -->
+       		<include name="UnionPayP2PDeposit"></include>
+     	</methods>
+     </class>
+
+     <class name="vantagecrm.TaskManagement">
+     	<methods>
+      		<include name="AdminLogIn"></include>
+       		<include name="OfflineDepositAudit"></include>
+			<include name="OnlineDepositAudit"></include>
+      	</methods>
+     </class>
+    </classes>
+  </test> <!-- Test -->
+
+</suite> <!-- Suite -->

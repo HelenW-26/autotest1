@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite allow-return-values="false" configfailurepolicy="continue" data-provider-thread-count="10" group-by-instances="false" guice-stage="DEVELOPMENT" junit="false" name="Create New User and Audit" parallel="none" preserve-order="true" skipfailedinvocationcounts="false" thread-count="5">
+
+ <listeners>
+     <listener class-name="utils.Listeners.CustomListener"/>
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	<parameter name="testEnv" value="test"/>
+	
+  <test allow-return-values="false" group-by-instances="false" junit="false" name="Verify ID3 With PROD Info" preserve-order="true" skipfailedinvocationcounts="false">
+    <parameter name="Brand" value="vfsc"/>
+  	<parameter name="TestEnv" value="alpha"/>
+    <parameter name="WebSiteURL" value="https://new.vantagefx.com"/>
+   	<parameter name="RegisterURL" value="http://cp.vantagefx.com"/>
+     <parameter name="IBpromotion" value=""/>    
+    <classes>
+
+     <class name="vantagecrm.CPID3WithProdUser">
+
+     
+     	<methods>
+     		<include name="RegisterUserMT4"/>
+ 		</methods>    
+ 
+     </class>        
+  
+ 
+    </classes>
+  </test> <!-- Test -->
+</suite><!-- Suite -->

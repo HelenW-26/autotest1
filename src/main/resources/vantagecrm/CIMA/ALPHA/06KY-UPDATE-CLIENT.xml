@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="KY Test Suite" configfailurepolicy="continue">
+
+ <listeners>
+    <!-- <listener class-name="utils.Listeners.TestListener" /> -->
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	<parameter name="testEnv" value="test"></parameter>
+	
+  <test name="KYRegressionTest">
+    <parameter name="Brand" value="ky"></parameter>
+  	<parameter name="TestEnv" value="test"></parameter>
+    <parameter name="AdminURL" value="https://admin.test-vantagefx.com/admin/main"></parameter>
+  	<parameter name="AdminName" value="automation_ky"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="https://secure.test-vantagefx.com"></parameter>
+   	 <parameter name="TraderName" value="webfdv@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+  	<parameter name="ThaiAccount" value="webfdv@test.com"></parameter>
+ 	<parameter name="ThaiPwd" value="123Qwe"></parameter>
+ 	  	
+ 	<parameter name="MalayAccount" value="webfdv@test.com"></parameter>
+ 	<parameter name="MalayPwd" value="123Qwe"></parameter>
+  	
+    <parameter name="VietAccount" value="webfdv@test.com"></parameter>
+ 	<parameter name="VietPwd" value="123Qwe"></parameter>
+  	
+  	<parameter name="NigeAccount" value="webfdv@test.com"></parameter>
+ 	<parameter name="NigePwd" value="123Qwe"></parameter>
+   
+    <classes>
+<!--  		<class name="vantagecrm.SystemSetting">
+ 			<methods>
+ 				<include name="AdminLogIn"></include>
+ 				<include name="AddPromotionSetting"></include>
+ 			</methods>
+ 		
+ 		</class> -->
+<!--        <class name="vantagecrm.UpdateClient">
+		<methods>
+			<include name="AdminLogIn"></include>
+			<include name="updateClientGeneral"></include>
+			<include name="resetPWD"></include>
+			<include name="setCountry2Malay"></include>
+			<include name="setCountry2Nige"></include>
+			<include name="setCountry2Thai"></include>
+			<include name="setCountry2Viet"></include>
+			<include name="deleteClient"></include>
+		</methods>
+	
+	</class> -->
+		<class name="vantagecrm.UpdateTradACC">
+		<methods>
+			<include name="AdminLogIn"></include>
+	<!-- 		<include name="changeAccountGroup"></include>
+			<include name="addBpayNo"></include> -->
+		<!-- 	<include name="changeCredit"></include> -->
+		<!-- 	<include name="differentUserAccountTransfer"></include> -->
+			<include name="makingAdjustment"></include>
+		<!-- 	<include name="resetPWD"></include>
+			<include name="statusCheck"></include>  -->
+			
+		</methods>
+	
+	
+	</class>
+   </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

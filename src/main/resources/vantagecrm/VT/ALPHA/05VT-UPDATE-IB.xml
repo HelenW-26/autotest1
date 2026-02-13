@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="KY_REGRESSION_SUIT_IB" configfailurepolicy="continue">
+
+ <listeners>
+    <!-- <listener class-name="utils.Listeners.TestListener" /> -->
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+    <parameter name="Brand" value="vt"></parameter>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+    <parameter name="AdminURL" value="https://admin.test-vtmarkets.com"></parameter>
+  	<parameter name="AdminName" value="Test CRM"></parameter>
+  	<parameter name="AdminPass" value="Vantage123"></parameter>
+  	<parameter name="TraderURL" value="https://secure.test-vtmarkets.com"></parameter>
+    <parameter name="TraderName" value="ibtestkqy@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>
+    
+  	<parameter name="ThaiAccount" value="ibtestkqy@test.com"/>
+ 	<parameter name="ThaiPwd" value="123Qwe"/>
+
+ 	<parameter name="MalayAccount" value="ibtestkqy@test.com"/>
+ 	<parameter name="MalayPwd" value="123Qwe"/>
+
+    <parameter name="VietAccount" value="ibtestkqy@test.com"/>
+ 	<parameter name="VietPwd" value="123Qwe"/>
+
+  	<parameter name="NigeAccount" value="ibtestkqy@test.com"/>
+ 	<parameter name="NigePwd" value="123Qwe"/>
+
+  <test allow-return-values="false" group-by-instances="false" junit="false" name="KY_UPDATE_IB" preserve-order="true" skipfailedinvocationcounts="false">
+
+    <classes>
+
+
+ 	<class name="vantagecrm.UpdateIB">
+ 		<methods>
+ 			<include name="AdminLogIn"></include>
+ 			<include name="updateClientGeneral"></include>
+ 			<include name="resetPWD"></include>
+ 			<include name="setCountry2Malay"></include>
+ 			<include name="setCountry2Nige"></include>
+ 			<include name="setCountry2Thai"></include>
+ 			<include name="setCountry2Viet"></include>
+  			<include name="RequestAddiRebateAccount"></include>
+ 		</methods>
+
+ 	</class>
+
+     <class name="vantagecrm.TaskManagement">
+
+  		<methods>
+	   		<include name="AdminLogIn"></include>
+	   		<include name="AddAccAuditIBRebate"></include>
+   		</methods>
+      </class>
+
+
+
+
+   <class name="vantagecrm.UpdateRebateACC">
+
+  	<methods>
+
+  		<include name="AdminLogIn"/>
+  		<include name="configCommissionRules"/>
+  		<include name="differentUserAccountTransfer"/>
+  		<include name="adjustDeposit"/>
+  		<include name="resetPWD"/>
+  	</methods>
+  </class>
+
+
+
+
+
+    </classes>
+  </test>
+
+ <!--  <test name="Delete_IB">
+  	<classes>
+  		<class name="vantagecrm.UpdateIB">
+	 		<methods>
+	 			<include name="AdminLogIn"></include>
+	 			<include name="DeleteIB"></include>
+	 		</methods>
+
+ 		</class>
+  	</classes>
+
+  </test> -->
+
+</suite> <!-- Suite -->

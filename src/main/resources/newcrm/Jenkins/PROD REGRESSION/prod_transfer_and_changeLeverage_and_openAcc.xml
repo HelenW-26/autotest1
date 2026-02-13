@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- Jenkins Job: QA_AUTOMATION_81_AddAcc_leverage_transfer -->
+<suite name="prod regression test" configfailurepolicy="continue">
+
+	<listeners>
+     	<listener class-name="utils.Listeners.CustomListener"/>
+  	</listeners>
+  <test name="prod regression test">
+    <classes>
+   		 <class name="newcrm.testcases.prodregression.TransferTestcase">
+   		 	<methods>
+   		 		<include name="testTransfer"></include>
+   		 	</methods>
+   		 </class>
+   		 <class name="newcrm.testcases.prodregression.ProdAccountConfigureTestCases">
+   		 	<methods>
+   		 		<include name="testChangeLeverage"></include>
+   		 	</methods>
+   		 </class>
+   		 <class name="newcrm.testcases.prodregression.ProdAccountManagementTestCases">
+   		 	<methods>
+   		 		<include name="openOneAdditionalAccount"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

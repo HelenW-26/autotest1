@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Client Portal Test Suite PUG" configfailurepolicy="continue">
+
+<!--  <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners> -->
+  
+    <parameter name="Brand" value="fsa"></parameter>
+  	<parameter name="TestEnv" value="prod"></parameter>
+  	<parameter name="AdminURL" value="http://admin.puprime.com"></parameter>
+  	<parameter name="AdminName" value="Test CRM"></parameter>
+  	<parameter name="AdminPass" value="Vantagefx123"></parameter>
+  	<parameter name="TraderURL" value="http://myaccount.puprime.com"></parameter>
+   	<parameter name="TraderName" value="webvok@tmail.t-com.sk"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+
+  
+  <test name="Client Portal PUG Activate MT4">
+
+    <classes>
+     	  
+		 <class name="vantagecrm.CPHomepage">
+   		 	<methods>
+   		 		<include name="CPLogIn"></include>
+  		 		<include name="activateMT4"></include>
+  
+   		 	</methods>
+   		 </class>   
+   		 
+   		 <class name="vantagecrm.UpdateTradACC">
+   		 	<methods>
+   		 		<include name="AdminLogIn"></include>
+   		 		<include name="activateAcc"></include>
+   		 	</methods>
+   		 </class>	
+   
+    </classes>
+  </test> 
+  
+  
+ 
+</suite> <!-- Suite -->

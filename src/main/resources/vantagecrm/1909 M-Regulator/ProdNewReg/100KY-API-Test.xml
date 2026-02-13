@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="KU Test Suite" configfailurepolicy="continue">
+
+
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	<parameter name="testEnv" value="test"></parameter>
+	
+  <test name="KYRegressionTest">
+    <parameter name="Brand" value="ky"></parameter>
+  	<parameter name="TestEnv" value="prod"></parameter>
+    <parameter name="AdminURL" value="https://test1admin.vantagefx.com"></parameter>
+  	<parameter name="AdminName" value="ben"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="https://test1secure.vantagefx.com"></parameter>
+   	 <parameter name="TraderName" value="webgsx@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+  	<parameter name="ThaiAccount" value="test127oxgvqs@test.com"></parameter>
+ 	<parameter name="ThaiPwd" value="123Qwe"></parameter>
+ 	  	
+ 	<parameter name="MalayAccount" value="test127oxgvqs@test.com"></parameter>
+ 	<parameter name="MalayPwd" value="123Qwe"></parameter>
+  	
+    <parameter name="VietAccount" value="test127oxgvqs@test.com"></parameter>
+ 	<parameter name="VietPwd" value="123Qwe"></parameter>
+  	
+  	<parameter name="NigeAccount" value="test127oxgvqs@test.com"></parameter>
+ 	<parameter name="NigePwd" value="123Qwe"></parameter>
+   
+    <classes>
+
+      <class name="vantagecrm.AdminAPITest"> 
+      	<methods>
+      		<include name="AdminLogIn"></include>
+<!--        		<include name="APIClientSearch"></include> 
+     		<include name="APIClientUpdate"></include>  -->
+      		<!-- <include name="APIClientDBSearch"></include> -->
+      		<include name ="APITestMinDeposit"></include>
+       	</methods>
+      </class>  
+	
+   </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

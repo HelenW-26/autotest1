@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Create New Users" configfailurepolicy="continue">
+
+ <listeners>
+     <listener class-name="utils.Listeners.CustomListener"/>
+     <listener class-name="utils.Listeners.RetryListener"/>
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	
+	<parameter name="headless" value="true"/>
+	  	
+  	<parameter name="AdminName" value="Test CRM"></parameter>
+  	<parameter name="AdminPass" value="VanSyd123"></parameter>
+  	
+	<!-- AU -->	
+  
+  <test name="Create_AU_VFSC2_User">
+    <parameter name="Brand" value="vfsc2"/>
+  	<parameter name="TestEnv" value="prod"/>
+  	<parameter name="AdminURL" value="https://admin.vantagefx.com"></parameter>
+    <classes>
+
+     <class name="vantagecrm.CPRegister">
+        <parameter name="WebSiteURL" value="https:/www.vantagefx.com/"/>
+      	<parameter name="RegisterURL" value=""/>
+        <parameter name="IBpromotion" value="?affid=NBMjExOTQz"/>    
+     
+     	<methods>
+     		<include name ="RegisterUserMT4"></include>
+       	</methods>    
+     </class>
+      <class name="vantagecrm.AdminAPITest">
+	   	  	<methods>
+	   	  		<include name="APIUpdateTestAccGroup"/>
+	   	  	</methods>
+	  </class> 
+    </classes>
+  </test>
+  
+  <test name="Create_AU_FCA_User">
+    <parameter name="Brand" value="fca"/>
+  	<parameter name="TestEnv" value="prod"/>
+    <classes>
+
+     <class name="vantagecrm.CPRegister">
+        <parameter name="WebSiteURL" value="https:/www.vantagefx.com/"/>
+      	<parameter name="RegisterURL" value=""/> 
+      	<parameter name="IBpromotion" value="?affid=NBMjExOTQz"></parameter>   
+     	<methods>
+     		<include name ="RegisterUserMT4"></include>
+       	</methods>    
+     </class>
+    </classes>
+  </test>
+  
+  <test name="Create_AU_ASIC_User">
+    <parameter name="Brand" value="au"/>
+  	<parameter name="TestEnv" value="prod"/>
+    <classes>
+
+     <class name="vantagecrm.CPRegister">
+        <parameter name="WebSiteURL" value="http://www.vantagefx.com.au"></parameter>
+      	<parameter name="RegisterURL" value=""></parameter>
+      	<parameter name="IBpromotion" value="?affid=NBMjExOTQz"></parameter>     
+     
+     	<methods>
+     		<include name ="RegisterUserMT4"></include>
+       	</methods>    
+     </class>
+    </classes>
+  </test>
+  
+  
+<!--   PUG -->
+  <test name="Create_PUG_FSA_User">
+    <parameter name="Brand" value="fsa"></parameter>
+  	<parameter name="TestEnv" value="prod"></parameter>
+  	<parameter name="AdminURL" value="https://admin.puprime.com"></parameter>
+  	
+    <classes>
+     <class name="vantagecrm.CPRegister">
+        <parameter name="WebSiteURL" value="https://www.puprime.com/"></parameter>
+      	<parameter name="RegisterURL" value=""></parameter>
+      	<parameter name="IBpromotion" value="?affid=NBMTEwMTQw"></parameter>     
+     	<methods>
+     		<include name ="RegisterUserMT4"></include>
+       	</methods>    
+     </class> 
+     <class name="vantagecrm.AdminAPITest">
+	   	  	<methods>
+	   	  		<include name="APIUpdateTestAccGroup"/>
+	   	  	</methods>
+	  </class>
+    </classes>
+  </test>
+  
+  <test name="Create_PUG_SVG_User">
+    <parameter name="Brand" value="svg"></parameter>
+  	<parameter name="TestEnv" value="prod"></parameter>
+  	<parameter name="AdminURL" value="https://admin.puprime.com"></parameter>
+    <classes>
+     <class name="vantagecrm.CPRegister">
+        <parameter name="WebSiteURL" value="https://www.puprime.net/"></parameter>
+       <parameter name="RegisterURL" value=""></parameter>
+        <parameter name="IBpromotion" value="?affid=NBMTEwMTQw"></parameter>         
+     	<methods>
+     		<include name ="RegisterUserMT4"></include>
+       	</methods>    
+     </class> 
+     <class name="vantagecrm.AdminAPITest">
+	   	  	<methods>
+	   	  		<include name="APIUpdateTestAccGroup"/>
+	   	  	</methods>
+	  </class>
+    </classes>
+  </test>
+  
+  <!-- VT -->
+  <test name="Create_VT_User">
+    <parameter name="Brand" value="vt"></parameter>
+  	<parameter name="TestEnv" value="prod"></parameter>
+  	<parameter name="AdminURL" value="https://admin.vtmarkets.com.cn"></parameter>
+  	
+    <classes>
+
+     <class name="vantagecrm.CPRegister">
+    	<parameter name="WebSiteURL" value="http://www.vtmarkets.com.cn"></parameter>
+    	<parameter name="RegisterURL" value=""></parameter>
+       	<parameter name="IBpromotion" value="?affid=NBODA1NjI="></parameter>
+     	<methods>
+     		<include name ="RegisterUserMT4"></include>
+       	</methods>    
+     </class> 
+     <class name="vantagecrm.AdminAPITest">
+	   	  	<methods>
+	   	  		<include name="APIUpdateTestAccGroup"/>
+	   	  	</methods>
+	  </class>
+    </classes>
+  </test> 
+</suite><!-- Suite -->

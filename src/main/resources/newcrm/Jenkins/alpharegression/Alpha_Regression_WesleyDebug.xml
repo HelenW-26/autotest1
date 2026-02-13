@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Alpha Smoke Test" configfailurepolicy="continue">
+    <listeners>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+    <parameter name="Brand" value="${brand}"></parameter>
+    <parameter name="Server" value="${container}"></parameter>
+
+    <suite-files>
+        <suite-file path="Alpha_Regression_UI.xml"/>
+        <suite-file path="Alpha_Regression_API.xml"/>
+    </suite-files>
+</suite>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- alpha jenkins上进行smoke test的job -->
+
+<suite name="Alpha Regression" configfailurepolicy="continue">
+
+    <listeners>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+<!--        <parameter name="Brand" value="VT"></parameter>-->
+<!--        <parameter name="Server" value="core-vt"></parameter>-->
+
+    <parameter name="Brand" value="${brand}"></parameter>
+    <parameter name="Server" value="${container}"></parameter>
+
+
+    <test name="CP Payment UI Regression">
+        <classes>
+<!--            <class name="newcrm.testcases.alpharegression.AlphaApiWithdrawTestCases">-->
+<!--                <methods>-->
+<!--                    <include name="sameChannelDepositWithdraw"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+            <class name="newcrm.testcases.alpharegression.AlphaWithdrawLimitTestCases">
+                <methods>
+                    <include name="judgeMsgEnable2fa"></include>
+<!--                    <include name="limitWithUnbind2fa"></include>-->
+<!--                    <include name="limitWithModify2fa"></include>-->
+<!--                    <include name="limitWithModifyEmail"></include>-->
+<!--                    <include name="limitWithModifyPwd"></include>-->
+<!--                    <include name="limitWithResetPwd"></include>-->
+<!--                    <include name="limitWithModifyPhone"></include>-->
+<!--                    <include name="withdrawCredit"></include>-->
+                </methods>
+            </class>
+<!--            <class name="newcrm.testcases.alpharegression.AlphaTrasferWalletTestCases">-->
+<!--                <methods>-->
+<!--                    <include name="transMT2Wallet"></include>-->
+<!--                    <include name="transAccWallet2MT"></include>-->
+<!--                    <include name="transAccMT2MTWithCredit"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="newcrm.testcases.alpharegression.AlphaDepositApprovePopUpTestCases">-->
+<!--                <methods>-->
+<!--                    <include name="testDepositApprovePopupCheck"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="newcrm.testcases.alpharegression.AlphaDepositTestCases">-->
+<!--                    <methods>-->
+<!--                    <include name="testVerificationDepositLBTPageCheck"></include>-->
+<!--                    <include name="testVerificationDepositCryptoPageCheck"></include>-->
+<!--                    <include name="testVerificationDepositCreditCardPageCheck"></include>-->
+<!--                    <include name="testVerificationDepositEWalletPageCheck"></include>-->
+<!--                    <include name="testVerificationDepositOfflineCheck"></include>-->
+<!--                    <include name="depositInputDisplayedInfoCheck"></include>-->
+<!--                    <include name="depositDeductedMaxAmount"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="newcrm.testcases.alpharegression.AlphaDepositPopWindowTestCases">-->
+<!--                <methods>-->
+<!--                    <include name="depositMinimumAmountPopupWindow"></include>-->
+<!--                    </methods>-->
+<!--                </class>-->
+<!--            <class name="newcrm.testcases.alpharegression.AlphaCCWithdrawTestCases">-->
+<!--                <methods>-->
+<!--                    <include name="testWithdrawCreditCardInfoCheck"></include>-->
+
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="newcrm.testcases.alpharegression.AlphaWithdrawTestCases">-->
+<!--                <methods>-->
+<!--                    <include name="testWithdrawDeductedMaxAmount"></include>-->
+<!--                    <include name="testWithDrawPageChangeRateCheck"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="newcrm.testcases.alpharegression.AlphaUnionPayWithdrawTestCases">-->
+<!--                <methods>-->
+<!--                    <include name="unionPayWithdraw"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="newcrm.testcases.alpharegression.AlphaWithdrawApprovePopUpTestCases">-->
+<!--                <methods>-->
+<!--                    <include name="withdrawApprovePopupCheck"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+        </classes>
+    </test>
+<!--    <test name="Admin Payment Deposit API Regression">-->
+<!--        <classes>-->
+<!--        <class name="newcrm.testcases.alpharegression.AlphaAPIDepositTestCases">-->
+<!--            <methods>-->
+<!--&lt;!&ndash;   注释掉：跟产品确认Pending已不发邮件 <include name="testAPICPPendingOrFailedDeposit"></include>&ndash;&gt;-->
+<!--                <include name="testAPICPSuccessDeposit"></include>-->
+<!--                <include name="testAPICashAdjustmentDeposit"></include>-->
+<!--                <include name="testAPICashAdjustmentCreditIn"></include>-->
+<!--            </methods>-->
+<!--        </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>

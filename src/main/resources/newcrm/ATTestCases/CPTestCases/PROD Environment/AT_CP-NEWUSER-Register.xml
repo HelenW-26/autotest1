@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Create New Users" configfailurepolicy="continue">
+
+ <listeners>
+     <listener class-name="utils.Listeners.CustomListener"/>
+  </listeners>
+    <parameter name="Brand" value="AT"></parameter>
+  	<parameter name="Regulator" value="SVG"></parameter>	
+  	<parameter name="TestEnv" value="ALPHA"></parameter>
+    <parameter name="AdminURL" value="https://admin.alphatick.com/"></parameter>
+  	<parameter name="AdminName" value="alexliu"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="https://myaccount.alphatick.com"></parameter>
+   	<parameter name="TraderName" value="webqvb@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>
+    <parameter name="Debug" value="true"></parameter>
+    <parameter name="IBCode" value=""></parameter>
+    <parameter name="RAFCode" value=""></parameter>
+    <parameter name="headless" value="true"></parameter>
+   
+   <test name="Create_AT_User"> 
+    <classes>
+     <class name="newcrm.testcases.cptestcases.RegisterTestcases">
+     	<methods>
+     		<include name ="testRegistMT4LiveAccountWithoutCheck"></include>
+       	</methods>    
+     </class>
+    </classes>
+  </test> 
+</suite><!-- Suite -->

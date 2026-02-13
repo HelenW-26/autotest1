@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- 对应Jenkins Job：  QA share-calculate commission，计算指定rebate account的佣金 -->
+<suite name="commission" configfailurepolicy="continue">
+
+  <parameter name="Brand" value="${Brand}"></parameter>
+  <parameter name="Server" value="${Server}"></parameter>
+  <parameter name="RebateAccout" value="${RebateAccout}"></parameter>
+  <parameter name="Date" value ="${Date}"></parameter>
+  <parameter name="TestEnv" value ="${Environment}"></parameter>
+  <parameter name="Regulator" value="${Regulator}"></parameter>
+
+    <!--<parameter name="Brand" value="vt"></parameter>
+    <parameter name="Server" value="Core-VT"></parameter>
+    <parameter name="RebateAccout" value="810270098"></parameter>
+    <parameter name="Date" value ="2023-03-01"></parameter>
+    <parameter name="TestEnv" value ="alpha"></parameter>
+    <parameter name="Regulator" value="SVG"></parameter>-->
+
+  <test name="commission calculation">
+  	
+    <classes>
+     	<class name="newcrm.testcases.commission.Calculation">
+   		 	<methods>
+   		 		<include name="calculateByRebateAccount"></include>
+   		 	</methods>
+   		 </class>
+    </classes>
+  </test>
+</suite><!-- Suite -->

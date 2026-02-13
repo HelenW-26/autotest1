@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- payment 相关 API 的 Regresion Job -->
+<suite name="Payment API (CP/IB/ADMIN) Regression Job" configfailurepolicy="continue">
+
+    <listeners>
+        <!-- 启用 Allure Listener -->
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+        <listener class-name="newcrm.listeners.AllureTestListener"/>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+
+    <parameter name="Brand" value="${brand}"></parameter>
+    <parameter name="Server" value="${container}"></parameter>
+
+
+    <test name="CP Payment API Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.AlphaAPIPaymentOthersTestCases">
+                <methods>
+                    <include name="testAPICPTransfer"></include>
+                    <include name="testAPIIBTransfer"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.alpharegression.AlphaAPIDepositTestCases">
+                <methods>
+                    <include name="testAPICPDepositOthers"></include>
+                    <include name="testWEBApiDeposit"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.alpharegression.AlphaAPIWithdrawalTestCases">
+                <methods>
+                    <include name="testAPICPWithdrawalOthers"></include>
+                    <include name="testAPIIBWithdrawal"></include>
+                    <include name="testAPIIBWithdrawalOthers"></include>
+                    <include name="testWEBApiWithdrawal"></include>
+                    <include name="testAPIWithdrawalCCLBTOther"></include>
+                    <include name="testAPIWithdrawalCCOther"></include>
+                    <include name="testAPIWithdrawalLBTOther"></include>
+                    <include name="testAPIWithdrawalCCLBT"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Admin Payment API Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.AlphaAPIAdminPaymentTestCases">
+                <methods>
+                    <include name="testAPIAdminDepositAudit"></include>
+                    <include name="testAPIAdminWithdrawalAudit"></include>
+                    <include name="testAPIAdminDepWithReport"></include>
+                    <include name="testAPIAdminFinancialInfoAudit"></include>
+                    <include name="testAPIAdminAcctTransferAudit"></include>
+                    <include name="testAPIAdminCCTransactionAudit"></include>
+                    <include name="apiAdminCCArchiveAuditPage"></include>
+                    <include name="testAPIAdminCashAdjustmentAudit"></include>
+                    <include name="testAPIAdminLBTTransactionAudit"></include>
+                    <include name="testAPIAdminUnionPayWithdrawal"></include>
+                    <include name="testAPIAdminPaymentCacheMgmt"></include>
+                    <include name="testAPIAdminAutoAuditSwitch"></include>
+                    <include name="testAPIAdminExchangeRate"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

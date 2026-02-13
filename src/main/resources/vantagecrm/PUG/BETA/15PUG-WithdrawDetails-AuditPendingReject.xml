@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="PUG Test Suite" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	
+    <parameter name="Brand" value="pug"></parameter>
+  	<parameter name="TestEnv" value="beta"></parameter>	
+  	<parameter name="AdminURL" value="https://betavgpadmin.puprime.com"></parameter>
+  	<parameter name="AdminName" value="Test CRM"></parameter>
+  	<parameter name="AdminPass" value="Vantagefx123"></parameter>
+  	<parameter name="TraderURL" value="https://betavgpmyaccount.puprime.com/"></parameter>
+    <parameter name="TraderName" value="webuxt@test.com"></parameter>
+    <parameter name="TraderPass" value="951391"></parameter> 
+ 
+ 	
+    <test name="Withdraw Details Audit">
+    <classes>
+	   		    		      		
+	   	  <class name="vantagecrm.CPPaymentDetail">
+	   	  	<methods>
+	   	  		<include name="CPLogIn"></include>
+	   	  		<include name="AddUnionPayWithdrawDetail"></include>
+	   	  	</methods>
+	   	  
+	   	  </class>
+	   	  
+	       
+	      <class name="vantagecrm.TaskManagement">
+	      
+	      		<methods>
+		      		<include name="AdminLogIn"></include>  	 
+	            	 <include name="WithdrawDetailsAudit"></include>            	     
+	       		</methods>
+	      </class>
+	      
+		      
+	  	</classes>
+  </test>
+  
+  <test name="Withdraw Details Pending">
+      	
+     
+	   <classes>
+	   		    		      		
+	   	  <class name="vantagecrm.CPPaymentDetail">
+	   	  	<methods>
+	   	  		<include name="CPLogIn"></include>
+	   	  		<include name="AddUnionPayWithdrawDetail"></include>
+	   	  	</methods>
+	   	  
+	   	  </class>
+	   	  
+	       
+	      <class name="vantagecrm.TaskManagement">
+	      
+	      		<methods>
+		      		<include name="AdminLogIn"></include>  	 
+	            	 <include name="WithdrawDetailsPending"></include>            	     
+	       		</methods>
+	      </class>
+	      
+		      
+	  	</classes>
+  </test>
+  
+   <test name="Withdraw Details Reject">
+      	
+     
+	   <classes>
+	   		    		      		
+	   	  <class name="vantagecrm.CPPaymentDetail">
+	   	  	<methods>
+	   	  		<include name="CPLogIn"></include>
+	   	  		<include name="AddUnionPayWithdrawDetail"></include>
+	   	  	</methods>
+	   	  
+	   	  </class>
+	   	  
+	       
+	      <class name="vantagecrm.TaskManagement">
+	      
+	      		<methods>
+		      		<include name="AdminLogIn"></include>  	 
+	            	<include name="WithdrawDetailsReject"></include>            	     
+	       		</methods>
+	      </class>
+	      
+		      
+	  	</classes>
+  </test>
+  
+ <test name="Withdraw Details Edit">
+	    <classes>
+	   		    		      		
+	  	  <class name="vantagecrm.CPPaymentDetail">
+	   	  	<methods>
+	   	  		<include name="CPLogIn"></include>
+	   	  		<include name="AddUnionPayWithdrawDetail"></include>
+	   	  	    <include name="UPWdSubmittedEdit"></include>
+	   	  		<include name="UPWdPendingEdit"></include>
+
+	   	  	</methods>
+	   	  </class>
+	      
+	  	</classes>
+  </test>
+  
+  <test name="Withdraw Details Search">
+    
+	   <classes>
+	   		    		      		
+	      <class name="vantagecrm.TaskManagement">
+	      
+	      		<methods>
+		      		<include name="AdminLogIn"></include>  	 
+	            	<include name="WithdrawDetailsSearchByName"></include>            	     
+	       		</methods>
+	      </class>
+	  	</classes>
+  </test>
+    
+</suite> <!-- Suite -->

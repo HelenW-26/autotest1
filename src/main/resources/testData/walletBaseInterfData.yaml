@@ -1,0 +1,7 @@
+walletyaml:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-core-au.crm-alpha.com/"
+  openapi_url: "https://openapi-core-au.crm-alpha.com"
+  password: "123Qwe"
+  brand: "VFX"
+  server: "core-au"

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Create New Users" configfailurepolicy="continue">
+
+ <listeners>
+     <listener class-name="utils.Listeners.CustomListener"/>
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	
+  	<parameter name="TestEnv" value="alpha"></parameter>
+    <parameter name="AdminURL" value="https://admin-capricorn-ex.crm-alpha.com/admin/main"></parameter>
+  	<parameter name="AdminName" value="Yanni"></parameter>
+  	<parameter name="AdminPass" value="12345678Qi"></parameter>
+  	<parameter name="TraderURL" value="https://secure-staging-au-ex.crm-alpha.com"></parameter>
+   	<parameter name="TraderName" value="VFXAutomationexclusive@mailinator.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>
+    <parameter name="Debug" value="true"></parameter>
+    <parameter name="IBCode" value="2134"></parameter>
+    <parameter name="RAFCode" value=""></parameter>
+    <parameter name="headless" value="true"></parameter>
+	<!-- AU -->	
+  
+<!--   <test name="Create_AU_VFSC2_User">
+    <parameter name="Brand" value="VFX"></parameter>
+  	<parameter name="Regulator" value="vfsc2"></parameter>
+    <classes>
+
+     <class name="newcrm.testcases.cptestcases.RegisterTestcases">
+     	<methods>
+     		<include name ="testRegistMT4LiveAccount"></include>
+       	</methods>    
+     </class>
+    </classes>
+  </test>
+  
+  <test name="Create_AU_FCA_User">
+    <parameter name="Brand" value="VFX"></parameter>
+  	<parameter name="Regulator" value="FCA"></parameter>
+    <classes>
+
+     <class name="newcrm.testcases.cptestcases.RegisterTestcases">
+     	<methods>
+     		<include name ="testRegistMT4LiveAccount"></include>
+       	</methods>    
+     </class>
+    </classes>
+  </test>
+  
+  <test name="Create_AU_ASIC_User">
+    <parameter name="Brand" value="VFX"></parameter>
+  	<parameter name="Regulator" value="asic"></parameter>
+    <classes>
+
+     <class name="newcrm.testcases.cptestcases.RegisterTestcases">
+     	<methods>
+     		<include name ="testRegistMT4LiveAccount"></include>
+       	</methods>    
+     </class>
+    </classes>
+  </test>
+  
+    <test name="Create_AU_VFSC_User">
+    <parameter name="Brand" value="VFX"></parameter>
+  	<parameter name="Regulator" value="vfsc"></parameter>
+    <classes>
+
+     <class name="newcrm.testcases.cptestcases.RegisterTestcases">
+     	<methods>
+     		<include name ="testRegistMT4LiveAccount"></include>
+       	</methods>    
+     </class>
+    </classes>
+  </test> -->
+  
+  
+<!--   PUG -->
+<!--   <test name="Create_PUG_FSA_User">
+    <parameter name="Brand" value="fsa"></parameter>
+  	<parameter name="TestEnv" value="prod"></parameter>
+  	<parameter name="AdminURL" value="https://admin.puprime.com"></parameter>
+  	
+    <classes>
+     <class name="vantagecrm.CPRegister">
+        <parameter name="WebSiteURL" value="https://www.puprime.com/"></parameter>
+      	<parameter name="RegisterURL" value=""></parameter>
+      	<parameter name="IBpromotion" value="?affid=NBMTEwMTQw"></parameter>     
+     	<methods>
+     		<include name ="RegisterUserMT4"></include>
+       	</methods>    
+     </class> 
+     <class name="vantagecrm.AdminAPITest">
+	   	  	<methods>
+	   	  		<include name="APIUpdateTestAccGroup"/>
+	   	  	</methods>
+	  </class>
+    </classes>
+  </test>
+  
+  <test name="Create_PUG_SVG_User">
+    <parameter name="Brand" value="svg"></parameter>
+  	<parameter name="TestEnv" value="prod"></parameter>
+  	<parameter name="AdminURL" value="https://admin.puprime.com"></parameter>
+    <classes>
+     <class name="vantagecrm.CPRegister">
+        <parameter name="WebSiteURL" value="https://www.puprime.net/"></parameter>
+       <parameter name="RegisterURL" value=""></parameter>
+        <parameter name="IBpromotion" value="?affid=NBMTEwMTQw"></parameter>         
+     	<methods>
+     		<include name ="RegisterUserMT4"></include>
+       	</methods>    
+     </class> 
+     <class name="vantagecrm.AdminAPITest">
+	   	  	<methods>
+	   	  		<include name="APIUpdateTestAccGroup"/>
+	   	  	</methods>
+	  </class>
+    </classes>
+  </test> -->
+  
+  <!-- VT -->
+  <test name="Create_VFSC2_User">
+    <parameter name="Brand" value="vfx"></parameter>
+  	<parameter name="Regulator" value="vfsc2"></parameter>
+    <classes>
+
+     <class name="newcrm.testcases.cptestcases.RegisterTestcases">
+     	<methods>
+     		<!-- <include name ="testRegistMT4LiveAccount"></include> -->
+     		<include name = "testRegistMT4LiveAccountWithIBCode"></include>
+       	</methods>    
+     </class>
+    </classes>
+  </test> 
+</suite><!-- Suite -->

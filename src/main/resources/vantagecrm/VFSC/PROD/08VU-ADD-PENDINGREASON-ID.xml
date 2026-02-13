@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite allow-return-values="false" configfailurepolicy="continue" data-provider-thread-count="10" group-by-instances="false" guice-stage="DEVELOPMENT" junit="false" name="KY Test Suite" parallel="none" preserve-order="true" skipfailedinvocationcounts="false" thread-count="5">
+
+ <listeners>
+    <!-- <listener class-name="utils.Listeners.TestListener" /> -->
+    <listener class-name="utils.Listeners.CustomListener"/>
+  </listeners>
+
+	<parameter name="Brand" value="vfsc"/>
+  	<parameter name="TestEnv" value="prod"/>
+    <parameter name="AdminURL" value="https://admin.vantagefx.com"/>
+  	<parameter name="AdminName" value="Test Crm"/>
+  	<parameter name="AdminPass" value="Vantage123"/>
+  	<parameter name="TraderURL" value="https://secure.vantagefx.com"/>
+   	<parameter name="TraderName" value="webopn@test.com"/>
+    <parameter name="TraderPass" value="123Qwe"/>  
+	
+<!--   <test name="ID Pending Reason">
+   
+    <classes>
+    	<class name="vantagecrm.NewTaskManagement">
+    	<methods>
+    		<include name="AdminLogIn"></include>
+    		<include name="AddIDProof"></include>
+    		<include name="IDProofPendingReason"></include>  
+    	</methods>  	
+    	</class>  	    	
+
+   </classes>
+  </test> -->
+  
+  <test allow-return-values="false" group-by-instances="false" junit="false" name="POA Pending Reason" preserve-order="true" skipfailedinvocationcounts="false">
+   
+    <classes>
+    	<class name="vantagecrm.NewTaskManagement">
+	    	<methods>
+	    		<include name="AdminLogIn"/>
+	    		<include name="AddPOA"/>
+	    		<include name="POAPendingReason"/> 
+	    	</methods>   	
+    	</class>  	    	
+
+   </classes>
+  </test> 
+</suite><!-- Suite -->

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="VT account configuration suit" configfailurepolicy="continue">
+
+	<listeners>
+     	<listener class-name="utils.Listeners.CustomListener"/>
+  	</listeners>
+  <test name="VT Test Account configuration">
+    <parameter name="Brand" value="VT"></parameter>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+  	<parameter name="Regulator" value="cima"></parameter>
+  	<parameter name="TraderURL" value="https://secure-taurus-ex.crm-alpha.com"></parameter>
+   	<parameter name="TraderName" value="ndptest7@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.AccountConfigureTestCases">
+   		 	<methods>
+   		 		<include name="testChangeMT4AccountLeverage"></include>
+   		 		<include name="testChangeMT5AccountLeverage"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

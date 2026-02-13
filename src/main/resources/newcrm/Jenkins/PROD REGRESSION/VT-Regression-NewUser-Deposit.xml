@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- PROD REGRESSION /  QA_AUTOMATION_81_VT_PROD_REGISTER_REGRESSION-->
+
+<suite name="Regression New User and Deposit" configfailurepolicy="continue">
+
+ <listeners>
+     <listener class-name="utils.Listeners.CustomListener"/>
+     <!-- <listener class-name="utils.Listeners.RetryListener"/> -->
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	
+	<parameter name="headless" value="true"/>
+	  	
+  	<parameter name="AdminName" value="Test CRM"></parameter>
+  	<parameter name="AdminPass" value="BDAVJECnh4hovtZLV33N"></parameter>
+  	<parameter name="Debug" value="true"></parameter>
+	
+  <!-- VT -->
+  
+  <test name="VT_SVG_NewUser_deposit">
+    <parameter name="Brand" value="VT"></parameter>
+  	<parameter name="TestEnv" value="prod"></parameter>
+  	<parameter name="AdminURL" value="https://admin.vtmarkets.com"></parameter>
+    <parameter name="Regulator" value="SVG"></parameter>
+    <parameter name="IBCode" value="NBODA1NjI="></parameter>
+    <parameter name="RAFCode" value=""></parameter>
+    <parameter name="TraderURL" value="https://myaccount.vtmarkets.com"></parameter>
+    <parameter name="TraderName" value="autotestnhszszyu@testcrmautomation.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>
+    <classes>
+    	<class name="newcrm.testcases.cptestcases.RegisterTestcases">
+   		 	<methods>
+   		 		<include name="testRegistMT4LiveAccountWithIBCode"></include>
+   		 		<!-- <include name="APIUpdateTestAccGroup"></include> -->
+   		 	</methods>
+   		 </class>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="testNetellerPay"></include>
+   		 		<include name="testSkrillPay"></include>
+   		 		<include name="testInterBankTransPay"></include>
+   		 		<include name="testFasaPay"></include>
+   		 	</methods>
+   		 </class>
+    </classes>
+  	</test>
+</suite><!-- Suite -->

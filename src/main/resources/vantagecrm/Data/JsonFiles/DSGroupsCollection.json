@@ -1,0 +1,376 @@
+[{  "dataSourceId":"5", 
+    "data": [
+      { "regulator": ["au", "ky", "vfsc", "vfsc2"],
+        "USD":"TEST_VFX_USD",
+        "AUD":"TEST_VFX_AUD",
+        "GBP":"TEST_VFX_GBP",
+        "HKD":"TEST_VFX_HKD",
+        "NZD":"TEST_VFX_PW_NZD"
+      }]
+ },
+ {  "dataSourceId":"11",
+     "data": [
+       { "regulator": ["ky", "vfsc", "vfsc2"],
+		 "USD":"TEST_VFX_USD",
+          "AUD":"TEST_VFX_AUD",
+          "GBP":"TEST_VFX_GBP",
+          "EUR":"TEST_VFX_EUR",
+          "CAD":"TEST_VFX_CAD",
+          "SGD":"TEST_VFX_SGD",
+          "JPY":"TEST_VFX_RE_JPY",
+          "NZD":"TEST_VFX_RE_NZD"           
+       },
+       { "regulator": ["movfsc"],
+         "USD":"TEST_MON_USD",
+         "AUD":"TEST_MON_AUD",
+         "GBP":"TEST_MON_GBP"
+       }]
+  },
+  {  "dataSourceId":"14", 
+      "data": [
+        { "regulator": ["ky", "vfsc", "vfsc2"],
+          "USD":"TEST_VFX_USD",
+          "AUD":"TEST_VFX_AUD",
+          "GBP":"TEST_VFX_GBP",
+          "EUR":"TEST_VFX_EUR",
+          "CAD":"TEST_VFX_CAD",
+          "SGD":"TEST_VFX_SGD",
+          "JPY":"TEST_VFX_JPY",
+          "NZD":"TEST_VFX_NZD",
+          "HKD":"TEST_VFX_HKD"
+        }]
+  },
+  {  "dataSourceId":"200", 
+      "data": [
+        { "regulator": ["ky", "vfsc", "vfsc2"],
+          "USD":"TEST_VFX_USD",
+          "AUD":"TEST_VFX_AUD",
+          "GBP":"TEST_VFX_GBP",
+          "EUR":"TEST_VFX_EUR",
+          "CAD":"TEST_VFX_CAD",
+          "SGD":"TEST_VFX_SGD",
+          "JPY":"TEST_VFX_JPY",
+          "NZD":"TEST_VFX_NZD",
+          "HKD":"TEST_VFX_HKD",
+          "USC":"TEST_VU_USC"
+        }]
+  },
+  {  "dataSourceId":"2", 
+      "data": [
+        { "regulator": ["ky", "vfsc", "vfsc2"],
+          "USD":"TEST_VFX_USD",
+          "AUD":"TEST_VFX_P_AUD",
+          "GBP":"TEST_VFX_GBP",
+          "EUR":"TEST_VIG_EUR",
+          "CAD":"TEST_VIG_CAD",
+          "SGD":"TEST_VFX_SGD",
+          "JPY":"TEST_VFX_JPY",
+          "NZD":"TEST_VFX_NZD",
+          "HKD":"TEST_VIG_HKD"
+        }]
+  },
+  {  "dataSourceId":"12", 
+      "data": [
+        { "regulator": ["ky", "vfsc", "vfsc2"],
+          "USD":"TEST_VFX_USD",
+          "AUD":"TEST_VFX_AUD",
+          "GBP":"TEST_VFX_GBP",
+          "EUR":"TEST_VFX_EUR",
+          "CAD":"TEST_VFX_CAD",
+          "SGD":"TEST_VFX_SGD",
+          "NZD":"TEST_VFX_RE_NZD"
+        }]
+  },
+  {  "dataSourceId":"15", 
+      "data": [
+        { "regulator": ["ky", "vfsc", "vfsc2"],
+          "USD":"TEST_VIG_USD",
+          "AUD":"TEST_VIG_AUD",
+          "GBP":"TEST_VIG_GBP",
+          "EUR":"TEST_VIG_EUR"
+        }]
+  },
+  {  "dataSourceId":"201", 
+      "data": [
+        { "regulator": ["ky", "vfsc", "vfsc2"],
+          "USD":"TEST_VFX_USD",
+          "AUD":"TEST_VFX_AUD",
+          "GBP":"TEST_VFX_GBP",
+          "EUR":"TEST_VFX_EUR",
+          "CAD":"TEST_VFX_CAD",
+          "SGD":"TEST_VFX_SGD",
+          "JPY":"TEST_VFX_RE_JPY",
+          "NZD":"TEST_VFX_RE_NZD",
+          "HKD":"TEST_VFX_HKD",
+          "PLN":"TEST_VIG_P_PLN"
+        }]
+  },
+  {  "dataSourceId":"220", 
+      "data": [
+        { "regulator": ["ky", "vfsc", "vfsc2"],
+          "USD":"TEST_VFX_USD",
+          "AUD":"TEST_VFX_AUD",
+          "GBP":"TEST_VFX_GBP",
+          "EUR":"TEST_VFX_EUR",
+          "CAD":"TEST_VFX_CAD",
+          "SGD":"TEST_VFX_SGD",
+          "HKD":"TEST_VFX_HKD"
+        }]
+  },
+  {  "dataSourceId":"230", 
+      "data": [
+        { "regulator": ["vfsc", "vfsc2"],
+          "USD":"TEST_VIG_USD",
+          "AUD":"TEST_VIG_AUD",
+          "GBP":"TEST_VIG_GBP",
+          "JPY":"TEST_VIG_JPY",
+          "CAD":"TEST_VIG_CAD",
+          "SGD":"TEST_VFX_SGD",
+          "HKD":"TEST_VIG_HKD"
+        }]
+  },
+  {  "dataSourceId":"240", 
+      "data": [
+        { "regulator": ["vfsc", "vfsc2"],
+          "USD":"TEST_VIG_USD",
+          "AUD":"TEST_VIG_AUD",
+          "GBP":"TEST_VIG_GBP",
+          "EUR":"TEST_VIG_EUR"
+        }]
+  },
+  {  "dataSourceId":"260", 
+      "data": [
+        { "regulator": ["vfsc", "vfsc2"],
+          "USD":"TEST_VFX_USD",
+          "AUD":"TEST_VFX_AUD",
+          "GBP":"TEST_VFX_GBP",
+          "JPY":"TEST_VFX_JPY",
+          "CAD":"TEST_VFX_CAD",
+          "SGD":"TEST_VFX_SGD",
+          "HKD":"TEST_VIG_HKD",
+          "EUR":"TEST_VFX_EUR",
+          "NZD":"TEST_VIG_NZD",
+          "USC":"TEST_VU_USC"
+        }]
+  },
+  {  "dataSourceId":"270", 
+      "data": [
+        { "regulator": ["vfsc", "vfsc2"],
+          "USD":"TEST_VIG_USD",
+          "AUD":"TEST_VIG_AUD",
+          "GBP":"TEST_VIG_GBP",
+          "EUR":"TEST_VIG_EUR",
+          "HKD":"TEST_VIG_HKD"
+        }]
+  },
+  {  "dataSourceId":"8", 
+      "data": [
+        { "regulator": ["au", "ky", "vfsc", "vfsc2", "fca"],
+          "USD":"Test%5CTEST_CRM_USD",
+          "AUD":"Test%5CTEST_CRM_AUD",
+          "GBP":"Test%5CTEST_CRM_GBP",
+          "EUR":"Test%5CTEST_CRM_EUR",
+          "CAD":"Test%5CTEST_CRM_CAD",
+          "SGD":"Test%5CTEST_CRM_SGD",
+          "JPY":"Test%5CTEST_CRM_JPY",
+          "NZD":"Test%5CTEST_CRM_NZD",
+          "HKD":"Test%5CTEST_CRM_HKD",
+          "USC":"Test%5CTEST_VU_USC",
+          "PLN":"Test%5CTEST_CRM_VIG_P_PLN"
+        }]
+  },
+  {  "dataSourceId":"17",
+      "data": [
+        { "regulator": ["fca"],
+          "USD":"TEST_VUK_USD",
+          "GBP":"TEST_VUK_GBP",
+          "EUR":"TEST_VUK_EUR",
+          "HKD":"TEST_VUK_HKD"
+        }]
+  },
+  {  "dataSourceId":"10", 
+      "data": [
+        { "regulator": ["vtsvg"],
+          "USD":"TEST_VT_USD",
+          "GBP":"TEST_VT_GBP",
+          "EUR":"TEST_VT_EUR",
+          "CAD":"TEST_VT_CAD",
+          "AUD":"TEST_VT_AUD"
+        },
+        { "regulator": ["vt"],
+          "USD":"TEST_VTC_E_USD",
+          "GBP":"TEST_VTC_E_GBP",
+          "EUR":"TEST_VTC_E_EUR",
+          "CAD":"TEST_VTC_E_CAD",
+          "AUD":"TEST_VTC_E_AUD"
+        }]
+  },
+  {  "dataSourceId":"18",
+      "data": [
+        { "regulator": ["vt","vtsvg"],
+          "USD":"TEST_VT_USD",
+          "GBP":"TEST_VT_GBP",
+          "EUR":"TEST_VT_EUR",
+          "CAD":"TEST_VT_CAD",
+          "AUD":"TEST_VT_AUD",
+          "USC":"TEST_VT_V_USC",
+          "JPY":"TEST_VT_V_JPY"
+        }]
+  },
+  {  "dataSourceId":"58",
+      "data": [
+        { "regulator": ["vt","vtsvg"],
+          "USD":"TEST_VT_USD",
+          "GBP":"TEST_VT_GBP",
+          "EUR":"TEST_VT_EUR",
+          "CAD":"TEST_VT_CAD",
+          "AUD":"TEST_VT_AUD",
+          "USC":"TEST_VT_V_USC",
+          "JPY":"TEST_VT_V_JPY"
+        }]
+  },
+  {  "dataSourceId":"68", 
+      "data": [
+        { "regulator": ["vt","vtsvg"],
+          "USD":"TEST_VT_USD",
+          "GBP":"TEST_VT_GBP",
+          "EUR":"TEST_VT_EUR",
+          "CAD":"TEST_VT_CAD",
+          "AUD":"TEST_VT_AUD",
+          "USC":"TEST_VT_V_USC",
+          "JPY":"TEST_VT_V_JPY"
+        }]
+  },
+  {  "dataSourceId":"78", 
+      "data": [
+        { "regulator": ["vt","vtsvg"],
+          "USD":"TEST_VT_USD",
+          "GBP":"TEST_VT_GBP",
+          "EUR":"TEST_VT_EUR",
+          "CAD":"TEST_VT_CAD",
+          "AUD":"TEST_VT_AUD",
+          "USC":"TEST_VT_V_USC",
+          "JPY":"TEST_VT_V_JPY"
+        }]
+  },
+  {  "dataSourceId":"19",
+      "data": [
+        { "regulator": ["vt","vtsvg"],
+          "USD":"Test%5CTEST_VT_NM_E_USD",
+          "AUD":"Test%5CTEST_REBATE_VT_AUD",
+          "GBP":"Test%5CTEST_VT_V_GBP",
+          "EUR":"Test%5CTEST_VT_NM_S_EUR",
+          "CAD":"Test%5CTEST_REBATE_VT_CAD",
+          "USC":"Test%5CTEST_VT_V_USC",
+          "JPY":"Test%5CTEST_VT_V_JPY"
+        }]
+  },
+  {  "dataSourceId":"7", 
+      "data": [
+        { "regulator": ["fsa", "svg"],
+          "USD":"TEST_PUGS_USD",
+          "AUD":"TEST_PUGS_AUD",
+          "GBP":"TEST_PUGS_GBP",
+          "EUR":"TEST_PUGS_EUR",
+          "CAD":"TEST_PUGS_CAD",
+          "SGD":"TEST_PUGS_SGD",
+          "JPY":"TEST_PUGS_JPY",
+          "NZD":"TEST_PUGS_NZD",
+          "HKD":"TEST_PUGS_HKD",
+          "USC":"TEST_PUGS_0_USC"
+        }]
+  },
+  {  "dataSourceId":"900", 
+      "data": [
+        { "regulator": ["movfsc"],
+          "USD":"TEST_MON_USD",
+          "AUD":"TEST_MON_AUD",
+          "GBP":"TEST_MON_GBP",
+          "EUR":"TEST_MON_EUR",
+          "BRL":"TEST_MON_BRL"
+        }]
+  },
+  {  "dataSourceId":"21", 
+      "data": [
+        { "regulator": ["fsa", "svg"],
+          "USD":"TEST_PULS_USD",
+          "AUD":"TEST_PULS_AUD",
+          "GBP":"TEST_PULS_GBP",
+          "EUR":"TEST_PULS_EUR",
+          "CAD":"TEST_PULS_CAD",
+          "SGD":"TEST_PULS_SGD",
+          "JPY":"TEST_PULS_JPY",
+          "NZD":"TEST_PULP_NZD",
+          "HKD":"TEST_PULS_HKD",
+          "USC":"TEST_PULS_USC"
+        }]
+  },
+  {  "dataSourceId":"59", 
+      "data": [
+        { "regulator": ["fsa", "svg"],
+          "USD":"TEST_PULS_USD",
+          "AUD":"TEST_PULS_AUD",
+          "GBP":"TEST_PULS_GBP",
+          "EUR":"TEST_PULS_EUR",
+          "CAD":"TEST_PULS_CAD",
+          "SGD":"TEST_PULS_SGD",
+          "JPY":"TEST_PULS_JPY",
+          "NZD":"TEST_PULP_NZD",
+          "HKD":"TEST_PULS_HKD",
+          "USC":"TEST_PULS_USC"
+        }]
+  },
+  {  "dataSourceId":"20", 
+      "data": [
+        { "regulator": ["fsa"],
+          "USD":"TEST_PUI%5CTEST_CRM_PUGP_00_USD",
+          "AUD":"TEST_PUI%5CTEST_CRM_PUGP_00_AUD",
+          "GBP":"TEST_PUI%5CTEST_CRM_PUGP_00_GBP",
+          "EUR":"TEST_PUI%5CTEST_CRM_PUGP_00_EUR",
+          "CAD":"TEST_PUI%5CTEST_CRM_PUGP_00_CAD",
+          "SGD":"TEST_PUI%5CTEST_CRM_PUGP_00_SGD",
+          "JPY":"TEST_PUI%5CTEST_CRM_PUGP_00_JPY",
+          "NZD":"TEST_PUI%5CTEST_CRM_PUGP_00_NZD",
+          "HKD":"TEST_PUI%5CTEST_CRM_PUGP_00_HKD"
+        },
+        { "regulator": ["svg"],
+          "USD":"TEST_PUL%5CTEST_CRM_PULP_00_USD",
+          "AUD":"TEST_PUL%5CTEST_CRM_PULP_00_AUD",
+          "GBP":"TEST_PUL%5CTEST_CRM_PULP_00_GBP",
+          "EUR":"TEST_PUL%5CTEST_CRM_PULP_00_EUR",
+          "CAD":"TEST_PUL%5CTEST_CRM_PULP_00_CAD",
+          "SGD":"TEST_PUL%5CTEST_CRM_PULP_00_SGD",
+          "JPY":"TEST_PUL%5CTEST_CRM_PULP_00_JPY",
+          "NZD":"TEST_PUL%5CTEST_CRM_PULP_00_NZD",
+          "HKD":"TEST_PUL%5CTEST_CRM_PULP_00_HKD"
+        }]
+  },
+  {  "dataSourceId":"907", 
+      "data": [
+        { "regulator": ["movfsc"],
+          "USD":"Moneta_Hedge%5CTEST_MNT_NS_USD",
+          "AUD":"Moneta_Hedge%5CTEST_MNT_NS_AUD",
+          "GBP":"Moneta_Hedge%5CTEST_MNT_NS_GBP",
+          "EUR":"Moneta_Hedge%5CTEST_MNT_NS_EUR",
+          "CAD":"Moneta_Hedge%5CTEST_MNT_NS_CAD",
+          "SGD":"Moneta_Hedge%5CTEST_MNT_NS_SGD",
+          "JPY":"Moneta_Hedge%5CTEST_MNT_NS_JPY",
+          "NZD":"Moneta_Hedge%5CTEST_MNT_NS_NZD",
+          "BRL":"Moneta_Hedge%5CTEST_MNT_BRL"
+        }]
+  },
+  {  "dataSourceId":"600", 
+      "data": [
+        { "regulator": ["um"],
+          "USD":"TEST_UMS_USD",
+          "AUD":"TEST_UM_AUD",
+          "GBP":"TEST_UME_GBP",
+          "EUR":"TEST_UME_EUR",
+          "CAD":"TEST_UM_CAD",
+          "SGD":"TEST_UM_SGD",
+          "JPY":"TEST_UM_JPY",
+          "NZD":"TEST_UM_NZD",
+          "HKD":"TEST_UM_HKD"
+        }]
+  }    
+]

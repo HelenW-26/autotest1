@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU Prod Suite">
+
+	   <parameter name="Brand" value="au"></parameter>
+	  	<parameter name="TestEnv" value="test"></parameter>
+	    <parameter name="AdminURL" value="http://192.168.16.200:8001/admin/main"></parameter>
+	  	<parameter name="AdminName" value="Yanni"></parameter>
+	  	<parameter name="AdminPass" value="12345678Qi"></parameter>
+	  	<parameter name="TraderURL" value="http://192.168.16.200:8004"></parameter>
+	   	 <parameter name="TraderName" value="webcda@test.com"></parameter>
+	    <parameter name="TraderPass" value="123Qwe"></parameter>  
+	  	
+	  	<parameter name="ThaiAccount" value="test355Cfp@test.com"></parameter>
+	 	<parameter name="ThaiPwd" value="123Qwe"></parameter>
+	 	  	
+	 	<parameter name="MalayAccount" value="webmez@test.com"></parameter>
+	 	<parameter name="MalayPwd" value="123Qwe"></parameter>
+	  	
+	    <parameter name="VietAccount" value="test304wro@test.com"></parameter>
+	 	<parameter name="VietPwd" value="123Qwe"></parameter>
+	  	
+	  	<parameter name="NigeAccount" value="test664vvn@test.com"></parameter>
+	 	<parameter name="NigePwd" value="123Qwe"></parameter>
+  	
+  <test thread-count="5" name="Test Register User Audit User">   	
+    <classes>  
+	    <class name="vantagecrm.UserManagement">
+	      
+	      	<parameter name="WebSiteURL" value="https://new.vantagefx.com"></parameter>
+	      	<parameter name="RegisterURL" value="http://192.168.16.200:8004"></parameter>
+	      	<!-- <parameter name="IBpromotion" value="?affid=OTUwMDA3"></parameter> -->
+	     		
+	      	<methods>
+	      	   	<include name="RegisterUser"></include>   	
+	      	</methods>
+	      	
+	    </class>   
+	    
+   
+       <class name="vantagecrm.TaskManagement">
+      
+      	<methods>
+      		<include name="AdminLogIn"></include>  
+      		<include name="AccountAuditWeb"></include> 
+       	</methods>
+      </class>   		
+
+    </classes>
+    
+  </test> <!-- Test -->
+  
+    
+</suite> <!-- Suite -->

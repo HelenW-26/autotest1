@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- QA share/QA share-CheckPromotionResult -->
+<suite name="CPS Deposit Suite" configfailurepolicy="continue">
+	<parameter name="ToolUrl" value="https://channel-tool.cps-sdbx.com/channel-tool/api-index.html"/>
+	<parameter name="merCd" value="520045110001805"/>
+	<parameter name="secret" value="abeabe46840fb49f85283c84207b4182a049b7df"/>
+	<parameter name="headless" value="true"/>
+
+	<test name="CPSCreateWithdraw">
+		<groups>
+			<run>
+				<include name="USDTTRC20"/>
+			</run>
+		</groups>
+		<classes>
+			<class name="newcrm.testcases.cps.CPSCreateWithdrawOrderTest"/>
+		</classes>
+	</test>
+</suite> <!-- Suite -->

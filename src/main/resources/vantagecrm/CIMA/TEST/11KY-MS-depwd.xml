@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU Test Suite" configfailurepolicy="continue">
+
+ <listeners>
+    <!-- <listener class-name="utils.Listeners.TestListener" /> -->
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	
+	
+	<parameter name="Brand" value="ky"></parameter>
+  	<parameter name="TestEnv" value="test"></parameter>
+    <parameter name="AdminURL" value="http://mg.vantagefx.com:8001/admin/main"></parameter>
+  	<parameter name="AdminName" value="automation_ky"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="http://mg.vantagefx.com:8004"></parameter>
+   	 <parameter name="TraderName" value="webkyy@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+  	<parameter name="ThaiAccount" value="test961psv@test.com"></parameter>
+ 	<parameter name="ThaiPwd" value="123Qwe"></parameter>
+ 	  	
+   <parameter name="MalayAccount" value="webkyy@test.com"></parameter>
+ 	<parameter name="MalayPwd" value="123Qwe"></parameter>  
+  	
+    <parameter name="VietAccount" value="test961psv@test.com"></parameter>
+ 	<parameter name="VietPwd" value="123Qwe"></parameter>
+  	
+  	<parameter name="NigeAccount" value="test961psv@test.com"></parameter>
+ 	<parameter name="NigePwd" value="123Qwe"></parameter>
+	
+   <test name="Malaysia Deposit">
+      	
+     
+	   <classes>
+	   		    		      		
+	   	  <class name="vantagecrm.UpdateClient">
+	   	  	<methods>
+	   	  		<include name="AdminLogIn"></include>
+	   	  		<include name="setCountry2Malay"></include>
+	   	  	</methods>
+	   	  
+	   	  </class>
+	   	  
+	   	  	<class name="vantagecrm.TraderDeposit">
+	      		<methods>
+	          			
+	      			<include name="TraderLogIn"></include> 
+	     			<include name="MalaysiaDeposit"></include>
+	        		
+	      		</methods>   
+	      
+	      </class>
+	      
+	      <class name="vantagecrm.TaskManagement">
+	      
+	      		<methods>
+		      		<include name="AdminLogIn"></include>  	 
+	            	 <include name="OnlineDepositAudit"></include>            	     
+	       		</methods>
+	      </class>
+	      
+		      
+	  	</classes>
+  </test>
+  
+     <test name="Malaysia Withdraw">
+      	
+ 	   <classes>
+	  
+	  	  <class name="vantagecrm.TraderWithdraw">
+	      		<methods>
+	            			
+	      			<include name="TraderLogIn"></include> 
+	     			<include name="WithdrawMalayBank"></include>
+	        		
+	      		</methods>       
+	      
+	      </class>  
+	      
+	      <class name="vantagecrm.TaskManagement">
+	      
+	      		<methods>
+		      		<include name="AdminLogIn"></include>  	 
+	            	 <include name="WithdrawlAudit"></include>            	     
+	       		</methods>
+	      </class>
+	      
+	  </classes>
+  </test>
+  
+</suite> <!-- Suite -->

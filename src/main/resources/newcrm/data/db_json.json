@@ -1,0 +1,35 @@
+{"ALPHA":
+	{
+	"PUG":
+		{"SVG":"dev_pug_m_reg_svg_business","FSA":"dev_pug_m_reg_fsa_business","GLOBAL":"dev_pug_m_reg_fsa_global"},
+	"VT":
+		{"SVG":"dev_vt_m_svg_business","CIMA":"dev_vt_m_regulator_business","GLOBAL":"dev_vt_m_regulator_global"},
+	"VFX":
+		{"VFSC":"dev_m_regulator_vfsc","VFSC2":"dev_m_regulator_vfsc2","CIMA":"dev_m_regulator_cima","FCA":"dev_m_regulator_fca","ASIC":"dev_m_regulator_asic","GLOBAL":"dev_m_regulator_global"},
+	"MO":
+		{"VFSC":"mo_vfsc_business","GLOBAL":"mo_global"},
+	"POSP":
+		{"ASIC":"prospero_asic_business","SVG":"prospero_svg_business","GLOBAL":"prospero_global"},
+	"KCM":
+		{"SVG":"dev_kcm_svg_business","GLOBAL":"dev_kcm_global"},
+	"UM":
+		{"SVG":"um_svg_business","GLOBAL":"um_global"}
+	},
+"PROD":
+	{
+	"PUG":
+		{"INSTANCE":"PU+LIVE+%E6%A5%AD%E5%8B%99%E5%BA%AB","FSA":"pug_fsa_business","SVG":"pug_svg_business","GLOBAL":"pug_global"},
+	"VT":
+		{"SVG":"804","CIMA":"506","GLOBAL":"508"},
+	"VFX":
+		{"VFSC":"917","VFSC2":"916","CIMA":"914","FCA":"915","ASIC":"911","GLOBAL":"912"},
+	"MO":
+		{"INSTANCE":"MO+LIVE+%E6%A5%AD%E5%8B%99%E5%BA%AB","VFSC":"mo_vfsc_business","GLOBAL":"mo_global"},
+	"POSP":
+		{"ASIC":"641","SVG":"653","GLOBAL":"642"},
+	"KCM":
+		{"INSTANCE":"kcm-prod-db01","SVG":"kcm_svg_business","GLOBAL":"kcm_global"},
+	"UM":
+		{"INSTANCE":"UM+LIVE+%E6%A5%AD%E5%8B%99%E5%BA%AB","SVG":"um_svg_business","GLOBAL":"um_global"}
+	}
+}

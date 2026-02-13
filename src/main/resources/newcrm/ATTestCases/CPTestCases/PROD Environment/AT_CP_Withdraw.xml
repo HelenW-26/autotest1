@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="AT Withdraw Test Suite">
+
+	<listeners>
+     	<listener class-name="utils.Listeners.CustomListener"/>
+  	</listeners>
+
+    <test name="Regression">
+	    <parameter name="Brand" value="AT"></parameter>
+	  	<parameter name="TestEnv" value="alpha"></parameter>
+	  	<parameter name="Regulator" value="svg"></parameter>
+	  	<parameter name="TraderURL" value="https://myaccount.alphatick.com/"></parameter>
+	   	<parameter name="TraderName" value="autotestnwruzbfs@testcrmautomation.com"></parameter>
+	    <parameter name="TraderPass" value="123Qwe"></parameter>
+	    <parameter name="headless" value="false"></parameter>
+        <classes>
+             <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+             	<methods>
+   		 	    	<include name="testCryptoCurrencyWithdraw"></include>
+   		 		</methods>
+             </class>
+		</classes>
+     </test> <!-- Test -->
+</suite> <!-- Suite -->

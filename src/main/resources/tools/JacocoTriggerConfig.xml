@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<jenkinsUrl>https://jenkins.crm-prod.com</jenkinsUrl>
+	<deployJobPath>job/UAT-BIT/job/UAT-NV-BIT-Service_Deploy_Global_all-in-one</deployJobPath>
+	<jacocoJobPath>job/UAT-BIT/job/UAT-BIT-Service-Jacoco</jacocoJobPath>
+	<username>Michelle Meng</username>
+	<token>117afe21cadd5f98d628b438ac754cf632</token>
+	<brand>au</brand>
+	<serviceListPath>src/main/resources/testData/BitServiceList.csv</serviceListPath>
+	<mappingFilePath>src/main/resources/testData/mapping.csv</mappingFilePath>
+	<gitJobPath>view/UAT/job/UAT-BIT/job/UAT-Util-Bit-Service-All-scm-repo-clone</gitJobPath>
+	<gitJobParamName>st_au_branch</gitJobParamName>
+	<teamOrder>账户, IB代理佣金, CRM支付, 钱包, 风控, 活动</teamOrder>
+
+</configuration>

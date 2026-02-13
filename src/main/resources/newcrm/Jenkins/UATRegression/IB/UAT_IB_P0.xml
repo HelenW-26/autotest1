@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- alpha jenkins上进行smoke test的job -->
+<suite name="IB Account" configfailurepolicy="continue">
+
+    <listeners>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+
+    <parameter name="Brand" value="${brand}"></parameter>
+    <parameter name="Server" value="${container}"></parameter>
+
+
+    <test name="IB Portal Report UI">
+        <classes>
+            <class name="newcrm.testcases.uatregression.IB.Report.UATIBReportTestCases">
+                <methods>
+                    <include name="testIBRebateReport"></include>
+                    <include name="testIBAccountAndClientReport"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="IB API">
+        <classes>
+            <class name="newcrm.testcases.uatregression.IB.Account.UATIBAPIAgreementTestCases">
+                <methods>
+                    <include name="testApiSignedIBRebateAgreement"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="IB Portal Account UI">
+        <classes>
+            <class name="newcrm.testcases.uatregression.IB.Account.UATIBAccountTestCases">
+                <methods>
+                    <include name="testIBProgramRegistration"></include>
+                    <include name="testIBReferralLinkAndCPUpgradeIB"></include>
+                    <include name="testIBCampaignLink"></include>
+                    <include name="testIBReferralLinkVerificationV1V2CIMA"></include>
+                    <include name="testIBReferralLinkRegistrationV1V2CIMA"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.uatregression.IB.Account.UATIBAccountASICTestCases">
+                <methods>
+                    <include name="testIBReferralLinkVerificationASIC"></include>
+                    <include name="testIBReferralLinkRegistrationASIC"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.uatregression.IB.Account.UATIBAccountFCATestCases">
+                <methods>
+                    <include name="testIBReferralLinkVerificationFCA"></include>
+                    <include name="testIBReferralLinkRegistrationFCA"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="IB Admin Account UI">
+        <classes>
+            <class name="newcrm.testcases.uatregression.IB.Account.UATIBAdminAccountTestCases">
+                <methods>
+                    <include name="testAdminUpgradeClientToIB"></include>
+                    <include name="testAdminCreateIBExtUserAndAdditionalIBAccount"></include>
+                    <include name="testConfigureIBCommissionRules"></include>
+                    <include name="testRebateAccountAgreement"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="UM Deposit Test Suite" configfailurepolicy="continue">
+	<listeners>
+     	<listener class-name="utils.Listeners.CustomListener"/>
+  	</listeners>
+  	<parameter name="Brand" value="UM"></parameter>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+  	<parameter name="Regulator" value="svg"></parameter>
+  	<parameter name="TraderURL" value="${TraderURL}"></parameter>
+  	<parameter name="TraderPass" value="123Qwe@@"></parameter>
+    <parameter name="headless" value="true"></parameter>
+
+	<!--Batch 1-->
+	<test name="UM IBT Deposit">
+		<parameter name="TraderName" value="testcrm_donttouch_cpsmalysiaclient@test.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="testInterBankTransPayNew"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+   <test name="UM Malaysia Deposit">
+       <parameter name="TraderName" value="testcrm_donttouch_cpsmalysiaclient@test.com"></parameter>
+       <classes>
+           <class name="newcrm.testcases.cptestcases.DepositTestCases">
+               <methods>
+                   <include name="testCryptoTRCNew"></include>
+                   <include name="testCryptoERCNew"></include>
+                   <!--method disabled, unable upload POF as of June 10 <include name="testCryptoBITNew"></include>-->
+                   <include name="testDepositCryptoBEPNew"></include>
+                   <include name="testCryptoUSDCERCNew"></include>
+                   <include name="cpsMalaysiaXPAY_MYR_New"></include>
+                  	<!--method not available as of June 10 <include name="testBridgePayNew"></include>-->
+               </methods>
+           </class>
+       </classes>
+   </test>
+   <test name="UM Vietnam Deposit">
+       <parameter name="TraderName" value="testcrm_donttouch_cpsvietnamclient@test.com"></parameter>
+       <classes>
+           <class name="newcrm.testcases.cptestcases.DepositTestCases">
+               <methods>
+                   <include name="cpsVietnamBTZotaPayNew"></include>
+                   <include name="testVietnamBTEeziePay_New"></include>
+                   <include name="testWowsPay_Remit_VND_New"></include>
+               </methods>
+           </class>
+       </classes>
+   </test>
+	<test name="UM Brazil PIX Deposit">
+		<parameter name="TraderName" value="testcrm_donttouch_cpsbrazil@test.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<!--<include name="cpsBrazilBT_Bitolo_PixNew"></include>-->
+					<include name="cpsBrazilBT_Toppay_PixNew"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<!--transaction history show as "Credit/Debit Card"
+	<test name="UM Japan Deposit">
+		<parameter name="TraderName" value="autotestqzizewex@testcrmautomation.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="cpsJapanBTTheJapanOne_New"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>-->
+	<test name="UM Indonesia Deposit">
+		<parameter name="TraderName" value="testcrm_donttouch_cpsindonesiaclient@test.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<!--method not available as of June 10 <include name="cpsCroinPlus_New"></include>-->
+					<include name="cpsIndonesiaBT_XpayNew"></include>
+					<include name="cpsIndonesiaBT_ZotaPayNew"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="UM Hong Kong Deposit">
+		<parameter name="TraderName" value="testcrm_donttouch_cpshongkongclient@test.com"></parameter>
+		<parameter name="TraderPass" value="123Qwe@@"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="cpsHongKongBT_New"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="UM Thailand Deposit">
+		<parameter name="TraderName" value="testcrm_donttouch_cpsthailandclient@test.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<!--channel not available as of june 10 <include name="cpsThailandBT_iSmartNew"></include>-->
+					<include name="cpsThailandQR_Vtpay"></include>
+					<include name="testThailandBT_EeziePay_New"></include>
+					<include name="cpsThailandBT_XpayNew"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="UM India Deposit">
+    <parameter name="TraderName" value="testcrm_indiaautomationuser@testcrm.com"></parameter>
+    <classes>
+        <class name="newcrm.testcases.cptestcases.DepositTestCases">
+            <methods>
+                <include name="testCheezePayNew"></include>
+                <include name="testCricpayzNew"></include>
+                <include name="testXpayNew"></include>
+            </methods>
+        </class>
+    </classes>
+</test>
+	<test name="UM Unionpay Deposit">
+		<parameter name="TraderName" value="autotestunainbxg@testcrmautomation.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="cpsAlipayBT_ChipPayNew"></include>
+					<include name="cpsUnionPay_Global_MediumNew"></include>
+					<include name="cpsUnionPay_Global_LargeNew"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+  <!-- Test -->
+</suite> <!-- Suite -->

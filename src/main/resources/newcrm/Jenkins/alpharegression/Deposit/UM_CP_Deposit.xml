@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="UM Deposit Test Suite" configfailurepolicy="continue">
+	<listeners>
+     	<listener class-name="utils.Listeners.CustomListener"/>
+  	</listeners>
+  	<parameter name="Brand" value="UM"></parameter>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+  	<parameter name="Regulator" value="svg"></parameter>
+  	<parameter name="TraderURL" value="${TraderURL}"></parameter>
+  	<parameter name="TraderPass" value="123Qwe@@"></parameter>
+    <parameter name="headless" value="true"></parameter>  
+  
+  <test name="UM IBT Deposit">
+   	<parameter name="TraderName" value="testcrm_donttouch_cpsmalysiaclient@test.com"></parameter>
+   	<parameter name="TraderPass" value="123Qwe@@"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="testInterBankTransPay"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+ <!-- UM cc page got two option, thinking solution, as of now only do primary first -->
+  <test name="UM Credit Card Deposit">
+   	<parameter name="TraderName" value="testcrm_donttouch_cpsmalysiaclient@test.com"></parameter>
+   	<parameter name="TraderPass" value="123Qwe@@"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="testSolidPay"></include>
+				<include name="testBridgePay"></include>
+			</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <!-- old cps -->
+  <test name="UM E-Wallet Deposit">
+   	<parameter name="TraderName" value="testcrm_donttouch_cpsmalysiaclient@test.com"></parameter>
+   	<parameter name="TraderPass" value="123Qwe@@"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<!-- did not redirect to 3rd party <include name="testMobilePayCallback"></include> -->
+   		 		<include name="testCPSCryptoDeposit"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <!-- hit error, cps issue -->
+   <test name="UM Japan Deposit">
+   	<parameter name="TraderName" value="autotestqzizewex@testcrmautomation.com"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="cpsJapanBT"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <test name="UM Taiwan Deposit">
+   	<parameter name="TraderName" value="testcrm_dontotuch_cpstaiwanclient@test.com"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="cpsTaiwanBT"></include>
+   		 		<include name="cpsTaiwanQR"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <test name="UM Brazil PIX Deposit">
+   	<parameter name="TraderName" value="testcrm_donttouch_cpsbrazil@test.com"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="cpsBrazilPIX"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <test name="UM Vietnam Deposit">
+   	<parameter name="TraderName" value="testcrm_donttouch_cpsvietnamclient@test.com"></parameter>
+   	<parameter name="TraderPass" value="123Qwe@@"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="cpsVietnamBT"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+   <test name="UM Thailand Deposit">
+   	<parameter name="TraderName" value="testcrm_donttouch_cpsthailandclient@test.com"></parameter>
+   	<parameter name="TraderPass" value="123Qwe@@"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="cpsThailandBT"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <test name="UM Indonesia Deposit">
+   	<parameter name="TraderName" value="testcrm_donttouch_cpsindonesiaclient@test.com"></parameter>
+   	<parameter name="TraderPass" value="123Qwe@@"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="cpsIndonesiaBT"></include>
+   		 		<!-- Prod and alpha also hit error <include name="cpsLocalDepositor"></include> -->
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <test name="UM Malaysia Deposit">
+   	<parameter name="TraderName" value="testcrm_donttouch_cpsmalysiaclient@test.com"></parameter>
+   	<parameter name="TraderPass" value="123Qwe@@"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="cpsMalaysiaBT"></include>
+   		 		<include name="cpsMalaysiaFPX"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+	<test name="UM Unionpay Deposit">
+		<parameter name="TraderName" value="autotestunainbxg@testcrmautomation.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="testUnionPay"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+		<test name="UM Hong Kong Deposit">
+		<parameter name="TraderName" value="testcrm_donttouch_cpshongkongclient@test.com"></parameter>
+	   	<parameter name="TraderPass" value="123Qwe@@"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="cpsHongKongBT"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="UM India Deposit">
+		<parameter name="TraderName" value="testcrm_dontotuch_indiaautomationuser@testcrm.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="testIndiaUPI"></include>
+					<include name="testIndiaIBTPay"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+  <!-- Test -->
+</suite> <!-- Suite -->

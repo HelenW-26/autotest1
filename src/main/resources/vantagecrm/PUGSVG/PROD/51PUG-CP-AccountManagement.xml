@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Client Portal Test Suite AU" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+	
+  <test name="Client Portal Test AU">
+	<parameter name="Brand" value="svg"></parameter>
+  	<parameter name="TestEnv" value="prod"></parameter>
+    <parameter name="AdminURL" value="http://admin.puprime.com"></parameter>
+  	<parameter name="AdminName" value="Test CRM"></parameter>
+  	<parameter name="AdminPass" value="Vantagefx123"></parameter>
+  	<parameter name="TraderURL" value="http://myaccount.puprime.com"></parameter>
+   	 <parameter name="TraderName" value="webvok@tmail.t-com.sk"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	 	
+ 
+    <classes>
+    			
+  
+      <class name="vantagecrm.CPAccountManagement">
+       		<methods>       			
+       			<include name="CPLogIn"></include>   
+  				<include name="RequestAddiAccount"></include>
+       			<include name="TransferFund"></include>
+        		<include name="ChangeCPMT4PWD"></include> 
+         		<include name="ChangeCPMT5PWD"></include>       		  
+       			<include name="ChangeAccountPWD"></include>   
+       			<include name="ResetCPMTXPwd"></include> 
+       			<include name = "CPSideBarNavigation"></include>	  		
+       		</methods>       
+       </class>
+
+    <!--  <class name="vantagecrm.CPDownload"> </class> -->
+     
+    </classes>
+  </test> 
+ 
+</suite> <!-- Suite -->

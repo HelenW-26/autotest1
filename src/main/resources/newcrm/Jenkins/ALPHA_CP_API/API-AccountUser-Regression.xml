@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- alpha jenkins上进行smoke test的job -->
+<suite name="Accounts and users Test Regression" configfailurepolicy="continue">
+
+    <listeners>
+        <!-- 启用 Allure Listener -->
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+        <listener class-name="newcrm.listeners.AllureTestListener"/>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+
+    <!-- 添加 Allure 相关参数 -->
+    <parameter name="allure.results.directory" value="target/allure-results"></parameter>
+    <parameter name="allure.report.directory" value="target/allure-report"></parameter>
+
+    <test name="Account API Regression">
+        <classes>
+            <class name="newcrm.testcases.crmapi.CPAPIAccountTestcase">
+            </class>
+            <class name="newcrm.testcases.crmapi.IBAPIAccountTestcases">
+            </class>
+        </classes>
+    </test>
+
+</suite><!-- Suite -->
+
+

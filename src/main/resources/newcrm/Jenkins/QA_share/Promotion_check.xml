@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- QA share/QA share-CheckPromotionResult -->
+<suite name="Promotion check Suite" configfailurepolicy="continue">
+
+  <test name="PromotionCheckTest">
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.PromotionCheck">
+   		 	<methods>
+				<include name="checkPromotionResult"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

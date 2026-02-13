@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU Prod Suite">
+
+	<parameter name="Brand" value="au"></parameter>
+  	<parameter name="TestEnv" value="prod"></parameter>
+  	<parameter name="AdminURL" value="https://admin.vantagefx.com.au/login/to_login"></parameter>
+  	<parameter name="AdminName" value="Test CRM"></parameter>
+  	<parameter name="AdminPass" value="Vantage123"></parameter>
+  	<parameter name="TraderURL" value="https://secure.vantagefx.com.au/login/to_login"></parameter>
+  	<parameter name="TraderName" value="webxrx@test.com"></parameter>  
+  	<!-- UK user: webxrx@test.com        UK2 user:webvrt@test.com  -->
+  	<!-- Need the user whose trading account is on the server being tested -->
+  	<parameter name="TraderPass" value="123Qwe"></parameter>
+  	
+  <test thread-count="5" name="Test Register User Audit User">   	
+    <classes>  
+	    <class name="vantagecrm.UserManagement">
+	      
+	        <parameter name="WebSiteURL" value="https://www.vantagefx.com/forex-trading"></parameter>
+	      	<parameter name="RegisterURL" value=""></parameter>
+	     		
+	      	<methods>
+	      	   	<include name="RegisterUser"></include>   
+	       		<include name="AdminLogIn"></include>	
+	     		<include name="AddIB"></include>  
+				<include name="AddClient"></include> 
+	      	</methods>
+	      	
+	    </class>   
+	    
+          <class name="vantagecrm.TraderMyAccount">
+          
+       		<methods>        			
+       			<include name="TraderLogIn"></include>
+       			<include name="RequestAddiAccount"></include>  
+       		</methods>       
+       
+       </class> 
+  
+       <class name="vantagecrm.TaskManagement">
+      
+      	<methods>
+      		<include name="AdminLogIn"></include>  
+      		<include name="AccountAudit"></include> 
+      		<include name="AddAccAuditIndi"></include>
+  
+       	</methods>
+      </class>
+      
+      <class name="vantagecrm.UpdateTradAcc">
+      	<methods>
+      		<include name="AdminLogIn"></include>
+      		<include name="resetPWD"></include>
+      	</methods>
+      </class>   		
+
+    </classes>
+    
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="Deposit">
+  	
+    <classes>
+      
+  	  <class name="vantagecrm.TraderDeposit">  	  
+
+ 		<methods>
+ 			<include name="TraderLogIn"></include>
+  			<include name="I18NDeposit"></include>
+  		    <include name="SkrillDeposit"></include>
+			<include name="NetellerDeposit"></include>	
+		</methods> 	  	
+ 
+	  </class>
+
+      <class name="vantagecrm.TaskManagement">
+      
+      	<methods>
+      		<include name="AdminLogIn"></include>  
+   	  		<include name="OfflineDepositAudit"></include>  
+        </methods>
+        
+      </class>   		
+  </classes>
+ 
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="Withdraw">
+  	
+    <classes>  		   	      	
+      
+       <class name="vantagecrm.TraderWithdraw">       
+      	<methods>      	
+           	<include name="TraderLogIn"></include>   	 
+      		<include name="WithdrawAUBank"></include> 
+      		<include name="WithdrawI18NBank"></include>   
+      		<include name="WithdrawChinaBank"></include> 
+      		<include name="WithdrawCC"></include>  
+       		<include name="WithdrawSkrNet"></include>  
+       		<include name="WithdrawUnionPay"></include>         		
+       	</methods>
+       	
+       </class>   
+       
+      <class name="vantagecrm.TaskManagement">
+      
+      	<methods>
+      		<include name="AdminLogIn"></include>  
+        	<include name="WithdrawlAudit"></include>
+       	</methods>
+      </class>   
+  
+ 
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="Transferfund and Managepwd">
+  	
+    <classes>  	
+       <class name="vantagecrm.TraderMyAccount">
+          	<parameter name="OldPwd" value="123Qwe"></parameter>
+       		<parameter name="NewPwd" value="1234Qwe"></parameter>    
+       		
+       		<methods>        			
+       			<include name="TraderLogIn"></include>
+       			<include name="TransferFund"></include>   
+       			<include name="ResetMT4Pwd"></include>
+       		</methods>       
+       
+       </class>
+       
+  
+    </classes>
+  </test> <!-- Test -->
+  
+    
+</suite> <!-- Suite -->

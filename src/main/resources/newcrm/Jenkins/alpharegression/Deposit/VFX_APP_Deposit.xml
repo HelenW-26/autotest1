@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="VFX APP Deposit Test Suite" configfailurepolicy="continue">
+    <listeners>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+    <parameter name="Brand" value="VFX"></parameter>
+    <parameter name="Server" value="alpha"></parameter>
+    <parameter name="TestEnv" value="alpha"></parameter>
+    <parameter name="Regulator" value="VFSC"></parameter>
+    <parameter name="APPURL" value="app-core-au.crm-alpha.com"></parameter>
+    <parameter name="headless" value="true"></parameter>
+
+     <test name="VFX Test APP Service Crypto">
+         <parameter name="UserId" value="10065701"></parameter>
+         <parameter name="AccountNo" value="20097"></parameter>
+         <classes>
+             <class name="newcrm.testcases.app.APPDepositRegression">
+                 <methods>
+                     <include name="cryptoBTCAPPDeposit"></include>
+                     <include name="cryptoBTCCPSDeposit"></include>
+                     <include name="usdtERCDeposit"></include>
+                     <include name="usdtTRCDeposit"></include>
+                 </methods>
+             </class>
+        </classes>
+    </test>
+    <test name="VFX Test APP Service CC">
+        <parameter name="UserId" value="10065711"></parameter>
+        <parameter name="AccountNo" value="30058"></parameter>
+        <classes>
+            <class name="newcrm.testcases.app.APPDepositRegression">
+                <methods>
+                    <include name="ccDeposit"></include>
+                    <include name="bridgeAPPCCDeposit"></include>
+                    <include name="virtualPayAPPCCDeposit"></include>
+                    <include name="powercashAPPCCDeposit"></include>
+                    <include name="googlePayAPPCCDeposit"></include>
+                    <include name="applepayAPPCCDeposit"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VFX Test APP Service Ewallet">
+        <parameter name="UserId" value="10065804"></parameter>
+        <parameter name="AccountNo" value="20098"></parameter>
+        <classes>
+            <class name="newcrm.testcases.app.APPDepositRegression">
+                <methods>
+                    <include name="fasaCPSAPPDeposit"></include>
+                    <include name="skrillCPSAPPDeposit"></include>
+                    <include name="perfectMoneyAPPDeposit"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VFX Test APP Service LBT">
+        <parameter name="UserId" value="10065823"></parameter>
+        <parameter name="AccountNo" value="30059"></parameter>
+        <classes>
+            <class name="newcrm.testcases.app.APPDepositRegression">
+                <methods>
+                     <include name="thailandBTCPSDeposit"></include>
+                     <include name="malaysiaBTCPSDeposit"></include>
+                    <include name="vietnamBTCPSAPPDeposit"></include>
+                    <include name="southAfricaBTCPSAPPDeposit"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite> <!-- Suite -->

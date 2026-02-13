@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU Test Suite" configfailurepolicy="continue">
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	
+  <test name="AUTest">
+    <parameter name="Brand" value="VFX"></parameter>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+  	<parameter name="Regulator" value="vfsc2"></parameter>
+    <parameter name="AdminURL" value="https://admin-uranus-ex.crm-alpha.com/admin/main"></parameter>
+  	<parameter name="AdminName" value="Yanni"></parameter>
+  	<parameter name="AdminPass" value="12345678Qi"></parameter>
+  	<parameter name="TraderURL" value="https://secure-leo-ex.crm-alpha.com/"></parameter>
+   	 <parameter name="TraderName" value="cmptest2@test.com"></parameter>
+<!--    	<parameter name="TraderName" value="ibtestlop@test.com"></parameter>   	 -->
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+    <classes>
+   		 <class name="newcrm.testcases.SampleTestCase">
+   		 	<methods>
+   		 		<include name="cpLogout"></include>
+   		 	</methods>
+   		 </class>   		      		
+       	  
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

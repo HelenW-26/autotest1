@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="KY_Regression_Suite" configfailurepolicy="continue">
+
+ <listeners>
+      <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	<parameter name="Brand" value="au"></parameter>
+  	<parameter name="TestEnv" value="test"></parameter>
+    <parameter name="AdminURL" value="https://admin.test-vantagefx.com/admin/main"></parameter>
+  	<parameter name="AdminName" value="automation_ky"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="http://hongyi.vantagefx.com:8080"></parameter>
+   	 <parameter name="TraderName" value="webnyq@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+	
+ <!--  <test name="KY_Deposit_Audit">
+    <classes>
+ 	 <class name="vantagecrm.TraderDeposit">  
+ 		<methods>
+ 			<include name="TraderLogIn"></include>
+ 			<include name="CCDeposit"></include> 		 	
+ 			<include name="I18NDeposit"></include>  
+ 			<include name="SkrillDeposit"></include>
+ 			<include name="NetellerDeposit"></include>    
+ 			<include name="BrokerDeposit"></include>
+ 			<include name="UnionPayDeposit"></include>
+ 			<include name="FasapayDeposit"></include> 
+ 			<include name="MobilepayDeposit"></include>
+			<include name="UnionPayP2PDeposit"></include>
+		</methods> 	
+	  </class>
+	  
+	  <class name="vantagecrm.TaskManagement">
+      
+      		<methods>
+	      		<include name="AdminLogIn"></include>
+	       		<include name="OfflineDepositAudit"></include>
+				<include name="OnlineDepositAudit"></include>
+       		</methods>
+      </class>
+    </classes>  
+	</test>
+	
+	<test name="KY_Withdraw_Audit">
+		<classes>
+		
+			 <class name="vantagecrm.TraderWithdraw">
+      			<methods>
+		            <include name="TraderLogIn"></include> 
+		           	<include name="WithdrawCC"></include>
+		     		<include name="WithdrawI18NBank"></include>  
+			 		<include name="WithdrawAUBank"></include>
+					<include name="WithdrawChinaBank"></include>
+					<include name="WithdrawSkrNet"></include>
+					<include name="WithdrawFasaPay"></include>
+					<include name="WithdrawUnionPay"></include>
+       			</methods>
+       		</class>   
+       		
+       		<class name="vantagecrm.TaskManagement">
+      
+	      		<methods>
+		      		<include name="AdminLogIn"></include>
+		       		<include name="WithdrawlAudit"></include>
+	       		</methods>
+      		</class>
+		
+		</classes>
+	</test>
+	       
+	<test name="Trader_Request_Addi_Account_and_Audit">
+		<classes>
+			 <class name="vantagecrm.TraderMyAccount">
+       			<methods>
+       			<include name="TraderLogIn"></include>
+       			<include name="RequestAddiAccount"></include>
+       		</methods>
+       </class>
+		
+	<class name="vantagecrm.TaskManagement">
+      
+      		<methods>
+	      		<include name="AdminLogIn"></include>
+	      		<include name="AddAccAuditIndi"></include>  
+       		</methods>
+      </class>
+		</classes>
+	</test> -->
+ 
+  <test name="Trader_MyAccount_Misc">
+  	<classes>
+  	     <class name="vantagecrm.TraderMyAccount">
+       		<methods>
+       			<include name="TraderLogIn"></include>
+       			<include name="RequestAddiAccount"></include>
+     <!--   			<include name="TransferFund"></include>
+				<include name="changeLeverage"></include>
+       			<include name="ChangePWD"></include>
+       		    <include name="ChangeMT4Pwd"></include>
+       		    <include name="ResetMT4Pwd"></include> -->
+       		</methods>
+       </class>
+  
+  <!--     <class name="vantagecrm.TaskManagement">
+      
+      		<methods>
+	      		<include name="AdminLogIn"></include>
+	      		<include name="AddAccAuditIndi"></include>  
+		     	<include name="leverageAudit"></include>
+       		</methods>
+      </class>
+  	
+  	<class name="vantagecrm.TraderSearchKeyword"></class> -->
+  	
+  	
+  	</classes>
+  
+  </test> 
+  
+</suite> <!-- Suite -->

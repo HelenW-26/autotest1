@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- QA share/QA share-Deposit Callback -->
+<suite name="Deposit Callback Test Suite" configfailurepolicy="continue">
+  <test name="Callback">
+    <parameter name="Brand" value="${Brand}"></parameter>     
+  	<parameter name="Regulator" value="${Regulator}"></parameter>
+  	<parameter name="TestEnv" value="${Environment}"></parameter>
+  	<parameter name="OpenAPIURL" value="https://${Openapi_url}"></parameter>
+  	<parameter name="Channel" value="${Channel}"></parameter>
+  	<parameter name="OrderNum" value="${OrderID}"></parameter>
+    <parameter name="Currency" value="${Currency}"></parameter>
+    <parameter name="Amount" value="${Amount}"></parameter>
+    <parameter name="First6num" value="${Bin}"></parameter>
+    <parameter name="Last4num" value="${Last4num}"></parameter>
+    <parameter name="Year" value="${Year}"></parameter>
+    <parameter name="Month" value="${Month}"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositCallbackTest">
+   		 	<methods>
+   		 		<include name="testCallback"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

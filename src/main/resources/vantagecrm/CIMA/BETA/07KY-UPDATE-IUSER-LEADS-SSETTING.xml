@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="KY Test Suite" configfailurepolicy="continue">
+
+ <listeners>
+    <!-- <listener class-name="utils.Listeners.TestListener" /> -->
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	<parameter name="testEnv" value="test"></parameter>
+	
+  <test name="AURegressionTest">
+    <parameter name="Brand" value="ky"></parameter>
+   	<parameter name="TestEnv" value="beta"></parameter>
+    <parameter name="AdminURL" value="https://betavgpadmin.vantagefx.com"></parameter>
+  	<parameter name="AdminName" value="alexliu"></parameter>
+  	<parameter name="AdminPass" value="1234Qwer"></parameter>
+  	<parameter name="TraderURL" value="https://betacpportal.vantagefx.com"></parameter>
+   	 <parameter name="TraderName" value="ibtestmjb@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+  	<parameter name="ThaiAccount" value="ibtestwkk@test.com"></parameter>
+ 	<parameter name="ThaiPwd" value="123Qwe"></parameter>
+ 	  	
+ 	<parameter name="MalayAccount" value="ibtestwkk@test.com"></parameter>
+ 	<parameter name="MalayPwd" value="123Qwe"></parameter>
+  	
+    <parameter name="VietAccount" value="ibtestwkk@test.com"></parameter>
+ 	<parameter name="VietPwd" value="123Qwe"></parameter>
+  	
+  	<parameter name="NigeAccount" value="ibtestwkk@test.com"></parameter>
+ 	<parameter name="NigePwd" value="123Qwe"></parameter>
+   
+       <classes>
+
+   
+		<class name="vantagecrm.UpdateInternalUser">  
+			<methods>
+				<include name="AdminLogIn"></include>
+				<include name="updateIUser"></include>
+				<include name="addCCode"></include>
+				<include name="updateCCode"></include>
+				<include name="delCCode"></include>
+				<include name="deleteIUser"></include> 		
+			
+			</methods> 
+		</class>
+		
+			<class name="vantagecrm.UpdateLead">
+			<methods>
+				<include name="AdminLogIn"></include>
+				<include name="updateLeadGeneral"></include>	
+			
+			</methods>
+		
+		</class>
+	 
+ 		<class name="vantagecrm.SystemSetting">
+ 			<methods>
+ 				<include name="AdminLogIn"></include>
+ 				<include name="AddRole"></include>
+ 				<include name="UpdateRole"></include>
+ 				<include name="ChangePermission"></include>
+ 				<include name="DeleteRole"></include>
+ 				<include name="OrganizationManagement"></include>
+ 				<include name="AddPromotionSetting"></include>
+			    <include name="EditPromotionSetting"></include>
+			    <include name="DelPromotionSetting"></include>
+			    <include name="RoleKeysVerification"></include>
+			    <include name="AddPlainNotification"></include>
+			    <include name="AddMaintainenceNotification"></include>
+			    <include name="EditNotification"></include>
+			    <include name="DeleteNotification"></include>
+ 			</methods>
+ 		
+ 		</class>
+ 		
+	 	
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

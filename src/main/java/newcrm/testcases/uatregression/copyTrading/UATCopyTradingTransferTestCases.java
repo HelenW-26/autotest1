@@ -1,0 +1,41 @@
+package newcrm.testcases.uatregression.copyTrading;
+
+import newcrm.adminapi.AdminAPIUserAccount;
+import newcrm.global.GlobalMethods;
+import newcrm.global.GlobalProperties;
+import newcrm.testcases.UATTestDataProvider;
+import newcrm.testcases.cptestcases.AccountManagementTestCases;
+import newcrm.utils.testCaseDescUtils;
+import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertNotNull;
+
+public class UATCopyTradingTransferTestCases extends AccountManagementTestCases {
+
+        @Override
+        public void beforMethod(@Optional("alpha")String TestEnv, @Optional("False") String headless, String Brand, String Regulator,
+                                @Optional("")String TraderURL, @Optional("")String TraderName, @Optional("")String TraderPass,
+                                @Optional("")String AdminURL, @Optional("")String AdminName, @Optional("")String AdminPass, @Optional("True")String Debug, @Optional("")String server,
+                                ITestContext context) {
+            launchBrowser( TestEnv,  headless,  Brand,  Regulator, TraderURL, TraderName, TraderPass, AdminURL,  AdminName, AdminPass,  Debug, context);
+        }
+        @BeforeClass(alwaysRun = true)
+        @Parameters(value= {"Brand","Server"})
+        public void initiEnv(String brand,String server, ITestContext context) {
+            brand = GlobalMethods.setEnvValues(brand);
+            data = UATTestDataProvider.getUATCopyTradingTransferUsersData(brand, server);
+            assertNotNull(data);
+
+            AdminAPIUserAccount adminUserAcctAPI = new AdminAPIUserAccount((String) data[0][4], GlobalProperties.REGULATOR.valueOf((String)data[0][0]),(String)data[0][7],(String)data[0][8],GlobalProperties.BRAND.valueOf(brand.toUpperCase()), GlobalProperties.ENV.valueOf("ALPHA"));
+            adminUserAcctAPI.apiEnableAutoAcctTransferAudit();
+            launchBrowser("uat","true",brand,(String)data[0][0],(String)data[0][3],(String)data[0][1],(String)data[0][2],"","","","True",context);
+        }
+        @Test(priority = 2, description = testCaseDescUtils.CPFUNDTRANS, groups = {"CP_Transfer_MTS"})
+        public void uatCTTransfertest() {
+            this.funcCopytradingTransfer();
+        }
+    }

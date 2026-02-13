@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Client Portal Test Suite PUG" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<parameter name="Brand" value="svg"></parameter>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+    <parameter name="AdminURL" value="https://admin.test-puprime.com/login/to_login"></parameter>
+  	<parameter name="AdminName" value="alexliu"></parameter>
+  	<parameter name="AdminPass" value="1234Qwer"></parameter>
+  	<parameter name="TraderURL" value="https://secure.test-puprime.com"></parameter>
+    <parameter name="TraderName" value="testcrmwbyd@test.com.fsa"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+
+    <test name="Upload ID Proof and Reject">
+    <classes>
+      
+      
+      <class name="vantagecrm.CPIDAddrProof">
+       		<methods>       			
+       
+       			<include name="CPLogIn"></include>   
+       			<include name="UploadProofOfIdentity"></include>
+
+       		</methods>       
+       </class>
+	  
+   		<class name="vantagecrm.NewTaskManagement">
+   
+    		<methods>
+	     		<include name="AdminLogIn"></include>
+	     	    <include name="IDProofSearchByName"></include>
+	      		<include name="IDProofReject"></include> 
+
+     		</methods>
+   		</class>
+     
+    </classes>
+  </test> 
+ 
+   <test name="Upload ID Proof and Audit">
+    <classes>
+      <class name="vantagecrm.CPIDAddrProof">
+       		<methods>       			
+       
+       			<include name="CPLogIn"></include>   
+       			<include name="UploadProofOfIdentity"></include>
+
+       		</methods>       
+       </class>
+	  
+   		<class name="vantagecrm.NewTaskManagement">
+   
+    		<methods>
+	     		<include name="AdminLogIn"></include>
+	      		<include name="IDProofAudit"></include> 
+
+     		</methods>
+   		</class>
+     
+    </classes>
+  </test>
+ 
+ <test name="Admin Add ID Proof and Pending">
+    <classes>
+	  
+   		<class name="vantagecrm.NewTaskManagement">
+   
+    		<methods>
+	     		<include name="AdminLogIn"></include>
+	     		<include name="AddIDProof"></include>
+	      		<!-- <include name="IDProofPending"></include>  -->
+	      		<include name="POAPendingReason"></include>
+     		</methods>
+   		</class>
+     
+    </classes>
+  </test>
+  
+   
+ 
+</suite> <!-- Suite -->

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- alpha jenkins上进行smoke test的job -->
+<suite name="IB Account" configfailurepolicy="continue">
+
+    <listeners>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+
+    <parameter name="Brand" value="${brand}"></parameter>
+    <parameter name="Server" value="${container}"></parameter>
+
+
+    <test name="DAP Registration UI">
+        <classes>
+            <class name="newcrm.testcases.uatregression.IB.DAP.UATDAPAccountRegistrationTestCases">
+                <methods>
+                    <include name="testDAPRegistration"></include>
+                    <include name="testDAPRegistration_Sumsub"></include>
+                    <include name="testDAPPhoneLogin"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="DAP Account UI">
+        <classes>
+            <class name="newcrm.testcases.uatregression.IB.DAP.UATDAPAccountTestCases">
+                <methods>
+                    <include name="testDAPProfilePanel"></include>
+                    <include name="testMarketingDeepLinkLiveAccRegistration"></include>
+                    <include name="testLiveAccReferralCodeRegistration"></include>
+                    <include name="testDAPStatisticsTable"></include>
+                    <include name="testPerformanceReportEntryPointToggle"></include>
+                    <include name="testDAPPostbackTracker"></include>
+                    <include name="testPaymentAudit"></include>
+                    <include name="testDAPCommissionReportPayments"></include>
+                    <include name="testDAPCommissionPlan"></include>
+                    <include name="testDAPMultiCommissionAndTop5"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="DAP Client-related UI">
+        <classes>
+            <class name="newcrm.testcases.uatregression.IB.DAP.UATDAPClientJourneyTestCases">
+                <methods>
+                    <include name="testDAPClientJourney"></include>
+                    <include name="testDAPClientList"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="OWS CPA UI">
+        <classes>
+            <class name="newcrm.testcases.uatregression.IB.DAP.UATDAPOwsCpaTestCases">
+                <methods>
+                    <include name="testOWSClientManagement"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

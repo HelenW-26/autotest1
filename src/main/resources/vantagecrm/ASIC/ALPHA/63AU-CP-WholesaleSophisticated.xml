@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Client Portal Test Suite KY" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<parameter name="Brand" value="au"></parameter>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+    <parameter name="AdminURL" value="http://mrcp.v.com:8001/"></parameter>
+  	<parameter name="AdminName" value="Test CRM"></parameter>
+  	<parameter name="AdminPass" value="Vantage123"></parameter>
+  	<parameter name="TraderURL" value="http://mrcp.v.com/"></parameter>
+   	<parameter name="TraderName" value="testcommasic@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+    <test name="Wholesale Test">
+    <classes>
+      
+      <class name="vantagecrm.CPWholesaleSophisticated">
+       		<methods>       			
+       
+       			<include name="CPLogIn"></include>   
+       			<include name="SophisticatedTest"></include>
+
+       		</methods>       
+       </class>
+     
+    </classes>
+  </test> 
+    
+</suite> <!-- Suite -->

@@ -1,0 +1,71 @@
+##GBP SticPay
+#SticPay:
+#  email : "autotestetdfyzri@testcrmautomation.com"
+#  mt4Account : "30204"
+#  operateAmount : "100"
+#  channel_name : "SticPay"
+#  Currency : "GBP"
+#  channel_id : "20"
+#  payment_channel : "20"
+
+#SticPay AUD
+SticPay1:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-bluebird.crm-alpha.com"
+  mt4Account : "21629"
+  operateAmount : "100"
+  channel_name: "SticPay"
+  Currency: "AUD"
+  channel_id : "18"
+  payment_channel : "18"
+  password: "7946e795e44db67be4c74219def41e2e"
+
+
+#21631 nzd SticPay 22
+SticPay2:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-bluebird.crm-alpha.com"
+  mt4Account : "21631"
+  operateAmount : "100"
+  channel_name: "SticPay"
+  Currency: "NZD"
+  channel_id : "22"
+  payment_channel : "22"
+  password: "7946e795e44db67be4c74219def41e2e"
+##SGD SticPay
+SticPay112:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-bluebird.crm-alpha.com"
+  mt4Account : "21628"
+  operateAmount : "200"
+  channel_name: "SticPay"
+  Currency: "SGD"
+  channel_id : "23"
+  password: "7946e795e44db67be4c74219def41e2e"
+#
+##JPY没有SticPay
+#
+##HKD  SticPay
+#SticPay3:
+#  email : "autotestetdfyzri@testcrmautomation.com"
+#  mt4Account : "58125"
+#  operateAmount : "4000"
+#  channel_name: "SticPay"
+#  Currency: "HKD"
+#  channel_id : "21"
+#  payment_channel : "21"
+## eur没有SticPay
+#
+##CAD
+#SticPay5:
+#  email : "autotestetdfyzri@testcrmautomation.com"
+#  url: "https://secure-bluebird.crm-alpha.com"
+#  mt4Account : "804333572"
+#  operateAmount : "100"
+#  channel_name: "SticPay"
+#  Currency: "CAD"
+#  channel_id : "19"
+#  payment_channel : "19"
+#  password: "7946e795e44db67be4c74219def41e2e"
+
+

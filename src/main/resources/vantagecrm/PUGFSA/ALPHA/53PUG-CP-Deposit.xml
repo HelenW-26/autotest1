@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Client Portal Test Suite AU" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+  <test name="Client Portal Test PUG">
+	<parameter name="Brand" value="fsa"></parameter>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+    <parameter name="AdminURL" value="https://admin.test-puprime.com/login/to_login"></parameter>
+  	<parameter name="AdminName" value="alexliu"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="https://secure.test-puprime.com"></parameter>
+   	 <parameter name="TraderName" value="test776ldj@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>
+
+
+    <classes>
+
+     <class name="vantagecrm.CPDeposit">
+     	<methods>
+     	    <include name="CPLogIn"></include>
+      		 <include name="CCNABDepositExistingCard"></include>
+    		 <include name="CCNABDepositNewCard"></include>
+			<include name="CCGenericDeposit"></include> 
+     	 	<include name="I18NDeposit"></include>
+     		<include name="FasapayDeposit"></include>
+			<include name="MobilepayDeposit"></include>		
+       		<include name="BitCoinDeposit"></include>
+       		<include name="UsdtDeposit"></include> 
+       		<include name="ERC20Deposit"></include> 
+       		<include name="BitwalletDeposit"></include>
+       		<include name="SticPayDeposit"></include>
+	 <!-- 	<include name="InteracDeposit"></include> --> <!-- Only Canada -->
+	 <!-- 	<include name="UnionPayP2PDeposit"></include>   --> <!-- Only China -->
+     	</methods>
+     </class>
+
+     <class name="vantagecrm.TaskManagement">
+     	<methods>
+      		<include name="AdminLogIn"></include>
+       		<include name="OfflineDepositAudit"></include>
+			<include name="OnlineDepositAudit"></include>
+      	</methods>
+     </class>
+    </classes>
+  </test> <!-- Test -->
+
+</suite> <!-- Suite -->

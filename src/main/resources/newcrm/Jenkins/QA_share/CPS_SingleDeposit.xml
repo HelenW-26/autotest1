@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- QA share/QA share-CheckPromotionResult -->
+<suite name="CPS Single Deposit Suite" configfailurepolicy="continue">
+	<parameter name="ToolUrl" value="https://test.spnsbm.com/deposit/api-test-tool/index.html"/>
+	<parameter name="merCd" value="520045110001805"/>
+	<parameter name="secret" value="abeabe46840fb49f85283c84207b4182a049b7df"/>
+	<parameter name="headless" value="true"/>
+
+  <test name="CPSCreateDeposit">
+    <classes>
+   		 <class name="newcrm.testcases.cps.CPSCreateDepositOrderTest">
+   		 	<methods>
+				<include name="CPSCreateDepositOrderCoboUSDTTRC20"></include>
+   		 	</methods>
+   		 </class>
+    </classes>
+  </test>
+</suite> <!-- Suite -->

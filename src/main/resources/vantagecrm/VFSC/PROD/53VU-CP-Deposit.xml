@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite allow-return-values="false" configfailurepolicy="continue" data-provider-thread-count="10" group-by-instances="false" guice-stage="DEVELOPMENT" junit="false" name="Client Portal Test Suite KY" parallel="none" preserve-order="true" skipfailedinvocationcounts="false" thread-count="5">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"/>
+  </listeners>
+	<parameter name="Brand" value="vfsc"/>
+  	<parameter name="TestEnv" value="prod"/>
+    <parameter name="AdminURL" value="https://admin.vantagefx.com"/>
+  	<parameter name="AdminName" value="Test Crm"/>
+  	<parameter name="AdminPass" value="Vantage123"/>
+  	<parameter name="TraderURL" value="https://secure.vantagefx.com"/>
+   	 <parameter name="TraderName" value="webopn@test.com"/>
+    <parameter name="TraderPass" value="123Qwe"/>  
+  	
+  	<parameter name="ThaiAccount" value="webkyy@test.com"/>
+ 	<parameter name="ThaiPwd" value="123Qwe"/>
+ 	  	
+ 	<parameter name="MalayAccount" value="webkyy@test.com"/>
+ 	<parameter name="MalayPwd" value="123Qwe"/>
+  	
+    <parameter name="VietAccount" value="webkyy@test.com"/>
+ 	<parameter name="VietPwd" value="123Qwe"/>
+  	
+  	<parameter name="NigeAccount" value="webkyy@test.com"/>
+ 	<parameter name="NigePwd" value="123Qwe"/>
+ 	
+  <test allow-return-values="false" group-by-instances="false" junit="false" name="Client Portal Test KY" preserve-order="true" skipfailedinvocationcounts="false">
+
+    <classes>
+    
+
+  	   <class name="vantagecrm.CPDeposit">
+	     	<methods>
+	     		<include name="CPLogIn"/>
+	     		<include name="CCDepositNewCard3D"/>
+	     		<include name="CCDepositNewCardNon3D"/>
+	     	 	<include name="I18NDeposit"/>
+	     		<include name="ValidateI18NDeposit"/>
+	     		<include name="SkrillDeposit"/>
+	     		<include name="NetellerDeposit"/>
+	     		<include name="BrokerDeposit"/>
+	     		<include name="UnionPayDeposit"/>
+	     		<include name="UnionPayP2PDeposit"/>  
+	     		<include name="FasapayDeposit"/>
+				<include name="MobilepayDeposit"/> 
+	       		<include name="PaypalDeposit"/>
+	       		<include name="CCCardpayDeposit"/>
+	       		<include name="BitCoinDeposit"/>
+	       		<include name="UsdtDeposit"/>
+	       		<include name="SticPayDeposit"/>
+	       		<include name="BitwalletDeposit"/>
+	     	</methods>        
+     </class>
+     
+ <!--    <class name="vantagecrm.TaskManagement">
+     	<methods>
+      		<include name="AdminLogIn"></include>
+       		<include name="OfflineDepositAudit"></include>
+			<include name="OnlineDepositAudit"></include>
+      	</methods>
+     </class> -->
+     
+    </classes>
+  </test>
+  
+   <!-- <test name="CreditCard deposit using existing card">    
+	<classes>    
+   	  <class name="vantagecrm.CPPaymentDetail">
+	     	<methods>
+	     		<include name="CPLogIn"></include>
+	     		<include name="AddPaymentDetailCC"></include>
+	     	</methods>    
+	     
+	     </class>
+	  <class name="vantagecrm.NewTaskManagement">
+	      
+	      		<methods>
+		      		<include name="AdminLogIn"></include>  	 
+	            	 <include name="CreditCardDetailsAudit"></include>            	     
+	       		</methods>
+	  </class>
+	      
+	  <class name="vantagecrm.CPDeposit">
+     	<methods>
+     		<include name="CPLogIn"></include>
+     		<include name="CCDepositExistingCard"></include>
+        </methods>
+	  </class>
+
+	  
+   </classes>
+  </test> Test -->
+ 
+</suite><!-- Suite -->

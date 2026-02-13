@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="UM Test Suite" configfailurepolicy="continue">
+	<listeners>
+     	<listener class-name="utils.Listeners.CustomListener"/>
+  	</listeners>
+  	<parameter name="Brand" value="UM"></parameter>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+  	<parameter name="Regulator" value="svg"></parameter>
+  	<parameter name="TraderURL" value="https://secure-core-um.crm-alpha.com"></parameter>
+  	<parameter name="TraderPass" value="123Qwe"></parameter>
+    <parameter name="headless" value="true"></parameter>  
+
+    <test name="UM Test Japan CP Withdraw">
+   	<parameter name="TraderName" value="autotestqzizewex@testcrmautomation.com"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+   		 	<methods>
+   		 		<include name="testJapanBankWithdraw"></include>
+   		 		<include name="testJapanBankWithdrawNewAccount"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test> 
+  
+  
+  <!-- Test -->
+</suite> <!-- Suite -->

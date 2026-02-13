@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Create New User and Audit" configfailurepolicy="continue">
+
+ <listeners>
+    <!-- <listener class-name="utils.Listeners.TestListener" /> -->
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+     <parameter name="Brand" value="pug"></parameter>
+  	<parameter name="TestEnv" value="prod"></parameter>
+  	<parameter name="AdminURL" value="https://admin.puprime.com"></parameter>
+  	<parameter name="AdminName" value="IUkwdj"></parameter>
+  	<parameter name="AdminPass" value="1234Qwer"></parameter>
+  	<parameter name="TraderURL" value="https://myaccount.puprime.com"></parameter>
+    <parameter name="TraderName" value=""></parameter>
+    <parameter name="TraderPass" value=""></parameter> 
+	
+  <test name="Create_NewUser_and_Audit">
+
+    <classes>
+
+     	<class name="vantagecrm.AdminAPITest">
+   
+   			<methods>
+				<include name="testMailLogList"></include>
+    		</methods>
+   		</class>  
+        
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

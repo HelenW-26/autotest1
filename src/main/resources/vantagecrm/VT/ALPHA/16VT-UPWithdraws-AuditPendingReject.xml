@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU Test Suite" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	
+	
+   <parameter name="Brand" value="vt"></parameter>
+  	<parameter name="TestEnv" value="test"></parameter>
+    <parameter name="AdminURL" value="https://admin.test-vtmarkets.com"></parameter>
+  	<parameter name="AdminName" value="Test CRM"></parameter>
+  	<parameter name="AdminPass" value="Vantage123"></parameter>
+  	<parameter name="TraderURL" value="https://secure.test-vtmarkets.com"></parameter>
+    <parameter name="TraderName" value="ibtestkbh@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+
+ 
+	
+  <test name="UnionPay Withdraw PendingCancel Check MT4 Comment">
+   
+	   <classes>
+	   		    		      		
+	   	  <class name="vantagecrm.CPHuaAoWithdraw">
+	   	  	<methods>
+	   	  		<include name="CPLogIn"></include>
+	   	  		<include name="WithdrawUnionPayWithBankDetail"></include>
+	   	  	</methods>
+	   	  </class>
+	   	  
+	      <class name="vantagecrm.TaskManagement">
+	      		<methods>
+		      		<include name="AdminLogIn"></include>  	 
+	            	<include name="UPWithdrawPendingMT4Comment"></include>
+	            	<include name="UPWithdrawPendingCancel"></include>  
+	            	<include name="UPWithdrawCancelMT4Comment"></include>
+	       		</methods>
+	      </class>
+	      
+	  	</classes>
+  </test>
+  
+  <test name="UnionPay Withdraw AcceptCancel">
+	   <classes>      		
+	   	  <class name="vantagecrm.CPHuaAoWithdraw">
+	   	  	<methods>
+	   	  		<include name="CPLogIn"></include>
+	   	  		<include name="WithdrawUnionPayWithBankDetail"></include>
+	   	  	</methods>
+	   	  </class>
+	   	  
+	      <class name="vantagecrm.TaskManagement">
+	      		<methods>
+		      		<include name="AdminLogIn"></include>  	
+		      		<include name="UPWithdrawAudit"></include>  
+	            	<include name="UPWithdrawAcceptCancel"></include>            	     
+	       		</methods>
+	      </class>
+	      
+		      
+	  	</classes>
+  </test>
+     
+   <test name="UnionPay Withdraw Process">
+	   <classes>
+	   		    		      		
+	   	  <class name="vantagecrm.CPHuaAoWithdraw">
+	   	  	<methods>
+	   	  		<include name="CPLogIn"></include>
+	   	  		<include name="WithdrawUnionPayWithBankDetail"></include>
+	   	  	</methods>
+	   	  </class>
+	       
+	      <class name="vantagecrm.TaskManagement">
+	      		<methods>
+		      		<include name="AdminLogIn"></include>  	 
+	            	 <include name="UPWithdrawAuditList"></include> 
+	            	 <include name="UPWithdrawPendingClose"></include>
+	            	 <include name="UPWithdrawAudit"></include> 
+	            	 <include name="UPWithdrawComplete"></include>  
+	            	 <include name="UPWithdrawPaid"></include>    	 	     
+	       		</methods>
+	      </class>
+  	</classes>
+  </test>
+    
+</suite> <!-- Suite -->

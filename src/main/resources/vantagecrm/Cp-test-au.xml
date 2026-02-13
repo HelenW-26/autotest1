@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU Test Suite" configfailurepolicy="continue">
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	<parameter name="testEnv" value="test"></parameter>
+	
+  <test name="AUTest">
+    <parameter name="Brand" value="au"></parameter>
+  	<parameter name="TestEnv" value="test"></parameter>
+    <parameter name="AdminURL" value="http://192.168.16.200:8001/admin/main"></parameter>
+  	<parameter name="AdminName" value="Yanni"></parameter>
+  	<parameter name="AdminPass" value="12345678Qi"></parameter>
+  	<parameter name="TraderURL" value="http://192.168.16.52:8082"></parameter>
+   	 <parameter name="TraderName" value="webgcg@test.com"></parameter>
+<!--    	<parameter name="TraderName" value="ibtestlop@test.com"></parameter>   	 -->
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+  	<parameter name="ThaiAccount" value="test355Cfp@test.com"></parameter>
+ 	<parameter name="ThaiPwd" value="123Qwe"></parameter>
+ 	  	
+ 	<parameter name="MalayAccount" value="webmez@test.com"></parameter>
+ 	<parameter name="MalayPwd" value="123Qwe"></parameter>
+  	
+    <parameter name="VietAccount" value="test304wro@test.com"></parameter>
+ 	<parameter name="VietPwd" value="123Qwe"></parameter>
+  	
+  	<parameter name="NigeAccount" value="test664vvn@test.com"></parameter>
+ 	<parameter name="NigePwd" value="123Qwe"></parameter>
+    <classes>
+   		 <class name="vantagecrm.CpHomepage">
+   		 	<methods>
+   		 		<include name="CPLogIn"></include>
+   		 		<include name="changeMT5Leverage"></include>
+   		 	</methods>
+   		 </class>   		      		
+       	  
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

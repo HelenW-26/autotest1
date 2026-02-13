@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- alpha jenkins上进行smoke test的job -->
+<suite name="Alpha Copytrading P0 Regression" configfailurepolicy="continue">
+
+    <listeners>
+        <listener class-name="utils.Listeners.CustomListener"/>
+        <!--<listener class-name="utils.Listeners.RetryListener"/>-->
+    </listeners>
+    <parameter name="Brand" value="PUG"></parameter>
+    <parameter name="Server" value="Core-PU"></parameter>
+    <parameter name="BranchVersion" value="${branchVersion}"></parameter>
+
+    <!--  <test name="CP CopyTrading Register UI Regression">
+            <classes>
+                <class name="newcrm.testcases.alpharegression.copyTrading.AlphaCopyTradingRegisterTestCases">
+                    <methods>
+                        <include name="testOpenCopyTradingAccount_withoutSumsub"></include>
+                    </methods>
+                </class>
+                <class name="newcrm.testcases.alpharegression.copyTrading.AlphaCopyTradingRegisterGoldTestCases">
+                    <methods>
+                        <include name="testOpenCopyTradingAccount_Gold_withoutSumsub"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+      <test name="CP CopyTrading Add additional account UI Regression">
+               <classes>
+                   <class name="newcrm.testcases.alpharegression.copyTrading.AlphaCopyTradingAddAccTestCases">
+                       <methods>
+                           <include name="testOpenAdditionalMTSAccount"></include>
+                       </methods>
+                   </class>
+               </classes>
+           </test>
+       <test name="CP CopyTrading Payment Withdraw UI Regression">
+          <classes>
+              <class name="newcrm.testcases.alpharegression.copyTrading.AlphaCopyTradingWithdrawTestCases">
+                  <methods>
+                      <include name="withdrawCopyTradingTest"></include>
+                  </methods>
+              </class>
+          </classes>
+      </test>
+         <test name="CP CopyTrading Payment Deposit UI Regression">
+            <classes>
+                <class name="newcrm.testcases.alpharegression.copyTrading.AlphaCopyTradingDepositTestcases">
+                    <methods>
+                        <include name="depositCopyTradingTest"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>-->
+     <test name="CP CopyTrading Discover UI Regression">
+          <classes>
+              <class name="newcrm.testcases.alpharegression.copyTrading.AlphaCopyTradingDiscoverTestcases">
+                  <methods>
+                      <include name="discoverCopyTradingTest"></include>
+                  </methods>
+              </class>
+          </classes>
+      </test>
+    <!--<test name="CP CopyTrading Copier EUR Regression">
+          <classes>
+              <class name="newcrm.testcases.alpharegression.copyTrading.AlphaCopyTradingCopierEURTestcases">
+                  <methods>
+                      <include name="CopierEURCopyTradingTest_EquivalentMargin"></include>
+                      <include name="CopierEURCopyTradingTest_FixLots"></include>
+                      <include name="CopierEURCopyTradingTest_FixedMultiples"></include>
+                  </methods>
+              </class>
+          </classes>
+      </test>
+      <test name="CP CopyTrading Copier Position Regression">
+       <classes>
+           <class name="newcrm.testcases.alpharegression.copyTrading.AlphaCopierPositionsTestcases">
+               <methods>
+                   <include name="copierPositionTest"></include>
+               </methods>
+           </class>
+       </classes>
+     </test>-->
+     <!--  <test name="CP CopyTrading Copier Details Regression">
+          <classes>
+              <class name="newcrm.testcases.alpharegression.copyTrading.AlphaCopierDetailsTestcases">
+                  <methods>
+                      <include name="copierDetailTest"></include>
+                  </methods>
+              </class>
+          </classes>
+       </test>
+        <test name="CP CopyTrading Copier UI Regression">
+             <classes>
+                 <class name="newcrm.testcases.alpharegression.copyTrading.AlphaCopierManageMenuTestcases">
+                     <methods>
+                         <include name="copierManageMenuTest"></include>
+                     </methods>
+                 </class>
+             </classes>
+         </test>
+    <test name="CP CopyTrading Copier History Regression">
+          <classes>
+              <class name="newcrm.testcases.alpharegression.copyTrading.AlphaCopierHistoryTestcases">
+                  <methods>
+                      <include name="copierHistoryTest"></include>
+                  </methods>
+              </class>
+          </classes>
+      </test>-->
+     <!--<test name="CP CopyTrading Signal provider Regression">
+          <classes>
+              <class name="newcrm.testcases.alpharegression.copyTrading.AlphaSignalProviderTestcases">
+                  <methods>
+                      <include name="signalProviderTest"></include>
+                  </methods>
+              </class>
+             <class name="newcrm.testcases.alpharegression.copyTrading.AlphaSUBSignalProviderTestCases">
+                  <methods>
+                      <include name="subSignalProviderTest"></include>
+                  </methods>
+              </class>
+                 <class name="newcrm.testcases.alpharegression.copyTrading.AlphaSignalProviderCopierReview">
+                    <methods>
+                        <include name="signalProviderCopierRvTest"></include>
+                    </methods>
+                </class>
+                <class name="newcrm.testcases.alpharegression.copyTrading.AlphaSignalProviderAgentLink">
+                    <methods>
+                        <include name="signalProviderAgentLinkTest"></include>
+                    </methods>
+                </class>
+          </classes>
+      </test>-->
+</suite><!-- Suite -->

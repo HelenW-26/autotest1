@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="PUG_Regression_Suite" configfailurepolicy="continue">
+
+ <listeners>
+      <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+    <parameter name="Brand" value="svg"></parameter>
+  	<parameter name="TestEnv" value="prod"></parameter>
+  	<parameter name="AdminURL" value="http://admin.puprime.com"></parameter>
+  	<parameter name="AdminName" value="Test CRM"></parameter>
+  	<parameter name="AdminPass" value="Vantage123"></parameter>
+  	<parameter name="TraderURL" value="http://myaccount.puprime.com"></parameter>
+    <parameter name="TraderName" value="webvok@tmail.t-com.sk"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter> 
+	
+  <test name="PUG_Deposit_Audit">
+    <classes>
+ 	 <class name="vantagecrm.TraderDeposit">  
+ 		<methods>
+ 			<include name="TraderLogIn"></include>
+ 			<include name="CCDeposit"></include> 		 	
+ 			<include name="I18NDeposit"></include>      
+ 			<include name="BrokerDeposit"></include>
+ 			<include name="UnionPayDeposit"></include> 
+ 			<include name="MobilepayDeposit"></include>
+			<include name="UnionPayP2PDeposit"></include>
+		</methods> 	
+	  </class>
+	  
+	  <class name="vantagecrm.TaskManagement">
+      
+      		<methods>
+	      		<include name="AdminLogIn"></include>
+	       		<include name="OfflineDepositPending"></include>
+				<include name="OfflineDepositPendingAll"></include>
+       		</methods>
+      </class>
+    </classes>  
+	</test>
+	
+	<test name="PUG_Withdraw_Audit">
+		<classes>
+		
+			 <class name="vantagecrm.TraderWithdraw">
+      			<methods>
+		            <include name="TraderLogIn"></include> 
+		           	<include name="WithdrawCC"></include>
+		      		<include name="WithdrawI18NBank"></include>  
+					<include name="WithdrawAUBank"></include>
+					<include name="WithdrawChinaBank"></include>
+					<include name="WithdrawSkrNet"></include>
+					<include name="WithdrawFasaPay"></include>
+					<include name="WithdrawUnionPay"></include>
+       			</methods>
+       		</class>   
+		
+			       
+		<class name="vantagecrm.TaskManagement">
+	      
+	      		<methods>
+		      		<include name="AdminLogIn"></include>
+		      		<include name="WithdrawlPending"></include>
+		      		<include name="WithdrawlPendingAll"></include>
+		      		<include name="WithdrawlAuditReject"></include>  
+	       		</methods>
+	      </class>
+		</classes>
+	</test>
+  
+  <test name="Trader_MyAccount_changeLeverage1">
+  	<classes>
+  	     <class name="vantagecrm.TraderMyAccount">
+       		<methods>
+       			<include name="TraderLogIn"></include>
+      			<include name="changeLeverage"></include>
+       		</methods>
+       </class>
+  
+      <class name="vantagecrm.TaskManagement">
+      
+      		<methods>
+	      		<include name="AdminLogIn"></include>
+	      		<include name="leveragePending"></include>  
+		     
+       		</methods>
+      </class>
+  	
+  	
+  	</classes>
+  
+  </test>
+  
+  <test name="Trader_MyAccount_changeLeverage2">
+  	<classes>
+  	     <class name="vantagecrm.TraderMyAccount">
+       		<methods>
+       			<include name="TraderLogIn"></include>
+      			<include name="changeLeverage"></include>
+       		</methods>
+       </class>
+  
+      <class name="vantagecrm.TaskManagement">
+      
+      		<methods>
+	      		<include name="AdminLogIn"></include>
+	      		<include name="leverageReject"></include>  
+		     
+       		</methods>
+      </class>
+  	
+  	
+  	</classes>
+  
+  </test>
+  
+</suite> <!-- Suite -->

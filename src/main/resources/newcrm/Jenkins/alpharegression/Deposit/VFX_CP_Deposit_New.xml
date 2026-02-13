@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU Deposit Test Suite New" configfailurepolicy="continue">
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod".
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	<listeners>
+		<listener class-name="utils.Listeners.CustomListener"/>
+	</listeners>
+	<parameter name="Brand" value="VFX"></parameter>
+	<parameter name="TestEnv" value="alpha"></parameter>
+	<parameter name="Regulator" value="vfsc"></parameter>
+	<parameter name="TraderURL" value="${TraderURL}"></parameter>
+	<parameter name="TraderPass" value="123Qwe@@"></parameter>
+	<parameter name="headless" value="true"></parameter>
+	<parameter name="OpenAPIURL" value="https://openapi-core-au.crm-alpha.com"></parameter>
+
+	<!--Batch 1-->
+    <test name="AU Australia CP Deposit_AISC_IBT">
+        <parameter name="TraderName" value="helenasictest@helenasictest.com"></parameter>
+        <parameter name="Regulator" value="asic"></parameter>
+        <parameter name="TraderPass" value="123Qwe"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testAustraliaBankTransPayNew"></include>
+                    <include name="testBrokerTransferPayNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU Australia CP Deposit_ASIC_AUD">
+        <parameter name="TraderName" value="testcrmaudhelen@testcrmaudhelen.com"></parameter>
+        <parameter name="Regulator" value="asic"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testASIC_Bpay_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_NewZealand_Deposit_IBT">
+        <parameter name="TraderName" value="testcrmwdhkmbbiw@testcrm.com"></parameter>
+        <parameter name="TraderPass" value="123Qwe"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testInterBankTransPayNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU Australia CP Deposit_ASIC_USD">
+        <parameter name="TraderName" value="helenasictest@helenasictest.com"></parameter>
+        <parameter name="TraderPass" value="123Qwe"></parameter>
+        <parameter name="Regulator" value="asic"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testASICCCCheckout_New"></include>
+                    <include name="testASICCCWorldpay_New"></include>
+                    <include name="testCCGoogleApplePayNew"></include>
+                    <include name="cpsPaypal_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU Australia CP Deposit_ASIC_AUD_PayID">
+        <parameter name="TraderName" value="testcrmaudhelen@testcrmaudhelen.com"></parameter>
+        <parameter name="Regulator" value="asic"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testASIC_PayID_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_UAE_Deposit">
+        <parameter name="TraderName" value="testcrmUAE@testcrmUAEhelen.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testBridgePayNew"></include>
+                    <include name="testApplePayNew"></include>
+                    <include name="testGooglePayNew"></include>
+                    <include name="cpsBitwallet_New"></include>
+                    <include name="testCryptoBITNew"></include>
+                    <include name="testCryptoERCNew"></include>
+                    <include name="testCryptoTRCNew"></include>
+                    <include name="testCryptoUSDCERCNew"></include>
+                    <include name="testDepositCryptoBEPNew"></include>
+                    <include name="testDepositCryptoETHNew"></include>
+                    <include name="testSkrillPayNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_Israel_Deposit">
+        <parameter name="TraderName" value="automationtestgbp2@mailinator.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testSticPayNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_NewZealand_Deposit">
+        <parameter name="TraderName" value="testcrmwdhkmbbiw@testcrm.com"></parameter>
+        <parameter name="TraderPass" value="123Qwe"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testNetellerPayNew"></include>
+                    <include name="testVoletNew"></include>
+                    <include name="cpsTygapay"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_TurkeyDeposit">
+        <parameter name="TraderName" value="testcrmwvhkmiiaq@testcrm.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsCroinPlus_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!-- Batch 2 -->
+    <test name="AU_Thailand_Deposit">
+        <parameter name="TraderName" value="autotestjethdael@testcrmautomation.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsThailandBT_iSmartNew"></include>
+                    <include name="cpsThailandBT_XpayNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_India_Deposit">
+        <parameter name="TraderName" value="testcrmhelenigyjitju@mailinator.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsIndiaP2PNew"></include>
+                    <include name="testCheezePayNew"></include>
+                    <include name="testCricpayzNew"></include>
+                    <include name="testXpayNew"></include>
+                    <include name="testVoletNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_Malaysia_Deposit">
+        <parameter name="TraderName" value="autotestabfgbikg@testcrmautomation.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsMalaysia2C2PEwallet_New"></include>
+                    <include name="cpsMalaysia2C2PFPX_New"></include>
+                    <include name="cpsMalaysiaXPAY_MYR_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_Colombia_Deposit">
+        <parameter name="TraderName" value="testcrm_donttouch_cpscolombiaclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsCOPBT_4ON_PSE_New"></include>
+                    <include name="cpsCOPBT_4ON_Efecty_New"></include>
+                    <include name="cpsCOPBT_Pagsmile_COP_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_Bangladesh_Deposit">
+        <parameter name="TraderName" value="testcrm_donttouch_cpsbdtclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testEcpay_Bkash_New"></include>
+                    <include name="testEcpay_Rocket_New"></include>
+                    <include name="testEcpay_Nagad_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_Brazil_BT/PIX_Deposit">
+        <parameter name="TraderName" value="testcrm_donttouch_cpsbrazillient@testcrm.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsBrazilBTPagsmileNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_KR_Deposit">
+        <parameter name="TraderName" value="testcrmwkarqhlee@testcrm.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testPAYWON_KRW_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_Philippine_Deposit">
+        <parameter name="TraderName" value="testcrm_donttouch_cpsphilipineclient@testcrm.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsPhilippinesBTZotaPayNew"></include>
+                    <include name="cpsPhilippinesBTPaymentAsiaNew"></include>
+                    <include name="cpsPhilippinesBTToppay_PHPNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!--Batch 3 -->
+    <test name="AU_Nigeria_Deposit">
+        <parameter name="TraderName" value="testcrm_donttouch_cpsnigeriaclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testKoraPay_NGN_New"></include>
+                    <include name="testBitolo_NGN_MM_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_South_Africa_Deposit">
+        <parameter name="TraderName" value="autotestscwfmrlw@testcrmautomation.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testSouthAfricaBTOzow_ZARNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_Uganda_Deposit">
+        <parameter name="TraderName" value="testcrm_donttouch_cpsugandaclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsUgandaBTZotaPayNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_Argentine_Deposit">
+        <parameter name="TraderName" value="testcrmwofxihxlh@testcrm.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsArgentineBT_4ON_PPagoFacil"></include>
+                    <include name="cpsArgentineBT_4ON_MercadoPagoWallet"></include>
+                    <include name="cpsArgentineBT_4ON_RapiPago"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_Mexico_Deposit">
+        <parameter name="TraderName" value="testcrmwujk@test.com.vfsc"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <!--   <include name="cpsMexicoBTBitolo_MXN"></include> no this channel in cps06 -->
+                    <!--     <include name="cpsMexicoBT4ON_OXXo_MXN"></include> no this channel in cps06 -->
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_Rwandan_Deposit">
+        <parameter name="TraderName" value="testcrmwiiy@test.com.vfsc"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <!--  <include name="cpsRwandanBTZotaPayNew"></include> no this channel in cps06-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_Zambia_Deposit">
+        <parameter name="TraderName" value="testcrm_donttouch_cpszambiaclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsZambiaBTZotaPayNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_Vietnam_Deposit">
+        <parameter name="TraderName" value="autotestslhhseyf@testcrmautomation.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsVietnamBTZotaPayNew"></include>
+                    <include name="testWowsPay_QR_VND_New"></include>
+                    <include name="testWowsPay_Remit_VND_New"></include>
+                    <include name="testVietnamBTEeziePay_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_Ghana_Deposit">
+        <parameter name="TraderName" value="testcrm_donttouch_cpsghanaclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsGhanaBTBitolo_GHS"></include>
+                    <include name="cpsGhanaBTKorapay_GHS"></include>
+                    <include name="cpsGhanaBTZotaPay_GHS"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_Indonesia_Deposit">
+        <parameter name="TraderName" value="testcrm_donttouch_cps_indonesia_client@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsIndonesiaBT_XPay_IDR"></include>
+                    <include name="cpsIndonesiaBT_WowsPay_IDR"></include>
+                    <include name="cpsIndonesiaBT_ZotaPay_IDR"></include>
+                    <include name="cpsIndonesiaBT_PaymentAsia_IDR"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_Kenya_Deposit">
+        <parameter name="TraderName" value="testcrm_donttouch_cpskenyaclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsKenyaBTBitolo_KES"></include>
+                    <include name="cpsKenyaBTKorapay_KES"></include>
+                    <include name="cpsKenyaBTZotaPay_KES"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_Japan_Deposit">
+        <parameter name="TraderName" value="testcrmhelennpfofnhz@mailinator.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsJapanBTTheJapanOne_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AU_Germany_Deposit">
+        <parameter name="TraderName" value="testcrmhelenvmqfdwga@mailinator.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testEuroSpaIBTPayNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite> <!-- Suite -->

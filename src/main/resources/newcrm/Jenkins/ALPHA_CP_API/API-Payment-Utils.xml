@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- alpha jenkins上进行smoke test的job -->
+<suite name="alpha Regression" configfailurepolicy="continue">
+
+ <listeners>
+     <listener class-name="utils.Listeners.CustomListener"/>
+  </listeners>
+  <parameter name="Brand" value="${brand}"></parameter>
+  <parameter name="Server" value="${container}"></parameter>
+
+ 	<test name="Payment_Utils">
+        <parameter name="TraderURL" value="${url}"></parameter>
+        <parameter name="TraderName" value="${login}"></parameter>
+        <parameter name="TraderPass" value="${pw}"></parameter>
+        <classes>
+            <class name="newcrm.testcases.crmapi.CPAPIWithdrawTestcases">
+                <methods>
+                    <include name="apiWithdrawCancelAll"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite><!-- Suite -->

@@ -1,0 +1,6 @@
+campaignyaml:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-bluebird.crm-alpha.com"
+  password: "123Qwe"
+  brand: "VFX"
+  regulator: "VFSC"

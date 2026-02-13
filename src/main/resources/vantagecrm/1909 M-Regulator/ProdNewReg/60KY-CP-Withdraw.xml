@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Client Portal Test Suite KY" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+	
+  <test name="Client Portal Test KY">
+	<parameter name="Brand" value="au"></parameter>
+  	<parameter name="TestEnv" value="prod"></parameter>
+    <parameter name="AdminURL" value="https://test1admin.vantagefx.com/admin/main"></parameter>
+  	<parameter name="AdminName" value="ben"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="https://test1secure.vantagefx.com"></parameter>
+   	<parameter name="TraderName" value="webtqga@test.com.au"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+  	<parameter name="ThaiAccount" value="webfdv@test.com"></parameter>
+ 	<parameter name="ThaiPwd" value="123Qwe"></parameter>
+ 	  	
+   <parameter name="MalayAccount" value="webfdv@test.com"></parameter>
+ 	<parameter name="MalayPwd" value="123Qwe"></parameter>  
+  	
+    <parameter name="VietAccount" value="webfdv@test.com"></parameter>
+ 	<parameter name="VietPwd" value="123Qwe"></parameter>
+  	
+  	<parameter name="NigeAccount" value="webfdv@test.com"></parameter>
+ 	<parameter name="NigePwd" value="123Qwe"></parameter>
+ 	
+ 
+    <classes>
+    			
+  
+      <class name="vantagecrm.CPWithdraw">
+       		<methods>       			
+       
+       			<include name="CPLogIn"></include>   
+       			<include name="WithdrawAUBank"></include>
+       			<include name="WithdrawI18NBank"></include>
+       			<include name="WithdrawSkrill"></include>
+       			<include name="WithdrawNeteller"></include>
+       			<include name="WithdrawUnionPay"></include>
+       			<include name="WithdrawFasaPay"></include>
+				<include name="WithdrawPaypal"></include>
+       		</methods>       
+       </class>
+	  
+   		<class name="vantagecrm.TaskManagement">
+   
+    		<methods>
+	     		<include name="AdminLogIn"></include>
+	      		<include name="WithdrawlAudit"></include> 
+	      		<include name="WithdrawlAuditComplete"></include> 
+		
+     		</methods>
+   		</class>
+     
+    </classes>
+  </test> <!-- Test -->
+ 
+</suite> <!-- Suite -->

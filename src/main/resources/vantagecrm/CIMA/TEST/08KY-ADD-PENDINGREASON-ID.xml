@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="KY Test Suite" configfailurepolicy="continue">
+
+ <listeners>
+    <!-- <listener class-name="utils.Listeners.TestListener" /> -->
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<parameter name="Brand" value="ky"></parameter>
+  	<parameter name="TestEnv" value="test"></parameter>
+    <parameter name="AdminURL" value="http://cp.vantagefx.com:8001/admin/main"></parameter>
+  	<parameter name="AdminName" value="automation_ky"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="http://cp.vantagefx.com"></parameter>
+   	<parameter name="TraderName" value="webkyy@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+	
+<!--   <test name="ID Pending Reason">
+   
+    <classes>
+    	<class name="vantagecrm.NewTaskManagement">
+    	<methods>
+    		<include name="AdminLogIn"></include>
+    		<include name="AddIDProof"></include>
+    		<include name="IDProofPendingReason"></include>  
+    	</methods>  	
+    	</class>  	    	
+
+   </classes>
+  </test> -->
+  
+  <test name="POA Pending Reason">
+   
+    <classes>
+    	<class name="vantagecrm.NewTaskManagement">
+	    	<methods>
+	    		<include name="AdminLogIn"></include>
+	    		<include name="AddPOA"></include>
+	    		<include name="POAPendingReason"></include> 
+	    	</methods>   	
+    	</class>  	    	
+
+   </classes>
+  </test> 
+</suite> <!-- Suite -->

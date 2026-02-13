@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite allow-return-values="false" configfailurepolicy="continue" data-provider-thread-count="10" group-by-instances="false" guice-stage="DEVELOPMENT" junit="false" name="Client Portal Test Suite KY" parallel="none" preserve-order="true" skipfailedinvocationcounts="false" thread-count="5">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"/>
+  </listeners>
+
+    <parameter name="Brand" value="vfsc"/>
+  	<parameter name="TestEnv" value="alpha"/>
+    <parameter name="AdminURL" value="https://admin.test-vantagefx.com"/>
+  	<parameter name="AdminName" value="Test Crm"/>
+  	<parameter name="AdminPass" value="Vantage123"/>
+  	<parameter name="TraderURL" value="https://secure.test-vantagefx.com"/>
+   	 <parameter name="TraderName" value="webopn@test.com"/>
+    <parameter name="TraderPass" value="123Qwe  "/>  
+  	
+  	<parameter name="ThaiAccount" value="webnyq@test.com"/>
+ 	<parameter name="ThaiPwd" value="123Qwe"/>
+ 	  	
+ 	<parameter name="MalayAccount" value="webkyy@test.com"/>
+ 	<parameter name="MalayPwd" value="123Qwe"/>
+  	
+    <parameter name="VietAccount" value="webkyy@test.com"/>
+ 	<parameter name="VietPwd" value="123Qwe"/>
+  	
+  	<parameter name="NigeAccount" value="webkyy@test.com"/>
+ 	<parameter name="NigePwd" value="123Qwe"/>
+	
+  
+<!--   <test name="Malaysia Paytoday Deposit">   
+	   <classes>	  
+	   	 <class name="vantagecrm.CPDeposit">
+	     	<methods>
+	     		<include name="CPLogIn"></include>
+	     		<include name="MalaysiaDeposit"></include>
+	     	</methods>       
+         </class>
+	      
+	      <class name="vantagecrm.TaskManagement">	      
+	      		<methods>
+		      		<include name="AdminLogIn"></include>  	 
+	            	 <include name="OLDepositAuditMalay"></include>            	     
+	       		</methods>
+	      </class>		      
+	  	</classes>
+  </test>
+   -->
+     <test allow-return-values="false" group-by-instances="false" junit="false" name="Malaysia PayTrust Deposit" preserve-order="true" skipfailedinvocationcounts="false">
+   
+	   <classes>
+	  
+	   	 <class name="vantagecrm.CPDeposit">
+	     	<methods>
+	     		<include name="CPLogIn"/>
+	     		<include name="MalaysiaPayTrust"/>
+	     	</methods>    
+     
+         </class>
+	      
+	      <class name="vantagecrm.TaskManagement">
+	      
+	      		<methods>
+		      		<include name="AdminLogIn"/>  	 
+	            	 <include name="OLDepositAuditMalay"/>            	     
+	       		</methods>
+	      </class>
+		      
+	  	</classes>
+  </test>
+  
+     <test allow-return-values="false" group-by-instances="false" junit="false" name="Malaysia Withdraw" preserve-order="true" skipfailedinvocationcounts="false">      	
+ 	   <classes>	  
+	     <class name="vantagecrm.CPWithdraw">
+		     	<methods>
+		     		<include name="CPLogIn"/>
+		     		<include name="WithdrawMalayBank"/>
+		     	</methods>      
+         </class>
+	      
+	      <class name="vantagecrm.TaskManagement">	      
+	      		<methods>
+		      		<include name="AdminLogIn"/>  	 
+	            	 <include name="WDAuditMalay"/> 
+	                <include name="WDAuditCompleteMalay"/>   	            	            	     
+	       		</methods>
+	      </class>
+	      
+	  </classes>
+  </test>
+ 
+</suite><!-- Suite -->

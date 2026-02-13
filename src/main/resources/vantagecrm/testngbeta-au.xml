@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU Beta Suite">
+  <test thread-count="5" name="Test">
+    <parameter name="Brand" value="au"></parameter>
+  	<parameter name="TestEnv" value="beta"></parameter>
+  	<parameter name="AdminURL" value="https://betavgpadmin.vantagefx.com.au"></parameter>
+  	<parameter name="AdminName" value="Test CRM"></parameter>
+  	<parameter name="AdminPass" value="Vantage123"></parameter>
+  	<parameter name="TraderURL" value="https://betavgpsecure.vantagefx.com.au"></parameter>
+  	<parameter name="TraderName" value="webuuc@test.com"></parameter>
+  	<parameter name="TraderPass" value="123Qwe"></parameter>
+  	
+    <classes>
+
+ <!--      <class name="vantagecrm.UserManagement">
+      
+        <parameter name="WebSiteURL" value="www.vantagefx.com"></parameter>
+      	<parameter name="RegisterURL" value=""></parameter>
+      	<parameter name="IBpromotion" value="?affid=NjA1NA=="></parameter>
+      	
+      	<methods>
+      	
+      		<include name="AdminLogIn"></include>	
+     		<include name="AddClient"></include> 
+        	<include name="RequestAddiRebateAccount"></include>   
+       	      			      		
+   			<include name="RegisterLead"></include>
+      		<include name="RegisterUser"></include>      		
+
+
+      		<include name="AddIB"></include> 
+
+      		<include name="DeleteIB"></include>  
+
+       	 	<include name="AddIUser"></include>       		
+      		<include name="AddLeads"></include>	    		
+       		  
+
+     	 	
+      	</methods>
+       </class>    -->
+       
+<!-- 
+ 	  <class name="vantagecrm.TraderDeposit">  	  
+
+ 		<methods>
+ 			<include name="TraderLogIn"></include>
+ 			<include name="CCDeposit"></include>
+ 			<include name="I18NDeposit"></include>
+ 			<include name="AuBankDeposit"></include>
+ 			<include name="BPayDeposit"></include>
+ 		    <include name="SkrillDeposit"></include>
+			<include name="NetellerDeposit"></include>	
+			<include name="UnionPayDeposit"></include>
+			<include name="UnionPayP2PDeposit"></include>			
+			<include name="ThailandDeposit"></include>
+
+			<include name="MalaysiaDeposit"></include>	
+		</methods> 	  	
+ 
+	   </class>
+
+      <class name="vantagecrm.TraderWithdraw">
+      	<methods>
+      	
+           	<include name="TraderLogIn"></include>   	 
+      		<include name="WithdrawAUBank"></include> 
+      		<include name="WithdrawI18NBank"></include>   
+      		<include name="WithdrawChinaBank"></include> 
+      		<include name="WithdrawCC"></include>  
+       		<include name="WithdrawSkrNet"></include>  
+       		<include name="WithdrawUnionPay"></include>         		
+
+       		<include name="WithdrawThaiBank"></include> 
+       		<include name="WithdrawMalayBank"></include>   	  	       	
+
+       	</methods>
+       </class>   
+ -->
+<!-- 
+       <class name="vantagecrm.TraderMyAccount">
+       		<methods>
+       			<parameter name="OldPwd" value="123Qwe"></parameter>
+       			<parameter name="NewPwd" value="1234Qwe"></parameter>
+       			
+       			<include name="TraderLogIn"></include>
+       			<include name="RequestAddiAccount"></include>
+       			<include name="TransferFund"></include>   
+    			<include name="ChangePWD"></include> 	
+       			<include name="ChangeMT4Pwd"></include>		
+       			<include name="ResetMT4Pwd"></include>
+       		</methods>       
+       
+       </class>
+ -->
+ 
+     <class name="vantagecrm.UpdateClient"></class>
+     <class name="vantagecrm.UpdateTradACC"></class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

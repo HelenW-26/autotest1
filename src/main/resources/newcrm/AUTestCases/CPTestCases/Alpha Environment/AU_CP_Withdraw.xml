@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU Test Suite" configfailurepolicy="continue">
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	<listeners>
+     	<listener class-name="utils.Listeners.CustomListener"/>
+  	</listeners>
+  	<parameter name="Brand" value="VFX"></parameter>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+  	<parameter name="Regulator" value="vfsc"></parameter>
+  	<parameter name="TraderURL" value="https://secure-cps01.crm-alpha.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+    <parameter name="headless" value="true"></parameter>  
+    
+  <test name="AU_CPS_Ewallet_Test">
+   	<parameter name="TraderName" value="autotestgprhuhxd@testcrmautomation.com"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+   		 	<methods>
+   		 		 <include name="testEbuyWithdraw"></include>
+   		 		<include name="testPerfectMoneyWithdraw"></include>
+   		 		<include name="testAdvcashWithdraw"></include>
+   		 		<include name="testAstropayWithdraw"></include>
+   		 		<include name="testFasaPayWithdraw"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <test name="AU_Malaysia_CPS_CP_Withdraw">
+   	<parameter name="TraderName" value="autotestabfgbikg@testcrmautomation.com"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+   		 	<methods>
+   		 		<include name="testMalaysiaBankWithdraw"></include>
+   		 		<include name="testMalaysiaBankWithdrawNewAccount"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+	<test name="AU_Thailand_CPS_CP_Withdraw">
+   	<parameter name="TraderName" value="autotestjethdael@testcrmautomation.com"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+   		 	<methods>
+   		 		<include name="testThaiBankWithdraw"></include>
+   		 		<include name="testThaiBankWithdrawNewAccount"></include>
+   		 		
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+    <test name="AU_Korea_CPS_CP_Withdraw">
+   	<parameter name="TraderName" value="autotestgprhuhxd@testcrmautomation.com"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+   		 	<methods>
+   		 		<include name="testKoreaBankWithdraw"></include>
+   		 		<include name="testKoreaBankWithdrawNewAccount"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+    <test name="AU_South_Africa_CPS_CP_Withdraw">
+   	<parameter name="TraderName" value="autotestscwfmrlw@testcrmautomation.com"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+   		 	<methods>
+   		 		<include name="testSouthAfricaBankWithdraw"></include>
+   		 		<include name="testSouthAfricaBankWithdrawNewAccount"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <test name="AU_Vietnam_CPS_CP_Withdraw - batch 3">
+   	<parameter name="TraderName" value="autotestslhhseyf@testcrmautomation.com"></parameter>
+  	<parameter name="Regulator" value="vfsc2"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+   		 	<methods>
+   		 		<include name="testVietnamBankWithdraw"></include>
+   		 		<include name="testVietnamBankWithdrawNewAccount"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test> 
+  <test name="AU_India_CPS_CP_Withdraw - batch 3">
+   	<parameter name="TraderName" value="autotestpdtzoegs@testcrmautomation.com"></parameter>
+  	<parameter name="Regulator" value="vfsc2"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+   		 	<methods>
+   		 		<include name="testIndiaBankWithdraw"></include>
+   		 		<include name="testIndiaBankWithdrawNewAccount"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+</suite> <!-- Suite -->

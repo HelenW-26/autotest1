@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- PROD REGRESSION /  QA_AUTOMATION_81_VT_PROD_REGISTER_REGRESSION-->
+
+<suite name="Production Smoke Test" configfailurepolicy="continue">
+
+    <listeners>
+        <listener class-name="utils.Listeners.CustomListener"/>
+        <!-- <listener class-name="utils.Listeners.RetryListener"/> -->
+    </listeners>
+
+    <!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod".
+    When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+
+    <parameter name="headless" value="true"/>
+    <parameter name="Brand" value="PUG"></parameter>
+    <parameter name="TestEnv" value="prod"></parameter>
+    <parameter name="AdminURL" value="https://admin.puprime.com"></parameter>
+    <parameter name="Regulator" value="SVG"></parameter>
+    <parameter name="AdminName" value="Test CRM"></parameter>
+    <parameter name="AdminPass" value="BDAVJECnh4hovtZLV33N"></parameter>
+    <parameter name="Debug" value="true"></parameter>
+
+    <test name="CP Registration UI Regression">
+        <parameter name="IBCode" value="NBNjI0MzA3"></parameter>
+        <parameter name="RAFCode" value=""></parameter>
+        <parameter name="Country" value="Italy"></parameter>
+        <parameter name="TraderURL" value="https://myaccount.puprime.com"></parameter>
+        <parameter name="TraderName" value="testcrmhwpupaystack@mailinator.com"></parameter>
+        <parameter name="TraderPass" value="1234Qwer!"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.RegisterTestcases">
+                <methods>
+                    <include name="testRegistMT4LiveAccountWithoutCheck"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CP Account, Deposit &amp; Transfer UI Regression">
+        <parameter name="IBCode" value="NBNjI0MzA3"></parameter>
+        <parameter name="RAFCode" value=""></parameter>
+        <parameter name="Country" value="Italy"></parameter>
+        <parameter name="TraderURL" value="https://myaccount.puprime.com"></parameter>
+        <parameter name="TraderName" value="testcrmhwpupaystack@mailinator.com"></parameter>
+        <parameter name="TraderPass" value="1234Qwer!"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.AccountConfigureTestCases">
+                <methods>
+                    <include name="testChangeMT4AccountLeverage"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testSkrillPayNew"></include>
+                    <include name="testDepositCryptoETHNew"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.cptestcases.AccountManagementTestCases">
+                <methods>
+                    <include name="testTransfer"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CP Withdrawal UI Regression">
+        <parameter name="TraderURL" value="https://myaccount.puprime.com"></parameter>
+        <parameter name="TraderName" value="autotestelmgfytm@testcrmautomation.com"></parameter>
+        <parameter name="TraderPass" value="HPAtwg805%%"></parameter>
+        <parameter name="AdminName" value="Test CRM"></parameter>
+        <parameter name="AdminPass" value="BDAVJECnh4hovtZL"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testMalaysiaBankWithdrawNew"></include>
+                </methods>
+            </class>
+<!--            <class name="newcrm.testcases.admintestcases.TaskManagementTestCases">-->
+<!--                <methods>-->
+<!--                    <include name="testadminwithdraw"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+        </classes>
+    </test>
+</suite><!-- Suite -->

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="PU CP Deposit Test Suite New" configfailurepolicy="continue">
+
+    <!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod".
+    When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+    <listeners>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+    <parameter name="Brand" value="PUG"></parameter>
+    <parameter name="TestEnv" value="alpha"></parameter>
+    <parameter name="Regulator" value="svg"></parameter>
+    <parameter name="TraderURL" value="${TraderURL}"></parameter>
+    <parameter name="TraderPass" value="123Qwe@@"></parameter>
+    <parameter name="headless" value="true"></parameter>
+    <parameter name="OpenAPIURL" value="https://openapi-core-pu.crm-alpha.com"></parameter>
+
+    <!--Batch 1-->
+    <test name="PU_UAE_Deposit">
+        <parameter name="TraderName" value="testcrm_automation_uae@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testBridgePayNew"></include>
+                    <include name="testCryptoBITNew"></include>
+                    <include name="testCryptoERCNew"></include>
+                    <include name="testCryptoTRCNew"></include>
+                    <include name="testCryptoUSDCERCNew"></include>
+                    <include name="testDepositCryptoBEPNew"></include>
+                    <include name="testDepositCryptoETHNew"></include>
+                    <include name="testSkrillPayNew"></include>
+                    <include name="testSticPayNew"></include>
+                    <include name="testNetellerPayNew"></include>
+                    <include name="testUAEIBTPay_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="PU_Mexico_Deposit">
+        <parameter name="TraderName" value="testcrm_automation_mexico@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsMexicoBTBitolo_MXN"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="PU_South_Korea_Deposit">
+        <parameter name="TraderName" value="testcrm_automation_southkorea@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testPAYWON_KRW_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="PU_South_Africa_Deposit">
+        <parameter name="TraderName" value="testcrm_automation_southafrica@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testSouthAfricaBTOzow_ZARNew"></include>
+                    <include name="cpsSouthAfricaBTZotaPayNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="PU_Thailand_Deposit">
+        <parameter name="TraderName" value="testcrm_automation_thailand@test.com"></parameter>
+        <parameter name="Regulator" value="fsa"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <!--渠道关闭
+                    <include name="cpsThailandBT_iSmartNew"></include>-->
+                    <include name="cpsThailandBT_XpayNew"></include>
+                    <include name="testAirTM_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="PU_Philippines_Deposit">
+        <parameter name="TraderName" value="testcrm_automation_php@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsPhilippinesBTZotaPayNew"></include>
+                    <include name="cpsPhilippinesBTPaymentAsiaNew"></include>
+                    <include name="cpsPhilippinesBTToppay_PHPNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="PU_Brazil_Deposit">
+        <parameter name="TraderName" value="testcrm_automation_brazil@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsBrazilBTPagsmileNew"></include>
+                    <include name="cpsBrazilBT_Toppay_PixNew"></include>
+<!--                    <include name="cpsBrazilBT_Bitolo_PixNew"></include>-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="PU_Japan_Deposit">
+        <parameter name="TraderName" value="testcrm_donttouch_japan@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsBitwallet_New"></include>
+                    <include name="cpsJapanBTTheJapanOne_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="PU_Poland_Deposit">
+            <parameter name="TraderName" value="testcrm_automation_poland@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testEuBTNodaPay_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="PU_Saudi_Arabia_Deposit">
+        <parameter name="TraderName" value="testcrm_automation_saudiarabia@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testMyFatoorah_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!--Batch 2-->
+    <test name="PU_India_Deposit">
+        <parameter name="TraderName" value="testcrm_automation_india@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsIndiaP2PNew"></include>
+                    <include name="testCheezePayNew"></include>
+                    <include name="testCricpayzNew"></include>
+                    <include name="testXpayNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="PU_Canada_Deposit">
+        <parameter name="TraderName" value="testcrm_donttouch_canada@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsInteracBTNew"></include>
+                    <include name="testInterBankTransPay_Whitespay_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="PU_Netherlands_Deposit">
+        <parameter name="TraderName" value="testcrm_automation_netherlands@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsNetherlandBT_Banxa_NL_New"></include>
+                    <include name="testInterBankTransPay_Equals_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="PU_Vietnam_Deposit">
+        <parameter name="TraderName" value="testcrm_automation_vietnam@test.com"></parameter>
+        <parameter name="Regulator" value="fsa"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testVietnamBTEeziePay_New"></include>
+                    <include name="cpsVietnamBTZotaPayNew"></include>
+                    <include name="cpsVietnamBT_XPay_New"></include>
+                    <include name="testWowsPay_QR_VND_New"></include>
+                    <include name="testWowsPay_Remit_VND_New"></include>
+                    <include name="testWowsPay_Momopay_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="PU_Italy_Deposit">
+        <parameter name="TraderName" value="testcrm_automation_italy@test.com"></parameter>
+        <parameter name="Regulator" value="fsa"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testInterBankTransPay_Whitespay_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!--&lt;!&ndash;渠道停用&ndash;&gt;
+    <test name="PU_Kenya_Deposit">
+        <parameter name="TraderName" value="testcrm_automation_kenya@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsKenyaBTUBank_KES_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="PU_Tanzania_Deposit">
+        <parameter name="TraderName" value="testcrm_automation_tanzania@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsTanzaniaBTZotaPayNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+    <!-- Test -->
+</suite> <!-- Suite -->

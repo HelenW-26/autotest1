@@ -1,0 +1,21 @@
+cpsdeposit:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-core-au.crm-alpha.com"
+  mt4Account : "804395514"
+  channel_name: "Advcash"
+  Currency: "USD"
+  operateAmount : "100"
+  channel_id : "24"
+  payment_channel : "24"
+  password: "7946e795e44db67be4c74219def41e2e"
+
+cpsdeposit1:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-core-au.crm-alpha.com"
+  mt4Account : "22289"
+  channel_name: "Advcash"
+  Currency: "USC"
+  operateAmount : "10000"
+  channel_id : "24"
+  payment_channel : "24"
+  password: "7946e795e44db67be4c74219def41e2e"

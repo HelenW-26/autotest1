@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Create New Users" configfailurepolicy="continue">
+
+ <listeners>
+     <listener class-name="utils.Listeners.CustomListener"/>
+  </listeners>
+    <parameter name="Brand" value="MO"></parameter>
+  	<parameter name="Regulator" value="movfsc"></parameter>	
+  	<parameter name="TestEnv" value="prod"></parameter>
+  	<parameter name="TraderURL" value="https://secure-moneta.crm-alpha.com"></parameter>
+    <parameter name="Debug" value="true"></parameter>
+    <parameter name="IBCode" value=""></parameter>
+    <parameter name="RAFCode" value="s4q08GZPUXixOIq0+FrhPg=="></parameter>
+    <parameter name="headless" value="false"></parameter>
+   
+   <test name="Create_Mo_User"> 
+    <classes>
+     <class name="newcrm.testcases.cptestcases.RegisterTestcases">
+     	<methods>
+     		<include name ="testRegistMT4LiveAccount"></include>
+       	</methods>    
+     </class>
+    </classes>
+  </test> 
+</suite><!-- Suite -->

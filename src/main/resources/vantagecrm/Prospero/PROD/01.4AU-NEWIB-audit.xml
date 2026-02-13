@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Create New User and Audit" configfailurepolicy="continue">
+
+ <listeners>
+<!--     <listener class-name="utils.Listeners.TestListener" /> -->
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+
+  <test name="Create_NewUser_and_Audit">
+    <parameter name="Brand" value="au"></parameter>
+   	<parameter name="TestEnv" value="prod"></parameter>
+    <parameter name="AdminURL" value="https://admin.vantagefx.com.au/login/to_login"></parameter>
+  	<parameter name="AdminName" value="Test crm"></parameter>
+  	<parameter name="AdminPass" value="Vantage123"></parameter>
+  	<parameter name="TraderURL" value="https://secure.vantagefx.com.au"></parameter>
+   	 <parameter name="TraderName" value="webuuc@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+    <classes>
+
+
+
+     <class name="vantagecrm.UserManagement">
+      	      	      
+      	<methods>
+  
+	  	    <include name="AdminLogIn"></include>
+	    	<include name="AddIBNew"></include>
+    	  	  	  		
+    	</methods>
+
+       </class> 
+       
+        <class name="vantagecrm.TaskManagement">
+        <methods>
+	      	<include name="AdminLogIn"></include>
+	        <include name="AccountAuditIB"></include>
+	   	</methods> 		
+      </class> 
+ 
+      <class name="vantagecrm.NewTaskManagement">
+ 
+  		<methods>
+    		<include name="AdminLogIn"></include>
+     		<include name="POAAudit"></include> 
+			<include name ="IDProofAudit"></include>
+   		</methods>
+ 	  </class>
+
+       
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

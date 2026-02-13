@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="PU Test Suite" configfailurepolicy="continue">
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	<listeners>
+     	<listener class-name="utils.Listeners.CustomListener"/>
+  	</listeners>
+  	<parameter name="Brand" value="PUG"></parameter>
+  	<parameter name="TestEnv" value="prod"></parameter>
+  	<parameter name="Regulator" value="svg"></parameter>
+  	<parameter name="TraderURL" value="https://myaccount.puprime.com"></parameter>
+  	<parameter name="TraderPass" value="123Qwe"></parameter>
+    <parameter name="headless" value="true"></parameter>
+
+
+ 	<test name="PU CPS Crypto Deposit">
+		<parameter name="TraderName" value="testcrmautomation_donttouch_crypto@test.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="testCPSCryptoDeposit"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="PU CPS Ewallet Deposit">
+	<parameter name="TraderName" value="testcrmautomation_donttouch_ewallet@test.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="testPerfectMoney"></include>
+					<include name="testSkrillPay"></include>
+					<include name="testNetellerPayWithCallback"></include>
+                   <!-- <include name="testFasaPay"></include> Valarie: Turned off in CPS Group Chat -->
+				</methods>
+			</class>
+		</classes>
+	</test> 
+	<test name="PU Test South Korea CP Deposit">
+   	<parameter name="TraderName" value="testcrmautomation_donttouch_korea@test.com"></parameter>
+    <classes>
+   		<class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+					<include name="testSKBankTransfer"></include>
+					<include name="testSKEbuyPay"></include>
+   		 	</methods>
+   		 </class>
+    </classes>
+  	</test>
+ 	<test name="PU Test Malaysian CP Deposit">
+		<parameter name="TraderName" value="testcrmautomation_donttouch_malaysia@test.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="testMYBankTransfer"></include>
+					<include name="testMYBankTransferXpay"></include>
+					<include name="testMYBankTransferZotapay"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>  
+	<test name="PU Test South Africa CP Deposit">
+		<parameter name="TraderName" value="testcrmautomation_donttouch_africa@test.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="testSouthAfricaBTWebpayment"></include>
+					<include name="testSouthAfricaBTzotapay"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> <!-- Suite -->

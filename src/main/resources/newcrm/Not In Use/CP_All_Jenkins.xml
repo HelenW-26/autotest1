@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU Test Suite" configfailurepolicy="continue">
+
+ 	<listeners>
+     	<listener class-name="utils.Listeners.CustomListener"/>
+  	</listeners>
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	
+  <test name="CPAllTest">
+    
+     <parameter name="Brand" value="${Application}"></parameter>     
+  	<parameter name="Regulator" value="${Brand}"></parameter>
+  	<parameter name="TestEnv" value="${Environment}"></parameter>
+    <parameter name="AdminURL" value="https://${adminurl}"></parameter>
+  	<parameter name="TraderURL" value="https://${cp_url}"></parameter>
+  	<parameter name="CallbackUrl" value="https://${openapi}"></parameter>
+  	
+    <parameter name="TraderName" value="${CPLogin}"></parameter>
+    <parameter name="TraderPass" value="${CPpassword}"></parameter>
+  	<parameter name="AdminName" value="${AdminLogin}"></parameter>
+  	<parameter name="AdminPass" value="${adminpass}"></parameter>
+  	
+  	<parameter name="headless" value="true"/>
+     
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="testSkrillPay"></include>
+				<include name="testSticPay"></include> 
+				<include name="testNetellerPay"></include>
+				<include name="testAstroPay"></include>
+				<include name="testInterBankTransPay"></include> 
+				<include name="testCryptoDeposit"></include>
+				<include name="testMalayBankZotaPay"></include> 
+				<!-- <include name="testMalayBankPayTrust"></include>  -->
+				<include name="testFasaPay"></include>
+				<include name="testBrokerTransferPay"></include>
+   		 	</methods>
+   		 </class>  
+   		 <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+   		 	<methods>
+   		 		<include name="testSkrillWithdraw"></include>
+   		 		<include name="testNetellerWithdraw"></include>
+   		 		<include name="testSticPayWithdraw"></include>
+   		 		<include name="testAstropayWithdraw"></include>
+   		 		<include name="testMalaysiaBankWithdraw"></include>
+   		 		<include name="testInternationalBankWithdraw"></include>
+   		 		<include name="testAustraliaBankWithdraw"></include> 
+   		 		<include name="testFasaPayWithdraw"></include>  
+   		 	</methods>
+   		 </class> 
+   		 <class name="newcrm.testcases.cptestcases.AccountConfigureTestCases">
+   		 	<methods>
+   		 		<include name="testChangeMT4AccountLeverage"></include>
+   		 		<include name="testChangeMT5AccountLeverage"></include>
+   		 	</methods>
+   		 </class>  
+   		 <class name="newcrm.testcases.cptestcases.AccountManagementTestCases">
+   		 	<methods>
+   		 		<include name="testOpenMT4DemoAccount"></include>
+   		 	</methods>
+   		 </class>		      		
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

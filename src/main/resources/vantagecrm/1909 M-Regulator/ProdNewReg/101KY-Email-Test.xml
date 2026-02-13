@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="KU Test Suite" configfailurepolicy="continue">
+
+
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+
+	
+  <test name="KYRegressionTest">
+    <parameter name="Brand" value="ky"></parameter>
+  	<parameter name="TestEnv" value="prod"></parameter>
+    <parameter name="AdminURL" value="https://test1admin.vantagefx.com"></parameter>
+  	<parameter name="AdminName" value="alexliu"></parameter>
+  	<parameter name="AdminPass" value="1234Qwer"></parameter>
+  	
+ 
+   
+    <classes>
+
+      <class name="vantagecrm.EmailTesting"> 
+      	<methods>
+      		<include name="SQLGetMailIdByTemplate"></include>
+       	</methods>
+      </class>  
+	
+   </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

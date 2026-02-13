@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="VJP IB Test Suite" configfailurepolicy="continue">
+    <listeners>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+    <parameter name="Brand" value="VJP"></parameter>
+    <parameter name="TestEnv" value="alpha"></parameter>
+    <parameter name="Regulator" value="svg"></parameter>
+    <parameter name="TraderURL" value="${TraderURL}"></parameter>
+    <parameter name="TraderPass" value="123Qwe@@"></parameter>
+    <parameter name="headless" value="true"></parameter>
+
+
+    <test name="VJP Test Japan IB Withdraw">
+        <parameter name="TraderName" value="testcrmib_donttouch_cps_japan_ib@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+                <methods>
+                    <include name="testCryptoCurrencyWithdraw"></include>
+                    <include name="testJapanBankWithdraw"></include>
+                    <include name="testJapanBankWithdrawNewAccount"></include>
+                    <include name="testJapanBTEmailWithdraw"></include>
+                    <include name="testBitwalletWithdraw"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!-- Test -->
+</suite> <!-- Suite -->

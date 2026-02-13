@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Change user group to test" configfailurepolicy="continue">
+
+<!-- QA share/QA share-Update Account Group -->
+ <listeners>
+     <listener class-name="utils.Listeners.CustomListener"/>
+  </listeners>
+
+ 
+  <test name="CPS P1010 and P9999 failure statistics">
+  	<parameter name="timeRange" value="2h"></parameter>     
+  	<parameter name="threshold" value="20"></parameter>
+ 
+    <classes>
+  		<class name="newcrm.utils.OpenSearch.testCPSFailureMonitor">
+   		 	<methods>
+   		 		<include name="testCPSMonitorFailedDPChannels"></include>
+   		 	</methods>
+   		 </class>
+    </classes>
+  </test>
+  <test name="CPS Withdraw failure statistics">
+  	<parameter name="timeRange" value="1h"></parameter>     
+  	<parameter name="threshold" value="0"></parameter>
+ 
+    <classes>
+  		<class name="newcrm.utils.OpenSearch.testCPSFailureMonitor">
+   		 	<methods>
+   		 		<include name="testCPSMonitorFailedWDChannels"></include>
+   		 	</methods>
+   		 </class>
+    </classes>
+  </test>
+</suite><!-- Suite -->

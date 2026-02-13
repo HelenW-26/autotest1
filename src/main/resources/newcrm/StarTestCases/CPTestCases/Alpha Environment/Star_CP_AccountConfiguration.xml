@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="STAR account configuration" configfailurepolicy="continue">
+
+	<listeners>
+     	<listener class-name="utils.Listeners.CustomListener"/>
+  	</listeners>
+  <test name="STARTest">
+    <parameter name="Brand" value="STAR"></parameter>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+  	<parameter name="Regulator" value="svg"></parameter>
+    <parameter name="AdminURL" value="https://admin-core-star.crm-alpha.com/admin/main"></parameter>
+  	<parameter name="AdminName" value="cmatest"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="https://secure-core-star.crm-alpha.com"></parameter>
+   	<parameter name="TraderName" value="autotestmalay@testcrmautomation.com"></parameter>
+    <parameter name="TraderPass" value="1234Qwer!"></parameter>
+    <parameter name="Debug" value="true"></parameter>
+	<parameter name="headless" value="false"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.AccountConfigureTestCases">
+   		 	<methods>
+   		 		<include name="testChangeMT4AccountLeverage"></include>
+   		 		<include name="testChangeMT5AccountLeverage"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

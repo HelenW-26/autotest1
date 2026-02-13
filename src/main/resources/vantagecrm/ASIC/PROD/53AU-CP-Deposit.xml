@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Client Portal Test Suite AU" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<parameter name="Brand" value="au"></parameter>
+  	<parameter name="TestEnv" value="prod"></parameter>
+    <parameter name="AdminURL" value="https://admin.vantagefx.com.au/login/to_login"></parameter>
+  	<parameter name="AdminName" value="Test crm"></parameter>
+  	<parameter name="AdminPass" value="Vantagefx123"></parameter>
+  	<parameter name="TraderURL" value="https://secure.vantagefx.com.au"></parameter>
+   	 <parameter name="TraderName" value="webggo@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+  	<parameter name="ThaiAccount" value="webauu@test.com"></parameter>
+ 	<parameter name="ThaiPwd" value="123Qwe"></parameter>
+ 	  	
+   <parameter name="MalayAccount" value="webauu@test.com"></parameter>
+ 	<parameter name="MalayPwd" value="123Qwe"></parameter>  
+  	
+    <parameter name="VietAccount" value="webauu@test.com"></parameter>
+ 	<parameter name="VietPwd" value="123Qwe"></parameter>
+  	
+  	<parameter name="NigeAccount" value="webauu@test.com"></parameter>
+ 	<parameter name="NigePwd" value="123Qwe"></parameter>
+	
+  <test name="Client Portal Test AU">
+ 
+    <classes> 
+  <!--    <class name="vantagecrm.CPPaymentDetail">
+	     	<methods>
+	     		<include name="CPLogIn"></include>
+	     		<include name="AddPaymentDetailCC"></include>
+	     	</methods>    
+	     
+	     </class> -->
+     <class name="vantagecrm.CPDeposit">
+     	<methods>
+     	    <include name="CPLogIn"></include>
+     	    <include name="CCDepositNewCard3D"></include> 
+     		<include name="CCDepositNewCardNon3D"></include> 
+     	  <!-- 	<include name="BrokerDeposit"></include>
+       		<include name="MobilepayDeposit"></include>
+       		<include name="PoliDeposit"></include> 
+       		<include name="BPayDeposit"></include>
+       		<include name="AuBankDeposit"></include>   		
+       		<include name="UnionPayDeposit"></include>
+       		<include name="UnionPayP2PDeposit"></include>
+       		<include name="FasapayDeposit"></include>	 -->
+       		<include name="PaypalDeposit"></include>     	
+     	</methods>     
+     </class>
+   <!--   <class name="vantagecrm.TaskManagement">
+     	<methods>
+      		<include name="AdminLogIn"></include>
+       		<include name="OfflineDepositAudit"></include>
+			<include name="OnlineDepositAudit"></include>
+      	</methods>
+     </class> -->
+    </classes>
+  </test> 
+  
+ <!--    <test name="CreditCard deposit using existing card">    
+	<classes>    
+   	  <class name="vantagecrm.CPPaymentDetail">
+	     	<methods>
+	     		<include name="CPLogIn"></include>
+	     		<include name="AddPaymentDetailCC"></include>
+	     	</methods>    
+	     
+	     </class>
+	  <class name="vantagecrm.NewTaskManagement">
+	      
+	      		<methods>
+		      		<include name="AdminLogIn"></include>  	 
+	            	 <include name="CreditCardDetailsAudit"></include>            	     
+	       		</methods>
+	  </class>
+	      
+	  <class name="vantagecrm.CPDeposit">
+     	<methods>
+     		<include name="CPLogIn"></include>
+     		<include name="CCDepositExistingCard"></include>
+        </methods>
+	  </class>
+
+	  
+   </classes>
+  </test> -->
+ 
+</suite> <!-- Suite -->

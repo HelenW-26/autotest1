@@ -1,0 +1,32 @@
+cashier5:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-bluebird.crm-alpha.com"
+  mt4Account : "22289"
+  operateAmount : "10000"
+  channel_name: "skrill"
+  Currency: "USC"
+  channel_id : "25"
+  password: "7946e795e44db67be4c74219def41e2e"
+
+
+#cashier6:
+#  email : "autotestetdfyzri@testcrmautomation.com"
+#  url: "https://secure-bluebird.crm-alpha.com"
+#  mt4Account : "58125"
+#  operateAmount : "400"
+#  channel_name : "skrill"
+#  Currency : "HKD"
+#  channel_id : "21"
+#  payment_channel : "21"
+#  password: "7946e795e44db67be4c74219def41e2e"
+
+cashier7:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-bluebird.crm-alpha.com"
+  mt4Account : "8350085"
+  operateAmount : "55"
+  channel_name : "skrill"
+  Currency : "USD"
+  channel_id : "17"
+  payment_channel : "17"
+  password: "7946e795e44db67be4c74219def41e2e"

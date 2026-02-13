@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="VJP CP Test Suite" configfailurepolicy="continue">
+    <listeners>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+    <parameter name="Brand" value="VJP"></parameter>
+    <parameter name="TestEnv" value="alpha"></parameter>
+    <parameter name="Regulator" value="svg"></parameter>
+    <parameter name="TraderURL" value="${TraderURL}"></parameter>
+    <parameter name="TraderPass" value="123Qwe@@"></parameter>
+    <parameter name="headless" value="true"></parameter>
+
+
+    <test name="VJP Test Japan CP Withdraw">
+        <parameter name="TraderName" value="testcrm_donttouch_cpswithdraw_japan_client@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testCryptoCurrencyWithdraw"></include>
+                    <include name="testJapanBankWithdraw"></include>
+                    <include name="testJapanBankWithdrawNewAccount"></include>
+                    <!-- cant find at both alpha and prod <include name="testJapanBTEmailWithdraw"></include> -->
+                    <include name="testBitWalletWithdraw"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!-- Test -->
+</suite> <!-- Suite -->

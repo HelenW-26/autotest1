@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite allow-return-values="false" configfailurepolicy="continue" data-provider-thread-count="10" group-by-instances="false" guice-stage="DEVELOPMENT" junit="false" name="AU Test Suite" parallel="none" preserve-order="true" skipfailedinvocationcounts="false" thread-count="5">
+
+ <listeners>
+    <!-- <listener class-name="utils.Listeners.TestListener" /> -->
+    <listener class-name="utils.Listeners.CustomListener"/>
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	<parameter name="testEnv" value="test"/>
+	
+  <test allow-return-values="false" group-by-instances="false" junit="false" name="AURegressionTest" preserve-order="true" skipfailedinvocationcounts="false">
+    <parameter name="Brand" value="vfsc"/>
+  	<parameter name="TestEnv" value="prod"/>
+    <parameter name="AdminURL" value="https://admin.vantagefx.com"/>
+  	<parameter name="AdminName" value="Test Crm"/>
+  	<parameter name="AdminPass" value="Vantage123"/>
+  	<parameter name="TraderURL" value="https://secure.vantagefx.com"/>
+   	 <parameter name="TraderName" value="webopn@test.com"/>
+    <parameter name="TraderPass" value="123Qwe"/>  
+  	
+  	<parameter name="ThaiAccount" value="ibtestsce@test.com"/>
+ 	<parameter name="ThaiPwd" value="123Qwe"/>
+ 	  	
+ 	<parameter name="MalayAccount" value="ibtestsce@test.com"/>
+ 	<parameter name="MalayPwd" value="123Qwe"/>
+  	
+    <parameter name="VietAccount" value="ibtestsce@test.com"/>
+ 	<parameter name="VietPwd" value="123Qwe"/>
+  	
+  	<parameter name="NigeAccount" value="ibtestsce@test.com"/>
+ 	<parameter name="NigePwd" value="123Qwe"/>
+   
+       <classes>
+
+   
+		<class name="vantagecrm.UpdateInternalUser">  
+			<methods>
+				<include name="AdminLogIn"/>
+				<include name="updateIUser"/>
+			<!-- 	<include name="addCCode"></include>
+				<include name="updateCCode"></include>
+				<include name="delCCode"></include>
+				<include name="deleteIUser"></include> 	 -->	
+			
+			</methods> 
+		</class>
+		
+			<class name="vantagecrm.UpdateLead">
+			<methods>
+				<include name="AdminLogIn"/>
+				<include name="updateLeadGeneral"/>	
+			
+			</methods>
+		
+		</class>
+	 
+ 		<!-- <class name="vantagecrm.SystemSetting">
+ 			<methods>
+ 				<include name="AdminLogIn"></include>
+ 				<include name="AddRole"></include>
+ 				<include name="UpdateRole"></include>
+ 				<include name="ChangePermission"></include>
+ 				<include name="DeleteRole"></include>
+ 				<include name="OrganizationManagement"></include>
+ 			 	<include name="AddPromotionSetting"></include>
+			    <include name="EditPromotionSetting"></include>
+			    <include name="DelPromotionSetting"></include>
+			    <include name="RoleManagementCheck"></include>
+			    <include name="RoleKeysVerification"></include>
+			    <include name="AddPlainNotification"></include>
+			    <include name="AddMaintainenceNotification"></include>
+			    <include name="EditNotification"></include>
+			    <include name="DeleteNotification"></include>
+ 			</methods>
+ 		
+ 		</class> -->
+ 		
+	 	
+    </classes>
+  </test> <!-- Test -->
+</suite><!-- Suite -->

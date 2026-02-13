@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- alpha jenkins上进行smoke test的job -->
+<suite name="Alpha Regression" configfailurepolicy="continue">
+
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+        <listener class-name="newcrm.listeners.AllureTestListener"/>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+    <parameter name="Brand" value="${brand}"></parameter>
+    <parameter name="Server" value="${container}"></parameter>
+    <parameter name="BranchVersion" value="${branchVersion}"></parameter>
+
+    <test name="CP Wallet API Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.UATAPIWalletTestCases">
+                <methods>
+                    <include name="testApiWalletOpenAccountValidate"></include>
+                    <include name="testApiWalletConverSubmit"></include>
+                    <include name="testApiWalletDeposit"></include>
+                    <include name="testApiWalletWithdraw"></include>
+                    <include name="testApiWalletTransfer"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="ADMIN Wallet API Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.UATAPIAdminWalletTestCases">
+                <methods>
+                    <include name="testAdminApiWalletAccountManagement"></include>
+                    <include name="testAdminApiWalletDeposit"></include>
+                    <include name="testAdminApiWalletWithdrawal"></include>
+                    <include name="testAdminApiWalletTransfer"></include>
+                    <include name="testAdminApiWalletConvert"></include>
+                    <include name="testAdminApiWalletPlatfromAccount"></include>
+                    <include name="testAdminApiWalletBybitPlatfrom"></include>
+                    <include name="testAdminApiWalletChannel"></include>
+                    <include name="testAdminApiWalleDEPOSITASSETS"></include>
+                    <include name="testAdminApiWalleBybitAssetDashboard"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CP Wallet Account UI Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.wallet.UATWalletRegisterTestCases">
+                <methods>
+                    <include name="testWalletOpenAccount"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CP Wallet Payment UI Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.wallet.UATWalletTestCases">
+                <methods>
+                    <include name="testWalletDepositCryptoBTC"></include>
+                    <include name="testWalletDepositCryptoETH"></include>
+                    <include name="testWalletDepositCryptoUSDC"></include>
+                    <include name="testWalletDepositCryptoUSDTERC"></include>
+                    <include name="testWalletDepositCryptoUSDTTRC"></include>
+                    <include name="testWalletWithdrawCryptoBTC"></include>
+                    <include name="testWalletWithdrawCryptoETH"></include>
+                    <include name="testWalletWithdrawCryptoUSDC"></include>
+                    <include name="testWalletWithdrawCryptoUSDTERC"></include>
+                    <include name="testWalletWithdrawCryptoUSDTTRC"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CP Wallet Home UI Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.wallet.UATWalletHomeTestCases">
+                <methods>
+                    <include name="testWalletHomeAssetsCheckUAT"></include>
+                    <include name="testWalletHomeCryptoListCheckUAT"></include>
+                    <include name="testWalletHomeDropdownMenuCheckUAT"></include>
+                    <include name="testWalletHomeDropdownMoreCheckUAT"></include>
+                    <include name="testWalletHomeRealDepositUAT"></include>
+                    <include name="wallectIntoWithdrawCreatRealOrderUAT"></include>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite><!-- Suite -->

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU Test Suite" configfailurepolicy="continue">
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", 
+		"beta" or "prod". When value is set to "beta" or "prod", the field Accout_Group_Setting 
+		can only be one test settings, like test_crm1_USD -->
+
+	<listeners>
+     	<listener class-name="utils.Listeners.CustomListener"/>
+  	</listeners>
+	<test name="AUTest">
+		<parameter name="Brand" value="VFX"></parameter>
+		<parameter name="TestEnv" value="alpha"></parameter>
+		<parameter name="Regulator" value="vfsc"></parameter>
+		<parameter name="AdminURL" value="https://admin-earth-ex.crm-alpha.com/"></parameter>
+		<parameter name="AdminName" value="Yanni"></parameter>
+		<parameter name="AdminPass" value="12345678Qi"></parameter>
+		<parameter name="TraderURL" value="https://secure-earth-ex.crm-alpha.com/"></parameter>
+		<parameter name="TraderName" value="vfxautomationexclusive@mailinator.com"></parameter>
+		<parameter name="TraderPass" value="123Qwe"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+				      <include name="testSkrillPay"></include>
+					  <include name="testSticPay"></include> 
+					  <include name="testNetellerPay"></include>
+					  <include name="testAstroPay"></include>
+					  <include name="testInterBankTransPay"></include> 
+					   <include name="testCryptoDeposit"></include>
+					  <include name="testMalayBankZotaPay"></include> 
+					  <!-- <include name="testMalayBankPayTrust"></include>  -->
+					  <include name="testFasaPay"></include>
+				<include name="testBrokerTransferPay"></include>
+				</methods>
+			</class>
+				 <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+   		 	<methods>
+   		 		<include name="testSkrillWithdraw"></include>
+   		 		<include name="testNetellerWithdraw"></include>
+   		 		<include name="testSticPayWithdraw"></include>
+   		 		<include name="testAstropayWithdraw"></include>
+   		 		<include name="testMalaysiaBankWithdraw"></include>
+   		 		<include name="testInternationalBankWithdraw"></include>
+   		 		<include name="testAustraliaBankWithdraw"></include> 
+   		 		<include name="testFasaPayWithdraw"></include>  
+   		 	</methods>
+   		 </class>  		      		
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

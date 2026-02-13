@@ -1,0 +1,1 @@
+Bank Name=National Australia Bank;SWIFT Code=NATAAU3303M;Address=Level 15, 680 George Street, Sydney NSW 2000;Account Name=Vantage Global Prime Segregated Trust Account;BSB Number=082-080;Account Number=946950963

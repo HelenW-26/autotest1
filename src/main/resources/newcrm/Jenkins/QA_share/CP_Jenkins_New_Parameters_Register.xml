@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- QA share/QA share-Register -->
+<suite name="Register Test Suite" configfailurepolicy="continue">
+
+	<listeners>
+     	<listener class-name="utils.Listeners.CustomListener"/>
+  	</listeners>
+  <test name="REGISTER">
+    <parameter name="Brand" value="${Brand}"></parameter>     
+  	<parameter name="Regulator" value="${Regulator}"></parameter>
+  	<parameter name="TestEnv" value="${Environment}"></parameter>
+  	<parameter name="TraderURL" value="https://${cp_url}"></parameter>
+  	<parameter name="headless" value="true"/>
+    <parameter name="Debug" value="${Debug}"></parameter>
+    <parameter name="IBCode" value="${code}"></parameter>
+    <parameter name="RAFCode" value="${code}"></parameter>
+    <parameter name="testMethod" value="${testMethod}"></parameter>
+    <parameter name="AdminURL" value="https://${admin_url}"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.RegisterTestcases">
+   		 	<methods>
+   		 		<include name="testRegistLivingAccount"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

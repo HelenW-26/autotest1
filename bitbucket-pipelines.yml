@@ -1,0 +1,27 @@
+image: maven:3.9.6-amazoncorretto-17
+
+definitions:
+  caches:
+    maven: ~/.m2/repository
+    pnpm: ~/.pnpm-store
+
+pipelines:
+  pull-requests:
+    '**':  # 匹配所有源分支的PR
+      - step:
+          name: "Maven 编译检查（目标分支为master时）"
+          size: 2x
+          caches:
+            - maven
+            - pnpm
+          script:
+            # 检查目标分支是否为主分支
+            - |
+              if [ "$BITBUCKET_PR_DESTINATION_BRANCH" != "master" ]; then
+                echo "跳过构建，因为目标分支不是master，而是 $BITBUCKET_PR_DESTINATION_BRANCH"
+                exit 0
+              fi
+            # 设置 Node.js 内存限制
+            - export NODE_OPTIONS="--max-old-space-size=4096"
+            # 跳过部署阶段，只进行编译
+            - mvn clean compile -U -B -DskipTests -Dmaven.deploy.skip=true

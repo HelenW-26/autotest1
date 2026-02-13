@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Client Portal Test Suite AU" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+	
+  <test name="Client Portal Test AU">
+	<parameter name="Brand" value="pug"></parameter>
+  	<parameter name="TestEnv" value="beta"></parameter>
+    <parameter name="AdminURL" value="https://betavgpadmin.puprime.com"></parameter>
+  	<parameter name="AdminName" value="Test CRM"></parameter>
+  	<parameter name="AdminPass" value="Vantagefx123"></parameter>
+  	<parameter name="TraderURL" value="https://betavgpmyaccount.puprime.com/"></parameter>
+   	 <parameter name="TraderName" value="webvok@tmail.t-com.sk"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+ 
+    <classes>
+    			
+  
+      <class name="vantagecrm.CPWithdraw">
+       		<methods>       			
+       
+       			<include name="CPLogIn"></include> 
+       			<include name="WithdrawI18NBank"></include>
+       			<include name="WithdrawUnionPay"></include>
+       		</methods>       
+       </class>
+
+ 		<class name="vantagecrm.TaskManagement">
+   
+    		<methods>
+     		<include name="AdminLogIn"></include>
+      		<include name="WithdrawlAudit"></include>
+     		</methods>
+   		</class>
+     
+    </classes>
+  </test> <!-- Test -->
+ 
+</suite> <!-- Suite -->

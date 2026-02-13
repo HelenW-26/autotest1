@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- PROD REGRESSION/ QA_AUTOMATION_81_PROD_REGISTER_REGRESSION disabled at moment-->
+
+<suite name="Regression New User and Deposit" configfailurepolicy="continue">
+
+ <listeners>
+     <listener class-name="utils.Listeners.CustomListener"/>
+     <!-- <listener class-name="utils.Listeners.RetryListener"/> -->
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	
+	<parameter name="headless" value="false"/>
+	  	
+  	<parameter name="AdminName" value="keith"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="Debug" value="true"></parameter>
+    <parameter name="Brand" value="UM"></parameter>
+  <parameter name="Server" value="UM01"></parameter>
+    <!-- um -->
+  <test name="Create_UM_User">
+<!--     <parameter name="Brand" value="um"></parameter>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+  	<parameter name="AdminURL" value="https://admin-um01.crm-alpha.com"></parameter>
+    <parameter name="Regulator" value="svg"></parameter>
+    <parameter name="TraderURL" value="https://secure-um01.crm-alpha.com"></parameter>
+    <parameter name="TraderName" value="webqvb@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter> -->
+   <classes>
+   	 <class name="newcrm.testcases.alpharegression.AlphaRegisterTestCases">
+   		 	<methods>
+   		 		<include name="testRegistMT4LiveAccountWithoutCheck"></include>
+   		 	</methods>
+   		 </class>
+    <class name="newcrm.testcases.alpharegression.AlphaAccountConfigureTestCases">
+   		 	<methods>
+   		 		<include name="testChangeMT4AccountLeverage"></include>
+   		 		<include name="testChangeMT5AccountLeverage"></include>
+   		 	</methods>
+   		 </class>
+    <class name="newcrm.testcases.alpharegression.account.AlphaAccountAddAccTestCases">
+   		 	<methods>
+   		 		<include name="alphaAddAcctest"></include>
+   		 	</methods>
+   		 </class>
+    <class name="newcrm.testcases.alpharegression.AlphaDepositTestCases">
+   		 	<methods>
+   		 		<include name="testMobilePay"></include>
+   		 	</methods>
+   		 </class>
+   		 
+   		 
+   		 
+   		 
+   		 
+   		 
+   		 
+   	 <class name="newcrm.testcases.alpharegression.AlphaTrasferTestcases">
+   		 	<methods>
+   		 		<include name="alphaTransfertest"></include>
+   		 	</methods>
+   		 </class>
+  	 <class name="newcrm.testcases.alpharegression.AlphaWithdrawTestCases">
+   		 	<methods>
+   		 		<!-- <include name="testFasaPayWithdraw"></include> Change to UM withdraw-->
+   		 	</methods>
+   		 </class> 
+   	 <class name="newcrm.testcases.alpharegression.AlphaWithdrawAuditTestCases">
+			<methods>
+				<include name="testadminwithdraw"></include>
+			</methods>
+		</class>
+   		 
+    </classes>
+  
+  </test>
+</suite><!-- Suite -->

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="VT APP Deposit Test Suite" configfailurepolicy="continue">
+    <listeners>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+    <parameter name="Brand" value="VT"></parameter>
+    <parameter name="Server" value="alpha"></parameter>
+    <parameter name="TestEnv" value="alpha"></parameter>
+    <parameter name="Regulator" value="SVG"></parameter>
+    <parameter name="APPURL" value="${TraderURL}"></parameter>
+    <parameter name="headless" value="true"></parameter>
+
+    <test name="VT Test APP Service Crypto">
+         <parameter name="UserId" value="10025915"></parameter>
+         <parameter name="AccountNo" value="810301900"></parameter>
+         <classes>
+             <class name="newcrm.testcases.app.APPDepositRegression">
+                 <methods>
+                     <include name="cryptoBTCAPPDeposit"></include>
+                     <include name="cryptoBTCCPSDeposit"></include>
+                     <include name="usdtERCDeposit"></include>
+                     <include name="usdtTRCDeposit"></include>
+                 </methods>
+             </class>
+        </classes>
+    </test>
+   <test name="VT Test APP Service CC">
+        <parameter name="UserId" value="10025916"></parameter>
+        <parameter name="AccountNo" value="810262891"></parameter>
+        <classes>
+            <class name="newcrm.testcases.app.APPDepositRegression">
+                <methods>
+                    <include name="ccDeposit"></include>
+                    <include name="bridgeAPPCCDeposit"></include>
+                    <include name="virtualPayAPPCCDeposit"></include>
+                    <include name="powercashAPPCCDeposit"></include>
+                    <include name="googlePayAPPCCDeposit"></include>
+                    <include name="applepayAPPCCDeposit"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+       <test name="VT Test APP Service Ewallet">
+          <parameter name="UserId" value="10025934"></parameter>
+          <parameter name="AccountNo" value="810262902"></parameter>
+          <classes>
+              <class name="newcrm.testcases.app.APPDepositRegression">
+                  <methods>
+                      <include name="fasaCPSAPPDeposit"></include>
+                      <include name="skrillCPSAPPDeposit"></include>
+                      <include name="perfectMoneyAPPDeposit"></include>
+                  </methods>
+              </class>
+          </classes>
+      </test>
+      <test name="VT Test APP Service LBT">
+          <parameter name="UserId" value="10025935"></parameter>
+          <parameter name="AccountNo" value="810019728"></parameter>
+          <classes>
+              <class name="newcrm.testcases.app.APPDepositRegression">
+                  <methods>
+                       <include name="thailandBTCPSDeposit"></include>
+                       <include name="malaysiaBTCPSDeposit"></include>
+                      <include name="vietnamBTCPSAPPDeposit"></include>
+                      <include name="southAfricaBTCPSAPPDeposit"></include>
+                  </methods>
+              </class>
+          </classes>
+      </test>
+</suite> <!-- Suite -->

@@ -1,0 +1,10 @@
+brokerdeposit:
+  email: "helenasictest@helenasictest.com"
+  url: "https://secure-bluebird.crm-alpha.com"
+  mt4Account: "804314554"
+  channelname : "broker_to_broker"
+  currency: "USD"
+  operateAmount : "100"
+  channel_id : "224"
+  payment_channel : "224"
+  password: "7946e795e44db67be4c74219def41e2e"

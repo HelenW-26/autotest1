@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite allow-return-values="false" configfailurepolicy="continue" data-provider-thread-count="10" group-by-instances="false" guice-stage="DEVELOPMENT" junit="false" name="KY_REGRESSION_SUIT_IB" parallel="none" preserve-order="true" skipfailedinvocationcounts="false" thread-count="5">
+
+ <listeners>
+    <!-- <listener class-name="utils.Listeners.TestListener" /> -->
+    <listener class-name="utils.Listeners.CustomListener"/>
+  </listeners>
+
+    <parameter name="Brand" value="vfsc"/>
+  	<parameter name="TestEnv" value="prod"/>
+    <parameter name="AdminURL" value="https://admin.vantagefx.com"/>
+  	<parameter name="AdminName" value="Test Crm"/>
+  	<parameter name="AdminPass" value="Vantage123"/>
+  	<parameter name="TraderURL" value="https://secure.vantagefx.com"/>
+    <parameter name="TraderName" value="webopn@test.com"/>
+    <parameter name="TraderPass" value="123Qwe"/>
+
+  	<parameter name="ThaiAccount" value="webvok@tmail.t-com.sk"/>
+ 	<parameter name="ThaiPwd" value="123Qwe"/>
+
+ 	<parameter name="MalayAccount" value="webvok@tmail.t-com.sk"/>
+ 	<parameter name="MalayPwd" value="123Qwe"/>
+
+    <parameter name="VietAccount" value="webvok@tmail.t-com.sk"/>
+ 	<parameter name="VietPwd" value="123Qwe"/>
+
+  	<parameter name="NigeAccount" value="webvok@tmail.t-com.sk"/>
+ 	<parameter name="NigePwd" value="123Qwe"/>
+
+  <test allow-return-values="false" group-by-instances="false" junit="false" name="KY_UPDATE_IB" preserve-order="true" skipfailedinvocationcounts="false">
+
+    <classes>
+
+
+ <!-- 	<class name="vantagecrm.UpdateIB">
+ 		<methods>
+ 			<include name="AdminLogIn"></include>
+ 			<include name="updateClientGeneral"></include>
+ 			<include name="resetPWD"></include>
+ 			<include name="setCountry2Malay"></include>
+ 			<include name="setCountry2Mige"></include>
+ 			<include name="setCountry2Thai"></include>
+ 			<include name="setCountry2Viet"></include>
+  			<include name="RequestAddiRebateAccount"></include>
+ 		</methods>
+
+ 	</class> -->
+
+<!--      <class name="vantagecrm.TaskManagement">
+
+  		<methods>
+	   		<include name="AdminLogIn"></include>
+	   		<include name="AddAccAuditIBRebate"></include>
+   		</methods>
+      </class> -->
+
+
+
+
+   <class name="vantagecrm.UpdateRebateACC">
+
+  	<methods>
+
+  		<include name="AdminLogIn"/>
+  		<include name="configCommissionRules"/>
+  	</methods>
+  </class>
+
+	<class name="vantagecrm.UpdateTradACC">
+		<methods>
+			<include name="AdminLogIn"/>
+			<!-- <include name="changeAccountGroup"></include>
+			<include name="addBpayNo"></include>
+			<include name="changeCredit"></include>
+			<include name="differentUserAccountTransfer"></include>
+			<include name="makingAdjustment"></include>
+			<include name="resetPWD"></include>    -->
+			<include name="statusCheck"/>
+
+		</methods>
+
+
+	</class>
+
+
+
+    </classes>
+  </test>
+
+<!--   <test name="Delete_IB">
+  	<classes>
+  		<class name="vantagecrm.UpdateIB">
+	 		<methods>
+	 			<include name="AdminLogIn"></include>
+	 			<include name="DeleteIB"></include>
+	 		</methods>
+
+ 		</class>
+  	</classes>
+
+  </test>
+ -->
+</suite><!-- Suite -->

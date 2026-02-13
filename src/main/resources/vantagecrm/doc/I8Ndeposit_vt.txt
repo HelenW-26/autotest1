@@ -1,0 +1,1 @@
+Currency=USD;Bank Name=National Australia Bank;SWIFT Code=NATAAU3303M;Branch Name=National Bank House;Branch Address=383 KING STREET FLOOR 4, Melbourne, Victoria 3000, Australia;Beneficiary Account Name=VIG CLIENT SEGREGATED ACCOUNT USD;Beneficiary Account Number=VIGHOUSD01;Beneficiary Address=Level 14, 333 Collins St, Melbourne, VIC, 3000, Australia

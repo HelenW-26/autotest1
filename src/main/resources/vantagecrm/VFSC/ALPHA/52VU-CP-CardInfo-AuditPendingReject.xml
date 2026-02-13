@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite allow-return-values="false" configfailurepolicy="continue" data-provider-thread-count="10" group-by-instances="false" guice-stage="DEVELOPMENT" junit="false" name="KY Test Suite" parallel="none" preserve-order="true" skipfailedinvocationcounts="false" thread-count="5">
+
+<!--  <listeners>
+    <listener class-name="utils.Listeners.TestListener" />
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners> -->
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	
+	
+	<parameter name="Brand" value="vfsc"/>
+  	<parameter name="TestEnv" value="alpha"/>
+    <parameter name="AdminURL" value="https://admin.test-vantagefx.com"/>
+  	<parameter name="AdminName" value="Test Crm"/>
+  	<parameter name="AdminPass" value="Vantage123"/>
+  	<parameter name="TraderURL" value="https://secure.test-vantagefx.com"/>
+   	 <parameter name="TraderName" value="webopn@test.com"/>
+    <parameter name="TraderPass" value="123Qwe  "/>  
+  	
+  	<parameter name="ThaiAccount" value="webkyy@test.com"/>
+ 	<parameter name="ThaiPwd" value="123Qwe"/>
+ 	  	
+   <parameter name="MalayAccount" value="webkyy@test.com"/>
+ 	<parameter name="MalayPwd" value="123Qwe"/>  
+  	
+    <parameter name="VietAccount" value="webkyy@test.com"/>
+ 	<parameter name="VietPwd" value="123Qwe"/>
+  	
+  	<parameter name="NigeAccount" value="webkyy@test.com"/>
+ 	<parameter name="NigePwd" value="123Qwe"/>
+	
+    <test allow-return-values="false" group-by-instances="false" junit="false" name="CreditCard Details Audit" preserve-order="true" skipfailedinvocationcounts="false">
+      	
+     
+	   <classes>
+	   		    		      		
+	     <class name="vantagecrm.CPPaymentDetail">
+	     	<methods>
+	     		<include name="CPLogIn"/>
+	     		<include name="AddPaymentDetailCC"/>
+	     	</methods>    
+	     
+	     </class>
+	   	  
+	       
+	      <class name="vantagecrm.NewTaskManagement">
+	      
+	      		<methods>
+		      		<include name="AdminLogIn"/>  	 
+	            	 <include name="CreditCardDetailsAudit"/>            	     
+	       		</methods>
+	      </class>
+	      
+		      
+	  	</classes>
+  </test>
+  
+  <test allow-return-values="false" group-by-instances="false" junit="false" name="CreditCard Details Pending" preserve-order="true" skipfailedinvocationcounts="false">
+      	
+     
+	   <classes>
+	   		    		      		
+	   	  <class name="vantagecrm.CPPaymentDetail">
+	     	<methods>
+	     		<include name="CPLogIn"/>
+	     		<include name="AddPaymentDetailCC"/>
+	     	</methods>    
+	     
+	     </class>
+	   	  
+	       
+	      <class name="vantagecrm.NewTaskManagement">
+	      
+	      		<methods>
+		      		<include name="AdminLogIn"/>  	 
+	            	 <include name="CreditCardDetailsPending"/>            	     
+	       		</methods>
+	      </class>
+	      
+		      
+	  	</classes>
+  </test>
+  
+   <test allow-return-values="false" group-by-instances="false" junit="false" name="CreditCard Details Reject" preserve-order="true" skipfailedinvocationcounts="false">
+      	
+     
+	   <classes>
+	   		    		      		
+	   	  <class name="vantagecrm.CPPaymentDetail">
+	     	<methods>
+	     		<include name="CPLogIn"/>
+	     		<include name="AddPaymentDetailCC"/>
+	     	</methods>    
+	     
+	     </class>
+	   	  
+	       
+	      <class name="vantagecrm.NewTaskManagement">
+	      
+	      		<methods>
+		      		<include name="AdminLogIn"/>  	 
+	            	<include name="CreditCardDetailsReject"/>            	     
+	       		</methods>
+	      </class>
+	      
+		      
+	  	</classes>
+  </test>
+
+ 
+   <test allow-return-values="false" group-by-instances="false" junit="false" name="CreditCard Details Search" preserve-order="true" skipfailedinvocationcounts="false">
+    
+	   <classes>
+	   		    		      		
+	      <class name="vantagecrm.NewTaskManagement">
+	      
+	      		<methods>
+		      		<include name="AdminLogIn"/>  	 
+	            	<include name="CreditCardDetailsSearchByName"/>            	     
+	       		</methods>
+	      </class>
+	  	</classes>
+  </test>
+    
+</suite><!-- Suite -->

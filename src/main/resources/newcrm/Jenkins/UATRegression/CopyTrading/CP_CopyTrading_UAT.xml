@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- alpha jenkins上进行smoke test的job -->
+<suite name="UAT Copytrading P0 Regression" configfailurepolicy="continue" parallel="tests" thread-count="1">
+
+    <listeners>
+        <listener class-name="utils.Listeners.CustomListener"/>
+       <!-- <listener class-name="utils.Listeners.RetryListener"/>-->
+    </listeners>
+    <parameter name="Brand" value="AU"></parameter>
+    <parameter name="Server" value="UAT-AU"></parameter>
+    <parameter name="BranchVersion" value="${branchVersion}"></parameter>
+
+     <!--<test name="CP CopyTrading Register UI Regression">
+              <classes>
+                  <class name="newcrm.testcases.uatregression.copyTrading.UATCopyTradingRegisterTestCases">
+                      <methods>
+                          <include name="testOpenCopyTradingAccount"></include>
+                      </methods>
+                  </class>
+                  <class name="newcrm.testcases.uatregression.copyTrading.UATCopyTradingRegisterGoldTestCases">
+                      <methods>
+                          <include name="testOpenCopyTradingAccount_Gold"></include>
+                      </methods>
+                  </class>
+              </classes>
+          </test>
+       <test name="CP CopyTrading Add additional account UI Regression">
+              <classes>
+                  <class name="newcrm.testcases.uatregression.copyTrading.UATCopyTradingAddAccTestCases">
+                      <methods>
+                          <include name="testOpenAdditionalMTSAccount"></include>
+                      </methods>
+                  </class>
+              </classes>
+          </test>
+    <test name="CP CopyTrading Payment Withdraw UI Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.copyTrading.UATCopyTradingWithdrawTestCases">
+                <methods>
+                    <include name="withdrawCopyTradingTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CP CopyTrading Payment Deposit UI Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.copyTrading.UATCopyTradingDepositTestcases">
+                <methods>
+                    <include name="depositCopyTradingTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+      <test name="CP CopyTrading Discover UI Regression">
+           <classes>
+               <class name="newcrm.testcases.uatregression.copyTrading.UATCopyTradingDiscoverTestcases">
+                   <!--<methods>
+                       <include name="discoverCopyTradingTest"></include>
+                   </methods>-->
+                   <methods>
+                       <include name="discoverDetailCopyTradingTest"></include>
+                   </methods>
+               </class>
+           </classes>
+       </test>
+   <!--   <test name="CP CopyTrading Copier EUR Regression">
+           <classes>
+               <class name="newcrm.testcases.uatregression.copyTrading.UATCopyTradingCopierEURTestcases">
+                   <methods>
+                       <include name="CopierEURCopyTradingTest_EquivalentMargin"></include>
+                       <include name="CopierEURCopyTradingTest_FixLots"></include>
+                       <include name="CopierEURCopyTradingTest_FixedMultiples"></include>
+                   </methods>
+               </class>
+           </classes>
+        </test>-->
+    <!-- <test name="CP CopyTrading Copier Position Regression">
+          <classes>
+              <class name="newcrm.testcases.uatregression.copyTrading.UATCopierPositionsTestcases">
+                  <methods>
+                      <include name="copierPositionTest"></include>
+                  </methods>
+              </class>
+          </classes>
+        </test>-->
+      <!--  <test name="CP CopyTrading Copier UI Regression">
+          <classes>
+              <class name="newcrm.testcases.uatregression.copyTrading.UATCopierDetailsTestcases">
+                  <methods>
+                      <include name="copierDetailTest"></include>
+                  </methods>
+              </class>
+             <class name="newcrm.testcases.uatregression.copyTrading.UATCopierHistoryTestcases">
+                 <methods>
+                     <include name="copierHistoryTest"></include>
+                 </methods>
+             </class>
+            <class name="newcrm.testcases.uatregression.copyTrading.UATCopierManageMenuTestcases">
+                <methods>
+                    <include name="copierManageMenuTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+      <test name="CP CopyTrading Signal provider Regression">
+          <classes>
+              <class name="newcrm.testcases.uatregression.copyTrading.UATSignalProviderTestcases">
+                  <methods>
+                      <include name="signalProviderTest"></include>
+                  </methods>
+              </class>
+              <class name="newcrm.testcases.uatregression.copyTrading.UATSUBSignalProviderTestCases">
+                  <methods>
+                      <include name="subSignalProviderTest"></include>
+                  </methods>
+              </class>
+              <class name="newcrm.testcases.uatregression.copyTrading.UATSignalProviderCopierReview">
+                  <methods>
+                      <include name="signalProviderCopierRvTest"></include>
+                  </methods>
+              </class>
+              <class name="newcrm.testcases.uatregression.copyTrading.UATSignalProviderAgentLink">
+                  <methods>
+                      <include name="signalProviderAgentLinkTest"></include>
+                  </methods>
+              </class>
+          </classes>
+      </test>-->
+</suite><!-- Suite -->

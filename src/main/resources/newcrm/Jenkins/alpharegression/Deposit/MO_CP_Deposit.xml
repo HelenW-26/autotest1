@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MO Deposit Test Suite" configfailurepolicy="continue">
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	<listeners>
+     	<listener class-name="utils.Listeners.CustomListener"/>
+  	</listeners>
+  	<parameter name="Brand" value="MO"></parameter>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+  	<parameter name="Regulator" value="vfsc"></parameter>
+  	<parameter name="TraderURL" value="${TraderURL}"></parameter>
+    <parameter name="TraderPass" value="123Qwe@@"></parameter>
+    <parameter name="headless" value="true"></parameter>
+   	<parameter name="OpenApi" value="https://openapi-core-mo.crm-alpha.com"></parameter>
+
+  <test name="MO IBT CP Deposit">
+    <parameter name="TraderName" value="autotesttnczfftk@testcrmautomation.com"></parameter>
+       <classes>
+           <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                   <methods>
+                       <include name="testInterBankTransPay"></include>
+               </methods>
+           </class>
+		</classes>
+  </test>
+  <test name="MO Credit Card CP Deposit">
+    <parameter name="TraderName" value="autotesttnczfftk@testcrmautomation.com"></parameter>
+       <classes>
+           <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                   <methods>
+                       <include name="testBridgePay"></include>
+               </methods>
+           </class>
+		</classes>
+  </test>
+  <test name="MO E-Wallet + Crypto Deposit">
+   	<parameter name="TraderName" value="autotesttnczfftk@testcrmautomation.com"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="testCPSCryptoDeposit"></include>
+                <include name="testFasaPay"></include>
+                <include name="testAdvcash"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <test name="MO Thailand Deposit">
+   	<parameter name="TraderName" value="autotestuxowjipu@testcrmautomation.com"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="cpsThailandBT"></include>
+				<!-- Need wait ACM-32717 to open by cps <include name="cpsThailandQR"></include> -->
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <test name="MO Malaysia Deposit">
+   	<parameter name="TraderName" value="autotesttnczfftk@testcrmautomation.com"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="cpsMalaysiaBT"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <test name="MO Indonesia Deposit">
+   	<parameter name="TraderName" value="autotestauibnuqd@testcrmautomation.com"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="cpsIndonesiaBT"></include>
+   		 		<!-- Hidden from CPS <include name="cpsIndonesiaVABT"></include> -->
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <test name="MO Vietnam Deposit">
+   	<parameter name="TraderName" value="autotestzvwrvfdq@testcrmautomation.com"></parameter>
+     <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<!-- Both prod and alpha hide by cps <include name="cpsVietnamBT"></include> -->
+   		 		<include name="cpsVietnamQR"></include>
+   		 		<include name="cpsVietnamP2PBT"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <test name="MO South Korea Deposit">
+   	<parameter name="TraderName" value="autotestdlqlngiz@testcrmautomation.com"></parameter>
+     <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="cpsSouthKoreaBT"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <test name="MO Mexico Deposit">
+   	<parameter name="TraderName" value="testcrm_donttouch_cps_mexico_client@test.com"></parameter>
+     <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="cpsMexicoBT"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <test name="MO Brazil BT/PIX Deposit">
+   	<parameter name="TraderName" value="testcrm_donttouch_cps_brazil_client@test.com"></parameter>
+     <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="cpsBrazilBT"></include>
+   		 		<include name="cpsBrazilPIX"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test> 
+  <test name="MO Philippines Deposit">
+   	<parameter name="TraderName" value="testcrm_donttouch_cpsphilippinesclient@test.com"></parameter>
+   	<parameter name="TraderPass" value="123Qwe@@"></parameter>
+     <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="cpsPhilipineBT"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <!-- Hidden from CPS
+  <test name="MO HongKong Deposit">
+   	<parameter name="TraderName" value="testcrm_donttouch_cps_hongkong_client@test.com"></parameter>
+     <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name=""></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>  -->
+  <!-- Hidden from CPS
+  <test name="MO India Deposit">
+   	<parameter name="TraderName" value="testcrm_donttouch_cpsindiaclient@test.com"></parameter>
+   	<parameter name="TraderPass" value="123Qwe@@"></parameter>
+     <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="cpsIndiaBT"></include>
+   		 		<include name="cpsIndiaUPI"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test> -->
+  <test name="MO Colombia Deposit">
+   	<parameter name="TraderName" value="testcrm_donttouch_cpscolombiaclient@test.com"></parameter>
+   	<parameter name="TraderPass" value="123Qwe@@"></parameter>
+     <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="cpsColombiaBT"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <test name="MO Chile Deposit">
+   	<parameter name="TraderName" value="testcrm_donttouch_cpschileclient@test.com"></parameter>
+   	<parameter name="TraderPass" value="123Qwe@@"></parameter>
+     <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="cpsChileBT"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <test name="MO Peru Deposit">
+   	<parameter name="TraderName" value="testcrm_donttouch_cpsperuclient@test.com"></parameter>
+   	<parameter name="TraderPass" value="123Qwe@@"></parameter>
+     <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="cpsPeruBT"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+  <test name="MO China Deposit">
+   	<parameter name="TraderName" value="testcrm_donttouch_cpschinaclient@test.com"></parameter>
+   	<parameter name="TraderPass" value="123Qwe@@"></parameter>
+     <classes>
+   		 <class name="newcrm.testcases.cptestcases.DepositTestCases">
+   		 	<methods>
+   		 		<include name="cpsAlipayBT"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test>
+	<test name="MO Unionpay Deposit">
+		<parameter name="TraderName" value="autotestnzvfcdmb@testcrmautomation.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="testUnionPay"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="MO Japan Deposit">
+		<parameter name="TraderName" value="autotestktrowufs@testcrmautomation.com"></parameter>
+		<classes>
+			<class name="newcrm.testcases.cptestcases.DepositTestCases">
+				<methods>
+					<include name="cpsJapanBT"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> <!-- Suite -->

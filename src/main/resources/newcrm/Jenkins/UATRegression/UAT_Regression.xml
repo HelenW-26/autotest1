@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- UAT jenkins上进行smoke test的job -->
+
+<suite name="UAT Smoke Test" configfailurepolicy="continue">
+
+    <listeners>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+    <parameter name="Brand" value="AU"></parameter>
+    <parameter name="Server" value="UAT-AU"></parameter>
+    <parameter name="BranchVersion" value="${branchVersion}"></parameter>
+
+    <!--<test name="CP Wallet API Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.UATAPIWalletTestCases">
+                <methods>
+                    <include name="testApiWalletOpenAccountValidate"></include>
+                    <include name="testApiWalletConverSubmit"></include>
+                    <include name="testApiWalletDeposit"></include>
+&lt;!&ndash;                    <include name="testApiWalletWithdraw"></include>&ndash;&gt;
+                    <include name="testApiWalletTransfer"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="ADMIN Wallet API Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.UATAPIAdminWalletTestCases">
+                <methods>
+                    <include name="testAdminApiWalletAccountManagement"></include>
+                    <include name="testAdminApiWalletDeposit"></include>
+&lt;!&ndash;                    <include name="testAdminApiWalletWithdrawal"></include>&ndash;&gt;
+                    <include name="testAdminApiWalletTransfer"></include>
+                    <include name="testAdminApiWalletConvert"></include>
+                    <include name="testAdminApiWalletPlatfromAccount"></include>
+                    <include name="testAdminApiWalletBybitPlatfrom"></include>
+                    <include name="testAdminApiWalletChannel"></include>
+                    <include name="testAdminApiWalletDEPOSITASSETS"></include>
+                    <include name="testAdminApiWalletBybitAssetDashboard"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CP Payment API Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.UATAPIDepositTestCases">
+                <methods>
+                    <include name="testWEBApiDeposit"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.uatregression.UATAPIWithdrawalTestCases">
+                <methods>
+                    <include name="testWEBApiWithdrawal"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.uatregression.UATAPIWithdrawalTestCases">
+                <methods>
+                    <include name="testAPIBigAmountWithdrawal"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+   <!-- <test name="ADMIN User, Payment Audit &amp; Report API Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.UATAPIAdminAccountTestCases">
+                <methods>
+                    <include name="testAPIAdminTradingAcctPage"></include>
+                    <include name="testAPIAdminRebateAcctPage"></include>
+                    <include name="testAPIAdminUserPage"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.uatregression.UATAPIAdminPaymentTestCases">
+                <methods>
+                    <include name="testAPIAdminDepositAudit"></include>
+                    <include name="testAPIAdminWithdrawalAudit"></include>
+                    <include name="testAPIAdminDepWithReport"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="ADMIN Campaign API Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.UATAPIAdminCampaignTestCases">
+                <methods>
+                    <include name="testAPIAdminCampaignSearchAllPage"></include>
+                    <include name="testAPIAdminLoyaltyProgramPage"></include>
+                    <include name="testAPIAdminCampaignSetting"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CP Registration UI Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.UATRegisterGoldTestCases">
+                <methods>
+                    <include name="testRegistMT5LiveAccount_Gold"></include>
+                    <include name="testRegistMT5LiveAccount_Gold_withoutSumsub"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.uatregression.UATRegisterTestCases">
+                <methods>
+                    <include name="testRegistMT5LiveAccount"></include>
+                    <include name="testRegistMT5LiveAccount_withoutSumsub"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.uatregression.UATRegisterASICTestCases">
+                <methods>
+                    <include name="testRegisterASIC"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+    <test name="CP Copy Trading UI Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.copyTrading.UATCopyTradingTestCases">
+                <methods>
+                    <include name="testCopyTrading"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+   <!-- <test name="CP Account UI Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.UATAccountConfigureTestCases">
+                <methods>
+                    <include name="testChangeMT4AccountLeverage"></include>
+                    <include name="testChangeMT5AccountLeverage"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.uatregression.account.UATAccountAddAccTestCases">
+                <methods>
+                    <include name="testOpenAdditionalMT4LiveAccount"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CP Wallet UI Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.wallet.UATWalletRegisterTestCases">
+                <methods>
+                    <include name="testWalletOpenAccount"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.uatregression.wallet.UATWalletTestCases">
+                <methods>
+                    <include name="testWalletDepositCryptoBTC"></include>
+                    <include name="testWalletDepositCryptoUSDTERC"></include>
+&lt;!&ndash;                    <include name="testWalletWithdrawCryptoUSDC"></include>&ndash;&gt;
+&lt;!&ndash;                    <include name="testWalletWithdrawCryptoUSDTERC"></include>&ndash;&gt;
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CP Payment UI Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.UATTrasferTestcases">
+                <methods>
+                    <include name="testTransfer"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.uatregression.UATDepositTestCases">
+                <methods>
+                    <include name="testDeposit"/>
+                    <include name="depositwithCallBack"></include>
+                </methods>
+            </class>
+&lt;!&ndash;            <class name="newcrm.testcases.uatregression.UATDepositBridgePayCallBackTestCases">&ndash;&gt;
+&lt;!&ndash;                <methods>&ndash;&gt;
+&lt;!&ndash;                    <include name="bridgeCCDepositwithCallBack"></include>&ndash;&gt;
+&lt;!&ndash;                </methods>&ndash;&gt;
+&lt;!&ndash;            </class>&ndash;&gt;
+            <class name="newcrm.testcases.uatregression.UATWithdrawTestCases">
+                <methods>
+                    <include name="testcpwithdraw"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+   <test name="Admin Payment Audit &amp; Email UI Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.UATWithdrawAuditTestCases">
+                <methods>
+                    <include name="testadminwithdraw"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.uatregression.UATEmailCheckTestCase">
+                <methods>
+                    <include name="testEmail"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="IB Payment UI Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.UATIBRebateWithdrawTestCases">
+                <methods>
+                    <include name="testIBRebateWithdraw"></include>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.uatregression.UATIBRebateTransferTestCases">
+                <methods>
+                    <include name="testIBRebateTransfer"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="ThirdParty API Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.UATThirdPartyServicesTestCases">
+                <methods>
+                    <include name="testMsgCenterSendAndVerifyPhoneOTP"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CP Web Trading Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.UATWebTradingTestCases">
+                <methods>
+                    <include name="testOpenUpdateClosePosition_Buy"></include>
+                    <include name="testOpenUpdateClosePosition_Sell"></include>
+                    <include name="testPositions_closeAll"></include>
+                    <include name="testPendingPosition_BuyLimit"></include>
+                    <include name="testPendingPosition_SellLimit"></include>
+                    <include name="testPendingPosition_BuyStop"></include>
+                    <include name="testPendingPosition_SellStop"></include>
+                    <include name="testPendingPosition_BuyStopLimit"></include>
+                    <include name="testPendingPosition_SellStopLimit"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+</suite><!-- Suite -->

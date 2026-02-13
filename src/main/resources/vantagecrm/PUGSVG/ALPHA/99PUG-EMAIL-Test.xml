@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="KU Test Suite" configfailurepolicy="continue">
+
+
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	<parameter name="testEnv" value="beta"></parameter>
+	
+  <test name="KYRegressionTest">
+ <listeners>
+    <!-- <listener class-name="utils.Listeners.TestListener" /> -->
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+  <parameter name="Brand" value="svg"></parameter>
+    	<parameter name="TestEnv" value="test"></parameter>
+      <parameter name="AdminURL" value="https://admin.test-puprime.com/login/to_login"></parameter>
+    	<parameter name="AdminName" value="yanniqi"></parameter>
+    	<parameter name="AdminPass" value="123Qwe"></parameter>
+    	<parameter name="TraderURL" value="https://secure.test-puprime.com"></parameter>
+      <parameter name="TraderName" value="webvok@tmail.t-com.sk"></parameter>
+      <parameter name="TraderPass" value="123Qwe"></parameter> 
+
+   
+    <classes>
+
+      <class name="vantagecrm.EmailTesting"> 
+      	<methods>
+      		<include name="APIResendEmail"></include>
+       	</methods>
+      </class>  
+	
+   </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

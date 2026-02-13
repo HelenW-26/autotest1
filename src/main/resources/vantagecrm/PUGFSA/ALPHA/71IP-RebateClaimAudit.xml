@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Client Portal Test Suite KY" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<parameter name="Brand" value="fsa"></parameter>
+  	<parameter name="TestEnv" value="test"></parameter>
+    <parameter name="AdminURL" value="https://admin.test-puprime.com/login/to_login"></parameter>
+  	<parameter name="AdminName" value="yanni"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="https://secure.test-puprime.com"></parameter>
+   	 <parameter name="TraderName" value="webvok@tmail.t-com.sk"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+   
+   <test name = "IB Portal Rebate Claim">  
+      <classes>
+           <class name="vantagecrm.IPRebate">
+           		<methods>
+           			<include name="IPLogIn"></include>
+           			<include name="ApplyForRebateFromDashboard"></include>
+           			<include name="ApplyForRebateFromPaymentHistory"></include>
+           		</methods>
+           	</class>
+   
+   			<class name="vantagecrm.TaskManagement">
+   				<methods>
+   					<include name="AdminLogIn"></include>
+   					<include name="CommAudit"></include>   				
+   				</methods>
+   			
+   			</class>
+   
+      </classes>       
+   </test>  
+   
+</suite> <!-- Suite -->

@@ -1,0 +1,22 @@
+cashier:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-bluebird.crm-alpha.com"
+  mt4Account : "1970540"
+  channel_name: "BTC"
+  Currency: "BTC"
+  operateAmount : "0.0009"
+  channel_id : "5"
+  password: "7946e795e44db67be4c74219def41e2e"
+
+
+cashier1:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-bluebird.crm-alpha.com"
+  mt4Account : "1970541"
+  channel_name: "ETH"
+  Currency: "ETH"
+  operateAmount : "0.0025"
+  channel_id : "7"
+  password: "7946e795e44db67be4c74219def41e2e"
+
+

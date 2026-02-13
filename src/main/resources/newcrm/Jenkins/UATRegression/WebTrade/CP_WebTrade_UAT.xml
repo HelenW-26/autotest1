@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- alpha jenkins上进行smoke test的job -->
+<suite name="alpha Regression" configfailurepolicy="continue">
+
+    <listeners>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+    <parameter name="Brand" value="AU"></parameter>
+    <parameter name="Server" value="UAT-AU"></parameter>
+
+    <!--<test name="CP API Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.AlphaAPIWithdrawalTestCases">
+                <methods>
+                    <include name="testAPIBigAmountWithdrawal"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+    <test name="CP Web Trading Regression">
+        <classes>
+            <class name="newcrm.testcases.uatregression.UATWebTradingTestCases">
+                <methods>
+                    <include name="test_chartInfo"></include>
+                    <include name="testPositions_reverse"></include>
+                    <include name="testPositions_closeBy"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite><!-- Suite -->

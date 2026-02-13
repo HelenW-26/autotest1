@@ -1,0 +1,89 @@
+cashier:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-core-au.crm-alpha.com"
+  mt4Account : "804395514"
+  channelname : "USDTETH"
+  currenty : "USD"
+  operateAmount : "100"
+  channel_id : "6"
+  password: "7946e795e44db67be4c74219def41e2e"
+
+cashier2:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-core-au.crm-alpha.com"
+  mt4Account : "21631"
+  channelname : "USDTETH"
+  currenty : "NZD"
+  operateAmount : "100"
+  channel_id : "6"
+  password: "7946e795e44db67be4c74219def41e2e"
+
+cashier3:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-core-au.crm-alpha.com"
+  mt4Account : "21630"
+  channelname : "USDTETH"
+  currenty : "EUR"
+  operateAmount : "100"
+  channel_id : "6"
+  password: "7946e795e44db67be4c74219def41e2e"
+
+#cashier4:
+#  email : "autotestetdfyzri@testcrmautomation.com"
+#  url: "https://secure-core-au.crm-alpha.com"
+#  mt4Account : "804333572"
+#  channelname : "USDTETH"
+#  currenty : "CAD"
+#  operateAmount : "100"
+#  channel_id : "6"
+#  password: "7946e795e44db67be4c74219def41e2e"
+
+cashier5:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-core-au.crm-alpha.com"
+  mt4Account : "21629"
+  channelname : "USDTETH"
+  currenty : "AUD"
+  operateAmount : "100"
+  channel_id : "6"
+  password: "7946e795e44db67be4c74219def41e2e"
+
+cashier6:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-core-au.crm-alpha.com"
+  mt4Account : "21628"
+  channelname : "USDTETH"
+  currenty : "SGD"
+  operateAmount : "100"
+  channel_id : "6"
+  password: "7946e795e44db67be4c74219def41e2e"
+
+cashier7:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-core-au.crm-alpha.com"
+  mt4Account : "20772"
+  channelname : "USDTETH"
+  currenty : "JPY"
+  operateAmount : "4000"
+  channel_id : "6"
+  password: "7946e795e44db67be4c74219def41e2e"
+
+cashier8:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-core-au.crm-alpha.com"
+  mt4Account : "22289"
+  channelname : "USDTETH"
+  currenty : "USC"
+  operateAmount : "10000"
+  channel_id : "6"
+  password: "7946e795e44db67be4c74219def41e2e"
+
+cashier9:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-core-au.crm-alpha.com"
+  mt4Account : "22289"
+  channelname : "USDTETH"
+  currenty : "USC"
+  operateAmount : "5000"
+  channel_id : "6"
+  password: "7946e795e44db67be4c74219def41e2e"

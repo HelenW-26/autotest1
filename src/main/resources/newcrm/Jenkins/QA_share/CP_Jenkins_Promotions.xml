@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- QA share/QA share-Promotions -->
+
+<suite name="Promotions Test Suite" configfailurepolicy="continue">
+
+	<listeners>
+     	<listener class-name="utils.Listeners.CustomListener"/>
+  	</listeners>
+  <test name="Promotions Test">
+	  <parameter name="Brand" value="${Brand}"></parameter>
+	  <parameter name="TestEnv" value="alpha"></parameter>
+	  <parameter name="Promotions" value="${Promotions}"></parameter>
+	  <parameter name="Server" value="${Server}"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.CPPromotionsTestCase">
+   		 	<methods>
+   		 		<include name = "generatePromotions"></include>
+				<include name="testPromotions"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

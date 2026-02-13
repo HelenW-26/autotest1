@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Create New User and Audit" configfailurepolicy="continue">
+
+ <listeners>
+     <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod".
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	<parameter name="testEnv" value="test"></parameter>
+
+  <test name="Create_NewUser_and_Audit">
+    <parameter name="Brand" value="ky"></parameter>
+  	<parameter name="TestEnv" value="test"></parameter>
+    <parameter name="AdminURL" value="https://admin.test-vantagefx.com"></parameter>
+  	<parameter name="AdminName" value="ben"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="https://secure.test-vantagefx.com"></parameter>
+    <parameter name="TraderName" value="webnhb@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>
+    <classes>
+
+     <class name="vantagecrm.CPRegister">
+        <parameter name="WebSiteURL" value="https://new.vantagefx.com/forex-trading/open-demo-account-0730/"></parameter>
+        <!-- <parameter name="WebSiteURL" value="https://new.vantagefx.com/forex-trading/forex-trading-account-0730/"></parameter> -->
+
+      	<parameter name="RegisterURL" value="https://secure.test-vantagefx.com"></parameter>
+      	<parameter name="IBpromotion" value="?affid=8406"></parameter>
+
+     	<methods>
+     		<!-- <include name ="RegisterUserMT4"></include> -->
+   	 		<!-- <include name="RegisterUserMT5"></include>  -->
+  		  	<include name="RegisterDemoMT4"></include>
+ <!-- 	 		<include name="RegisterDemoMT5"></include>
+  	 		<include name = "RegisterLeads"></include>
+  	  		<include name = "RegisterMT4Leads2Client"></include>
+  	 		<include name = "RegisterMT5Leads2Client"></include>
+ 	 		<include name="RegisterMT4Demo2MT4Client"></include>
+   	 		<include name = "RegisterMT4Demo2MT5Client"></include>
+  	 		<include name = "RegisterMT5Demo2MT4Client"></include>
+  	 		<include name = "RegisterMT5Demo2MT5Client"></include>
+  	 		<include name = "RegisterDemo2LeadP1"></include>
+
+     		<include name="ValidateRegisterUser"></include>
+      		<include name="CheckDuplicatedEmail"></include>
+     		<include name="CheckDuplicatedMobile"></include>
+     		<include name="CheckDuplicatedDemoEmail"></include>
+     		<include name="CheckDuplicatedDemoMobile"></include>	 	 -->
+       	</methods>
+
+     </class>
+
+
+ <!--  	<class name="vantagecrm.CPRegister">
+  		<methods>
+  			<include name="testFunction"></include>
+
+  		</methods>
+  	</class> -->
+
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

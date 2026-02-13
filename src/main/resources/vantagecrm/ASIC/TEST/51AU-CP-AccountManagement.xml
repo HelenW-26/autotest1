@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Client Portal Test Suite AU" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+	
+  <test name="Client Portal Test AU">
+	<parameter name="Brand" value="au"></parameter>
+  	<parameter name="TestEnv" value="test"></parameter>
+    <parameter name="AdminURL" value="http://cp.vantagefx.com.au:8001/admin/main"></parameter>
+  	<parameter name="AdminName" value="automation_au"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="http://cp.vantagefx.com.au"></parameter>
+   	<parameter name="TraderName" value="webauu@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+  	<parameter name="ThaiAccount" value="webauu@test.com"></parameter>
+ 	<parameter name="ThaiPwd" value="123Qwe"></parameter>
+ 	  	
+   <parameter name="MalayAccount" value="webauu@test.com"></parameter>
+ 	<parameter name="MalayPwd" value="123Qwe"></parameter>  
+  	
+    <parameter name="VietAccount" value="webauu@test.com"></parameter>
+ 	<parameter name="VietPwd" value="123Qwe"></parameter>
+  	
+  	<parameter name="NigeAccount" value="webauu@test.com"></parameter>
+ 	<parameter name="NigePwd" value="123Qwe"></parameter>
+ 	
+ 
+    <classes>
+    			
+  
+      <class name="vantagecrm.CPAccountManagement">
+       		<methods>       			
+       
+       			<include name="CPLogIn"></include>   
+  				<include name="RequestAddiAccount"></include> 
+       			<include name="TransferFund"></include>
+        		<include name="ChangeCPMT4PWD"></include> 
+         		<include name="ChangeCPMT5PWD"></include>       		  
+       			<include name="ChangeAccountPWD"></include>   
+       			<include name="ResetCPMTXPwd"></include> 
+       			<include name="CPSideBarNavigation"></include>	  		
+       		</methods>       
+       </class>
+
+     <class name="vantagecrm.CPDownload">
+     
+     </class>
+     
+    </classes>
+  </test> <!-- Test -->
+ 
+</suite> <!-- Suite -->

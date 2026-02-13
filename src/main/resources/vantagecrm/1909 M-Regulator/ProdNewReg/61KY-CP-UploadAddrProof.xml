@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Client Portal Test Suite KY" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<parameter name="Brand" value="au"></parameter>
+  	<parameter name="TestEnv" value="prod"></parameter>
+    <parameter name="AdminURL" value="https://test1admin.vantagefx.com"></parameter>
+  	<parameter name="AdminName" value="alex_ky"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="https://test1secure.vantagefx.com"></parameter>
+   	<parameter name="TraderName" value="webtmpr@test.com.au"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+  	<parameter name="ThaiAccount" value="webfdv@test.com"></parameter>
+ 	<parameter name="ThaiPwd" value="123Qwe"></parameter>
+ 	  	
+   <parameter name="MalayAccount" value="webfdv@test.com"></parameter>
+ 	<parameter name="MalayPwd" value="123Qwe"></parameter>  
+  	
+    <parameter name="VietAccount" value="webfdv@test.com"></parameter>
+ 	<parameter name="VietPwd" value="123Qwe"></parameter>
+  	
+  	<parameter name="NigeAccount" value="webfdv@test.com"></parameter>
+ 	<parameter name="NigePwd" value="123Qwe"></parameter>
+ 	
+  
+   <!--  <test name="Upload Address Proof and Reject">
+    <classes>
+      <class name="vantagecrm.CPIDAddrProof">
+       		<methods>       			
+       
+       			<include name="CPLogIn"></include>   
+       			<include name="UploadAddrProof"></include>
+
+       		</methods>       
+       </class>
+	  
+   		<class name="vantagecrm.NewTaskManagement">
+   
+    		<methods>
+	     		<include name="AdminLogIn"></include>
+	     	    <include name="POASearchByName"></include>
+	      		<include name="POAReject"></include> 
+
+     		</methods>
+   		</class>
+     
+    </classes>
+  </test>  -->
+ 
+   <test name="Upload Address Proof and Audit">
+    <classes>
+      <class name="vantagecrm.CPIDAddrProof">
+       		<methods>       			
+       
+       			<include name="CPLogIn"></include>   
+       			<include name="UploadAddrProof"></include>
+
+       		</methods>       
+       </class>
+	  
+   		<class name="vantagecrm.NewTaskManagement">
+   
+    		<methods>
+	     		<include name="AdminLogIn"></include>
+	      		<include name="POAAudit"></include> 
+
+     		</methods>
+   		</class>
+     
+    </classes>
+  </test> <!-- Test -->
+ 
+    <test name="Upload Address Proof and Pending">
+    <classes>
+       <class name="vantagecrm.UpdateClient">
+   
+    		<methods>
+	     		<include name="AdminLogIn"></include>
+	      		<include name="updatePOAFlag"></include> 
+
+     		</methods>
+   		</class>
+    
+      <class name="vantagecrm.CPIDAddrProof">
+       		<methods>       			
+       
+       			<include name="CPLogIn"></include>   
+       			<include name="UploadAddrProof"></include>
+
+       		</methods>       
+       </class>
+	  
+   		<class name="vantagecrm.NewTaskManagement">
+   
+    		<methods>
+	     		<include name="AdminLogIn"></include>
+	      		<include name="POAPending"></include> 
+
+     		</methods>
+   		</class>
+     
+    </classes>
+  </test>
+ 
+</suite> <!-- Suite -->

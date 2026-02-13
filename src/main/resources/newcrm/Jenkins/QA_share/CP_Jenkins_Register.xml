@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- Register with specific country-->
+<suite name="Register Test Suite" configfailurepolicy="continue">
+
+	<listeners>
+     	<listener class-name="utils.Listeners.CustomListener"/>
+  	</listeners>
+  <test name="REGISTER">
+  	<parameter name="headless" value="true"/>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+    <parameter name="Brand" value="${Brand}"></parameter>     
+  	<parameter name="Regulator" value="${Regulator}"></parameter>
+  	<parameter name="TraderURL" value="${cp_url}"></parameter>
+  	<parameter name="AdminURL" value="${admin_url}"></parameter>
+    <!-- <parameter name="IBCode" value="${IBcode}"></parameter> -->
+    <!-- <parameter name="RAFCode" value="${RAFcode}"></parameter> -->
+    <parameter name="Country" value="${Country}"></parameter>
+    <parameter name="Platform" value="${Platform}"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.RegisterTestcases">
+   		 	<methods>
+   		 		<include name="registerwithCode"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

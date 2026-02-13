@@ -1,0 +1,1 @@
+Currency=USD;Bank Name=Commonwealth Bank of Australia;SWIFT Code=CTBAAU2S;Branch Name=George & Market street Sydney Branch;Branch Address=Ground floor,46 Market Street Sydney NSW 2000;Beneficiary Account Name=Pacific UNION GROUP PTY LTD - CLIENT SEGREGATED ACCOUNT USD;Beneficiary Account Number=1201 9562;Beneficiary Address=level 26, 44 Market Street, Sydney NSW 2000

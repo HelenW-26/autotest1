@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU Register Test Suite" configfailurepolicy="continue">
+
+	<listeners>
+     	<listener class-name="utils.Listeners.CustomListener"/>
+  	</listeners>
+  <test name="AUTest">
+    <parameter name="Brand" value="VFX"></parameter>
+  	<parameter name="TestEnv" value="prod"></parameter>
+  	<parameter name="Regulator" value="ASIC"></parameter>
+  	<parameter name="TraderURL" value=""></parameter>
+  	<parameter name="AdminURL" value=""></parameter>
+    <parameter name="Debug" value=""></parameter>
+    <parameter name="IBCode" value=""></parameter>
+    <parameter name="RAFCode" value=""></parameter>
+    <parameter name ="headless" value="false"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.RegisterTestcases">
+   		 	<methods>
+   		 		<include name="testRegistMT4LiveAccount"></include>
+   		 		<!-- <include name="testRegistMT4LiveAccountWithIBCode"></include> -->
+   		 		<!-- <include name="testRegistMT5LiveAccountWithRAFCode"></include> -->
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

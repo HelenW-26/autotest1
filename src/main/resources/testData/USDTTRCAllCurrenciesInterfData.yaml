@@ -1,0 +1,77 @@
+cashier:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-core-au.crm-alpha.com"
+  mt4Account : "804395514"
+  channelname : "USDTTRC"
+  currenty : "USD"
+  operateAmount : "100"
+  channel_id : "10"
+  password: "7946e795e44db67be4c74219def41e2e"
+
+#cashier1:
+#  email : "autotestetdfyzri@testcrmautomation.com"
+#  mt4Account : "30211"
+#  channelname : "USDTERC"
+#  currenty : "USDT"
+#  operateAmount : "4000"
+#  channel_id : "9"
+
+cashier2:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-core-au.crm-alpha.com"
+  mt4Account : "21628"
+  channelname : "USDTTRC"
+  currenty : "SGD"
+  operateAmount : "100"
+  channel_id : "10"
+  password: "7946e795e44db67be4c74219def41e2e"
+
+cashier3:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-core-au.crm-alpha.com"
+  mt4Account : "21629"
+  channelname : "USDTTRC"
+  currenty : "AUD"
+  operateAmount : "100"
+  channel_id : "10"
+  password: "7946e795e44db67be4c74219def41e2e"
+
+cashier4:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-core-au.crm-alpha.com"
+  mt4Account : "21630"
+  channelname : "USDTTRC"
+  currenty : "EUR"
+  operateAmount : "100"
+  channel_id : "10"
+  password: "7946e795e44db67be4c74219def41e2e"
+
+cashier5:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-core-au.crm-alpha.com"
+  mt4Account : "21631"
+  channelname : "USDTTRC"
+  currenty : "NZD"
+  operateAmount : "100"
+  channel_id : "10"
+  password: "7946e795e44db67be4c74219def41e2e"
+
+cashier6:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-core-au.crm-alpha.com"
+  mt4Account : "22289"
+  channelname : "USDTTRC"
+  currenty : "USC"
+  operateAmount : "10000"
+  channel_id : "10"
+  password: "7946e795e44db67be4c74219def41e2e"
+
+#cashier7:
+#  email : "autotestetdfyzri@testcrmautomation.com"
+#  url: "https://secure-core-au.crm-alpha.com"
+#  mt4Account : "804333572"
+#  channelname : "USDTTRC"
+#  currenty : "CAD"
+#  operateAmount : "10000"
+#  channel_id : "10"
+#  password: "7946e795e44db67be4c74219def41e2e"

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Create New User and Audit" configfailurepolicy="continue">
+
+ <listeners>
+    <!-- <listener class-name="utils.Listeners.TestListener" /> -->
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+    <parameter name="Brand" value="vt"></parameter>
+  	<parameter name="TestEnv" value="prod"></parameter>
+  	<parameter name="AdminURL" value="https://admin.vtmarkets.com.cn"></parameter>
+  	<parameter name="AdminName" value="alexliu"></parameter>
+  	<parameter name="AdminPass" value="1234Qwer"></parameter>
+  	<parameter name="TraderURL" value="https://myaccount.vtmarkets.com.cn/login/to_login"></parameter>
+    <parameter name="TraderName" value="webvok@tmail.t-com.sk"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter> 
+		
+  <test name="Create_NewUser_and_Audit">
+ 
+    <classes>
+     <class name="vantagecrm.CPRegister">
+      
+      	<parameter name="WebSiteURL" value="https://zh.vtmarkets.com/live-0513/"></parameter>
+      	<parameter name="RegisterURL" value="https://myaccount.vtmarkets.com"></parameter>
+             
+      	<methods>
+  			<include name="RegisterUserMT4"></include>
+      	</methods>
+
+       </class> 
+     <class name="vantagecrm.UserManagement">
+          
+      	<methods>
+	      	<include name="AdminLogIn"></include>
+    	  	<include name="AddIBNew"></include>
+  	  		<include name="AddClient"></include>
+      	</methods>
+
+       </class> 
+       
+        
+       <class name="vantagecrm.TaskManagement">
+      
+      		<methods>
+	      		<include name="AdminLogIn"></include>
+	       		<include name="AccountAuditPendingIB"></include>
+	       		<include name="AccountAuditAddClient"></include>
+	       		<include name="AccountAuditReject"></include>
+	   
+       		</methods>
+      </class>
+        
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

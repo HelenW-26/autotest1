@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- alpha jenkins上进行smoke test的job -->
+<suite name="Alpha Regression" configfailurepolicy="continue">
+
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+        <listener class-name="newcrm.listeners.AllureTestListener"/>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+    <parameter name="Brand" value="${brand}"></parameter>
+    <parameter name="Server" value="${container}"></parameter>
+    <parameter name="BranchVersion" value="${branchVersion}"></parameter>
+
+    <test name="CP Wallet Account UI Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.wallet.AlphaWalletRegisterTestCases">
+                <methods>
+                    <include name="testWalletOpenAccount"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CP Wallet Payment UI Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.wallet.AlphaWalletTestCases">
+                <methods>
+                    <include name="testWalletDepositCryptoBTC"></include>
+                    <include name="testWalletDepositCryptoETH"></include>
+                    <include name="testWalletDepositCryptoUSDC"></include>
+                    <include name="testWalletDepositCryptoUSDTERC"></include>
+                    <include name="testWalletDepositCryptoUSDTTRC"></include>
+                    <include name="testWalletWithdrawCryptoBTC"></include>
+                    <include name="testWalletWithdrawCryptoETH"></include>
+                    <include name="testWalletWithdrawCryptoUSDC"></include>
+                    <include name="testWalletWithdrawCryptoUSDTERC"></include>
+                    <include name="testWalletWithdrawCryptoUSDTTRC"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CP Wallet Card UI Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.wallet.AlphaWalletCardHomeTestCase">
+                <methods>
+                    <include name="testWalletCardHomeAssertCheck"/>
+                    <include name="testWalletCardDetails"/>
+                    <include name="testWalletCardChangeAutoCashback"/>
+                    <include name="testWalletCardChangeCardStatus"/>
+                    <include name="testWalletCardAllTransactions"/>
+                    <include name="testWalletCardTransactionDetails"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CP Wallet Earn UI Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.wallet.AlphaWalletEarnTestCases">
+                <methods>
+                    <include name="testWalletOverviewPage"/>
+                    <include name="testWalletFundingPage"/>
+                    <include name="testWalletEarnPage"/>
+                    <include name="testWalletEarnHomePage"/>
+                </methods>
+
+            </class>
+        </classes>
+    </test>
+</suite><!-- Suite -->

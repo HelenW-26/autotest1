@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="STAR IB Test Suite" configfailurepolicy="continue">
+    <listeners>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+    <parameter name="Brand" value="STAR"></parameter>
+    <parameter name="TestEnv" value="alpha"></parameter>
+    <parameter name="Regulator" value="svg"></parameter>
+    <parameter name="TraderURL" value="${TraderURL}"></parameter>
+    <parameter name="TraderPass" value="123Qwe@@"></parameter>
+    <parameter name="headless" value="true"></parameter>
+
+
+    <test name="STAR IB E-Wallet Withdraw">
+        <parameter name="Brand" value="STAR"></parameter>
+        <parameter name="TraderName" value="testcrm_donttouch_cpschinaclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+                <methods>
+                    <include name="testPerfectMoneyWithdraw"></include>
+                    <include name="testSticPayWithdraw"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="STAR IB Unionpay Withdraw">
+        <parameter name="TraderName" value="testcrm_donttouch_cpschinaclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+                <methods>
+                    <include name="testUnionPayWithdraw"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!-- Missing data-testid, ACM-33034
+    <test name="STAR IB Crypto Withdraw">
+        <parameter name="TraderName" value="testcrm_donttouch_cpschinaclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+                <methods>
+                    <include name="testCryptoCurrencyWithdraw"></include>
+                </methods>
+            </class>
+        </classes>
+    </test> -->
+    <test name="STAR IB Malayisa Withdraw">
+        <parameter name="TraderName" value="testcrmib_donttouch_cpsmalaysia@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+                <methods>
+                    <include name="testMalaysiaBankWithdraw"></include>
+                    <include name="testMalaysiaBankWithdrawNewAccount"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="STAR IB India Withdraw">
+        <parameter name="TraderName" value="testcrmib_donttouch_indiacps@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+                <methods>
+                    <include name="testIndiaBankWithdraw"></include>
+                    <include name="testIndiaBankWithdrawNewAccount"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="STAR_Internation_CPS_CP_Withdraw">
+        <parameter name="TraderName" value="testcrmib_donttouch_indiacps@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+                <methods>
+                    <include name="testInternationalBankNewAccountWitdraw"></include>
+                    <include name="testInternationalBankSavedAccountWitdraw"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="STAR_Australia_CPS_CP_Withdraw">
+        <parameter name="TraderName" value="testcrmib_donttouch_australiabank@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+                <methods>
+                    <include name="testAustraliaBankNewAccountWitdraw"></include>
+                    <include name="testAustraliaBankSavedAccountWitdraw"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="STAR IB Thailand Withdraw">
+        <parameter name="TraderName" value="testcrmib_donttouch_cpsthailand@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+                <methods>
+                    <include name="testThaiBankWithdraw"></include>
+                    <include name="testThaiBankWithdrawNewAccount"></include>
+                    <include name="testLocalDepositorWithdraw"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="STAR IB Indonesia Withdraw">
+        <parameter name="TraderName" value="testcrmib_donttouch_cpsindonesia@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+                <methods>
+                    <include name="testIndonesiaBankWithdraw"></include>
+                    <include name="testIndonesiaBankWithdrawNewAccount"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="STAR IB Laos Withdraw">
+        <parameter name="TraderName" value="testcrmib_donttouch_cpslaos@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+                <methods>
+                    <include name="testLaosBankWithdraw"></include>
+                    <include name="testLaosBankWithdrawNewAccount"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="STAR IB Philippine Withdraw">
+        <parameter name="TraderName" value="testcrmib_donttouch_cpsphilippine@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+                <methods>
+                    <include name="testPhilippinesBankWithdraw"></include>
+                    <include name="testPhilippinesBankWithdrawNewAccount"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="STAR IB Vietnam Withdraw">
+        <parameter name="TraderName" value="testcrmib_dontotuch_cpsvietnam@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+                <methods>
+                    <include name="testVietBankWithdraw"></include>
+                    <include name="testVietBankWithdrawNewAccount"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="STAR IB Brazil Withdraw">
+        <parameter name="TraderName" value="testcrmib_donttouch_cpsbrazil@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+                <methods>
+                    <include name="testBrazilBankWithdraw"></include>
+                    <include name="testBrazilBankWithdrawNewAccount"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="STAR IB Japan Withdraw">
+        <parameter name="TraderName" value="testcrmib_donttouch_cpsjapan@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.ibtestcases.IBRebateWithdrawTestcases">
+                <methods>
+                    <include name="testJapanBankWithdraw"></include>
+                    <include name="testJapanBankWithdrawNewAccount"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!-- Test -->
+</suite> <!-- Suite -->

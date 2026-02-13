@@ -1,0 +1,28 @@
+==========ExtentReport============
+1.all java files need to add lines below:
+import utils.ExtentReports.ExtentTestManager;
+import java.lang.reflect.Method;
+
+2. add one line after "driver = new ChromeDriver();" in LaunchBrowser
+utils.Listeners.TestListener.driver=driver;
+	
+
+3. all the @Test method need to add one more parameter:Method method,
+and add the line below at the beginning:
+ExtentTestManager.startTest(method.getName(),"Description: The description of the test");
+
+4. add the lines below to testng.xml between </test> and </suite>  
+  </test> <!-- Test -->
+      <listeners>
+        <listener class-name="utils.Listeners.TestListener"/>
+        <listener class-name="utils.Listeners.AnnotationTransformer"/>
+      </listeners>
+</suite> <!-- Suite -->
+
+5. add dependency to pom.xml
+	<dependency>
+	    <groupId>com.relevantcodes</groupId>
+	    <artifactId>extentreports</artifactId>
+	    <version>2.41.2</version>
+	</dependency>
+	

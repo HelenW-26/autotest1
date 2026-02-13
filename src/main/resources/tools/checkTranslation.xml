@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite parallel="false" name="testTranslationSuit" configfailurepolicy="continue">
+<listeners>
+  </listeners>
+  
+  <test name="TestTranslation">
+  	<!-- Don't forget to configure the following parameters -->
+  	<parameter name="dataPath" value="C:\testcases\PD333VT新增阿拉伯语翻译\Nation,_country,_questionaire_AR_Translation_1_自动生成SQL_0519.xlsx"/>
+    <parameter name = "sheetname" value="Country"/>
+    <parameter name="column" value="2"/>  	
+  	<parameter name="jsPath" value="C:\testcases\languages\auonline20211221\de.js"/>
+  	<parameter name="enJsPath" value="C:\testcases\languages\auonline20211221\en.js"/>
+  	
+  	<parameter name="keyString" value="vantage fx,vantagefx"/>
+  	
+  	<!-- folderPath: language js files folder path -->
+  	<parameter name="folderPath" value="C:\testcases\languages\auonline20211221"/>
+  	
+  	<!-- finish -->
+    
+    <classes>
+		 <class name="tools.CheckTranslation">
+		 	<methods>
+		 		<!-- compare js file -->
+		 		<!-- <include name="diff"/> -->
+		 		<!-- check excel -->
+		 		<!-- <include name="check"/> -->
+		 		
+		 		<!-- normal check -->
+		 		<!-- <include name="normalcheck"/> -->
+		 		
+		 		<!-- check key words -->
+		 		<include name="findKeyword"></include>
+		 	</methods>
+		 </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

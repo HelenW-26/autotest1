@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU Test Suite" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	
+	
+	<parameter name="Brand" value="fca"></parameter>
+  	<parameter name="TestEnv" value="test"></parameter>
+    <parameter name="AdminURL" value="https://admin.test-vantagefx.com"></parameter>
+  	<parameter name="AdminName" value="Yanni"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="https://secure.test-vantagefx.com/login"></parameter>
+   	<parameter name="TraderName" value="webkyy@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+  	<parameter name="ThaiAccount" value="webovh@tmail.t-com.sk"></parameter>
+ 	<parameter name="ThaiPwd" value="123Qwe"></parameter>
+ 	  	
+   <parameter name="MalayAccount" value="webovh@tmail.t-com.sk"></parameter>
+ 	<parameter name="MalayPwd" value="123Qwe"></parameter>  
+  	
+    <parameter name="VietAccount" value="webovh@tmail.t-com.sk"></parameter>
+ 	<parameter name="VietPwd" value="123Qwe"></parameter>
+  	
+  	<parameter name="NigeAccount" value="webovh@tmail.t-com.sk"></parameter>
+ 	<parameter name="NigePwd" value="123Qwe"></parameter>
+	
+  <test name="Change Account Group to Test Account Group">
+   
+	   <classes>
+	   		    		      		
+	   	  <class name="vantagecrm.AdminAPITest">
+	   	  	<methods>
+	   	  		<include name="APIUpdateTestAccGroup"></include>
+	   	  	</methods>
+	   	  </class>  
+	
+	      
+	  	</classes>
+  </test>
+      
+</suite> <!-- Suite -->

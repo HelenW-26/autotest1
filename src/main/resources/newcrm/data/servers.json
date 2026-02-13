@@ -1,0 +1,1186 @@
+[
+	{
+		"name": "Staging-AU-ECI",
+		"admin_url": "admin-staging-au-ex.crm-alpha.com",
+		"cp_url": "secure-staging-au-ex.crm-alpha.com",
+		"IB_url": "ibportal-staging-au-ex.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-staging-au-ex.crm-alpha.com"
+	},
+	{
+		"name": "Prospero193",
+		"admin_url": "admin-prospero.crm-alpha.com",
+		"cp_url": "secure-prospero.crm-alpha.com",
+		"IB_url": "ibportal-prospero.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-prospero.crm-alpha.com"
+	},
+	{
+		"name": "Goat",
+		"admin_url": "admin-goat.crm-alpha.com",
+		"cp_url": "secure-goat.crm-alpha.com",
+		"IB_url": "ibportal-goat.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-goat.crm-alpha.com",
+		"app_service": "app-goat.crm-alpha.com"
+	},
+	{
+		"name": "sz04",
+		"admin_url": "admin-sz04.crm-alpha.com",
+		"cp_url": "secure-sz04.crm-alpha.com",
+		"IB_url": "ibportal-sz04.crm-alpha.com",
+		"ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-sz04.crm-alpha.com",
+		"app_service": "app-sz04.crm-alpha.com"
+	},
+	{
+		"name": "Monkey",
+		"admin_url": "admin-monkey.crm-alpha.com",
+		"cp_url": "secure-monkey.crm-alpha.com",
+		"IB_url": "ibportal-monkey.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-monkey.crm-alpha.com",
+		"app_service": "app-monkey.crm-alpha.com"
+	},
+	{
+		"name": "Jaguar",
+		"admin_url": "admin-jaguar.crm-alpha.com",
+		"cp_url": "secure-jaguar.crm-alpha.com",
+		"IB_url": "ibportal-jaguar.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-jaguar.crm-alpha.com",
+		"app_service": "app-jaguar.crm-alpha.com"
+	},
+	{
+		"name": "Sheep",
+		"admin_url": "admin-sheep.crm-alpha.com",
+		"cp_url": "secure-sheep.crm-alpha.com",
+		"IB_url": "ibportal-sheep.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-sheep.crm-alpha.com",
+		"app_service": "app-sheep.crm-alpha.com"
+	},
+	{
+		"name": "Tottenham",
+		"admin_url": "admin-tottenham.crm-alpha.com",
+		"cp_url": "secure-tottenham.crm-alpha.com",
+		"IB_url": "ibportal-tottenham.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-tottenham.crm-alpha.com",
+		"app_service": "app-tottenham.crm-alpha.com"
+	},
+	{
+		"name": "Butterfly",
+		"admin_url": "ixnxt-butterfly.crm-alpha.com",
+		"cp_url": "secure-butterfly.crm-alpha.com",
+		"IB_url": "ibportal-butterfly.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-butterfly.crm-alpha.com",
+		"app_service": "app-butterfly.crm-alpha.com"
+	},
+	{
+		"name": "Blowfish",
+		"admin_url": "admin-blowfish.crm-alpha.com",
+		"cp_url": "secure-blowfish.crm-alpha.com",
+		"IB_url": "ibportal-blowfish.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-blowfish.crm-alpha.com",
+		"app_service": "app-blowfish.crm-alpha.com"
+	},
+	{
+		"name": "Jellyfish",
+		"admin_url": "admin-jellyfish.crm-alpha.com",
+		"cp_url": "secure-jellyfish.crm-alpha.com",
+		"IB_url": "ibportal-jellyfish.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-jellyfish.crm-alpha.com",
+		"app_service": "app-jellyfish.crm-alpha.com"
+	},
+	{
+		"name": "Aardwolf",
+		"admin_url": "admin-aardwolf.crm-alpha.com",
+		"cp_url": "secure-aardwolf.crm-alpha.com",
+		"IB_url": "ibportal-aardwolf.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-aardwolf.crm-alpha.com",
+		"app_service": "app-aardwolf.crm-alpha.com"
+	},
+	{
+		"name": "Broccoli",
+		"admin_url": "admin-broccoli.crm-alpha.com",
+		"cp_url": "secure-broccoli.crm-alpha.com",
+		"IB_url": "ibportal-broccoli.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-broccoli.crm-alpha.com",
+		"app_service": "app-broccoli.crm-alpha.com"
+	},
+	{
+		"name": "Monet",
+		"admin_url": "admin-monet.crm-alpha.com",
+		"cp_url": "secure-monet.crm-alpha.com",
+		"IB_url": "ibportal-monet.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-monet.crm-alpha.com",
+		"app_service": "app-monet.crm-alpha.com"
+	},
+	{
+		"name": "Alabama",
+		"admin_url": "admin-alabama.crm-alpha.com",
+		"cp_url": "secure-alabama.crm-alpha.com",
+		"IB_url": "ibportal-alabama.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-alabama.crm-alpha.com",
+		"app_service": "app-alabama.crm-alpha.com"
+	},
+	{
+		"name": "Manchester",
+		"admin_url": "admin-manchester.crm-alpha.com",
+		"cp_url": "secure-manchester.crm-alpha.com",
+		"IB_url": "ibportal-manchester.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-manchester.crm-alpha.com",
+		"app_service": "app-manchester.crm-alpha.com"
+	},
+	{
+		"name": "Gucci",
+		"admin_url": "admin-gucci.crm-alpha.com",
+		"cp_url": "secure-gucci.crm-alpha.com",
+		"IB_url": "ibportal-gucci.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-gucci.crm-alpha.com",
+		"app_service": "app-gucci.crm-alpha.com"
+	},
+	{
+		"name": "Liverpool",
+		"admin_url": "admin-liverpool.crm-alpha.com",
+		"cp_url": "secure-liverpool.crm-alpha.com",
+		"IB_url": "ibportal-liverpool.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-liverpool.crm-alpha.com",
+		"app_service": "app-liverpool.crm-alpha.com"
+	},
+	{
+		"name": "Leopard",
+		"admin_url": "admin-leopard.crm-alpha.com",
+		"cp_url": "secure-leopard.crm-alpha.com",
+		"IB_url": "ibportal-leopard.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-leopard.crm-alpha.com",
+		"app_service": "app-leopard.crm-alpha.com"
+	},
+	{
+		"name": "Buffalo",
+		"admin_url": "admin-buffalo.crm-alpha.com",
+		"cp_url": "secure-buffalo.crm-alpha.com",
+		"IB_url": "ibportal-buffalo.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-buffalo.crm-alpha.com",
+		"app_service": "app-buffalo.crm-alpha.com"
+	},
+	{
+		"name": "Carrot",
+		"admin_url": "admin-carrot.crm-alpha.com",
+		"cp_url": "secure-carrot.crm-alpha.com",
+		"IB_url": "ibportal-carrot.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-carrot.crm-alpha.com",
+		"app_service": "app-carrot.crm-alpha.com"
+	},
+	{
+		"name": "Radish",
+		"admin_url": "admin-radish.crm-alpha.com",
+		"cp_url": "secure-radish.crm-alpha.com",
+		"IB_url": "ibportal-radish.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-radish.crm-alpha.com",
+		"app_service": "app-radish.crm-alpha.com"
+	},
+	{
+		"name": "Picasso",
+		"admin_url": "admin-picasso.crm-alpha.com",
+		"cp_url": "secure-picasso.crm-alpha.com",
+		"IB_url": "ibportal-picasso.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-picasso.crm-alpha.com",
+		"app_service": "app-picasso.crm-alpha.com"
+	},
+	{
+		"name": "Gauguin",
+		"admin_url": "admin-gauguin.crm-alpha.com",
+		"cp_url": "secure-gauguin.crm-alpha.com",
+		"IB_url": "ibportal-gauguin.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-gauguin.crm-alpha.com",
+		"app_service": "app-gauguin.crm-alpha.com"
+	},
+	{
+		"name": "Alaska",
+		"admin_url": "admin-alaska.crm-alpha.com",
+		"cp_url": "secure-alaska.crm-alpha.com",
+		"IB_url": "ibportal-alaska.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-alaska.crm-alpha.com",
+		"app_service": "app-alaska.crm-alpha.com"
+	},
+	{
+		"name": "Arizona",
+		"admin_url": "admin-arizona.crm-alpha.com",
+		"cp_url": "secure-arizona.crm-alpha.com",
+		"IB_url": "ibportal-arizona.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-arizona.crm-alpha.com",
+		"app_service": "app-arizona.crm-alpha.com"
+	},
+	{
+		"name": "Chelsea",
+		"admin_url": "admin-chelsea.crm-alpha.com",
+		"cp_url": "secure-chelsea.crm-alpha.com",
+		"IB_url": "ibportal-chelsea.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-chelsea.crm-alpha.com",
+		"app_service": "app-chelsea.crm-alpha.com"
+	},
+	{
+		"name": "Everton",
+		"admin_url": "admin-everton.crm-alpha.com",
+		"cp_url": "secure-everton.crm-alpha.com",
+		"IB_url": "ibportal-everton.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-everton.crm-alpha.com",
+		"app_service": "app-everton.crm-alpha.com"
+	},
+	{
+		"name": "Balenciaga",
+		"admin_url": "admin-balenciaga.crm-alpha.com",
+		"cp_url": "secure-balenciaga.crm-alpha.com",
+		"IB_url": "ibportal-balenciaga.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-balenciaga.crm-alpha.com",
+		"app_service": "app-balenciaga.crm-alpha.com"
+	},
+	{
+		"name": "Elephant",
+		"admin_url": "admin-elephant.crm-alpha.com",
+		"cp_url": "secure-elephant.crm-alpha.com",
+		"IB_url": "ibportal-elephant.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-elephant.crm-alpha.com",
+		"app_service": "app-elephant.crm-alpha.com"
+	},
+	{
+		"name": "Alpaca",
+		"admin_url": "admin-alpaca.crm-alpha.com",
+		"cp_url": "secure-alpaca.crm-alpha.com",
+		"IB_url": "ibportal-alpaca.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-alpaca.crm-alpha.com",
+		"app_service": "app-alpaca.crm-alpha.com"
+	},
+	{
+		"name": "Cabbage",
+		"admin_url": "admin-cabbage.crm-alpha.com",
+		"cp_url": "secure-cabbage.crm-alpha.com",
+		"IB_url": "ibportal-cabbage.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-cabbage.crm-alpha.com",
+		"app_service": "app-cabbage.crm-alpha.com"
+	},
+	{
+		"name": "Burdock",
+		"admin_url": "admin-burdock.crm-alpha.com",
+		"cp_url": "secure-burdock.crm-alpha.com",
+		"IB_url": "ibportal-burdock.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-burdock.crm-alpha.com",
+		"app_service": "app-burdock.crm-alpha.com"
+	},
+	{
+		"name": "Renoir",
+		"admin_url": "admin-renoir.crm-alpha.com",
+		"cp_url": "secure-renoir.crm-alpha.com",
+		"IB_url": "ibportal-renoir.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-renoir.crm-alpha.com",
+		"app_service": "app-renoir.crm-alpha.com"
+	},
+	{
+		"name": "Vermeer",
+		"admin_url": "admin-vermeer.crm-alpha.com",
+		"cp_url": "secure-vermeer.crm-alpha.com",
+		"IB_url": "ibportal-vermeer.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-vermeer.crm-alpha.com",
+		"app_service": "app-vermeer.crm-alpha.com"
+	},
+	{
+		"name": "Arkansas",
+		"admin_url": "admin-arkansas.crm-alpha.com",
+		"cp_url": "secure-arkansas.crm-alpha.com",
+		"IB_url": "ibportal-arkansas.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-arkansas.crm-alpha.com",
+		"app_service": "app-arkansas.crm-alpha.com"
+	},
+	{
+		"name": "California",
+		"admin_url": "admin-california.crm-alpha.com",
+		"cp_url": "secure-california.crm-alpha.com",
+		"IB_url": "ibportal-california.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-california.crm-alpha.com",
+		"app_service": "app-california.crm-alpha.com"
+	},
+	{
+		"name": "Bournemouth",
+		"admin_url": "admin-bournemouth.crm-alpha.com",
+		"cp_url": "secure-bournemouth.crm-alpha.com",
+		"IB_url": "ibportal-bournemouth.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-bournemouth.crm-alpha.com",
+		"app_service": "app-bournemouth.crm-alpha.com"
+	},
+	{
+		"name": "CPS01",
+		"admin_url": "admin-cps01.crm-alpha.com",
+		"cp_url": "secure-cps01.crm-alpha.com",
+		"IB_url": "ibportal-cps01.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-cps01.crm-alpha.com",
+		"app_service": "app-cps01.crm-alpha.com"
+	},
+	{
+		"name": "CPS02",
+		"admin_url": "admin-cps02.crm-alpha.com",
+		"cp_url": "secure-cps02.crm-alpha.com",
+		"IB_url": "ibportal-cps02.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-cps02.crm-alpha.com",
+		"app_service": "app-cps02.crm-alpha.com"
+	},
+	{
+		"name": "CPS03",
+		"admin_url": "admin-cps03.crm-alpha.com",
+		"cp_url": "secure-cps03.crm-alpha.com",
+		"IB_url": "ibportal-cps03.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-cps03.crm-alpha.com",
+		"app_service": "app-cps03.crm-alpha.com"
+	},
+	{
+		"name": "CPS04",
+		"admin_url": "admin-cps04.crm-alpha.com",
+		"cp_url": "secure-cps04.crm-alpha.com",
+		"IB_url": "ibportal-cps04.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-cps04.crm-alpha.com",
+		"app_service": "app-cps04.crm-alpha.com"
+	},
+	{
+		"name": "CPS05",
+		"admin_url": "admin-cps05.crm-alpha.com",
+		"cp_url": "secure-cps05.crm-alpha.com",
+		"IB_url": "ibportal-cps05.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-cps05.crm-alpha.com",
+		"app_service": "app-cps05.crm-alpha.com"
+	},
+	{
+		"name": "CPS06",
+		"admin_url": "admin-cps06.crm-alpha.com",
+		"cp_url": "secure-cps06.crm-alpha.com",
+		"IB_url": "ibportal-cps06.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-cps06.crm-alpha.com",
+		"app_service": "app-cps06.crm-alpha.com"
+	},
+	{
+		"name": "CPS07",
+		"admin_url": "admin-cps07.crm-alpha.com",
+		"cp_url": "secure-cps07.crm-alpha.com",
+		"IB_url": "ibportal-cps07.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-cps07.crm-alpha.com",
+		"app_service": "app-cps07.crm-alpha.com"
+	},
+	{
+		"name": "CPS08",
+		"admin_url": "admin-cps08.crm-alpha.com",
+		"cp_url": "secure-cps08.crm-alpha.com",
+		"IB_url": "ibportal-cps08.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-cps08.crm-alpha.com",
+		"app_service": "app-cps08.crm-alpha.com"
+	},
+	{
+		"name": "CPS09",
+		"admin_url": "admin-cps09.crm-alpha.com",
+		"cp_url": "secure-cps09.crm-alpha.com",
+		"IB_url": "ibportal-cps09.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-cps09.crm-alpha.com",
+		"app_service": "app-cps09.crm-alpha.com"
+	},
+	{
+		"name": "CPS10",
+		"admin_url": "admin-cps10.crm-alpha.com",
+		"cp_url": "secure-cps10.crm-alpha.com",
+		"IB_url": "ibportal-cps10.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-cps10.crm-alpha.com",
+		"app_service": "app-cps10.crm-alpha.com"
+	},
+	{
+		"name": "Camel",
+		"admin_url": "admin-camel.crm-alpha.com",
+		"cp_url": "secure-camel.crm-alpha.com",
+		"IB_url": "ibportal-camel.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-camel.crm-alpha.com",
+		"app_service": "app-camel.crm-alpha.com"
+	},
+	{
+		"name": "Deer",
+		"admin_url": "admin-deer.crm-alpha.com",
+		"cp_url": "secure-deer.crm-alpha.com",
+		"IB_url": "bportal-deer.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-deer.crm-alpha.com",
+		"app_service": "app-deer.crm-alpha.com"
+	},
+	{
+		"name": "Beaver",
+		"admin_url": "admin-beaver.crm-alpha.com",
+		"cp_url": "secure-beaver.crm-alpha.com",
+		"IB_url": "ibportal-beaver.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-beaver.crm-alpha.com",
+		"app_service": "app-beaver.crm-alpha.com"
+	},
+	{
+		"name": "Whale",
+		"admin_url": "admin-whale.crm-alpha.com",
+		"cp_url": "secure-whale.crm-alpha.com",
+		"IB_url": "ibportal-whale.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-whale.crm-alpha.com",
+		"app_service": "app-whale.crm-alpha.com"
+	},
+	{
+		"name": "Tiger",
+		"admin_url": "admin-tiger.crm-alpha.com",
+		"cp_url": "secure-tiger.crm-alpha.com",
+		"IB_url": "ibportal-tiger.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-tiger.crm-alpha.com",
+		"app_service": "app-tiger.crm-alpha.com"
+	},
+	{
+		"name": "Pumpkin",
+		"admin_url": "admin-pumpkin.crm-alpha.com",
+		"cp_url": "secure-pumpkin.crm-alpha.com",
+		"IB_url": "ibportal-pumpkin.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-pumpkin.crm-alpha.com",
+		"app_service": "app-pumpkin.crm-alpha.com"
+	},
+	{
+		"name": "Cauliflower",
+		"admin_url": "admin-cauliflower.crm-alpha.com",
+		"cp_url": "secure-cauliflower.crm-alpha.com",
+		"IB_url": "ibportal-cauliflower.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-cauliflower.crm-alpha.com",
+		"app_service": "app-cauliflower.crm-alpha.com"
+	},
+	{
+		"name": "Leek",
+		"admin_url": "admin-leek.crm-alpha.com",
+		"cp_url": "secure-leek.crm-alpha.com",
+		"IB_url": "ibportal-leek.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-leek.crm-alpha.com",
+		"app_service": "app-leek.crm-alpha.com"
+	},
+	{
+		"name": "Vangogh",
+		"admin_url": "admin-vangogh.crm-alpha.com",
+		"cp_url": "secure-vangogh.crm-alpha.com",
+		"IB_url": "ibportal-vangogh.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-vangogh.crm-alpha.com",
+		"app_service": "app-vangogh.crm-alpha.com"
+	},
+	{
+		"name": "Cezanne",
+		"admin_url": "admin-cezanne.crm-alpha.com",
+		"cp_url": "secure-cezanne.crm-alpha.com",
+		"IB_url": "ibportal-cezanne.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-cezanne.crm-alpha.com",
+		"app_service": "app-cezanne.crm-alpha.com"
+	},
+	{
+		"name": "Colorado",
+		"admin_url": "admin-colorado.crm-alpha.com",
+		"cp_url": "secure-colorado.crm-alpha.com",
+		"IB_url": "ibportal-colorado.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-colorado.crm-alpha.com",
+		"app_service": "app-colorado.crm-alpha.com"
+	},
+	{
+		"name": "Connecticut",
+		"admin_url": "admin-connecticut.crm-alpha.com",
+		"cp_url": "secure-connecticut.crm-alpha.com",
+		"IB_url": "ibportal-connecticut.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-connecticut.crm-alpha.com",
+		"app_service": "app-connecticut.crm-alpha.com"
+	},
+	{
+		"name": "Delaware",
+		"admin_url": "admin-delaware.crm-alpha.com",
+		"cp_url": "secure-delaware.crm-alpha.com",
+		"IB_url": "ibportal-delaware.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-delaware.crm-alpha.com",
+		"app_service": "app-delaware.crm-alpha.com"
+	},
+	{
+		"name": "Fulham",
+		"admin_url": "admin-fulham.crm-alpha.com",
+		"cp_url": "secure-fulham.crm-alpha.com",
+		"IB_url": "ibportal-fulham.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-fulham.crm-alpha.com",
+		"app_service": "app-fulham.crm-alpha.com"
+	},
+	{
+		"name": "Villa",
+		"admin_url": "admin-villa.crm-alpha.com",
+		"cp_url": "secure-villa.crm-alpha.com",
+		"IB_url": "ibportal-villa.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-villa.crm-alpha.com",
+		"app_service": "app-villa.crm-alpha.com"
+	},
+	{
+		"name": "Hermes",
+		"admin_url": "admin-hermes.crm-alpha.com",
+		"cp_url": "secure-hermes.crm-alpha.com",
+		"IB_url": "ibportal-hermes.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-hermes.crm-alpha.com",
+		"app_service": "app-hermes.crm-alpha.com"
+	},
+	{
+		"name": "Bvlgari",
+		"admin_url": "admin-bvlgari.crm-alpha.com",
+		"cp_url": "secure-bvlgari.crm-alpha.com",
+		"IB_url": "ibportal-bvlgari.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-bvlgari.crm-alpha.com",
+		"app_service": "app-bvlgari.crm-alpha.com"
+	},
+	{
+		"name": "Squirrel",
+		"admin_url": "admin-squirrel.crm-alpha.com",
+		"cp_url": "secure-squirrel.crm-alpha.com",
+		"IB_url": "ibportal-squirrel.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-squirrel.crm-alpha.com",
+		"app_service": "app-squirrel.crm-alpha.com"
+	},
+	{
+		"name": "VFX Prod",
+		"admin_url": "admin.vantagemarkets.com",
+		"cp_url": "secure.vantagemarkets.com",
+		"IB_url": "ibportal.vantagemarkets.com",
+        "ows_url": "ows.hytechc.com",
+		"openAPI_url": "openapi.vantagemarkets.com"
+	},
+	{
+		"name": "PUG Prod",
+		"admin_url": "admin.puprime.com",
+		"cp_url": "myaccount.puprime.com",
+		"IB_url": "ibportal.puprime.com",
+        "ows_url": "ows.hytechc.com",
+		"openAPI_url": "openapi.puprime.com"
+	},
+	{
+		"name": "VT Prod",
+		"admin_url": "admin.vtmarkets.com",
+		"cp_url": "myaccount.vtmarkets.com",
+		"IB_url": "ibportal.vtmarkets.com",
+        "ows_url": "ows.hytechc.com",
+		"openAPI_url": "openapi.vtmarkets.com"
+	},
+	{
+		"name": "Moneta Prod",
+		"admin_url": "admin.monetamarkets.com",
+		"cp_url": "myaccount.monetamarkets.com",
+		"IB_url": "NA",
+        "ows_url": "ows.hytechc.com",
+		"openAPI_url": "NA"
+	},
+	{
+		"name": "Moneta",
+		"admin_url": "admin-moneta.crm-alpha.com",
+		"cp_url": "secure-moneta.crm-alpha.com",
+		"IB_url": "ibportal-moneta.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-moneta.crm-alpha.com"
+	},
+	{
+		"name": "Moneta02",
+		"admin_url": "admin-moneta02.crm-alpha.com",
+		"cp_url": "secure-moneta02.crm-alpha.com",
+		"IB_url": "ibportal-moneta02.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-moneta02.crm-alpha.com"
+	},
+	{
+		"name": "Moneta03",
+		"admin_url": "admin-moneta03.crm-alpha.com",
+		"cp_url": "secure-moneta03.crm-alpha.com",
+		"IB_url": "ibportal-moneta03.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-moneta03.crm-alpha.com",
+		"app_service": "app-moneta03.crm-alpha.com"
+	},
+	{
+		"name": "Kcm Prod",
+		"admin_url": "admin.klimexcm.com",
+		"cp_url": "myaccount.klimexcm.com",
+		"IB_url": "",
+		"openAPI_url": ""
+	},
+	{
+		"name": "UM01",
+		"admin_url": "admin-um01.crm-alpha.com",
+		"cp_url": "secure-um01.crm-alpha.com",
+		"IB_url": "ibportal-um01.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-um01.crm-alpha.com",
+		"app_service": ""
+	},
+	{
+		"name": "UM02",
+		"admin_url": "admin-um02.crm-alpha.com",
+		"cp_url": "secure-um02.crm-alpha.com",
+		"IB_url": "ibportal-um02.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-um02.crm-alpha.com",
+		"app_service": ""
+	},
+	{
+		"name": "Prada",
+		"admin_url": "admin-prada.crm-alpha.com",
+		"cp_url": "secure-prada.crm-alpha.com",
+		"IB_url": "ibportal-prada.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-prada.crm-alpha.com",
+		"app_service": "app-prada.crm-alpha.com"
+	},
+	{
+		"name": "Chanel",
+		"admin_url": "admin-Chanel.crm-alpha.com",
+		"cp_url": "secure-Chanel.crm-alpha.com",
+		"IB_url": "ibportal-Chanel.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-Chanel.crm-alpha.com",
+		"app_service": "app-Chanel.crm-alpha.com"
+	},
+	{
+		"name": "Dior",
+		"admin_url": "admin-Dior.crm-alpha.com",
+		"cp_url": "secure-Dior.crm-alpha.com",
+		"IB_url": "ibportal-Dior.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-Dior.crm-alpha.com",
+		"app_service": "app-Dior.crm-alpha.com"
+	},
+	{
+		"name": "Core-UM",
+		"admin_url": "admin-core-um.crm-alpha.com",
+		"cp_url": "secure-core-um.crm-alpha.com",
+		"IB_url": "ibportal-core-um.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-core-um.crm-alpha.com",
+		"app_service": "app-core-um.crm-alpha.com"
+	},
+	{
+		"name": "Core-PU",
+		"admin_url": "admin-core-pu.crm-alpha.com",
+		"cp_url": "secure-core-pu.crm-alpha.com",
+		"IB_url": "ibportal-core-pu.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-core-pu.crm-alpha.com",
+		"app_service": "app-core-pu.crm-alpha.com"
+	},
+	{
+		"name": "Core-VT",
+		"admin_url": "admin-core-vt.crm-alpha.com",
+		"cp_url": "secure-core-vt.crm-alpha.com",
+		"IB_url": "ibportal-core-vt.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-core-vt.crm-alpha.com",
+		"app_service": "app-core-vt.crm-alpha.com"
+	},
+	{
+		"name": "Core-MO",
+		"admin_url": "admin-core-mo.crm-alpha.com",
+		"cp_url": "secure-core-mo.crm-alpha.com",
+		"IB_url": "ibportal-core-mo.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-core-mo.crm-alpha.com",
+		"app_service": "app-core-mo.crm-alpha.com"
+	},
+	{
+		"name": "Core-AU",
+		"admin_url": "admin-core-au.crm-alpha.com",
+		"cp_url": "secure-core-au.crm-alpha.com",
+		"IB_url": "ibportal-core-au.crm-alpha.com",
+        "DAP_url": "partner--test--au.bit-eks.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-core-au.crm-alpha.com",
+		"app_service": "app-core-au.crm-alpha.com"
+	},
+	{
+		"name": "Core-VDM",
+		"admin_url": "admin-core-vdm.crm-alpha.com",
+		"cp_url": "secure-core-vdm.crm-alpha.com",
+		"IB_url": "ibportal-core-vdm.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-core-vdm.crm-alpha.com",
+		"app_service": "app-core-vdm.crm-alpha.com"
+	},
+	{
+		"name": "Core-AT",
+		"admin_url": "admin-core-at.crm-alpha.com",
+		"cp_url": "secure-core-at.crm-alpha.com",
+		"IB_url": "ibportal-core-at.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-core-at.crm-alpha.com",
+		"app_service": "app-core-at.crm-alpha.com"
+	},
+	{
+		"name": "Core-RG",
+		"admin_url": "admin-core-rg.crm-alpha.com",
+		"cp_url": "secure-core-rg.crm-alpha.com",
+		"IB_url": "ibportal-core-rg.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-core-rg.crm-alpha.com",
+		"app_service": "app-core-rg.crm-alpha.com"
+	},
+		{
+		"name": "Core-STAR",
+		"admin_url": "admin-core-star.crm-alpha.com",
+		"cp_url": "secure-core-star.crm-alpha.com",
+		"IB_url": "ibportal-core-star.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-core-star.crm-alpha.com",
+		"app_service": "app-core-star.crm-alpha.com"
+	},
+	{
+		"name": "Core-VJP",
+		"admin_url": "admin-core-vjp.crm-alpha.com",
+		"cp_url": "secure-core-vjp.crm-alpha.com",
+		"IB_url": "ibportal-core-vjp.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-core-vjp.crm-alpha.com",
+		"app_service": "app-core-vjp.crm-alpha.com"
+	},
+	{
+		"name": "Core-marketo-01",
+		"admin_url": "admin-core-marketo-01.crm-alpha.com",
+		"cp_url": "secure-core-marketo-01.crm-alpha.com",
+		"IB_url": "ibportal-core-marketo-01.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-core-marketo-01.crm-alpha.com",
+		"app_service": "app-core-marketo-01.crm-alpha.com"
+	},
+	{
+		"name": "Core-marketo-02",
+		"admin_url": "admin-core-marketo-02.crm-alpha.com",
+		"cp_url": "secure-core-marketo-02.crm-alpha.com",
+		"IB_url": "ibportal-core-marketo-02.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-core-marketo-02.crm-alpha.com",
+		"app_service": "app-core-marketo-02.crm-alpha.com"
+	},
+	{
+		"name": "Core-marketo-03",
+		"admin_url": "admin-core-marketo-03.crm-alpha.com",
+		"cp_url": "secure-core-marketo-03.crm-alpha.com",
+		"IB_url": "ibportal-core-marketo-03.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-core-marketo-03.crm-alpha.com",
+		"app_service": "app-core-marketo-03.crm-alpha.com"
+	},
+	{
+		"name": "APP01",
+		"admin_url": "admin-app01.crm-alpha.com",
+		"cp_url": "secure-app01.crm-alpha.com",
+		"IB_url": "ibportal-app01.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-app01.crm-alpha.com",
+		"app_service": "app-app01.crm-alpha.com"
+	},
+	{
+		"name": "APP02",
+		"admin_url": "admin-app02.crm-alpha.com",
+		"cp_url": "secure-app02.crm-alpha.com",
+		"IB_url": "ibportal-app02.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-app02.crm-alpha.com",
+		"app_service": "app-app02.crm-alpha.com"
+	},
+	{
+		"name": "APP03",
+		"admin_url": "admin-app03.crm-alpha.com",
+		"cp_url": "secure-app03.crm-alpha.com",
+		"IB_url": "ibportal-app03.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-app03.crm-alpha.com",
+		"app_service": "app-app03.crm-alpha.com"
+	},
+	{
+		"name": "APP04",
+		"admin_url": "admin-app04.crm-alpha.com",
+		"cp_url": "secure-app04.crm-alpha.com",
+		"IB_url": "ibportal-app04.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-app04.crm-alpha.com",
+		"app_service": "app-app04.crm-alpha.com"
+	},
+	{
+		"name": "APP05",
+		"admin_url": "admin-app05.crm-alpha.com",
+		"cp_url": "secure-app05.crm-alpha.com",
+		"IB_url": "ibportal-app05.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-app05.crm-alpha.com",
+		"app_service": "app-app05.crm-alpha.com"
+	},
+	{
+		"name": "APP06",
+		"admin_url": "admin-app06.crm-alpha.com",
+		"cp_url": "secure-app06.crm-alpha.com",
+		"IB_url": "ibportal-app06.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-app06.crm-alpha.com",
+		"app_service": "app-app06.crm-alpha.com"
+	},
+	{
+		"name": "APP07",
+		"admin_url": "admin-app07.crm-alpha.com",
+		"cp_url": "secure-app07.crm-alpha.com",
+		"IB_url": "ibportal-app07.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-app07.crm-alpha.com",
+		"app_service": "app-app07.crm-alpha.com"
+	},
+	{
+		"name": "APP08",
+		"admin_url": "admin-app08.crm-alpha.com",
+		"cp_url": "secure-app08.crm-alpha.com",
+		"IB_url": "ibportal-app08.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-app08.crm-alpha.com",
+		"app_service": "app-app08.crm-alpha.com"
+	},
+	{
+		"name": "Sheep",
+		"admin_url": "admin-sheep.crm-alpha.com",
+		"cp_url": "secure-sheep.crm-alpha.com",
+		"IB_url": "ibportal-sheep.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-sheep.crm-alpha.com",
+		"app_service": "app-sheep.crm-alpha.com"
+	},
+	{
+		"name": "Jaguar",
+		"admin_url": "admin-jaguar.crm-alpha.com",
+		"cp_url": "secure-jaguar.crm-alpha.com",
+		"IB_url": "ibportal-jaguar.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-jaguar.crm-alpha.com",
+		"app_service": "app-jaguar.crm-alpha.com"
+	},
+	{
+		"name": "Monkey",
+		"admin_url": "admin-monkey.crm-alpha.com",
+		"cp_url": "secure-monkey.crm-alpha.com",
+		"IB_url": "ibportal-monkey.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-monkey.crm-alpha.com",
+		"app_service": "app-monkey.crm-alpha.com"
+	},
+	{
+		"name": "Data01",
+		"admin_url": "admin-data01.crm-alpha.com",
+		"cp_url": "secure-data01.crm-alpha.com",
+		"IB_url": "ibportal-data01.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-data01.crm-alpha.com",
+		"app_service": "app-data01.crm-alpha.com"
+	},
+	{
+		"name": "Data02",
+		"admin_url": "admin-data02.crm-alpha.com",
+		"cp_url": "secure-data02.crm-alpha.com",
+		"IB_url": "ibportal-data02.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-data02.crm-alpha.com",
+		"app_service": "app-data02.crm-alpha.com"
+	},
+	{
+		"name": "Data03",
+		"admin_url": "admin-data03.crm-alpha.com",
+		"cp_url": "secure-data03.crm-alpha.com",
+		"IB_url": "ibportal-data03.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-data03.crm-alpha.com",
+		"app_service": "app-data03.crm-alpha.com"
+	},
+	{
+		"name": "All01",
+		"admin_url": "admin-all01.crm-alpha.com",
+		"cp_url": "secure-all01.crm-alpha.com",
+		"IB_url": "ibportal-all01.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-all01.crm-alpha.com",
+		"app_service": "app-all01.crm-alpha.com"
+	},
+	{
+		"name": "All02",
+		"admin_url": "admin-all02.crm-alpha.com",
+		"cp_url": "secure-all02.crm-alpha.com",
+		"IB_url": "ibportal-all02.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-all02.crm-alpha.com",
+		"app_service": "app-all02.crm-alpha.com"
+	},
+	{
+		"name": "All03",
+		"admin_url": "admin-all03.crm-alpha.com",
+		"cp_url": "secure-all03.crm-alpha.com",
+		"IB_url": "ibportal-all03.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-all03.crm-alpha.com",
+		"app_service": "app-all03.crm-alpha.com"
+	},
+	{
+		"name": "All04",
+		"admin_url": "admin-all04.crm-alpha.com",
+		"cp_url": "secure-all04.crm-alpha.com",
+		"IB_url": "ibportal-all04.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-all04.crm-alpha.com",
+		"app_service": "app-all04.crm-alpha.com"
+	},
+	{
+		"name": "All05",
+		"admin_url": "admin-all05.crm-alpha.com",
+		"cp_url": "secure-all05.crm-alpha.com",
+		"IB_url": "ibportal-all05.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-all05.crm-alpha.com",
+		"app_service": "app-all05.crm-alpha.com"
+	},
+	{
+		"name": "All06",
+		"admin_url": "admin-all06.crm-alpha.com",
+		"cp_url": "secure-all06.crm-alpha.com",
+		"IB_url": "ibportal-all06.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-all06.crm-alpha.com",
+		"app_service": "app-all06.crm-alpha.com"
+	},
+	{
+		"name": "All07",
+		"admin_url": "admin-all07.crm-alpha.com",
+		"cp_url": "secure-all07.crm-alpha.com",
+		"IB_url": "ibportal-all07.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-all07.crm-alpha.com",
+		"app_service": "app-all07.crm-alpha.com"
+	},
+	{
+		"name": "All08",
+		"admin_url": "admin-all08.crm-alpha.com",
+		"cp_url": "secure-all08.crm-alpha.com",
+		"IB_url": "ibportal-all08.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-all08.crm-alpha.com",
+		"app_service": "app-all08.crm-alpha.com"
+	},
+	{
+		"name": "TW01",
+		"admin_url": "admin-TW01.crm-alpha.com",
+		"cp_url": "secure-TW01.crm-alpha.com",
+		"IB_url": "ibportal-TW01.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-TW01.crm-alpha.com",
+		"app_service": "app-TW01.crm-alpha.com"
+	},
+	{
+		"name": "TW02",
+		"admin_url": "admin-TW02.crm-alpha.com",
+		"cp_url": "secure-TW02.crm-alpha.com",
+		"IB_url": "ibportal-TW02.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-TW02.crm-alpha.com",
+		"app_service": "app-TW02.crm-alpha.com"
+	},
+	{
+		"name": "TW03",
+		"admin_url": "admin-TW03.crm-alpha.com",
+		"cp_url": "secure-TW03.crm-alpha.com",
+		"IB_url": "ibportal-TW03.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-TW03.crm-alpha.com",
+		"app_service": "app-TW03.crm-alpha.com"
+	},
+	{
+		"name": "TW04",
+		"admin_url": "admin-TW04.crm-alpha.com",
+		"cp_url": "secure-TW04.crm-alpha.com",
+		"IB_url": "ibportal-TW04.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-TW04.crm-alpha.com",
+		"app_service": "app-TW04.crm-alpha.com"
+	},
+	{
+		"name": "TW05",
+		"admin_url": "admin-TW05.crm-alpha.com",
+		"cp_url": "secure-TW05.crm-alpha.com",
+		"IB_url": "ibportal-TW05.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-TW05.crm-alpha.com",
+		"app_service": "app-TW05.crm-alpha.com"
+	},
+	{
+		"name": "Bluebird",
+		"admin_url": "admin-bluebird.crm-alpha.com",
+		"cp_url": "secure-bluebird.crm-alpha.com",
+		"IB_url": "ibportal-bluebird.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-bluebird.crm-alpha.com",
+		"app_service": "app-bluebird.crm-alpha.com"
+	},
+	{
+		"name": "Duck",
+		"admin_url": "admin-duck.crm-alpha.com",
+		"cp_url": "secure-duck.crm-alpha.com",
+		"IB_url": "ibportal-duck.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-duck.crm-alpha.com",
+		"app_service": "app-duck.crm-alpha.com"
+	},
+	{
+		"name": "Parrot",
+		"admin_url": "admin-parrot.crm-alpha.com",
+		"cp_url": "secure-parrot.crm-alpha.com",
+		"IB_url": "ibportal-parrot.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-parrot.crm-alpha.com",
+		"app_service": "app-parrot.crm-alpha.com"
+	},
+	{
+		"name": "Swan",
+		"admin_url": "admin-swan.crm-alpha.com",
+		"cp_url": "secure-swan.crm-alpha.com",
+		"IB_url": "ibportal-swan.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-swan.crm-alpha.com",
+		"app_service": "app-swan.crm-alpha.com"
+	},
+	{
+		"name": "Lettuce",
+		"admin_url": "admin-lettuce.crm-alpha.com",
+		"cp_url": "secure-lettuce.crm-alpha.com",
+		"IB_url": "ibportal-lettuce.crm-alpha.com",
+        "ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-lettuce.crm-alpha.com",
+		"app_service": "app-lettuce.crm-alpha.com"
+	},
+    {
+      "name": "UAT",
+      "ows_url": "ows.pc-pub.bit-beta.com"
+    },
+	{
+		"name": "UAT-AU",
+		"admin_url": "admin.pc-au.bit-beta.com",
+		"cp_url": "secure.pc-au.bit-beta.com",
+		"IB_url": "ibportal.pc-au.bit-beta.com",
+        "DAP_url": "partner--au-uat--au.eks.bit-beta.com",
+        "ows_url": "ows.pc-pub.bit-beta.com",
+		"openAPI_url": "openapi.pc-au.bit-beta.com",
+		"app_service": "app.pc-au.bit-beta.com"
+	},
+	{
+		"name": "UAT-PUG",
+		"admin_url": "admin.pc-pug.bit-beta.com",
+		"cp_url": "secure.pc-pug.bit-beta.com",
+		"IB_url": "ibportal.pc-pug.bit-beta.com",
+        "ows_url": "ows.pc-pub.bit-beta.com",
+		"openAPI_url": "openapi.pc-pug.bit-beta.com",
+		"app_service": "app.pc-pug.bit-beta.com"
+	},
+	{
+		"name": "UAT-VT",
+		"admin_url": "admin.pc-vt.bit-beta.com",
+		"cp_url": "myaccount.pc-vt.bit-beta.com",
+		"IB_url": "ibportal.pc-vt.bit-beta.com",
+        "ows_url": "ows.pc-pub.bit-beta.com",
+		"openAPI_url": "openapi.pc-vt.bit-beta.com",
+		"app_service": "app.pc-vt.bit-beta.com"
+	},
+	{
+		"name": "UAT-STAR",
+		"admin_url": "admin.pc-star.bit-beta.com",
+		"cp_url": "myaccount.pc-star.bit-beta.com",
+		"IB_url": "ibportal.pc-star.bit-beta.com",
+        "ows_url": "ows.pc-pub.bit-beta.com",
+		"openAPI_url": "openapi.pc-star.bit-beta.com",
+		"app_service": "app.pc-star.bit-beta.com"
+	},
+	{
+		"name": "UAT-VJP",
+		"admin_url": "admin.pc-vjp.bit-beta.com",
+		"cp_url": "myaccount.pc-vjp.bit-beta.com",
+		"IB_url": "ibportal.pc-vjp.bit-beta.com",
+        "ows_url": "ows.pc-pub.bit-beta.com",
+		"openAPI_url": "openapi.pc-vjp.bit-beta.com",
+		"app_service": "app.pc-vjp.bit-beta.com"
+	},
+	{
+		"name": "UAT-MO",
+		"admin_url": "admin.pc-moneta.bit-beta.com",
+		"cp_url": "secure.pc-moneta.bit-beta.com",
+		"IB_url": "ibportal.pc-moneta.bit-beta.com",
+        "ows_url": "ows.pc-pub.bit-beta.com",
+		"openAPI_url": "openapi.pc-moneta.bit-beta.com",
+		"app_service": "app.pc-moneta.bit-beta.com"
+	},
+	{
+		"name": "UAT-UM",
+		"admin_url": "admin.pc-um.bit-beta.com",
+		"cp_url": "secure.pc-um.bit-beta.com",
+		"IB_url": "ibportal.pc-um.bit-beta.com",
+        "ows_url": "ows.pc-pub.bit-beta.com",
+		"openAPI_url": "openapi.pc-um.bit-beta.com",
+		"app_service": "app.pc-um.bit-beta.com"
+	},
+	{
+		"name": "Athena",
+		"admin_url": "admin-athena.crm-alpha.com",
+		"cp_url": "secure-athena.crm-alpha.com",
+		"IB_url": "ibportal-athena.crm-alpha.com",
+		"ows_url": "ows.crm-alpha.com",
+		"openAPI_url": "openapi-athena.crm-alpha.com",
+		"app_service": "app-new-athena.crm-alpha.com"
+	}
+]

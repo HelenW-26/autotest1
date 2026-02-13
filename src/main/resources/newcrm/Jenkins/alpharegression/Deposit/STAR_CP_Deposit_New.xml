@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Star CP Deposit Test Suite New">
+
+    <listeners>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+    <parameter name="Brand" value="Star"></parameter>
+    <parameter name="TestEnv" value="alpha"></parameter>
+    <parameter name="Regulator" value="svg"></parameter>
+    <parameter name="TraderURL" value="${TraderURL}"></parameter>
+    <parameter name="TraderName" value="autotestmalay@testcrmautomation.com"></parameter>
+    <parameter name="TraderPass" value="1234Qwer!"></parameter>
+    <parameter name="OpenAPIURL" value="https://openapi-core-star.crm-alpha.com"></parameter>
+    <parameter name="headless" value="true"></parameter>
+
+    <!-- Batch 1 -->
+    <test name="Star Credit Card CP Deposit ">
+        <parameter name="TraderName" value="testcrm_donttouch_cpscreditcard@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testBridgePayNew"></include>
+                    <!-- 2nd deposit page missing -->
+                    <!--<include name="testCCGoogleApplePayNew"></include>-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="STAR Laos CP Deposit">
+        <parameter name="TraderName" value="laoshwtestcrm@mailinator.com"></parameter>
+        <parameter name="TraderPass" value="123Qwe@@"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsLaosBT_ThunderXpay_Lak_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="STAR Belgium CP Deposit">
+        <parameter name="TraderName" value="testbanxaeur@mailinator.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsBanxa_New"></include>
+                    <include name="testEuroSpaIBTPayNew"></include>
+                    <include name="testBridgePayNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!--   <test name="STAR Indonesia CP Deposit">
+        <parameter name="TraderName" value="indonesiadepsoithw@mailinator.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    &lt;!&ndash; No redirection after submit payment &ndash;&gt;
+                    <include name="testWowsPay_QR_Gopay_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+    <!--    <test name="STAR Thailand CP Deposit">
+            <parameter name="TraderName" value="thailanddepsoithw@mailinator.com"></parameter>
+            <classes>
+                <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                    <methods>
+                        &lt;!&ndash; 2nd deposit page missing &ndash;&gt;
+                        <include name="cpsThailandBT_XpayNew"></include>
+                        &lt;!&ndash; 2nd deposit page missing https://suntontech.atlassian.net/browse/PWR-4257 &ndash;&gt;
+                        <include name="cpsCroinPlus_New"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>-->
+    <!--    <test name="STAR Brazil CP Deposit">
+            <parameter name="TraderName" value="brazildepsoithw@mailinator.com"></parameter>
+            <classes>
+                <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                    <methods>
+                        &lt;!&ndash; 2nd deposit page missing &ndash;&gt;
+                        <include name="cpsBrazilBTPagsmileNew"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>-->
+    <!--    <test name="STAR Mexico CP Deposit">
+            <parameter name="TraderName" value="testcrm_donttouch_cpsmexicoclient@test.com"></parameter>
+            <parameter name="TraderPass" value="123Qwe@@"></parameter>
+            <classes>
+                <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                    <methods>
+                        &lt;!&ndash; 2nd deposit page missing &ndash;&gt;
+                        <include name="cpsMexicoBTPagsmile_MXN"></include>
+                    </methods>
+                </class>
+            </classes>
+        </test>-->
+    <!-- <test name="STAR Japan CP Deposit">
+         <parameter name="TraderName" value="testcrm_donttouch_cpsjapanclient@test.com"></parameter>
+         <parameter name="TraderPass" value="123Qwe@@"></parameter>
+         <classes>
+             <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                 <methods>
+                     &lt;!&ndash; 2nd deposit page missing &ndash;&gt;
+                     <include name="cpsJapanBTTheJapanOne_New"></include>
+                     &lt;!&ndash; Transaction history name mismatch &ndash;&gt;
+                     <include name="cpsBitwallet_New"></include>
+                 </methods>
+             </class>
+         </classes>
+     </test>-->
+    <!-- Batch 2 -->
+    <test name="Star India CP Deposit">
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testInterBankTransPayNew"></include>
+                    <include name="testSticPayNew"></include>
+                    <include name="testCryptoBITNew"></include>
+                    <include name="testCryptoERCNew"></include>
+                    <!-- Missing channel -->
+                    <!--<include name="testCryptoTRCNew"></include>-->
+                    <include name="testCryptoUSDCERCNew"></include>
+                    <include name="testDepositCryptoBEPNew"></include>
+                    <include name="testDepositCryptoETHNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!-- Error 500 -->
+    <!--<test name="Star Credit Card Multiexc CP Deposit ">
+        <parameter name="TraderName" value="testsumsubjessthirtyfortynine@re-gister.com"></parameter>
+        <parameter name="TraderPass" value="Test1234@!"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testMultiexcNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+    <test name="STAR Vietnam CP Deposit">
+        <parameter name="TraderName" value="vietnamdepsoithw@mailinator.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testWowsPay_QR_VND_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!--Wait ticket resolve https://suntontech.atlassian.net/browse/PWR-4567
+    <test name="STAR Malaysia CP Deposit">
+        <parameter name="TraderName" value="malaysiadepsoithw@mailinator.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="cpsMalaysiaXPAY_MYR_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+    <test name="STAR China CP Deposit">
+        <parameter name="TraderName" value="pdlcmplw904@appapiautotest.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <!-- 2nd deposit page missing -->
+                    <!--<include name="cpsUnionPay_ChipPayNew"></include>-->
+<!--                    <include name="cpsUnionPay_ChinapayNew"></include>-->
+                    <!-- Error 500 -->
+                    <!--<include name="cpsUnionPay_TeleportNew"></include>-->
+                    <!-- 2nd deposit page missing -->
+                    <!--<include name="cpsUnionPay_DynamicPayNew"></include>-->
+<!--                    <include name="cpsUnionPay_MpayNew"></include>-->
+                    <!-- Error 500 -->
+                    <!--<include name="cpsUnionPay_MyPayNew"></include>-->
+<!--                    <include name="cpsUnionPay_PasstopayNew"></include>-->
+                    <!-- Transaction history name mismatch -->
+                    <!--<include name="cpsUnionPay_Toppay2New"></include>-->
+                    <!-- Error 500 -->
+                    <!--<include name="cpsUnionPay_uEnjoyNew"></include>-->
+                    <include name="cpsAlipayBT_ChipPayNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Missing channel -->
+<!--    <test name="STAR Nigeria CP Deposit">
+        <parameter name="TraderName" value="testcrmwmgffpgnq@testcrm.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.DepositTestCases">
+                <methods>
+                    <include name="testBitolo_NGN_MM_New"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+    <!-- Test -->
+</suite> <!-- Suite -->

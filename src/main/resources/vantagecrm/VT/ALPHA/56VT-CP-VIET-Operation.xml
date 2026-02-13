@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Client Portal Test Suite VT" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<parameter name="Brand" value="vt"></parameter>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+    <parameter name="AdminURL" value="https://admin2.test-vtmarkets.com/"></parameter>
+  	<parameter name="AdminName" value="alexliu"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="https://secure2.test-vtmarkets.com/"></parameter>
+   	<parameter name="TraderName" value="webuuc@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>
+  	
+    <parameter name="VietAccount" value="webuuc@test.com"></parameter>
+ 	<parameter name="VietPwd" value="123Qwe"></parameter>
+  	
+ 	
+ 
+	  <test name="Client Portal Test VT Zotapay Deposit">
+    
+  	 
+    <classes>
+    
+   	   	  <class name="vantagecrm.UpdateClient">
+   	  	<methods>
+   	  		<include name="AdminLogIn"></include>
+   	  		<include name="setCountry2Viet"></include>
+   	  	</methods>
+   	  
+   	  </class>
+    
+	   <class name="vantagecrm.CPDeposit">
+	     	<methods>
+	     		<include name="CPLogIn"></include>
+	     		<include name="VietnamDeposit"></include>
+	     	    <include name="VietnamXpay"></include>
+	     	</methods>    
+	     
+	     </class>
+     	
+        <class name="vantagecrm.TaskManagement">
+      
+      		<methods>
+	      		<include name="AdminLogIn"></include>  	 
+            	 <include name="OLDepositAuditViet"></include>            	     
+       		</methods>
+        </class>
+                 
+    </classes>
+  </test> 
+   <test name="Client Portal Test VT Xpay Deposit">
+    
+  	 
+    <classes>
+    
+	   <class name="vantagecrm.CPDeposit">
+	     	<methods>
+	     		<include name="CPLogIn"></include>
+	     	    <include name="VietnamXpay"></include>
+	     	</methods>    
+	     
+	     </class>
+     	
+        <class name="vantagecrm.TaskManagement">
+      
+      		<methods>
+	      		<include name="AdminLogIn"></include>  	 
+            	 <include name="OLDepositAuditViet"></include>            	     
+       		</methods>
+        </class>
+                 
+    </classes>
+  </test> 
+    <test name="Client Portal Test VT Withdraw">
+    
+  	 
+    <classes>
+    
+       <class name="vantagecrm.CPWithdraw">
+     		<methods>
+	     		<include name="CPLogIn"></include>
+	     		<include name="WithdrawVietnamBank"></include>
+     		</methods> 
+     
+       </class>
+     
+       <class name="vantagecrm.TaskManagement">	      
+	      		<methods>
+		      	  <include name="AdminLogIn"></include>  	 
+	              <include name="WDAuditViet"></include>  
+	              <include name="WDAuditCompleteViet"></include>   	                       	     
+	       		</methods>
+	   </class>
+     
+    </classes>
+  </test> <!-- Test -->
+  
+ 
+</suite> <!-- Suite -->

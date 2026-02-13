@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="alpha Regression" configfailurepolicy="continue">
+
+	<listeners>
+	     <listener class-name="utils.Listeners.CustomListener"/>
+	</listeners>
+	<parameter name="Brand" value="${Brand}"></parameter>
+	<parameter name="TestEnv" value="ALPHA"></parameter>
+    <parameter name="Regulator" value="${Regulator}"></parameter>
+    <parameter name="AdminURL" value="${AdminURL}"></parameter>
+    <parameter name="AdminName" value="cmatest"></parameter>
+    <parameter name="AdminPass" value="123Qwe"></parameter>
+    <parameter name="Account" 	value="${Account}"></parameter>
+    <parameter name="Adjustment" value="${Amount}"></parameter>
+    <parameter name="Type" 		value="1"></parameter>
+    <parameter name="Currency" value="${Currency}"></parameter>
+    <test name="Cash_adjustment">
+        <classes>
+            <class name="newcrm.testcases.admintestcases.AdminAPITests">
+                <methods>
+                    <include name="apiCashAdjustment"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite><!-- Suite -->

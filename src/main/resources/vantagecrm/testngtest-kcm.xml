@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="CrmSuite" configfailurepolicy="continue">
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	<parameter name="testEnv" value="test"></parameter>
+	
+  <test name="CrmTest">
+    <parameter name="Brand" value="kcm"></parameter>
+  	<parameter name="TestEnv" value="test"></parameter>
+    <parameter name="AdminURL" value="http://192.168.16.52:8001/admin/main"></parameter>
+  	<parameter name="AdminName" value="Crm team"></parameter>
+  	<parameter name="AdminPass" value="Crmteam123"></parameter>
+  	<parameter name="TraderURL" value="http://192.168.16.52:8002"></parameter>
+  	<parameter name="TraderName" value="webpze@test.com"></parameter>
+  	<!--  <parameter name="TraderName" value="webomh@test.com"></parameter>-->
+  	<!-- <parameter name="TraderName" value="ibtestowv@test.com"></parameter>   -->
+  	<parameter name="TraderPass" value="123Qwe"></parameter> 
+  	
+  	<parameter name="ThaiAccount" value="webauu@test.com"></parameter>
+ 	<parameter name="ThaiPwd" value="123Qwe"></parameter>
+ 	  	
+ 	<parameter name="MalayAccount" value="webpze@test.com"></parameter>
+ 	<parameter name="MalayPwd" value="123Qwe"></parameter>
+
+  	<parameter name="VietAccount" value="weblmx@test.com"></parameter>
+ 	<parameter name="VietPwd" value="123Qwe"></parameter>
+  	
+  	<parameter name="NigeAccount" value="webfif@test.com"></parameter>
+ 	<parameter name="NigePwd" value="123Qwe"></parameter>
+ 
+    <classes>
+
+ 	 
+      <class name="vantagecrm.UserManagement">
+      
+      	<parameter name="WebSiteURL" value="https://new.vantagefx.com/forex-trading/forex-trading-account/"></parameter>
+      	<parameter name="RegisterURL" value="http://192.168.16.52:8002"></parameter>
+      	
+      	<methods>
+
+	
+
+      		<include name="AdminLogIn"></include>	
+     		<include name="AddClient"></include> 
+     		
+<!-- 
+	
+   			<include name="RegisterLead"></include>
+   			<include name="RegisterDemo"></include>    
+      		<include name="RegisterUser"></include>      	
+
+      		<include name="AddIB"></include> 
+
+      		<include name="DeleteIB"></include>  
+
+       	 	<include name="AddIUser"></include>       		
+      		<include name="AddLeads"></include>	    		
+ -->
+    	</methods>
+       </class>   
+
+  <!--
+ 
+ 	  <class name="vantagecrm.TraderDeposit">  	  
+
+ 		<methods>
+ 			<include name="TraderLogIn"></include>
+ 			<include name="CCDeposit"></include>
+ 			<include name="I18NDeposit"></include>
+ 			<include name="AuBankDeposit"></include>
+ 			<include name="BPayDeposit"></include>
+ 		    <include name="SkrillDeposit"></include>
+			<include name="NetellerDeposit"></include>	
+			<include name="UnionPayDeposit"></include>
+			<include name="UnionPayP2PDeposit"></include>			
+			<include name="ThailandDeposit"></include>
+			<include name="MalaysiaDeposit"></include>	
+			<include name="NigeriaDeposit"></include>
+			<include name="VietnamDeposit"></include>
+		</methods> 	  	
+ 
+	   </class>
+	 -->    
+	
+<!-- 
+      <class name="vantagecrm.TraderWithdraw">
+      	<methods>
+      	
+           	<include name="TraderLogIn"></include>   	 
+      		<include name="WithdrawAUBank"></include> 
+      		<include name="WithdrawI18NBank"></include>   
+      		<include name="WithdrawChinaBank"></include> 
+      		<include name="WithdrawCC"></include>  
+       		<include name="WithdrawSkrNet"></include>  
+       		<include name="WithdrawUnionPay"></include>         		
+
+       		<include name="WithdrawThaiBank"></include> 
+       		<include name="WithdrawMalayBank"></include>   	  	       	
+
+       	</methods>
+       </class>   
+ -->
+<!-- 
+       <class name="vantagecrm.TraderMyAccount">
+       		<methods>
+       			<parameter name="OldPwd" value="123Qwe"></parameter>
+       			<parameter name="NewPwd" value="1234Qwe"></parameter>
+       			
+       			<include name="TraderLogIn"></include>
+       			<include name="RequestAddiAccount"></include>
+       			<include name="TransferFund"></include>   
+    			<include name="ChangePWD"></include> 	
+       			<include name="ChangeMT4Pwd"></include>		
+       			<include name="ResetMT4Pwd"></include>
+       		</methods>       
+       
+       </class>
+       
+               <class name="vantagecrm.TaskManagement">
+      
+      	<methods>
+      		<include name="AdminLogIn"></include>
+      		<include name="WithdrawlAudit"></include>
+      		
+      		<!--       		
+      		<include name="AccountAudit"></include> 
+        	<include name="OfflineDepositAudit"></include>   	
+        	<include name="OnlineDepositAudit"></include>	
+      		-->
+      	</methods>
+      </class>  
+ -->
+ 
+ 
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

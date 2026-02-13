@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Client Portal Test Suite KY" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+  
+    <parameter name="Brand" value="vt"></parameter>
+  	<parameter name="TestEnv" value="test"></parameter>
+    <parameter name="AdminURL" value="http://192.168.66.109:8001/"></parameter>
+  	<parameter name="AdminName" value="Test CRM"></parameter>
+  	<parameter name="AdminPass" value="Vantagefx123"></parameter>
+  	<parameter name="TraderURL" value="http://cp.vt.com"></parameter>
+   	<parameter name="TraderName" value="webmzm@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+  <test name="Client Portal KY LogIn Page - Test Links">
+
+    <classes>
+     	  
+		<class name="vantagecrm.CPLogInPage">
+		
+		  <methods>
+		    <include name="testAllLinks"></include>
+      	  </methods>
+     	  
+		</class>   
+    </classes>
+  </test>  
+
+<test name="Client Portal Reset Passoword">
+
+    <classes>
+     	  
+		<class name="vantagecrm.CPLogInPage">
+		
+		  <methods>
+		    <include name="CPLogIn"></include>
+	   		<include name="testResetPWLink"></include>
+     		<include name="testResetMTXPWLink"></include> 
+     	  </methods>
+     	  
+		</class>   
+    </classes>
+  </test> 
+  
+ 
+</suite> <!-- Suite -->

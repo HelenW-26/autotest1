@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU Test Suite" configfailurepolicy="continue">
+
+<!--  <listeners>
+    <listener class-name="utils.Listeners.TestListener" />
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners> -->
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	<parameter name="testEnv" value="test"></parameter>
+	
+  <test name="PUGRegressionTest">
+<parameter name="Brand" value="pug"></parameter>
+  	<parameter name="TestEnv" value="test"></parameter>
+    <parameter name="AdminURL" value="https://admin.test-puprime.com/login/to_login"></parameter>
+  	<parameter name="AdminName" value="alexliu"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="https://secure.test-puprime.com"></parameter>
+    <parameter name="TraderName" value="webvok@tmail.t-com.sk"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter> 
+ 
+
+       <classes>
+
+   
+		<class name="vantagecrm.UpdateInternalUser">  
+			<methods>
+				<include name="AdminLogIn"></include>
+				<include name="updateIUser"></include>
+				<include name="addCCode"></include>
+				<include name="updateCCode"></include>
+				<include name="delCCode"></include>
+				<include name="deleteIUser"></include> 		
+			
+			</methods> 
+		</class>
+		
+			<class name="vantagecrm.UpdateLead">
+			<methods>
+				<include name="AdminLogIn"></include>
+				<include name="updateLeadGeneral"></include>	
+			
+			</methods>
+		
+		</class>
+	 
+ 		<class name="vantagecrm.SystemSetting">
+ 			<methods>
+ 				<include name="AdminLogIn"></include>
+ 				<include name="AddRole"></include> 
+ 				<include name="UpdateRole"></include>
+ 			 	<include name="ChangePermission"></include>
+ 				<include name="DeleteRole"></include>
+ 				<include name="OrganizationManagement"></include>
+ 				<include name="AddPromotionSetting"></include>
+				<include name="EditPromotionSetting"></include>
+				<include name="DelPromotionSetting"></include>
+			    <include name="RoleKeysVerification"></include>
+ 			</methods>
+ 		
+ 		</class>
+ 			
+	 	
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

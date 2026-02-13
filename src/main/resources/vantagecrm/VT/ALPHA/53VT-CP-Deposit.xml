@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Client Portal Test Suite KY" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+	<parameter name="Brand" value="vt"></parameter>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+    <parameter name="AdminURL" value="https://admin2.test-vtmarkets.com/"></parameter>
+  	<parameter name="AdminName" value="alexliu"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="https://secure2.test-vtmarkets.com/"></parameter>
+   	 <parameter name="TraderName" value="webuuc@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>
+
+  	<parameter name="ThaiAccount" value="webuuc@test.com"></parameter>
+ 	<parameter name="ThaiPwd" value="123Qwe"></parameter>
+
+ 	<parameter name="MalayAccount" value="webuuc@test.com"></parameter>
+ 	<parameter name="MalayPwd" value="123Qwe"></parameter>
+
+    <parameter name="VietAccount" value="webuuc@test.com"></parameter>
+ 	<parameter name="VietPwd" value="123Qwe"></parameter>
+
+  	<parameter name="NigeAccount" value="webuuc@test.com"></parameter>
+ 	<parameter name="NigePwd" value="123Qwe"></parameter>
+
+  <test name="Client Portal Test VT">
+
+    <classes>
+
+
+   	   <class name="vantagecrm.CPDeposit">
+     	<methods>
+     		<include name="CPLogIn"></include>
+      		<include name="CCNABDepositExistingCard"></include>
+    		<include name="CCNABDepositNewCard"></include> 
+			<include name="CCGenericDeposit"></include>
+     	 	<include name="I18NDeposit"></include>
+      		<include name="SkrillDeposit"></include>
+     		<include name="NetellerDeposit"></include> 
+			<include name="UnionPayDeposit"></include>
+     		<include name="FasapayDeposit"></include>
+			<include name="MobilepayDeposit"></include> 
+			<include name="UnionPayP2PDeposit"></include> 
+       		<include name="BitCoinDeposit"></include>
+       		<include name="UsdtDeposit"></include> 
+       		<include name="ERC20Deposit"></include>
+	 		<include name="InteracDeposit"></include>
+
+     	</methods>
+
+     </class>
+    <class name="vantagecrm.TaskManagement">
+     	<methods>
+      		<include name="AdminLogIn"></include>
+       		<include name="OfflineDepositAudit"></include>
+			<include name="OnlineDepositAudit"></include>
+      	</methods>
+     </class>
+
+    </classes>
+  </test>
+
+   <!-- <test name="CreditCard deposit using existing card">
+	<classes>
+   	  <class name="vantagecrm.CPPaymentDetail">
+	     	<methods>
+	     		<include name="CPLogIn"></include>
+	     		<include name="AddPaymentDetailCC"></include>
+	     	</methods>
+
+	     </class>
+	  <class name="vantagecrm.NewTaskManagement">
+
+	      		<methods>
+		      		<include name="AdminLogIn"></include>
+	            	 <include name="CreditCardDetailsAudit"></include>
+	       		</methods>
+	  </class>
+
+	  <class name="vantagecrm.CPDeposit">
+     	<methods>
+     		<include name="CPLogIn"></include>
+     		<include name="CCDepositExistingCard"></include>
+        </methods>
+	  </class>
+
+
+   </classes>
+  </test> Test -->
+
+</suite> <!-- Suite -->

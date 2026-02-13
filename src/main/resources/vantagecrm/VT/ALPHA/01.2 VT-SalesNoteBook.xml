@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Create New User and Audit" configfailurepolicy="continue">
+
+ <listeners>
+    <!-- <listener class-name="utils.Listeners.TestListener" /> -->
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod".
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	<parameter name="testEnv" value="test"></parameter>
+
+  <test name="Sales Notebook">
+   <parameter name="Brand" value="vt"></parameter>
+  	<parameter name="TestEnv" value="test"></parameter>
+    <parameter name="AdminURL" value="https://admin.test-vtmarkets.com"></parameter>
+  	<parameter name="AdminName" value="Test CRM"></parameter>
+  	<parameter name="AdminPass" value="Vantagefx123"></parameter>
+  	<parameter name="TraderURL" value="https://secure.test-vtmarkets.com"></parameter>
+    <parameter name="TraderName" value="webnhb@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>
+
+
+    <classes>
+       <class name="vantagecrm.SalesNoteBook">
+      		<methods>
+	      		<include name="AdminLogIn"></include>
+	       		<include name="AddLeads"></include>
+	       		<include name = "updateSalesNote"></include>
+	       		<include name = "DeleteLeads"></include>
+	       		<include name = "verifySearch"></include>
+	       		<include name = "modifyAttribution"></include>
+				<include name = "AddFollowUp"></include>
+				<include name = "addNotes2Aptment"></include>
+				<include name = "rescheduleAptment"></include>
+				<include name = "dismissAptment"></include>
+       		</methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

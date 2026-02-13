@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU account configuration" configfailurepolicy="continue">
+
+	<listeners>
+     	<listener class-name="utils.Listeners.CustomListener"/>
+  	</listeners>
+  <test name="AUTest">
+    <parameter name="Brand" value="VFX"></parameter>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+  	<parameter name="Regulator" value="vfsc2"></parameter>
+    <parameter name="AdminURL" value="https://admin-core-au.crm-alpha.com/admin/main"></parameter>
+  	<parameter name="AdminName" value="cmatest"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="https://secure-core-au.crm-alpha.com"></parameter>
+   	<parameter name="TraderName" value="VFXAutomationexclusive@mailinator.com"></parameter>
+    <parameter name="TraderPass" value="1234Qwer!"></parameter>
+    <parameter name="Debug" value="true"></parameter>
+    <parameter name="IBCode" value=""></parameter>
+    <parameter name="RAFCode" value="s4q08GZPUXixOIq0+FrhPg=="></parameter>
+	<parameter name="headless" value="false"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.cptestcases.AccountConfigureTestCases">
+   		 	<methods>
+   		 		<include name="testChangeMT4AccountLeverage"></include>
+   		 		<include name="testChangeMT5AccountLeverage"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

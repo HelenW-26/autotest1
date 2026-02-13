@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Email Test Suite" configfailurepolicy="continue">
+
+
+
+	
+  <test name="Email Test">
+    <parameter name="Brand" value="fca"></parameter>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+    <parameter name="AdminURL" value="https://admin-jupiter-ex.crm-alpha.com"></parameter>
+  	<parameter name="AdminName" value="automation_ky"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="headless" value="true"/>
+ 
+   
+    <classes>
+
+     <class name="vantagecrm.EmailTesting"> 
+      	<methods>
+      		<include name="SQLGetMailIdByTemplate"></include>
+
+      	<!-- 	<include name="APIResendEmail"></include> -->
+
+      		<!-- <include name="SQLGetMailIdByDate"></include> -->
+       	</methods>
+      </class> 
+      
+
+      
+   </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

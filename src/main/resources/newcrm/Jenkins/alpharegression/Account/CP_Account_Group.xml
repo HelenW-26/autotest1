@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Alpha Account P0 Regression" configfailurepolicy="continue">
+
+    <listeners>
+        <listener class-name="utils.Listeners.GroupTestListener"/>
+    </listeners>
+
+    <parameter name="Brand" value="${brand}"></parameter>
+    <parameter name="Server" value="${container}"></parameter>
+    <parameter name="BranchVersion" value="${branchVersion}"></parameter>
+
+    <test name="CP Registration UI Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.account.AlphaDemoRegGoldenFlowTestCases">
+<!--                <methods>-->
+<!--                    <include name="testRegistMT5DemoAccount_Gold"></include>-->
+<!--                </methods>-->
+            </class>
+            <class name="newcrm.testcases.alpharegression.account.AlphaAutoRegGoldenFlowTestCases">
+<!--                <methods>-->
+<!--                    <include name="testAutoRegistMT5LiveAccount_Gold"></include>-->
+<!--                </methods>-->
+            </class>
+            <class name="newcrm.testcases.alpharegression.account.AlphaDemoRegTestCases">
+<!--                <methods>-->
+<!--                    <include name="testRegistMT5DemoAccount"></include>-->
+<!--                </methods>-->
+            </class>
+            <class name="newcrm.testcases.alpharegression.account.AlphaAutoRegTestCases">
+<!--                <methods>-->
+<!--                    <include name="testAutoRegistMT5LiveAccount"></include>-->
+<!--                </methods>-->
+            </class>
+        </classes>
+    </test>
+    <test name="CP Login &amp; Forgot Password UI Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.account.AlphaAccountLoginTestCases">
+<!--                <methods>-->
+<!--                    <include name="testAccountEmailLoginFail"></include>-->
+<!--                </methods>-->
+            </class>
+            <class name="newcrm.testcases.alpharegression.account.AlphaEmailTOTPLoginTestCases">
+<!--                <methods>-->
+<!--                    <include name="testAccountEmailLoginTOTP"></include>-->
+<!--                </methods>-->
+            </class>
+            <class name="newcrm.testcases.alpharegression.account.AlphaPhoneLoginTestCases">
+<!--                <methods>-->
+<!--                    <include name="testAccountPhoneLoginFail"></include>-->
+<!--                    <include name="testAccountPhoneLoginSuccess"></include>-->
+<!--                </methods>-->
+            </class>
+            <class name="newcrm.testcases.alpharegression.account.AlphaAccountForgotPwdTestCases">
+<!--                <methods>-->
+<!--                    <include name="testAccountEmailForgotPwd"></include>-->
+<!--                </methods>-->
+            </class>
+            <class name="newcrm.testcases.alpharegression.account.AlphaAccPhoneForgotPwdTestCases">
+<!--                <methods>-->
+<!--                    <include name="testAccountPhoneForgotPwd"></include>-->
+<!--                </methods>-->
+            </class>
+        </classes>
+    </test>
+    <test name="CP Account UI Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.AlphaAccountManagementTestCases">
+<!--                <methods>-->
+<!--                    <include name="testMT4LiveAccountInfoCheck"></include>-->
+<!--                    <include name="testMT5LiveAccountInfoCheck"></include>-->
+<!--                    <include name="testChangeMT4LiveAccountNickname"></include>-->
+<!--                    <include name="testChangeMT5LiveAccountNickname"></include>-->
+<!--                    <include name="testMT4LiveAccountSwitchDisplayModeCheck"></include>-->
+<!--                    <include name="testMT5LiveAccountSwitchDisplayModeCheck"></include>-->
+<!--                    <include name="testMT4LiveAccountRemoveCredit"></include>-->
+<!--                    <include name="testMT5LiveAccountRemoveCredit"></include>-->
+<!--                </methods>-->
+            </class>
+            <class name="newcrm.testcases.alpharegression.account.AlphaAccountChgPwdTestCases">
+<!--                <methods>-->
+<!--                    <include name="testMT4LiveAccountChgPwd"></include>-->
+<!--                    <include name="testMT5LiveAccountChgPwd"></include>-->
+<!--                </methods>-->
+            </class>
+        </classes>
+    </test>
+    <test name="CP Additional Account UI Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.account.AlphaAccountAddAccTestCases">
+<!--                <methods>-->
+<!--                    <include name="testOpenAdditionalMT5LiveAccount"></include>-->
+<!--                </methods>-->
+            </class>
+            <class name="newcrm.testcases.alpharegression.copyTrading.AlphaCopyTradingAddAccTestCases">
+<!--                <methods>-->
+<!--                    <include name="testOpenAdditionalMTSAccount"></include>-->
+<!--                </methods>-->
+            </class>
+        </classes>
+    </test>
+    <test name="CP Demo Account UI Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.account.AlphaDemoAccount">
+<!--                <methods>-->
+<!--                    <include name="testMT4DemoAccountInfoCheck"></include>-->
+<!--                    <include name="testMT5DemoAccountInfoCheck"></include>-->
+<!--                </methods>-->
+            </class>
+            <class name="newcrm.testcases.alpharegression.account.AlphaDemoAccountUpdLeverage">
+<!--                <methods>-->
+<!--                    <include name="testChangeMT4DemoAccountInfo"></include>-->
+<!--                    <include name="testChangeMT5DemoAccountInfo"></include>-->
+<!--                </methods>-->
+            </class>
+        </classes>
+    </test>
+    <test name="CP User Profile UI Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.account.AlphaProfileVerifyGoldenFlowTestCases">
+<!--                <methods>-->
+<!--                    <include name="testMT5LiveAccProfileVerification"></include>-->
+<!--                    <include name="testMT5LiveAccProfileVerification_withoutSumsub"></include>-->
+<!--                </methods>-->
+            </class>
+            <class name="newcrm.testcases.alpharegression.account.AlphaProfileVerifyTestCases">
+<!--                <methods>-->
+<!--                    <include name="testMT5LiveAccProfileVerification"></include>-->
+<!--                    <include name="testMT5LiveAccProfileVerification_withoutSumsub"></include>-->
+<!--                </methods>-->
+            </class>
+            <class name="newcrm.testcases.alpharegression.account.AlphaUserProfileTestCases">
+<!--                <methods>-->
+<!--                    <include name="testUserProfileContactInfoMaskingCheck"></include>-->
+<!--                </methods>-->
+            </class>
+        </classes>
+    </test>
+    <test name="CP Dashboard UI Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.dashboard.AlphaDashboardTestCases">
+<!--                <methods>-->
+<!--                    <include name="testDashboardAccountCheck"></include>-->
+<!--                    <include name="testDashboardTradeViewCheck"></include>-->
+<!--                </methods>-->
+            </class>
+        </classes>
+    </test>
+    <test name="CP Support &amp; Others Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.download.AlphaDownloadTestCases">
+<!--                <methods>-->
+<!--                    <include name="testDownloadInfoCheck"></include>-->
+<!--                </methods>-->
+            </class>
+        </classes>
+    </test>
+    <test name="CP Account Config Check (Thailand) UI Regression">
+        <parameter name="Country" value="Thailand"></parameter>
+        <classes>
+            <class name="newcrm.testcases.alpharegression.account.AlphaOpenAddAccConfigCheckTestCases">
+<!--                <methods>-->
+<!--                    <include name="testOpenMT4AddAccConfigCheck"></include>-->
+<!--                    <include name="testOpenMT5AddAccConfigCheck"></include>-->
+<!--                    <include name="testOpenMTSAddAccConfigCheck"></include>-->
+<!--                </methods>-->
+            </class>
+            <class name="newcrm.testcases.alpharegression.account.AlphaAccLeverage2000CheckTestCases">
+<!--                <methods>-->
+<!--                    <include name="testMT5LiveAccountLeverage2000Check"></include>-->
+<!--                </methods>-->
+            </class>
+        </classes>
+    </test>
+    <test name="CP Account Config Check (United Kingdom) UI Regression">
+        <parameter name="Country" value="United Kingdom"></parameter>
+        <classes>
+            <class name="newcrm.testcases.alpharegression.account.AlphaOpenAddAccConfigCheckTestCases">
+<!--                <methods>-->
+<!--                    <include name="testOpenMT4AddAccConfigCheck"></include>-->
+<!--                    <include name="testOpenMT5AddAccConfigCheck"></include>-->
+<!--                    <include name="testOpenMTSAddAccConfigCheck"></include>-->
+<!--                </methods>-->
+            </class>
+        </classes>
+    </test>
+    <test name="CP Account Config Check (France) UI Regression">
+        <parameter name="Country" value="France"></parameter>
+        <classes>
+            <class name="newcrm.testcases.alpharegression.account.AlphaOpenAddAccConfigCheckTestCases">
+<!--                <methods>-->
+<!--                    <include name="testOpenMT4AddAccConfigCheck"></include>-->
+<!--                    <include name="testOpenMT5AddAccConfigCheck"></include>-->
+<!--                    <include name="testOpenMTSAddAccConfigCheck"></include>-->
+<!--                </methods>-->
+            </class>
+            <class name="newcrm.testcases.alpharegression.account.AlphaAccLeverageCheckTestCases">
+<!--                <methods>-->
+<!--                    <include name="testMT5LiveAccountLeverage500Check"></include>-->
+<!--                </methods>-->
+            </class>
+        </classes>
+    </test>
+    <test name="CP Account Config Check (Poland) UI Regression">
+        <parameter name="Country" value="Poland"></parameter>
+        <classes>
+            <class name="newcrm.testcases.alpharegression.account.AlphaAccLeverage1000CheckTestCases">
+<!--                <methods>-->
+<!--                    <include name="testMT5LiveAccountLeverage1000Check"></include>-->
+<!--                </methods>-->
+            </class>
+        </classes>
+    </test>
+</suite><!-- Suite -->

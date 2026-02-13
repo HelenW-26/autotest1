@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="logPath">ExtentReports</Property>
+        <Property name="devToolLogErrorFileName">DevTools_log.html</Property>
+        <Property name="devToolLogInfoFileName">selenium_log.html</Property>
+        <Property name="devToolRollErrorFilePattern">${logPath}/DevTools_log-%d{yyyy-MM-dd-HH-mm-ss}.html</Property>
+        <Property name="devToolRollInfoFilePattern">${logPath}/selenium_log-%d{yyyy-MM-dd-HH-mm-ss}.html</Property>
+    </Properties>
+    <Appenders>
+        <!-- 控制台输出 -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %class{36}.%method:%L - %msg%n"/>
+        </Console>
+
+        <!-- 文件输出 -->
+        <RollingFile name="RollingFile" fileName="logs/app.log"
+                     filePattern="logs/app-%d{yyyy-MM-dd}.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="100MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="30"/>
+        </RollingFile>
+
+        <!-- Devtool listener Error log-->
+        <RollingFile name="DevToolsRolling"
+                         fileName="${logPath}/${devToolLogErrorFileName}"
+                         filePattern="${devToolRollErrorFilePattern}"
+                         createOnDemand="true"
+                         append="false">
+            <PatternLayout>
+                <pattern>
+                    <![CDATA[
+    <table><tbody><tr><td>%d{yyyy-MM-dd HH:mm:ss}</td><td>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;</td><td>%m</td></tr></tbody></table>%n
+    ]]>
+                </pattern>
+            </PatternLayout>
+
+            <Policies>
+                <OnStartupTriggeringPolicy/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+            <Filters>
+                <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </RollingFile>
+
+        <!-- Devtool listener Info log-->
+        <RollingFile name="APIInfoRolling"
+                     fileName="${logPath}/${devToolLogInfoFileName}"
+                     filePattern="${devToolRollInfoFilePattern}"
+                     createOnDemand="true"
+                     append="false">
+            <PatternLayout>
+                <pattern>
+                    <![CDATA[
+<table><tbody><tr><td>%d{yyyy-MM-dd HH:mm:ss}</td><td>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;</td><td>%m</td></tr></tbody></table>%n
+]]>
+                </pattern>
+            </PatternLayout>
+
+            <Policies>
+                <OnStartupTriggeringPolicy/>
+            </Policies>
+
+            <DefaultRolloverStrategy max="10"/>
+            <Filters>
+                <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- 可以针对特定包设置日志级别 -->
+        <Logger name="newcrm" level="debug" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="RollingFile"/>
+        </Logger>
+        <Logger name="utils.Listeners.DevtoolsListener" level="info" additivity="false">
+            <AppenderRef ref="DevToolsRolling" level="error"/>
+            <AppenderRef ref="APIInfoRolling" level="info"/>
+        </Logger>
+
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="RollingFile"/>
+        </Root>
+    </Loggers>
+</Configuration>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- alpha jenkins上进行smoke test的job -->
+<suite name="PT Regression" configfailurepolicy="continue">
+
+ <listeners>
+     <listener class-name="utils.Listeners.CustomListener"/>
+  </listeners>
+  <!--<parameter name="Brand" value="${brand}"></parameter>
+  <parameter name="Server" value="${container}"></parameter>-->
+    <parameter name="Brand" value="PUGPT"></parameter>
+    <parameter name="Server" value="vangogh"></parameter>
+
+ <test name="regression">
+     <classes>
+           <class name="newcrm.testcases.pt.AlphaPTRegisterPaymentAndPayoutTestCases">
+             <methods>
+                 <include name="testRegisterPaymentAndPayout"></include>
+             </methods>
+         </class>
+         <!--<class name="newcrm.testcases.pt.AlphaPTPayoutTestCases">
+             <methods>
+                 <include name="testPayout"></include>
+             </methods>
+         </class>-->
+    </classes>
+  </test>
+</suite><!-- Suite -->

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="STAR Withdraw Test Suite New">
+
+    <listeners>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+    <parameter name="Brand" value="STAR"></parameter>
+    <parameter name="TestEnv" value="alpha"></parameter>
+    <parameter name="Regulator" value="svg"></parameter>
+    <parameter name="TraderURL" value="${TraderURL}"></parameter>
+    <parameter name="TraderName" value="autotestzgetyuxq@testcrmautomation.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe@@"></parameter>
+    <parameter name="headless" value="true"></parameter>
+
+    <!-- Batch 1 -->
+    <test name="STAR Australia CP Withdraw">
+        <parameter name="TraderName" value="australiabttestcrm@mailinator.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testAustraliaBankWithdrawNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="STAR Thailand CP Withdraw">
+        <parameter name="TraderName" value="thailanddepsoithw@mailinator.com"></parameter>
+        <parameter name="TraderPass" value="1234Qwer!"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testThaiBankWithdrawNew"></include>
+                    <include name="testThaiBankWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="STAR Indonesia CP Withdraw">
+        <parameter name="TraderName" value="indonesiatestcrm@mailinator.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testIndonesiaBankWithdrawNew"></include>
+                    <include name="testIndonesiaBankWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!-- no such withdraw method now as of 24 June 2025
+    <test name="STAR Laos CP Withdraw">
+        <parameter name="TraderName" value="laoshwtestcrm@mailinator.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testLaosBankWithdrawNew"></include>
+                    <include name="testLaosBankWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+    <test name="STAR Philippine CP Withdraw">
+        <parameter name="TraderName" value="philippineshwtestcrm@mailinator.com"></parameter>
+        <parameter name="TraderPass" value="1234Qwer!"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testPhilippinesBankWithdrawNew"></include>
+                    <include name="testPhilippinesBankWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="STAR Brazil CP Withdraw">
+        <parameter name="TraderName" value="brazilhwtestcrm@mailinator.com"></parameter>
+        <parameter name="TraderPass" value="1234Qwer!"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testBrazilBankWithdrawNew"></include>
+                    <include name="testBrazilBankWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!-- Withdrawal name mismatch
+    <test name="STAR Japan CP Withdraw">
+        <parameter name="TraderName" value="testcrm_donttouch_cpsjapanclient@test.com"></parameter>
+        <parameter name="TraderPass" value="123Qwe@@"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testBitWalletWithdrawNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+    <test name="STAR Nigeria CP Withdraw">
+        <parameter name="TraderName" value="nigeriatestcrm@mailinator.com"></parameter>
+        <parameter name="TraderPass" value="123Qwe!!"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testNigeriaBankWithdrawNew"></include>
+                    <include name="testNigeriaBankWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!-- no such withdraw method now as of 24 June 2025
+    <test name="STAR Taiwan CP Withdraw">
+        <parameter name="TraderName" value="testcrm_donttouch_cpstaiwanclient@test.com"></parameter>
+        <parameter name="TraderPass" value="123Qwe!!"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testTaiwanBankWithdrawNew"></include>
+                    <include name="testTaiwanBankWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+    <test name="STAR Mexico CP Withdraw">
+        <parameter name="TraderName" value="testcrm_donttouch_cpsmexicoclient@test.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testMexicoBankWithdrawNew"></include>
+                    <include name="testMexicoBankWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!-- Batch 2 -->
+    <test name="STAR Malaysia CP Withdraw">
+        <parameter name="TraderName" value="autotestzgetyuxq@testcrmautomation.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testMalaysiaBankWithdrawNew"></include>
+                    <include name="testMalaysiaBankWithdrawNewAccountNew"></include>
+                    <!-- Withdrawal name mismatch
+                    <include name="testSticPayWithdrawNew"></include> -->
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="STAR China Unionpay CP Withdraw">
+        <parameter name="TraderName" value="autotestdemfdivt@testcrmautomation.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testUnionPayWithdrawNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="STAR India IBT CP Withdraw">
+        <parameter name="TraderName" value="internationalbttestcrm@mailinator.com"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testInternationalBankWithdrawNew"></include>
+                    <include name="testIndiaBankWithdrawNew"></include>
+                    <include name="testIndiaBankWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="STAR Crypto CP Withdraw">
+        <parameter name="TraderName" value="hwstartest@mailinator.com"></parameter>
+        <parameter name="TraderPass" value="1234Qwer!"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testCryptoCRYPTOBTCNew"></include>
+                    <include name="testCryptoCRYPTOETHNew"></include>
+                    <include name="testCryptoCRYPTOERCNew"></include>
+                    <include name="testCryptoCRYPTOTRCNew"></include>
+                    <include name="testCryptoCRYPTOUSDCNew"></include>
+                    <include name="testCryptoCRYPTOBEPNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="STAR Vietnam CP Withdraw">
+        <parameter name="TraderName" value="vietnamhwtestcrm@mailinator.com"></parameter>
+        <parameter name="TraderPass" value="1234Qwer!"></parameter>
+        <classes>
+            <class name="newcrm.testcases.cptestcases.WithdrawTestCases">
+                <methods>
+                    <include name="testVietnamBankWithdrawNew"></include>
+                    <include name="testVietnamBankWithdrawNewAccountNew"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!-- Test -->
+</suite> <!-- Suite -->

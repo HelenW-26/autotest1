@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Alpha Regression API Tests" configfailurepolicy="continue">
+    <listeners>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+
+    <test name="CP Wallet API Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.AlphaAPIWalletTestCases">
+                <methods>
+                    <include name="testApiWalletOpenAccountValidate"/>
+                    <include name="testApiWalletConverSubmit"/>
+                    <include name="testApiWalletDeposit"/>
+                    <include name="testApiWalletTransfer"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="ADMIN Campaign API Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.AlphaAPIAdminCampaignTestCases">
+                <methods>
+                    <include name="testAPIAdminCampaignSearchAllPage"/>
+                    <include name="testAPIAdminLoyaltyProgramPage"/>
+                    <include name="testAPIAdminCampaignSetting"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CP Payment API Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.AlphaAPIDepositTestCases">
+                <methods>
+                    <include name="testWEBApiDeposit"/>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.alpharegression.AlphaAPIWithdrawalTestCases">
+                <methods>
+                    <include name="testWEBApiWithdrawal"/>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.alpharegression.AlphaAPIWithdrawalTestCases">
+                <methods>
+                    <include name="testAPIBigAmountWithdrawal"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="ADMIN User, Payment Audit &amp; Report API Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.AlphaAPIAdminAccountTestCases">
+                <methods>
+                    <include name="testAPIAdminTradingAcctPage"/>
+                    <include name="testAPIAdminRebateAcctPage"/>
+                    <include name="testAPIAdminUserPage"/>
+                </methods>
+            </class>
+            <class name="newcrm.testcases.alpharegression.AlphaAPIAdminPaymentTestCases">
+                <methods>
+                    <include name="testAPIAdminDepositAudit"/>
+                    <include name="testAPIAdminWithdrawalAudit"/>
+                    <include name="testAPIAdminDepWithReport"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="ThirdParty API Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.AlphaThirdPartyServicesTestCases">
+                <methods>
+                    <include name="testMsgCenterSendAndVerifyPhoneOTP"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="ADMIN Wallet API Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.AlphaAPIAdminWalletTestCases">
+                <methods>
+                    <include name="testAdminApiWalletAccountManagement"/>
+                    <include name="testAdminApiWalletDeposit"/>
+                    <include name="testAdminApiWalletTransfer"/>
+                    <include name="testAdminApiWalletConvert"/>
+                    <include name="testAdminApiWalletPlatfromAccount"/>
+                    <include name="testAdminApiWalletBybitPlatfrom"/>
+                    <include name="testAdminApiWalletChannel"/>
+                    <include name="testAdminApiWalletDEPOSITASSETS"/>
+                    <include name="testAdminApiWalletBybitAssetDashboard"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

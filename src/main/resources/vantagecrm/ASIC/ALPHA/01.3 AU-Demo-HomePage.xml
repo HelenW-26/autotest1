@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Create New User and Audit" configfailurepolicy="continue">
+
+ <listeners>
+     <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	<parameter name="testEnv" value="test"></parameter>
+	
+  <test name="Demo Home Page">
+    <parameter name="Brand" value="au"></parameter>
+  	<parameter name="TestEnv" value="test"></parameter>
+    <parameter name="AdminURL" value="https://admin.test-vantagefx.com"></parameter>
+  	<parameter name="AdminName" value="automation_ky"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="https://secure.test-vantagefx.com"></parameter>
+    <parameter name="TraderName" value="webnhb@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+    
+       <classes>       
+       <class name="vantagecrm.CPDemoHome">     
+	        <parameter name="WebSiteURL" value="https://new.vantagefx.com"></parameter>
+	      	<parameter name="RegisterURL" value="https://secure.test-vantagefx.com:9990"></parameter>
+	        <parameter name="IBpromotion" value="?affid=975054"></parameter>    
+      		<methods>
+	      		<include name="InitDemo"></include>
+      			<include name="AddMT4Demo"></include>
+       			<include name="AddMT5Demo"></include>
+       			<include name="AddLive"></include>
+       		</methods>
+      </class>         
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

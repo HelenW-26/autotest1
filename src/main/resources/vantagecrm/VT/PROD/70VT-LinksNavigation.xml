@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Client Portal Test Suite VT" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+   <parameter name="Brand" value="vt"></parameter>
+  	<parameter name="TestEnv" value="prod"></parameter>
+    <parameter name="AdminURL" value="https://admin.vtmarkets.com.cn/"></parameter>
+  	<parameter name="AdminName" value="fiona"></parameter>
+  	<parameter name="AdminPass" value="123Qwe"></parameter>
+  	<parameter name="TraderURL" value="https://myaccount.vtmarkets.com.cn"></parameter>
+    <parameter name="TraderName" value="ibtesthpx@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+	
+  <test name="IB PORTAL Compare Data and Link Navigation">
+    <classes>
+        
+	      <class name="vantagecrm.IPLinkNavigation">
+	      	<methods>
+	      		<include name="IPLogIn"></include>
+	      		<include name="SidebarLinks"></include>
+	       		<include name="navBnIPCP"></include>
+	     		<include name="testIBLinks"></include>
+	      	</methods>
+	      </class>
+	      
+	       <class name="vantagecrm.IPAccountCompare"></class> 
+	       
+	     <class name="vantagecrm.IPCommiCompare">
+	     	<methods>
+	     		<include name="IPLogIn"></include>
+	     		<include name="CompareCommission"></include>
+	     	</methods>
+	     </class>
+	     
+	      <class name="vantagecrm.IPTransCompare"></class>
+	      
+      </classes>
+   </test>
+    
+</suite>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- alpha jenkins上进行smoke test的job -->
+<suite name="Alpha Regression" configfailurepolicy="continue">
+
+    <listeners>
+        <!-- 启用 Allure Listener -->
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+        <listener class-name="newcrm.listeners.AllureTestListener"/>
+        <listener class-name="utils.Listeners.CustomListener"/>
+    </listeners>
+
+    <!-- 添加 Allure 相关参数 -->
+    <parameter name="allure.results.directory" value="target/allure-results"></parameter>
+    <parameter name="allure.report.directory" value="target/allure-report"></parameter>
+
+    <parameter name="Brand" value="${brand}"></parameter>
+    <parameter name="Server" value="${container}"></parameter>
+
+    <test name="CP Wallet API Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.AlphaAPIWalletTestCases">
+                <methods>
+                    <include name="testApiWalletOpenAccountValidate"></include>
+                    <include name="testApiWalletConverSubmit"></include>
+                    <include name="testApiWalletDeposit"></include>
+                    <include name="testApiWalletWithdraw"></include>
+                    <include name="testApiWalletTransfer"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="ADMIN Wallet API Regression">
+        <classes>
+            <class name="newcrm.testcases.alpharegression.AlphaAPIAdminWalletTestCases">
+                <methods>
+                    <include name="testAdminApiWalletAccountManagement"></include>
+                    <include name="testAdminApiWalletDeposit"></include>
+                    <include name="testAdminApiWalletWithdrawal"></include>
+                    <include name="testAdminApiWalletTransfer"></include>
+                    <include name="testAdminApiWalletConvert"></include>
+                    <include name="testAdminApiWalletPlatfromAccount"></include>
+                    <include name="testAdminApiWalletBybitPlatfrom"></include>
+                    <include name="testAdminApiWalletChannel"></include>
+                    <include name="testAdminApiWalleDEPOSITASSETS"></include>
+                    <include name="testAdminApiWalleBybitAssetDashboard"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+
+

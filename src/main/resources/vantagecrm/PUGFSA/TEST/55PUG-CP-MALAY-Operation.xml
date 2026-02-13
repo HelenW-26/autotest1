@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Client Portal Test Suite KY" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+  <parameter name="Brand" value="fsa"></parameter>
+  	<parameter name="TestEnv" value="test"></parameter>
+    <parameter name="AdminURL" value="http://192.168.66.161:8001/login/to_login"></parameter>
+  	<parameter name="AdminName" value="test crm"></parameter>
+  	<parameter name="AdminPass" value="Vantage123"></parameter>
+  	<parameter name="TraderURL" value="http://cp.pug.com/login"></parameter>
+   	 <parameter name="TraderName" value="test111pug@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>
+
+ 	<parameter name="MalayAccount" value="test111pug@test.com"></parameter>
+ 	<parameter name="MalayPwd" value="123Qwe"></parameter>
+
+
+ <!--  <test name="Malaysia Paytoday Deposit">
+	   <classes>
+	   	 <class name="vantagecrm.CPDeposit">
+	     	<methods>
+	     		<include name="CPLogIn"></include>
+	     		<include name="MalaysiaDeposit"></include>
+	     	</methods>
+         </class>
+
+	      <class name="vantagecrm.TaskManagement">
+	      		<methods>
+		      		<include name="AdminLogIn"></include>
+	            	 <include name="OLDepositAuditMalay"></include>
+	       		</methods>
+	      </class>
+	  	</classes>
+  </test> -->
+  
+     <test name="Malaysia PayTrust Deposit">
+
+	   <classes>
+
+	   	 <class name="vantagecrm.CPDeposit">
+	     	<methods>
+	     		<include name="CPLogIn"></include>
+	     		<include name="MalaysiaPayTrust"></include>
+	     	</methods>
+
+         </class>
+
+	      <class name="vantagecrm.TaskManagement">
+
+	      		<methods>
+		      		<include name="AdminLogIn"></include>
+	            	 <include name="OLDepositAuditMalay"></include>
+	       		</methods>
+	      </class>
+
+	  	</classes>
+  </test>
+
+     <test name="Malaysia Withdraw">
+ 	   <classes>
+	     <class name="vantagecrm.CPWithdraw">
+		     	<methods>
+		     		<include name="CPLogIn"></include>
+		     		<include name="WithdrawMalayBank"></include>
+		     	</methods>
+         </class>
+
+	      <class name="vantagecrm.TaskManagement">
+	      		<methods>
+		      		<include name="AdminLogIn"></include>
+	            	 <include name="WDAuditMalay"></include>
+	                <include name="WDAuditCompleteMalay"></include>
+	       		</methods>
+	      </class>
+
+	  </classes>
+  </test>
+
+</suite> <!-- Suite -->

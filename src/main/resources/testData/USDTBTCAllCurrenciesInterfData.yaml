@@ -1,0 +1,58 @@
+cashier:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-core-au.crm-alpha.com"
+  mt4Account : "804395514"
+  channelname : "USDTBTC"
+  currenty : "USD"
+  operateAmount : "100"
+  channel_id : "4"
+  password: "7946e795e44db67be4c74219def41e2e"
+
+#cashier1:
+#  email : "autotestetdfyzri@testcrmautomation.com"
+#  mt4Account : "806008923"
+#  channelname : "USDTBTC"
+#  currenty : "USDT"
+#  operateAmount : "100"
+#  channel_id : "4"
+
+cashier2:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-core-au.crm-alpha.com"
+  mt4Account : "21631"
+  channelname : "USDTBTC"
+  currenty : "NZD"
+  operateAmount : "100"
+  channel_id : "4"
+  password: "7946e795e44db67be4c74219def41e2e"
+
+cashier3:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-core-au.crm-alpha.com"
+  mt4Account : "21630"
+  channelname : "USDTBTC"
+  currenty : "EUR"
+  operateAmount : "100"
+  channel_id : "4"
+  password: "7946e795e44db67be4c74219def41e2e"
+
+#cashier4:
+#  email : "autotestetdfyzri@testcrmautomation.com"
+#  url: "https://secure-core-au.crm-alpha.com"
+#  mt4Account : "804333572"
+#  channelname : "USDTBTC"
+#  currenty : "CAD"
+#  operateAmount : "100"
+#  channel_id : "4"
+#  password: "7946e795e44db67be4c74219def41e2e"
+
+cashier5:
+  email : "autotestetdfyzri@testcrmautomation.com"
+  url: "https://secure-core-au.crm-alpha.com"
+  mt4Account : "21629"
+  channelname : "USDTBTC"
+  currenty : "AUD"
+  operateAmount : "100"
+  channel_id : "4"
+  password: "7946e795e44db67be4c74219def41e2e"
+

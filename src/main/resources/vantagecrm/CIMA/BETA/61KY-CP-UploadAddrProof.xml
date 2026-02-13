@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Client Portal Test Suite KY" configfailurepolicy="continue">
+
+ <listeners>
+    <listener class-name="utils.Listeners.CustomListener"></listener>
+  </listeners>
+
+	<parameter name="Brand" value="ky"></parameter>
+  	<parameter name="TestEnv" value="beta"></parameter>
+    <parameter name="AdminURL" value="https://betavgpadmin.vantagefx.com/admin/main"></parameter>
+  	<parameter name="AdminName" value="Test CRM"></parameter>
+  	<parameter name="AdminPass" value="Vantage123"></parameter>
+  	<parameter name="TraderURL" value="https://betacpportal.vantagefx.com/"></parameter>
+   	<parameter name="TraderName" value="webacmx@test.com"></parameter>
+    <parameter name="TraderPass" value="123Qwe"></parameter>  
+  	
+
+    <test name="Upload Address Proof and Reject">
+    <classes>
+      
+      
+      <class name="vantagecrm.CPIDAddrProof">
+       		<methods>       			
+       
+       			<include name="CPLogIn"></include>   
+       			<include name="UploadAddrProof"></include>
+
+       		</methods>       
+       </class>
+	  
+   		<class name="vantagecrm.NewTaskManagement">
+   
+    		<methods>
+	     		<include name="AdminLogIn"></include>
+	     	    <include name="POASearchByName"></include>
+	      		<include name="POAReject"></include> 
+
+     		</methods>
+   		</class>
+     
+    </classes>
+  </test> 
+ 
+   <test name="Upload Address Proof and Audit">
+    <classes>
+      <class name="vantagecrm.CPIDAddrProof">
+       		<methods>       			
+       
+       			<include name="CPLogIn"></include>   
+       			<include name="UploadAddrProof"></include>
+
+       		</methods>       
+       </class>
+	  
+   		<class name="vantagecrm.NewTaskManagement">
+   
+    		<methods>
+	     		<include name="AdminLogIn"></include>
+	      		<include name="POAAudit"></include> 
+
+     		</methods>
+   		</class>
+     
+    </classes>
+  </test>
+ 
+ <test name="Admin Add Address Proof and Pending">
+    <classes>
+	  
+   		<class name="vantagecrm.NewTaskManagement">
+   
+    		<methods>
+	     		<include name="AdminLogIn"></include>
+	     		<include name="AddPOA"></include>
+	      		<include name="POAPending"></include> 
+     		</methods>
+   		</class>
+     
+    </classes>
+  </test>
+  
+   
+ 
+</suite> <!-- Suite -->

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite parallel="false" name="testMigrationDB" configfailurepolicy="continue">
+<listeners>
+  </listeners>
+  
+  <test name="TestMigrationDB">	
+  	<parameter name="path1" value="C:\Jmetertest\result\prod\pug_fsa_business_PROD_ALL.csv"/>
+  	<parameter name="path2" value="C:\Jmetertest\result\prod\pug_svg_business_PROD_ALL.csv"/>
+  	<parameter name="resultpath" value="C:\Jmetertest\result\prod\"/>
+    <classes>
+		 <class name="tools.MigrationCompare">
+		 	<methods>
+		 		<!-- <include name="compare"/> -->
+		 		<include name="checkDelete"/>
+		 	</methods>
+		 </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MO APP Test Suite" configfailurepolicy="continue">
+
+	<!-- this parameter is used for Account Audit option. Value can be "test", "beta" or "prod". 
+	When value is set to "beta" or "prod", the field Accout_Group_Setting can only be one test settings, like test_crm1_USD -->
+	<listeners>
+     	<listener class-name="utils.Listeners.CustomListener"/>
+  	</listeners>
+  	<parameter name="Brand" value="MO"></parameter>
+  	<parameter name="TestEnv" value="alpha"></parameter>
+  	<parameter name="Regulator" value="vfsc"></parameter>
+  	<parameter name="APPURL" value="${TraderURL}"></parameter>
+  	
+  	
+   	<test name="MO Test APP CPS Thailand Bank Transfer Withdrawal - Batch 1">
+   	<parameter name="UserId" value="1681"></parameter>
+   	<parameter name="AccountNo" value="810320760"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.app.APPCPSWithdrawalRegression">
+   		 	<methods>
+   		 		<include name="cpsTHBTWithdraw"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  	</test>
+  	<test name="MO Test APP CPS Malaysia Bank Transfer Withdrawal - Batch 2">
+   	<parameter name="UserId" value="1689"></parameter>
+   	<parameter name="AccountNo" value="810320761"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.app.APPCPSWithdrawalRegression">
+   		 	<methods>
+   		 		<include name="cpsMYBTWithdraw"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  	</test>
+  	<test name="MO Test APP CPS Vietnam Bank Transfer Withdrawal - Batch 2">
+   	<parameter name="UserId" value="1466"></parameter>
+   	<parameter name="AccountNo" value="810320767"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.app.APPCPSWithdrawalRegression">
+   		 	<methods>
+   		 		<include name="cpsVNBTWithdraw"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  	</test>
+  	<test name="MO Test APP CPS Indonesia Bank Transfer Withdrawal - Batch 2">
+   	<parameter name="UserId" value="1629"></parameter>
+   	<parameter name="AccountNo" value="810320766"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.app.APPCPSWithdrawalRegression">
+   		 	<methods>
+   		 		<include name="cpsIDBTWithdraw"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  	</test>
+  	<test name="MO Test APP CPS South Korea Bank Transfer Withdrawal - Batch 4">
+   	<parameter name="UserId" value="2047"></parameter>
+   	<parameter name="AccountNo" value="810320956"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.app.APPCPSWithdrawalRegression">
+   		 	<methods>
+   		 		<include name="cpsKOBTWithdraw"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  	</test>
+  	<test name="MO Test APP CPS Mexico Bank Transfer Withdrawal - batch 4">
+   	<parameter name="UserId" value="2628"></parameter>
+   	<parameter name="AccountNo" value="810321260"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.app.APPCPSWithdrawalRegression">
+   		 	<methods>
+   		 		<include name="cpsMXBTWithdraw"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  	</test>  
+ 	<test name="MO Test APP CPS Brazil BT / Brazil PIX Withdrawal - batch 4.5">
+   	<parameter name="UserId" value="2700"></parameter>
+   	<parameter name="AccountNo" value="810321283"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.app.APPCPSWithdrawalRegression">
+   		 	<methods>
+   		 		<include name="cpsBRLBTWithdraw"></include>
+   		 		<include name="cpsPIXBTWithdraw"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  	</test> 
+<!--   	Nov 07 Confirmed with KP, hide jor
+    <test name="MO Test APP CPS Hong Kong - HKD Bank Transfer Withdrawal - batch 4.5">
+   	<parameter name="UserId" value="2707"></parameter>
+   	<parameter name="AccountNo" value="810321286"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.app.APPCPSWithdrawalRegression">
+   		 	<methods>
+   		 		<include name="cpsHKBTWithdraw"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  	</test> 
+   	<test name="MO Test APP CPS Hong Kong - USD Bank Transfer Withdrawal - batch 4.5">
+   	<parameter name="UserId" value="2707"></parameter>
+   	<parameter name="AccountNo" value="810321286"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.app.APPCPSWithdrawalRegression">
+   		 	<methods>
+   		 		<include name="cpsHKUSDBTWithdraw"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  	</test>   -->
+  	<!-- Batch 6 did not support APP
+  	<test name="MO Test APP CPS Philippines Bank Transfer Withdrawal - batch 6">
+   	<parameter name="UserId" value="4018"></parameter>
+   	<parameter name="AccountNo" value="810380035"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.app.APPCPSWithdrawalRegression">
+   		 	<methods>
+   		 		<include name="cpsPHBTWithdraw"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  	</test> 
+  	<test name="MO Test APP CPS India Bank Transfer Withdrawal - batch 6">
+   	<parameter name="UserId" value="4019"></parameter>
+   	<parameter name="AccountNo" value="810380036"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.app.APPCPSWithdrawalRegression">
+   		 	<methods>
+   		 		<include name="cpsINBTWithdraw"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  	</test>  -->
+    <test name="MO Test APP CPS E-Wallet Withdrawal">
+   	<parameter name="UserId" value="1681"></parameter>
+   	<parameter name="AccountNo" value="810320760"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.app.APPCPSWithdrawalRegression">
+   		 	<methods>
+   		 		<include name="cpsAdvcashWithdraw"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  	</test>
+  	<test name="MO Test APP CPS EWallet-FXIR Withdrawal">
+   	<parameter name="UserId" value="4487"></parameter>
+   	<parameter name="AccountNo" value="810380208"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.app.APPCPSWithdrawalRegression">
+   		 	<methods>
+   		 		<include name="cpsFXIRWithdraw"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  	</test>
+  	<test name="MO Test APP CPS Japan Withdrawal">
+   	<parameter name="UserId" value="4492"></parameter>
+   	<parameter name="AccountNo" value="810380213"></parameter>
+    <classes>
+   		 <class name="newcrm.testcases.app.APPCPSWithdrawalRegression">
+   		 	<methods>
+   		 		<include name="cpsJPBTWithdraw"></include>
+   		 	</methods>
+   		 </class>   		      		
+    </classes>
+  	</test>
+  <!-- Test -->
+</suite> <!-- Suite -->
