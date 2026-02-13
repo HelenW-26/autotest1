@@ -3,7 +3,6 @@
 .classpath
 test-output/
 .settings/
-ExtentReports/
 screenshots/
 allure-results/
 .idea/
